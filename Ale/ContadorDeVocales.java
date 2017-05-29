@@ -6,6 +6,7 @@ errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 import java.io.*;
 public class ContadorDeVocales {
     public static void main(String args[]) throws IOException {
+        
         BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
         String cadena_ingresada;
         String cadena_mayus;
