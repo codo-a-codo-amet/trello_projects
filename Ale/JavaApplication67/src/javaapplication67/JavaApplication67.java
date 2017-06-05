@@ -20,8 +20,18 @@ public class JavaApplication67 {
         
         Perro unPerro = new Perro();
         
+        unPerro.ponerNombre("Filais");
+        
         System.out.println(unPerro.trotar());
         System.out.println(unPerro.dameTuNombre());
+        
+        
+        
+        Persona pp = new Persona();
+        
+        
+        
+        
     }
     
 }

@@ -10,11 +10,17 @@ package javaapplication67;
  * @author alumno
  */
 public class Perro extends Mamifero implements ICuadrupedo { // Y cuadrupedo?
+    private String nombre;
+     
     public String trotar(){
         return "perro trotando";
     }
     
+    public void ponerNombre(String nombreNuevo){
+        nombre = nombreNuevo;
+    }
+    
     public String dameTuNombre(){
-        return "firulais";
+        return nombre;
     }
 }

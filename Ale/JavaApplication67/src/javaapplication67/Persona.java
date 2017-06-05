@@ -9,10 +9,10 @@ package javaapplication67;
  *
  * @author alumno
  */
-public class Persona {
-    public String nombre;
-    public String apellido;
-    public Integer dni;
+public class Persona implements IPersona{
+    private String nombre;
+    private String apellido;
+    private Integer dni;
     public String sexo;
     public Ropa calzado;
     public Ropa pantalones;
@@ -20,7 +20,8 @@ public class Persona {
     
     protected String religion;
     
-    public String dameTuNombre(){
+    public String comoTeLlamas() {
         return nombre;
     }
+   
 }
