@@ -17,6 +17,10 @@ public class JavaApplication67 {
         //unAlumno.ahoraTeLlamas("Pepito");
         System.out.println(unAlumno.comoTeLlamas());
         
+        unAlumno = new Alumno();
+        unAlumno = new Alumno();
+        unAlumno = new Alumno();
+        unAlumno = new Alumno();
         //Persona unaPersona = new Persona();
         //System.out.println(unaPersona.comoTeLlamas());
         //System.out.println(unaPersona.queEdadTenes());
