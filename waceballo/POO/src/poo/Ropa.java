@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication67;
+package poo;
 
 /**
  *
@@ -14,4 +14,5 @@ public class Ropa {
     public String talle;
     public String tipo;
     public String marca;
+    
 }

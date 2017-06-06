@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication67;
+package poo;
 
 /**
  *
  * @author alumno
  */
-public class Ropa {
-    public String color;
-    public String talle;
-    public String tipo;
-    public String marca;
+public class Alumno extends Persona{
+    private Integer calificacion;
 }
