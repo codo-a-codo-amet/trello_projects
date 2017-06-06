@@ -17,11 +17,37 @@ public class Persona implements IPersona{
     public Ropa calzado;
     public Ropa pantalones;
     public Ropa sombrero;
+    public int edad;
     
     protected String religion;
+    
+    public Persona(){
+        nombre = "Sin nombre";
+        apellido = "Sin apellido";
+       dni = 0;
+       sexo = "Sin sexo";
+       calzado.color = "Negro";
+       calzado.marca = "Adidas";
+       calzado.talle = "L";
+       pantalones.color = "Azul";
+       pantalones.marca = "Adidas";
+       pantalones.talle = "L";
+       sombrero.color = "Negro";
+       sombrero.marca = "Nike";
+       sombrero.talle = "No Aplica";
+       edad = 0;
+   
+    }
     
     public String comoTeLlamas() {
         return nombre;
     }
-   
+      
+    public String apellido(){
+        return apellido;
+    }
+   private Integer dni(){
+       return dni;
+   }
+
 }
