@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package javaapplication67;
-
+import javaapplication67.Ropa;
 /**
  *
  * @author alumno
@@ -19,6 +19,29 @@ public class Persona implements IPersona{
     private Ropa pantalones;
     private Ropa sombrero;
     private String religion;
+    
+    public Persona (){
+        nombre ="N";
+        apellido="N";
+        edad=0;
+        dni =0;
+        sexo="Indefinido";
+        calzado= new Ropa();
+        calzado.talle="40";
+        calzado.tipo=("Cuero");
+        calzado.color=("Marron");
+        calzado.marca=("Kickers");
+        pantalones = new Ropa();
+        pantalones.color=("Azul");
+        pantalones.marca=("Levis");
+        pantalones.talle=("41");
+        pantalones.tipo=("Jean");
+        sombrero = new Ropa();
+        sombrero.color=("Gris");
+        sombrero.tipo=("Bombin");
+        sombrero.talle=("Medium");
+        sombrero.marca=("Sin Marca");
+    }
     
     public String dameTuNombre(){
         return getNombre();
@@ -36,7 +59,7 @@ public class Persona implements IPersona{
 
     @Override
     public String dequedoloresturopa() {
-        return "Calzado color: "+getCalzado().getColor()+". Pantalones color : "+getPantalones().getColor()+". Sombrero color: "+ getSombrero().getColor();
+        return "Calzado color: "+calzado.color+". Pantalones color : "+pantalones.color+". Sombrero color: "+ sombrero.color;
         
     }
 

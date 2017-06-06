@@ -9,9 +9,6 @@ package javaapplication67;
  *
  * @author alumno
  */
-public class Ropa {
-    public String color;
-    public String talle;
-    public String tipo;
-    public String marca;
+public class Profesor extends Persona{
+    
 }

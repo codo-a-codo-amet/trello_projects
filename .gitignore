@@ -11,7 +11,12 @@ Ale/Prueba003/nbproject/private/private.properties
 *.class
 Ale/JavaApplication67/nbproject/private/private.properties
 Ale/JavaApplication67/nbproject/private/private.xml
+<<<<<<< HEAD
 /JavaApplication8/nbproject/private/
 /Ale/JavaApplication67/JavaApplication9/nbproject/private/
 /Ale/JavaApplication67/nbproject/private/
 /Ale/JavaApplication67/build/
+=======
+/Ale/JavaApplication67/nbproject/private/
+/cesaramadori1/JavaApplication67/build/
+>>>>>>> 455f211a053d61a7b52fd8674d3530d85075ec6b
