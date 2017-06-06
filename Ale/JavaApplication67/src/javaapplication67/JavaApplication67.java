@@ -15,8 +15,8 @@ public class JavaApplication67 {
     public static void main(String[] args) {
         Alumno unAlumno = new Alumno();
         
-        unAlumno.nombre = "Pepito";
-        System.out.println(unAlumno.dameTuNombre());
+        unAlumno.ahoraTeLlamas("ivan");        
+        System.out.println(unAlumno.comoTeLlamas());
         
         Perro unPerro = new Perro();
         
