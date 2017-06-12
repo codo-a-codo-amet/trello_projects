@@ -10,5 +10,8 @@ package clase21;
  * @author alumno
  */
 public interface IVehiculo {
+    public boolean Arrancar();
+    public boolean Frenar();
+    public String Moverse();
     
 }
