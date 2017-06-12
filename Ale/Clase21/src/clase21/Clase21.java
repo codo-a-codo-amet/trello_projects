@@ -26,27 +26,15 @@ public class Clase21 {
         motito.setRuedas(2);
         motito.Arrancar();
         motito.setPasajeros(2);
-        System.out.println("La "+nombreDeObjeto(str)+" "+motito.getMarca()+" modelo "+motito.getModelo()+" es del año "+ motito.getAño());
+        System.out.println("La"+" "+motito.getMarca()+" modelo "+motito.getModelo()+" es del año "+ motito.getAño());
         Lancha lanchita = new Lancha();
         System.out.println(unVehiculo.getMarca()+" "+unVehiculo.getModelo()+" "+unVehiculo.getAño()+" Esta detenido?"+ unVehiculo.Frenar());
-        String objetoBici = nombreDeObjeto(mibici.getClass().getName().toString());
-        nombreDeObjeto(objetoBici);
+        
+        
         //System.out.println(mibici.getClass().getName().toString());
         
-        System.out.println("Tengo una "+nombreDeObjeto(objetoBici)+" marca "+mibici.marca+" del año "+mibici.anio);
+        System.out.println("Tengo una Bicicleta"+" marca "+mibici.marca+" del año "+mibici.anio);
     }
     
-    public static String nombreDeObjeto(Object str){
-        //System.out.println(str);
-        //String[] parts= str.split(".");
-        String nombre = str.getClass().getName().toString();
-        System.out.println("");
-        //int largo parts[].length();
-        //System.out.println(parts[].length());
-        //System.out.println(parts[1]);
-        //String elNombre = parts[1];
-  
-        
-        return nombre.substring(str.indexOf(".")+1, str.length());;
-    }
+    
 }
