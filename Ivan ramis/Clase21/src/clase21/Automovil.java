@@ -9,6 +9,6 @@ package clase21;
  *
  * @author alumno
  */
-public class Moto extends Vehiculo {
+public class Automovil extends Vehiculo{
     
 }

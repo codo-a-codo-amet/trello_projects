@@ -11,64 +11,152 @@ package clase21;
  */
 public class Vehiculo implements IVehiculo {
     
-    protected Integer pasajeros;
+    private Integer pasajeros;
     protected Integer ruedas;
-    protected String tipoMotor;
+    private String tipoMotor;
     private String combustible;
     protected String marca;
-    protected String modelo;
-    private Integer año;
-    protected String patente;
-    
-   
-    
+    private String modelo;
+    protected Integer anio;
+    private String patente;
     
     public Vehiculo(){
-        pasajeros = 4;
-        ruedas = 4;
-        tipoMotor = "Ferrari";
-        combustible = "Magico";
-        marca = "Ferrari";
-        modelo = "Ferrari Classic";
-        año = 2017;
-        patente = "ZZZ 000";
+        pasajeros=2;
+        ruedas=4;
+        tipoMotor="Borgward";
+        combustible="Gasoil";
+        marca="I.A.M.E.";
+        modelo="Rastrojero";
+        anio =1954;
+        patente="RJE123";
+        
+        
     }
     
     public boolean Frenar(){
         return true;
     }
-    
-   public Integer obtenerPasajeros(){
-        return pasajeros;
-    }
-   public Integer obtenerRuedas(){
-       return ruedas;
-   }
-   public String obtenerMotor(){
-       return tipoMotor;
-   }
-   public String obtenerCombustible(){
-        return combustible;
-    }
-    public String obtenerMarca() {
-        return marca;
-    }
-
-    public String obtenerModelo(){
-        return modelo;
-    }
-    public Integer obtenerAño(){
-        return año;
-    }
-    public String obtenerPatente(){
-        return patente;
-    }
-    public void Moverse (int km){
-        System.out.println("El auto se movio " + km);
-    }
 
     @Override
     public boolean Arrancar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return true;
     }
+
+    @Override
+    public String Moverse() {
+        return "Me estoy moviendo";
+    }
+
+    /**
+     * @return the pasajeros
+     */
+    public Integer getPasajeros() {
+        return pasajeros;
+    }
+
+    /**
+     * @param pasajeros the pasajeros to set
+     */
+    public void setPasajeros(Integer pasajeros) {
+        this.pasajeros = pasajeros;
+    }
+
+    /**
+     * @return the ruedas
+     */
+    public Integer getRuedas() {
+        return ruedas;
+    }
+
+    /**
+     * @param ruedas the ruedas to set
+     */
+    public void setRuedas(Integer ruedas) {
+        this.ruedas = ruedas;
+    }
+
+    /**
+     * @return the tipoMotor
+     */
+    public String getTipoMotor() {
+        return tipoMotor;
+    }
+
+    /**
+     * @param tipoMotor the tipoMotor to set
+     */
+    public void setTipoMotor(String tipoMotor) {
+        this.tipoMotor = tipoMotor;
+    }
+
+    /**
+     * @return the combustible
+     */
+    public String getCombustible() {
+        return combustible;
+    }
+
+    /**
+     * @param combustible the combustible to set
+     */
+    public void setCombustible(String combustible) {
+        this.combustible = combustible;
+    }
+
+    /**
+     * @return the marca
+     */
+    public String getMarca() {
+        return marca;
+    }
+
+    /**
+     * @param marca the marca to set
+     */
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    /**
+     * @return the modelo
+     */
+    public String getModelo() {
+        return modelo;
+    }
+
+    /**
+     * @param modelo the modelo to set
+     */
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    /**
+     * @return the año
+     */
+    public Integer getAño() {
+        return anio;
+    }
+
+    /**
+     * @param año the año to set
+     */
+    public void setAño(Integer año) {
+        this.anio = año;
+    }
+
+    /**
+     * @return the patente
+     */
+    public String getPatente() {
+        return patente;
+    }
+
+    /**
+     * @param patente the patente to set
+     */
+    public void setPatente(String patente) {
+        this.patente = patente;
+    }
+            
 }
