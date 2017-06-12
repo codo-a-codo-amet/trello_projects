@@ -14,9 +14,18 @@ public class JavaApplication67 {
     }
     public static void main(String[] args) {
         Alumno unAlumno = new Alumno();
+        //unAlumno.ahoraTeLlamas("Pepito");
+        System.out.println(unAlumno.comoTeLlamas());
         
-        unAlumno.nombre = "Pepito";
-        System.out.println(unAlumno.dameTuNombre());
+        unAlumno = new Alumno();
+        unAlumno = new Alumno();
+        unAlumno = new Alumno();
+        unAlumno = new Alumno();
+        //Persona unaPersona = new Persona();
+        //System.out.println(unaPersona.comoTeLlamas());
+        //System.out.println(unaPersona.queEdadTenes());
+        Profesor unProfesor = new Profesor();
+        System.out.println(unProfesor.comoTeLlamas());
         
         Perro unPerro = new Perro();
         
