@@ -17,8 +17,24 @@ public class Clase21 {
     public static void main(String[] args) {
         // TODO code application logic here
         Vehiculo unVehiculo = new Vehiculo();
+        Bicicleta mibici = new Bicicleta();
+        Moto motito = new Moto();
+        motito.setAño(2016);
+        motito.setModelo("Ninja");
+        motito.setMarca("Kawasaki");
+        motito.setCombustible("Gasolina");
+        motito.setRuedas(2);
+        motito.Arrancar();
+        motito.setPasajeros(2);
+        System.out.println("La"+" "+motito.getMarca()+" modelo "+motito.getModelo()+" es del año "+ motito.getAño());
+        Lancha lanchita = new Lancha();
+        System.out.println(unVehiculo.getMarca()+" "+unVehiculo.getModelo()+" "+unVehiculo.getAño()+" Esta detenido?"+ unVehiculo.Frenar());
         
-        System.out.println(unVehiculo.Frenar());
+        
+        //System.out.println(mibici.getClass().getName().toString());
+        
+        System.out.println("Tengo una Bicicleta"+" marca "+mibici.marca+" del año "+mibici.anio);
     }
+    
     
 }
