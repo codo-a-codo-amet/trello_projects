@@ -18,7 +18,7 @@ public class Avion extends Vehiculo {
         combustible="kerosene";
         marca="Fiat";
         modelo="spacio";
-        anio =2014;
+        año =2014;
         patente="asa832rn";
     }
 }

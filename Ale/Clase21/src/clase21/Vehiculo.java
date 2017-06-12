@@ -11,14 +11,14 @@ package clase21;
  */
 public class Vehiculo implements IVehiculo {
     
-    private Integer pasajeros;
-    private Integer ruedas;
-    private String tipoMotor;
-    private String combustible;
-    private String marca;
-    private String modelo;
-    private Integer año;
-    private String patente;
+    protected Integer pasajeros;
+    protected Integer ruedas;
+    protected String tipoMotor;
+    protected String combustible;
+    protected String marca;
+    protected String modelo;
+    protected Integer año;
+    protected String patente;
     
     public Vehiculo(){
         
