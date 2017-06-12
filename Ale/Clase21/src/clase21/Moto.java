@@ -11,4 +11,14 @@ package clase21;
  */
 public class Moto extends Vehiculo {
     
+     public Moto(){
+        pasajeros=1;
+        ruedas=2;
+        tipoMotor="";
+        combustible="a sangre";
+        marca="corven";
+        modelo="rouser 200as";
+        anio =2017;
+        patente="dvl666";
+    }
 }
