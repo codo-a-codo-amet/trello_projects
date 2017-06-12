@@ -9,9 +9,12 @@ package clase21;
  *
  * @author alumno
  */
-public interface IVehiculo {
-    public boolean Arrancar();
-    public boolean Frenar();
-    public String Moverse();
-    
+public class Bicicleta extends Vehiculo{
+    public Bicicleta(){
+        ruedas =2;
+        marca= "Olmo";
+        anio=2017;
+        setPasajeros(1);
+        
+    }
 }
