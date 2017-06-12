@@ -1,24 +1,8 @@
-Ale/Prueba001/build/classes/.netbeans_automatic_build
-Ale/Prueba001/build/classes/.netbeans_update_resources
-Ale/Prueba001/build/classes/prueba001/Prueba001.class
-Ale/Prueba001/nbproject/private/private.properties
-*.netbeans_automatic_build
-*.netbeans_update_resources
-Ale/Prueba002/build/classes/prueba002/Prueba002.class
-Ale/Prueba002/nbproject/private/private.properties
-Ale/Prueba003/build/classes/prueba003/Prueba003.class
-Ale/Prueba003/nbproject/private/private.properties
-*.class
+Ale/JavaApplication67/build/built-jar.properties
 Ale/JavaApplication67/nbproject/private/private.properties
 Ale/JavaApplication67/nbproject/private/private.xml
-<<<<<<< HEAD
-/JavaApplication8/nbproject/private/
-/Ale/JavaApplication67/JavaApplication9/nbproject/private/
-/Ale/JavaApplication67/nbproject/private/
-/Ale/JavaApplication67/build/
-=======
-/Ale/JavaApplication67/nbproject/private/
-/cesaramadori1/JavaApplication67/build/
->>>>>>> 455f211a053d61a7b52fd8674d3530d85075ec6b
-Ale/Clase21/nbproject/private/private.properties
-/juanappendino/Clase21/nbproject/private/
+.gitignore
+/Ale/Clase21/nbproject/private/
+/Ale/Clase21/build/
+/cesaramadori1/Clase21/nbproject/private/
+/cesaramadori1/Clase21/build/
