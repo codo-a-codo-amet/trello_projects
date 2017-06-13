@@ -18,7 +18,18 @@ public class Avion extends Vehiculo {
         combustible="kerosene";
         marca="Fiat";
         modelo="spacio";
-        anio =2014;
+        año =2014;
+        patente="asa832rn";
+    }
+    
+    public Avion(String nuevaMarca){
+        super(nuevaMarca);
+        pasajeros=14;
+        ruedas=3;
+        tipoMotor="bimotor";
+        combustible="kerosene";
+        modelo="spacio";
+        año =2014;
         patente="asa832rn";
     }
 }
