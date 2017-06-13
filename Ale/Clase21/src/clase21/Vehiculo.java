@@ -20,8 +20,20 @@ public class Vehiculo implements IVehiculo {
     protected Integer año;
     protected String patente;
     
+    public String dameTuMarca(){
+        return marca;
+    }
+    
+    public void AhoraTuMarcaEs(String nuevaMarca){
+        marca = nuevaMarca;
+    }
+    
     public Vehiculo(){
         
+    }
+    
+    public Vehiculo(String nuevaMarca) {
+        marca = nuevaMarca;
     }
     
     public boolean Frenar(){
