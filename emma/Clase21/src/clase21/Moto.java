@@ -22,5 +22,16 @@ public class Moto extends Vehiculo {
     año = 2017;
     patente = "a12 3bcd";
     }
+    
+    public Moto(String nuevaPatente) {
+    pasajeros = 1;
+    ruedas = 2;
+    tipoMotor = "naftero";        
+    combustible = "nafta";
+    marca = "yamaha";
+    modelo = "SZ RR";
+    año = 2017;
+    patente = nuevaPatente;
+    }
             
 }

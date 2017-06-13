@@ -52,5 +52,8 @@ public Integer dameTuAño(){
     public boolean Arrancar (){
         return true;
     }
+    public String dameTuPatente (){
+        return patente;  
+    }
             
 }

@@ -23,6 +23,13 @@ public class Clase21 {
         System.out.println(unVehiculo.dameTuMarca());
         System.out.println(unVehiculo.dameTuModelo());
         System.out.println(unVehiculo.dameTuAño());
+        
+         Vehiculo unaMoto = new Moto();
+         System.out.println(unaMoto.dameTuPatente());
+         
+         Vehiculo nuevaPatente = new Moto("z56 6xyz");
+         System.out.println(nuevaPatente.dameTuPatente());
+         
     }
     
 }
