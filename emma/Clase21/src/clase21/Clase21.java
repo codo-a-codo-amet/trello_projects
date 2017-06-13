@@ -21,6 +21,8 @@ public class Clase21 {
         System.out.println(unVehiculo.Frenar());
             
         System.out.println(unVehiculo.dameTuMarca());
+        System.out.println(unVehiculo.dameTuModelo());
+        System.out.println(unVehiculo.dameTuAño());
     }
     
 }
