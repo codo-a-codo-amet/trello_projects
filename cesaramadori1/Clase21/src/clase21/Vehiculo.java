@@ -11,14 +11,14 @@ package clase21;
  */
 public class Vehiculo implements IVehiculo {
     
-    private Integer pasajeros;
+    protected Integer pasajeros;
     protected Integer ruedas;
-    private String tipoMotor;
-    private String combustible;
+    protected String tipoMotor;
+    protected String combustible;
     protected String marca;
-    private String modelo;
+    protected String modelo;
     protected Integer anio;
-    private String patente;
+    protected String patente;
     
     public Vehiculo(){
         pasajeros=2;
@@ -132,17 +132,17 @@ public class Vehiculo implements IVehiculo {
     }
 
     /**
-     * @return the año
+     * @return the anio
      */
-    public Integer getAño() {
+    public Integer getAnio() {
         return anio;
     }
 
     /**
-     * @param año the año to set
+     * @param anio the anio to set
      */
-    public void setAño(Integer año) {
-        this.anio = año;
+    public void setAnio(Integer anio) {
+        this.anio = anio;
     }
 
     /**
