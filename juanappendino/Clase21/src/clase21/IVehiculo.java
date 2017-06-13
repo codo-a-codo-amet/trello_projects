@@ -10,5 +10,6 @@ package clase21;
  * @author alumno
  */
 public interface IVehiculo {
-    
+    public void arrancar ();
+    public boolean frenar
 }

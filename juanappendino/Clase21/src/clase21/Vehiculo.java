@@ -13,27 +13,15 @@ public class Vehiculo implements IVehiculo {
     
     protected Integer pasajeros;
     protected Integer ruedas;
-    protected String tipoMotor;
-    protected String combustible;
+    private String tipoMotor;
+    private String combustible;
     protected String marca;
-    protected String modelo;
-    protected Integer año;
-    protected String patente;
-    
-    public String dameTuMarca(){
-        return marca;
-    }
-    
-    public void AhoraTuMarcaEs(String nuevaMarca){
-        marca = nuevaMarca;
-    }
+    private String modelo;
+    private Integer año;
+    private String patente;
     
     public Vehiculo(){
         
-    }
-    
-    public Vehiculo(String nuevaMarca) {
-        marca = nuevaMarca;
     }
     
     public boolean Frenar(){

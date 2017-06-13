@@ -9,6 +9,11 @@ package clase21;
  *
  * @author alumno
  */
-public interface IVehiculo {
-    
+public class bicicleta extends Vehiculo{
+    public bicicleta(){
+            marca = "Entusiasta Bikes";
+            pasajeros = 1;
+            ruedas = 2;
+    }
+                
 }

@@ -9,6 +9,13 @@ package clase21;
  *
  * @author alumno
  */
-public class Moto extends Vehiculo {
+public class Bicicleta extends Vehiculo{
+    public Bicicleta(){
+        ruedas =2;
+        marca= "Olmo";
+        anio="2017";
+        pasajeros=2;
+       
+    }
     
 }
