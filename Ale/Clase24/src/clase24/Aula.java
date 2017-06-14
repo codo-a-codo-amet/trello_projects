@@ -12,4 +12,9 @@ package clase24;
 public class Aula {
     private Profesor unProfesor;
     
+    
+    public Aula() {
+        unProfesor = new Profesor();
+        
+    }
 }
