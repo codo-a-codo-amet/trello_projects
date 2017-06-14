@@ -22,15 +22,17 @@ public class Clase21 {
         
         System.out.println(otroVehiculo.dameTuMarca());
         
-        Avion unAvion = new Avion(); // ahora este fiat
+        IVehiculo unAvion = new Avion(); // ahora este fiat
         
         System.out.println(unVehiculo.Frenar());
         
         System.out.println(unAvion.dameTuMarca());
         
-        Avion otroAvion = new Avion("Chevrolet", "Hidroavion"); // ahora este lo quiero chevrolet
+        IVehiculo otroAvion = new Avion("Chevrolet", "Hidroavion"); // ahora este lo quiero chevrolet
         
         System.out.println(otroAvion.dameTuMarca());
+        
+        //System.out.println(otroAvion.dameTusAlas());
     }
     
 }
