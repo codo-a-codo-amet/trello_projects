@@ -6,7 +6,7 @@
 package clase21;
 
 /**
- *
+ * Clase principal donde se implementan las propiedades
  * @author alumno
  */
 public class Clase21 {
@@ -31,8 +31,8 @@ public class Clase21 {
         System.out.println(unaMoto.getPatente());
         unaMoto.setMarca("Honda");
         System.out.println(unaMoto.getMarca());
-
         unaMoto.Moverse(10);
     }
     
 }
+
