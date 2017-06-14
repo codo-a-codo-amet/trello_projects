@@ -31,7 +31,6 @@ public class Clase21 {
         System.out.println(unaMoto.getPatente());
         unaMoto.setMarca("Honda");
         System.out.println(unaMoto.getMarca());
-
         unaMoto.Moverse(10);
     }
     
