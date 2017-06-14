@@ -6,7 +6,7 @@
 package clase21;
 
 /**
- *
+ * Clase principal donde se implementan las propiedades
  * @author alumno
  */
 public class Clase21 {
@@ -35,3 +35,4 @@ public class Clase21 {
     }
     
 }
+

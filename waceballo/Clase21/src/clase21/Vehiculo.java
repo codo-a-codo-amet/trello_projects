@@ -6,7 +6,7 @@
 package clase21;
 
 /**
- *
+ * Clase donde estan las propiedades del vehiculo
  * @author alumno
  */
 public class Vehiculo implements IVehiculo {

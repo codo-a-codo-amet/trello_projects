@@ -20,40 +20,24 @@ public class Vehiculo implements IVehiculo {
     protected Integer año;
     protected String patente;
     
-    public Vehiculo(){
-        pasajeros = 3;
-        ruedas = 4;
-        tipoMotor = "naftero";        
-        combustible = "nafta";
-        marca = "fiat";
-        modelo = "Fiesta";
-        año = 2017;
-        patente = "aa 999 bb";
-    }
-    
     public String dameTuMarca(){
         return marca;
-       } 
-    public String dameTuModelo(){
-          return modelo;
-      }
- 
-public Integer dameTuAño(){
-        return año;
-        
-       } 
-    public void Moverse (int km){
-    System.out.println ("se mueve" );
-}
-    public boolean Frenar(){
-        return true;
     }
     
-    public boolean Arrancar (){
-        return true;
+    public void AhoraTuMarcaEs(String nuevaMarca){
+        marca = nuevaMarca;
     }
-    public String dameTuPatente (){
-        return patente;  
+    
+    public Vehiculo(){
+        
+    }
+    
+    public Vehiculo(String nuevaMarca) {
+        marca = nuevaMarca;
+    }
+    
+    public boolean Frenar(){
+        return true;
     }
             
 }

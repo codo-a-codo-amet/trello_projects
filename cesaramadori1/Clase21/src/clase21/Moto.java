@@ -12,13 +12,18 @@ package clase21;
 public class Moto extends Vehiculo {
     
      public Moto(){
-        pasajeros=1;
-        ruedas=2;
-        tipoMotor="";
-        combustible="a sangre";
-        marca="corven";
-        modelo="rouser 200as";
-        anio =2017;
-        patente="dvl666";
+      
     }
+     public Moto(String marca, String modelo, int anio, String combustible, int ruedas){
+         this.marca = marca;
+         this.modelo = modelo;
+         this.anio = anio;
+         this.combustible = combustible;
+         this.ruedas = ruedas;
+     }
+     public String DamelaPatente (){
+         return this.patente;
+     }
+     
 }
+
