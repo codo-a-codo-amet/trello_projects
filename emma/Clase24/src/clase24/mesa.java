@@ -9,12 +9,15 @@ package clase24;
  *
  * @author alumno
  */
-public class Aula {
-    private Profesor unProfesor;
+public class mesa extends Mueble {
+       
+    public mesa () {
     
-    
-    public Aula() {
-        unProfesor = new Profesor();
-        
+    Material = "madera";
+    tipo = "cocina";
+    tamaño = "2metros";        
+    color = "gris";
+    Forma = "cuadrada";
     }
-}
+
+}            

@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase24;
+package clase21;
 
 /**
  *
  * @author alumno
  */
-public class Aula {
-    private Profesor unProfesor;
+public class mesa {
     
-    
-    public Aula() {
-        unProfesor = new Profesor();
-        
-    }
 }
