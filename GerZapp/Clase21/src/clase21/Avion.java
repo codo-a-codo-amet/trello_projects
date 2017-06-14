@@ -10,8 +10,6 @@ package clase21;
  * @author alumno
  */
 public class Avion extends Vehiculo {
-    protected String tipo;
-    protected int cantidad_alas;
     
     public Avion(){
         pasajeros=14;
@@ -22,13 +20,10 @@ public class Avion extends Vehiculo {
         modelo="spacio";
         año =2014;
         patente="asa832rn";
-        tipo = "hidroavion";
-        cantidad_alas = 2;
-    }    
+    }
     
-    public Avion(String nuevaMarca, String nuevotipo){
-        super(nuevaMarca); // Vehiculo(nuevaMarca)
-        tipo = nuevotipo;
+    public Avion(String nuevaMarca){
+        super(nuevaMarca);
         pasajeros=14;
         ruedas=3;
         tipoMotor="bimotor";
@@ -36,10 +31,5 @@ public class Avion extends Vehiculo {
         modelo="spacio";
         año =2014;
         patente="asa832rn";
-        cantidad_alas = 2;
-    }
-    
-    public int dameTusAlas(){
-        return cantidad_alas;
     }
 }

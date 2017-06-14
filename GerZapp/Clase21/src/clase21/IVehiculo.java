@@ -9,6 +9,6 @@ package clase21;
  *
  * @author alumno
  */
-public class Automovil extends Vehiculo{
+public interface IVehiculo {
     
 }
