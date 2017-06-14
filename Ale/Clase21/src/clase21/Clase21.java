@@ -28,7 +28,7 @@ public class Clase21 {
         
         System.out.println(unAvion.dameTuMarca());
         
-        Avion otroAvion = new Avion("Chevrolet"); // ahora este lo quiero chevrolet
+        Avion otroAvion = new Avion("Chevrolet", "Hidroavion"); // ahora este lo quiero chevrolet
         
         System.out.println(otroAvion.dameTuMarca());
     }

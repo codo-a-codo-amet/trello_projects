@@ -10,6 +10,7 @@ package clase21;
  * @author alumno
  */
 public class Avion extends Vehiculo {
+    protected String tipo;
     
     public Avion(){
         pasajeros=14;
@@ -20,10 +21,12 @@ public class Avion extends Vehiculo {
         modelo="spacio";
         año =2014;
         patente="asa832rn";
-    }
+        tipo = "hidroavion";
+    }    
     
-    public Avion(String nuevaMarca){
+    public Avion(String nuevaMarca, String nuevotipo){
         super(nuevaMarca);
+        tipo = nuevotipo;
         pasajeros=14;
         ruedas=3;
         tipoMotor="bimotor";
