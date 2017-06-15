@@ -22,10 +22,16 @@ public class Aula {
 
     private Profesor unProfesor;
 
+    private int obtenerCantidadAlumnos(int min, int max){
+        return min + ((max-min)*(int)Math.random());
+    }
+    
     public Aula() {
         unProfesor = new Profesor();
         sillas = new ArrayList<>();
         mesas = new ArrayList<>();
+        
+        int cantidad_de_alumnos = obtenerCantidadAlumnos(1, 10);
 
         for (int i = 0; i < cantidad_sillas; i++) {
             sillas.add(new Silla());
