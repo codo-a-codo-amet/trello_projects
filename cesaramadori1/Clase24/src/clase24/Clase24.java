@@ -19,9 +19,11 @@ public class Clase24 {
         Mueble unMueble = new Mueble();
         Silla newHouse = new Silla();
         Mesa luis = new Mesa();
+        Aula clase1 = new Aula();
+        
         System.out.println("La nueva silla modelo " + newHouse.getModelo() + " tiene color " + newHouse.color );
         System.out.println("Combina perfectamente con la mesa " + luis.forma + " que es de forma " + luis.tipo);
-        
+        System.out.println("La cantidad de sillas en el aula es " + clase1.dameCantidadDeSillas());
     }
     
 }

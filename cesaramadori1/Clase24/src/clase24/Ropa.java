@@ -9,6 +9,9 @@ package clase24;
  *
  * @author alumno
  */
-public class Alumno  extends Persona{
-    public Integer calificacion;
+public class Ropa {
+    public String color;
+    public String talle;
+    public String tipo;
+    public String marca;
 }
