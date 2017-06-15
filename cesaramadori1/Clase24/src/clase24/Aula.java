@@ -30,7 +30,7 @@ public class Aula {
         for (int i = 0; i < cantidad_mesas ; i++) {
             mesas.add(new Mesa());
         }
-        for (int i = 0; i < Aleatorio(24) ; i++) {
+        for (int i = 0; i < Aleatorio(1,24) ; i++) {
             alumnos.add(new Alumno());
         }
         
@@ -44,8 +44,8 @@ public class Aula {
     public int dameCantidadDeAlumnos(){
     return alumnos.size();
 }
-    public int Aleatorio(int h){
-        return (int)(Math.random()*h)+1;
+    private int Aleatorio(int d, int h){
+        return (int)(Math.random()*(h - d))+d;
     }
 }
 
