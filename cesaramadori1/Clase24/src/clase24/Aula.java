@@ -14,17 +14,38 @@ import java.util.List;
  */
 public class Aula {
     private Profesor unProfesor;
+    List <Alumno> alumnos;
     List <Silla> sillas;
+    List <Mesa> mesas;
     public Aula(){
         unProfesor = new Profesor();
         sillas = new ArrayList<>();
-        int cantSillas = 24;
-        for (int i = 0; i < cantSillas ; i++) {
+        alumnos = new ArrayList<>();
+        mesas = new ArrayList<>();
+        int cantidad_sillas = 24;
+        int cantidad_mesas = 8;
+        for (int i = 0; i < cantidad_sillas ; i++) {
             sillas.add(new Silla());
         }
+        for (int i = 0; i < cantidad_mesas ; i++) {
+            mesas.add(new Mesa());
+        }
+        for (int i = 0; i < Aleatorio(24) ; i++) {
+            alumnos.add(new Alumno());
+        }
+        
     }
     public int dameCantidadDeSillas(){
     return sillas.size();
 }
+    public int dameCantidadDeMesas(){
+    return mesas.size();
+}
+    public int dameCantidadDeAlumnos(){
+    return alumnos.size();
+}
+    public int Aleatorio(int h){
+        return (int)(Math.random()*h)+1;
+    }
 }
 
