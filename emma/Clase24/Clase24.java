@@ -16,16 +16,16 @@ public class Clase24 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Mueble unMueble = new Mueble();
+        System.out.println(unMueble.material);
         
-        Aula unAula = new Aula();
+        Silla unaSilla = new Silla();
+        System.out.println(unaSilla.dameTuMaterial());
+        System.out.println(unaSilla.dameTuColor());
         
-        Aula otraAula = new Aula();
-        Aula otraMasAula = new Aula();
-        Aula algunaOtraMAsAula = new Aula();
-        Aula aquellaAula = new Aula();
+        Laptop unaLaptop =  new Laptop("HP");
+        System.out.println(unaLaptop.dameTuMarca());
         
-        
-        System.out.println("Cantidad de Sillas " + unAula.dameCantidadDeSillas());
         
     }
     

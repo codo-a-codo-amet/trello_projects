@@ -10,5 +10,5 @@ package clase24;
  * @author alumno
  */
 public class Alumno  extends Persona{
-    
+    public Integer calificacion;
 }

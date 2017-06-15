@@ -9,6 +9,12 @@ package clase24;
  *
  * @author alumno
  */
-public class Profesor extends Persona{
+public class Aula {
+    private Profesor unProfesor;
     
+    
+    public Aula() {
+        unProfesor = new Profesor();
+        
+    }
 }

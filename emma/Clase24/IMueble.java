@@ -9,6 +9,10 @@ package clase24;
  *
  * @author alumno
  */
-public class Profesor extends Persona{
-    
+public interface IMueble {
+    public String dameTuMaterial();
+    public String dameTuTipo();
+    public String dameTuColor();
+    public String dameTuForma();
+    public String dameTuTamanio();
 }

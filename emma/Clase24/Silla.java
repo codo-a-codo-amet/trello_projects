@@ -9,6 +9,13 @@ package clase24;
  *
  * @author alumno
  */
-public class Profesor extends Persona{
+public class Silla extends Mueble{
     
+    public Silla(){
+        material = "Plastico";
+        forma = "ver";
+        color = "Azul";
+        tamanio = "Mediana";
+        tipo = "Aula";
+    }
 }

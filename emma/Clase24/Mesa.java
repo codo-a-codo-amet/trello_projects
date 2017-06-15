@@ -9,6 +9,14 @@ package clase24;
  *
  * @author alumno
  */
-public class Profesor extends Persona{
-    
+public class Mesa extends Mueble {
+
+    public Mesa() {
+        material = "Melamina";
+        forma = "Rectangula";
+        color = "Blanca";
+        tamanio = "Grande";
+        tipo = "Meson";
+    }
+
 }
