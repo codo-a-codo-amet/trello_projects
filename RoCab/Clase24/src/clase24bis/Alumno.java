@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase24;
+package clase24bis;
 
 /**
  *
  * @author alumno
  */
-public class Profesor extends Persona{
+public class Alumno extends Persona{
+    
     
 }

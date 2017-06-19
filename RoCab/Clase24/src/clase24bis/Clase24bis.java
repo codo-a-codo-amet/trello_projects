@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase24;
+package clase24bis;
 
 /**
  *
  * @author alumno
  */
-public class Clase24 {
+public class Clase24bis {
 
     /**
      * @param args the command line arguments
@@ -17,16 +17,14 @@ public class Clase24 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Aula unAula = new Aula();
+        Mueble unMueble= new Mueble ();
         
-        Aula otraAula = new Aula();
-        Aula otraMasAula = new Aula();
-        Aula algunaOtraMAsAula = new Aula();
-        Aula aquellaAula = new Aula();
+        Aula unAula= new Aula();
         
-        
-        System.out.println("Cantidad de Sillas " + unAula.dameCantidadDeSillas());
-        
+        System.out.println(dameCantidadDeSillas(sillas));
     }
+
+    
+    
     
 }
