@@ -28,6 +28,8 @@ public class Clase24 {
         Aula unaAula = new Aula();
         System.out.println("Cantidad de sillas "+unaAula.dameCantidadSillas());
         System.out.println("Cantidad de mesas "+unaAula.dameCantidadMesas());
+        System.out.println("Cantidad de alumnos "+unaAula.dameCantidadAlumnos());
+        System.out.println("El Aula tiene capacidad "+unaAula.dameAula());
         
         
     }

@@ -21,9 +21,10 @@ public class Aula {
     List<Mesa> mesas;
 
     private Profesor unProfesor;
+    private int cantidad_de_alumnos;
 
     private int obtenerCantidadAlumnos(int min, int max){
-        return min + ((max-min)*(int)Math.random());
+        return min + ((max-min)*(int)Math.random()*1000)/1000;
     }
     
     public Aula() {
@@ -31,7 +32,7 @@ public class Aula {
         sillas = new ArrayList<>();
         mesas = new ArrayList<>();
         
-        int cantidad_de_alumnos = obtenerCantidadAlumnos(1, 10);
+        cantidad_de_alumnos = obtenerCantidadAlumnos(5, 30);
 
         for (int i = 0; i < cantidad_sillas; i++) {
             sillas.add(new Silla());
@@ -50,5 +51,19 @@ public class Aula {
     public int dameCantidadMesas() {
         return mesas.size();
     }
+    
+    public int dameCantidadAlumnos(){
+        return cantidad_de_alumnos;
+    }
 
+    public String dameAula(){
+        
+        if (dameCantidadAlumnos()>dameCantidadSillas()){
+            return "No Alcanzan";
+        }else{
+            return "Hay una silla para cada Alumno";
+        }
+        
+        
+    }
 }
