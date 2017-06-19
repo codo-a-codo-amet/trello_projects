@@ -24,6 +24,9 @@ public class Clase24 {
         System.out.println("La nueva silla modelo " + newHouse.getModelo() + " tiene color " + newHouse.color );
         System.out.println("Combina perfectamente con la mesa " + luis.forma + " que es de forma " + luis.tipo);
         System.out.println("La cantidad de sillas en el aula es " + clase1.dameCantidadDeSillas());
+        System.out.println("La cantidad de mesas en el aula es " + clase1.dameCantidadDeMesas());
+        System.out.println("La cantidad de alumnos en el aula es " + clase1.dameCantidadDeAlumnos());
+        
     }
     
 }
