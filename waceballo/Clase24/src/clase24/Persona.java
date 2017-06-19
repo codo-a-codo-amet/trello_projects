@@ -11,4 +11,13 @@ package clase24;
  */
 public class Persona {
     
+    protected String nombre;
+    protected String apellido;
+    protected int dni;
+    
+    public Persona(){
+        
+    }
+    
+    
 }

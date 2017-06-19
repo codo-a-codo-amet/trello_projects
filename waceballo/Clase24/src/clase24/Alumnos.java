@@ -5,10 +5,24 @@
  */
 package clase24;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class Alumnos extends Persona{
+    List<Persona> alumno;
+    
+    public Alumnos(){
+        alumno = new ArrayList();
+    }
+
+    public void cargarAlumnos(){
+        Persona al = new Persona();
+        alumno.add(new Persona());
+    }
+    
     
 }

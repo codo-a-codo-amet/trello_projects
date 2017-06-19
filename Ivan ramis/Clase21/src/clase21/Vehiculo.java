@@ -6,158 +6,111 @@
 package clase21;
 
 /**
- *
+ * Clase donde estan las propiedades del vehiculo
  * @author alumno
  */
 public class Vehiculo implements IVehiculo {
-    
+
     protected Integer pasajeros;
-    protected Integer ruedas;
-    protected String tipoMotor;
-    protected String combustible;
-    protected String marca;
-    protected String modelo;
-    protected String anio;
-    protected String patente;
-    
-    public Vehiculo(){
-        pasajeros=2;
-        ruedas=4;
-        tipoMotor="Borgward";
-        combustible="Gasoil";
-        marca="I.A.M.E.";
-        modelo="Rastrojero";
-        anio ="1954";
-        patente="RJE123";
-        
-        
-    }
-    
-    public boolean Frenar(){
-        return true;
+    private Integer ruedas;
+    private String tipoMotor;
+    private String combustible;
+    private String marca;
+    private String modelo;
+    private Integer año;
+    private String patente;
+
+    public Vehiculo() {
+        pasajeros = 0;
+        ruedas = 0;
+        tipoMotor = "Definir";
+        combustible = "Definir";
+        marca = "Definir";
+        modelo = "Definir";
+        año = 0;
+        patente = "Definir";
     }
 
-    //@Override
-    public boolean Arrancar() {
-       return true;
-    }
-
-  //  @Override
-    public String Moverse() {
-        return "Me estoy moviendo";
-    }
-
-    /**
-     * @return the pasajeros
-     */
     public Integer getPasajeros() {
         return pasajeros;
     }
 
-    /**
-     * @param pasajeros the pasajeros to set
-     */
-    public void setPasajeros(Integer pasajeros) {
-        this.pasajeros = pasajeros;
+    public void setPasajeros(int cant_pasajeros) {
+        pasajeros = cant_pasajeros;
     }
 
-    /**
-     * @return the ruedas
-     */
     public Integer getRuedas() {
         return ruedas;
     }
 
-    /**
-     * @param ruedas the ruedas to set
-     */
-    public void setRuedas(Integer ruedas) {
-        this.ruedas = ruedas;
+    public void setRuedas(Integer cant_ruedas) {
+        ruedas = cant_ruedas;
     }
 
-    /**
-     * @return the tipoMotor
-     */
     public String getTipoMotor() {
         return tipoMotor;
     }
 
-    /**
-     * @param tipoMotor the tipoMotor to set
-     */
-    public void setTipoMotor(String tipoMotor) {
-        this.tipoMotor = tipoMotor;
+    public void setTipoMotor(String tipomotor) {
+        tipoMotor = tipomotor;
     }
 
-    /**
-     * @return the combustible
-     */
     public String getCombustible() {
         return combustible;
     }
 
-    /**
-     * @param combustible the combustible to set
-     */
-    public void setCombustible(String combustible) {
-        this.combustible = combustible;
+    public void setCombustible(String Combustible) {
+        combustible = Combustible;
     }
 
-    /**
-     * @return the marca
-     */
     public String getMarca() {
         return marca;
     }
 
-    /**
-     * @param marca the marca to set
-     */
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setMarca(String Marca) {
+        marca = Marca;
     }
 
-    /**
-     * @return the modelo
-     */
     public String getModelo() {
         return modelo;
     }
 
-    /**
-     * @param modelo the modelo to set
-     */
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setModelo(String Modelo) {
+        modelo = Modelo;
     }
 
-    /**
-     * @return the año
-     */
-    public String getAño() {
-        return anio;
+    public Integer getAño() {
+        return año;
     }
 
-    /**
-     * @param año the año to set
-     */
-    public void setAño(String año) {
-        this.anio = año;
+    public void setAño(Integer anio) {
+        año = anio;
     }
 
-    /**
-     * @return the patente
-     */
     public String getPatente() {
         return patente;
     }
 
-    /**
-     * @param patente the patente to set
-     */
-    public void setPatente(String patente) {
-        this.patente = patente;
+    public void setPatente(String Patente) {
+        patente = Patente;
     }
-   
-            
+
+    public void Moverse(int km) {
+        if (km > 0) {
+            Arrancar();
+            System.out.println("Tiene que avanzar " + km + " km");
+        } else {
+            Frenar();
+            System.out.println("Esta detenido ...");
+        }
+    }
+
+    public boolean Arrancar() {
+        return true;
+    }
+
+    public boolean Frenar() {
+        return true;
+    }
+
 }
