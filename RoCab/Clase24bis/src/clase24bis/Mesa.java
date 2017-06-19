@@ -10,5 +10,13 @@ package clase24bis;
  * @author alumno
  */
 public class Mesa extends Mueble {
+    public Mesa(){
+        
     
+        material= "Madera";
+        tipo="deCocina";
+        tamaño="Standard";
+        color="Roble";
+        forma="puntas redondeadas";
+    }
 }

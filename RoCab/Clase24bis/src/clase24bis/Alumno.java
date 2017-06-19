@@ -9,6 +9,7 @@ package clase24bis;
  *
  * @author alumno
  */
-public class Alumno {
+public class Alumno extends Persona{
+    
     
 }

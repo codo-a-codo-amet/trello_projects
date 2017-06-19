@@ -9,6 +9,15 @@ package clase24bis;
  *
  * @author alumno
  */
-public class Silla {
+public class Silla extends Mueble{
+    
+    public Silla(){
+        material= "Madera";
+        tipo="deCocina";
+        tamaño="Standard";
+        color="Roble";
+        forma="puntas redondeadas";
+    }
+    
     
 }

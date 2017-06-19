@@ -18,8 +18,13 @@ public class Clase24bis {
         // TODO code application logic here
         
         Mueble unMueble= new Mueble ();
-
+        
+        Aula unAula= new Aula();
+        
+        System.out.println(dameCantidadDeSillas(sillas));
     }
+
+    
     
     
 }
