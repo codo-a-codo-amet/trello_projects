@@ -25,11 +25,28 @@ public class Clase24 {
 //        
 //        Laptop unaLaptop =  new Laptop("HP");
 //        System.out.println(unaLaptop.dameTuMarca());
+        System.out.println("-----------------------------------------------------");
         Aula unaAula = new Aula();
         System.out.println("Cantidad de sillas "+unaAula.dameCantidadSillas());
         System.out.println("Cantidad de mesas "+unaAula.dameCantidadMesas());
         System.out.println("Cantidad de alumnos "+unaAula.dameCantidadAlumnos());
-        System.out.println("El Aula tiene capacidad "+unaAula.dameAula());
+        System.out.println("El Aula tiene capacidad "+unaAula.dameAulaLista());
+        
+        System.out.println("-----------------------------------------------------");
+        Aula unaAula1 = new Aula();
+        System.out.println("Cantidad de sillas "+unaAula1.dameCantidadSillas());
+        System.out.println("Cantidad de mesas "+unaAula1.dameCantidadMesas());
+        System.out.println("Cantidad de alumnos "+unaAula1.dameCantidadAlumnos());
+        System.out.println("El Aula tiene capacidad "+unaAula1.dameAulaLista());
+
+        System.out.println("-----------------------------------------------------");
+        Aula unaAula2 = new Aula();
+        System.out.println("Cantidad de sillas "+unaAula2.dameCantidadSillas());
+        System.out.println("Cantidad de mesas "+unaAula2.dameCantidadMesas());
+        System.out.println("Cantidad de alumnos "+unaAula2.dameCantidadAlumnos());
+        System.out.println("El Aula tiene capacidad "+unaAula2.dameAulaLista());
+        
+        
         
         
     }
