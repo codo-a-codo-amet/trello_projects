@@ -18,7 +18,7 @@ public class Aula {
     private Profesor unProfesor;
     
     private int obtenerCantidadAlumnos(int min, int max){
-        return min + ( ( max - min) * (int)Math.random());
+        return min + ( ( max - min) * (int)(Math.random()*1000)) / 1000;
     }
     
     public Aula() {
