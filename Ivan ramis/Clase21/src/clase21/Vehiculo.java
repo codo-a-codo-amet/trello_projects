@@ -11,14 +11,14 @@ package clase21;
  */
 public class Vehiculo implements IVehiculo {
     
-    private Integer pasajeros;
+    protected Integer pasajeros;
     protected Integer ruedas;
-    private String tipoMotor;
-    private String combustible;
+    protected String tipoMotor;
+    protected String combustible;
     protected String marca;
-    private String modelo;
-    protected Integer anio;
-    private String patente;
+    protected String modelo;
+    protected String anio;
+    protected String patente;
     
     public Vehiculo(){
         pasajeros=2;
@@ -27,7 +27,7 @@ public class Vehiculo implements IVehiculo {
         combustible="Gasoil";
         marca="I.A.M.E.";
         modelo="Rastrojero";
-        anio =1954;
+        anio ="1954";
         patente="RJE123";
         
         
@@ -37,12 +37,12 @@ public class Vehiculo implements IVehiculo {
         return true;
     }
 
-    @Override
+    //@Override
     public boolean Arrancar() {
        return true;
     }
 
-    @Override
+  //  @Override
     public String Moverse() {
         return "Me estoy moviendo";
     }
@@ -134,14 +134,14 @@ public class Vehiculo implements IVehiculo {
     /**
      * @return the año
      */
-    public Integer getAño() {
+    public String getAño() {
         return anio;
     }
 
     /**
      * @param año the año to set
      */
-    public void setAño(Integer año) {
+    public void setAño(String año) {
         this.anio = año;
     }
 
@@ -158,5 +158,6 @@ public class Vehiculo implements IVehiculo {
     public void setPatente(String patente) {
         this.patente = patente;
     }
+   
             
 }

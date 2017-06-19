@@ -22,11 +22,12 @@ public class Vehiculo implements IVehiculo {
     
     
     public boolean ArrancarAuto;
-    
+    public boolean Avanzar;
      
     
     public Vehiculo(){
       ArrancarAuto = false;
+      Avanzar = false;
     }
     
      public boolean Arrancar(){
@@ -41,6 +42,7 @@ public class Vehiculo implements IVehiculo {
         
     
         if (Arrancar() == true){
+            Avanzar = true;
        return "el auto esta avanzando" ;
        
        } else {
@@ -53,7 +55,15 @@ public class Vehiculo implements IVehiculo {
     }
     public String Frenar(){
         if (Arrancar() == true){
-            return "Se ha frenado el vehiculo";
+            if (Avanzar = true){
+             return "Se ha frenado el vehiculo";   
+            }
+            else{
+                return "No se puede frenar porque el auto no esta en movimiento";
+            }
+          
+            
+            
         }
         else{
             ArrancarAuto = true;

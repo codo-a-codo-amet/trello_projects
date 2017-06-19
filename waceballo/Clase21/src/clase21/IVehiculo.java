@@ -6,7 +6,7 @@
 package clase21;
 
 /**
- *
+ * Interface donde escribiremos los metodos a usar
  * @author alumno
  */
 public interface IVehiculo {
