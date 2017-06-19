@@ -17,10 +17,14 @@ public class Aula {
     List<Silla> sillas;
     private Profesor unProfesor;
     
+    private int obtenerCantidadAlumnos(int min, int max){
+        return min + ( ( max - min) * (int)(Math.random()*1000)) / 1000;
+    }
     
     public Aula() {
         unProfesor = new Profesor();
         sillas = new ArrayList<>();
+        int cantidad_de_alumnos = obtenerCantidadAlumnos(5, 30);
         
         for (int i = 0; i < cantidad_sillas; i++) {
             sillas.add(new Silla());
