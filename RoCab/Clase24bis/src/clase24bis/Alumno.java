@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase24bis;
 
 /**
  *
  * @author alumno
  */
-public class Bicicleta extends Vehiculo{
-    public Bicicleta(){
-        ruedas =2;
-        marca= "Olmo";
-        anio=2017;
-        setPasajeros(1);
-        
-    }
+public class Alumno {
+    
 }

@@ -20,6 +20,22 @@ public class Clase21 {
         
         System.out.println(unVehiculo.Avanzar());
         System.out.println(unVehiculo.Frenar());
+        
+        Moto unaPatente = new Moto("nkk 666");
+        
+        System.out.println(unaPatente.PasameTuPatente());
+        
+        Moto MiPatente = new Moto("vvv999");
+        
+        
+        System.out.println(MiPatente.PasameTuPatente());
+        
+        
+        
+        
+        
+        
+        
     }
     
 }

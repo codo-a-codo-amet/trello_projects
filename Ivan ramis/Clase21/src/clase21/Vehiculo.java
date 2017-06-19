@@ -17,7 +17,7 @@ public class Vehiculo implements IVehiculo {
     protected String combustible;
     protected String marca;
     protected String modelo;
-    protected Integer anio;
+    protected Integer año;
     protected String patente;
     
     public String dameTuMarca(){

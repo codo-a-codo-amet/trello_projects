@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase24;
 
 /**
  *
  * @author alumno
  */
-public class Moto extends Vehiculo {
+public class Aula {
+    private Profesor unProfesor;
     
+    
+    public Aula() {
+        unProfesor = new Profesor();
+        
+    }
 }
