@@ -26,7 +26,7 @@ public class Clase24 {
         System.out.println("La cantidad de sillas en el aula es " + clase1.dameCantidadDeSillas());
         System.out.println("La cantidad de mesas en el aula es " + clase1.dameCantidadDeMesas());
         System.out.println("La cantidad de alumnos en el aula es " + clase1.dameCantidadDeAlumnos());
-        
+        System.out.println("Quedan "+ clase1.DameSillasLibres() +" sillas Libres");
     }
     
 }

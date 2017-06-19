@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase24;
+package clase.pkg24;
 
 /**
  *
  * @author alumno
  */
-public class Profesor {
-    protected int cantidad_profesor;
+public class Mesa extends Mueble {
     
-    public Profesor() {
-        cantidad_profesor = 1;
+    public Mesa(){
+        material = "Madera";
+        tipo = "Mesa de Aula";
+        tamaño = "Grande";
+        color = "Blanco";
+        forma = "Simple";
     }
-
-    public int dameUnProfesor(){
-        return cantidad_profesor;
-    }
+    
 }

@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase24;
+package clase.pkg24;
 
 /**
  *
  * @author alumno
  */
-public class Profesor {
-    protected int cantidad_profesor;
+public class Persona {
     
-    public Profesor() {
-        cantidad_profesor = 1;
+    private Persona unaPersona; 
+    
+    public Persona() {
+            unaPersona = new Persona();
     }
-
-    public int dameUnProfesor(){
-        return cantidad_profesor;
-    }
+    
 }
