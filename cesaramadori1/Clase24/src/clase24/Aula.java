@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class Aula {
     private Profesor unProfesor;
+    private int sillasLibres;
     List <Alumno> alumnos;
     List <Silla> sillas;
     List <Mesa> mesas;
@@ -33,7 +34,7 @@ public class Aula {
         for (int i = 0; i < Aleatorio(1,24) ; i++) {
             alumnos.add(new Alumno());
         }
-        
+        sillasLibres= sillas.size() - alumnos.size();
     }
     public int dameCantidadDeSillas(){
     return sillas.size();
@@ -46,6 +47,9 @@ public class Aula {
 }
     private int Aleatorio(int d, int h){
         return (int)(Math.random()*(h - d))+d;
+    }
+    public int DameSillasLibres(){
+        return sillasLibres;
     }
 }
 
