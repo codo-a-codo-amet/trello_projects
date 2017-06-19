@@ -9,7 +9,7 @@ package clase.pkg24;
  *
  * @author alumno
  */
-public class Clase24 {
+public class Clase24 { TENGO CARA DE PIJA
 
     /**
      * @param args the command line arguments
