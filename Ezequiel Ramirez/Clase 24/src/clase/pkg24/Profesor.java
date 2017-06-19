@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase.pkg24;
 
 /**
  *
  * @author alumno
  */
-public interface IVehiculo {
+public class Profesor extends Persona {
     
+    public Profesor(){
+        
+    }
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase24;
 
 /**
  *
  * @author alumno
  */
-public interface IVehiculo {
+public class Mesa extends Mueble{
     
 }
