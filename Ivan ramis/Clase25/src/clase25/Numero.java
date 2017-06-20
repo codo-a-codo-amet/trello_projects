@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase25;
 
 /**
  *
  * @author alumno
  */
-public class bici {
+public class Numero implements IAritmetica {
     
 }

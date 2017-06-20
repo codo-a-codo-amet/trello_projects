@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase24;
 
 /**
- * Interface donde escribiremos los metodos a usar
+ *
  * @author alumno
  */
-public interface IVehiculo {
-    public void Moverse(int km);
-    public boolean Arrancar();
-    public boolean Frenar();
+public class Silla extends Mueble{
+    
 }
