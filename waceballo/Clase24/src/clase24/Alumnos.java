@@ -19,9 +19,32 @@ public class Alumnos extends Persona{
         alumno = new ArrayList();
     }
 
-    public void cargarAlumnos(){
-        Persona al = new Persona();
-        alumno.add(new Persona());
+    public void cargarApellido(String Apellido){
+        apellido = Apellido;
+    }
+    
+    public String pedirApellido(){
+        return apellido;
+    }
+    
+    public void cargarNombre(String Nombre){
+        nombre = Nombre;
+    }
+    
+    public String pedirNombre(){
+        return nombre;
+    }
+    
+    public void cargarDni(int Dni){
+        dni = Dni;
+    }
+    
+    public Integer pedirDni(){
+        return dni;
+    }
+    
+    public void cargarAlumnos(Persona p){
+        
     }
     
     
