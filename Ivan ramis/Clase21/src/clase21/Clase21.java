@@ -6,7 +6,7 @@
 package clase21;
 
 /**
- *
+ * Clase principal donde se implementan las propiedades
  * @author alumno
  */
 public class Clase21 {
@@ -18,7 +18,21 @@ public class Clase21 {
         // TODO code application logic here
         Vehiculo unVehiculo = new Vehiculo();
         
-        System.out.println(unVehiculo.Frenar());
+        unVehiculo.setMarca("Ford");
+        System.out.println(unVehiculo.getMarca());
+        unVehiculo.Moverse(50);
+        
+        Moto unaMoto = new Moto();
+        unaMoto.setPasajeros(1);
+        System.out.println(unaMoto.getPasajeros());
+        unaMoto.setTipoMotor("2 Cilindros");
+        System.out.println(unaMoto.getTipoMotor());
+        unaMoto.setPatente("ABC123");
+        System.out.println(unaMoto.getPatente());
+        unaMoto.setMarca("Honda");
+        System.out.println(unaMoto.getMarca());
+        unaMoto.Moverse(10);
     }
     
 }
+

@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase21;
+package clase25;
 
 /**
  *
  * @author alumno
  */
-public class Bicicleta extends Vehiculo{
-    public Bicicleta(){
-        ruedas =2;
-        marca= "Olmo";
-        anio="2017";
-        pasajeros=2;
-       
+public class Clase25 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
     
 }
