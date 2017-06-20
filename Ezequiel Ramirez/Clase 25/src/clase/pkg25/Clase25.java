@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase25;
+package clase.pkg25;
 
 /**
  *
@@ -16,14 +16,16 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         Numero unNumero = new Numero();
         Numero otroNumero = new Numero();
         
-        System.out.println(unNumero.descripcion()); // esto es un numero valor: aada
-    
-        unNumero.Sumar(otroNumero);
-
-        System.out.println(unNumero.descripcion()); // esto es un numero valor: aada
+        
+      
+        
+        
+        
+        
     }
     
 }
