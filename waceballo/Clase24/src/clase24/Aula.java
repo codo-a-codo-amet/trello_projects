@@ -13,25 +13,26 @@ import java.util.List;
  * @author alumno
  */
 public class Aula {
-
     final static int cantidad_sillas = 20;
     final static int cantidad_mesas = 5;
 
     List<Silla> sillas;
     List<Mesa> mesas;
+    List<Alumnos> alumnos;
 
     private Profesor unProfesor;
 
     private int obtenerCantidadAlumnos(int min, int max){
-        return min + ((max-min)*(int)Math.random());
+        return min + ((max-min)*(int)Math.random()*1000)/1000;
     }
     
     public Aula() {
         unProfesor = new Profesor();
         sillas = new ArrayList<>();
         mesas = new ArrayList<>();
+        alumnos = new ArrayList<>();
         
-        int cantidad_de_alumnos = obtenerCantidadAlumnos(1, 10);
+        int cantidad_de_alumnos = obtenerCantidadAlumnos(5, 30);
 
         for (int i = 0; i < cantidad_sillas; i++) {
             sillas.add(new Silla());
@@ -41,6 +42,10 @@ public class Aula {
             mesas.add(new Mesa());
         }
 
+        for (int i = 0; i < cantidad_de_alumnos; i++) {
+            alumnos.add(new Alumnos());
+        }
+        
     }
 
     public int dameCantidadSillas() {
@@ -50,5 +55,18 @@ public class Aula {
     public int dameCantidadMesas() {
         return mesas.size();
     }
+    
+    public int dameCantidadAlumnos(){
+        return alumnos.size();
+    }
 
+    public String dameAulaLista(){       
+        if (dameCantidadAlumnos()>dameCantidadSillas()){
+            return "No Alcanzan";
+        }else{
+            return "Hay una silla para cada Alumno";
+        }
+        
+        
+    }
 }
