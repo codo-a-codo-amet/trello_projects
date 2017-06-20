@@ -21,15 +21,4 @@ public class Avion extends Vehiculo {
         anio =2014;
         patente="asa832rn";
     }
-    
-    public Avion(String nuevaMarca){
-        super(nuevaMarca);
-        pasajeros=14;
-        ruedas=3;
-        tipoMotor="bimotor";
-        combustible="kerosene";
-        modelo="spacio";
-        anio = 2014;
-        patente="asa832rn";
-    }
 }

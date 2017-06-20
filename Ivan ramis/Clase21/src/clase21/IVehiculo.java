@@ -6,12 +6,11 @@
 package clase21;
 
 /**
- *
+ * Interface donde escribiremos los metodos a usar
  * @author alumno
  */
 public interface IVehiculo {
+    public void Moverse(int km);
     public boolean Arrancar();
     public boolean Frenar();
-    public String Moverse();
-    
 }
