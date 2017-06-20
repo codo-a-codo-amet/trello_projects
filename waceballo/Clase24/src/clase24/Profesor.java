@@ -10,5 +10,13 @@ package clase24;
  * @author alumno
  */
 public class Profesor {
+    protected int cantidad_profesor;
     
+    public Profesor() {
+        cantidad_profesor = 1;
+    }
+
+    public int dameUnProfesor(){
+        return cantidad_profesor;
+    }
 }
