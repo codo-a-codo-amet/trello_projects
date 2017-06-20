@@ -14,7 +14,7 @@ public interface IAritmetica {
     public void Restar(IAritmetica aRestar);
     public void Multiplicar(IAritmetica aMultiplicar);
     public void Dividir(IAritmetica aDividir);
-    public Boolean EsIgualA(IAritmetica aObjeto);
+    public Boolean EsIgualA(IAritmetica aIgular);
     
     public String descripcion();
 }
