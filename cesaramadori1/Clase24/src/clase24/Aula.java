@@ -18,6 +18,11 @@ public class Aula {
     List <Alumno> alumnos;
     List <Silla> sillas;
     List <Mesa> mesas;
+    String[] nombres = {"Juan","Pedro","Maria","Jose","Ariel","Andres","Jimena","Martin","Alredo","Karina"};
+    String[] apellidos = {"Lopez","Martinez","Gonzalez","Fernandez","Gimenez"};
+    
+    
+    
     public Aula(){
         unProfesor = new Profesor();
         sillas = new ArrayList<>();
@@ -32,7 +37,7 @@ public class Aula {
             mesas.add(new Mesa());
         }
         for (int i = 0; i < Aleatorio(1,24) ; i++) {
-            alumnos.add(new Alumno());
+            alumnos.add(new Alumno(nombres[Aleatorio(0,9)],apellidos[Aleatorio(0,4)]));
         }
         sillasLibres= sillas.size() - alumnos.size();
     }
@@ -50,6 +55,9 @@ public class Aula {
     }
     public int DameSillasLibres(){
         return sillasLibres;
+    }
+    public List DameListaAlumnos(){
+        return alumnos;
     }
 }
 
