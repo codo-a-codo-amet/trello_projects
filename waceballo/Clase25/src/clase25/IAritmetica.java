@@ -10,11 +10,11 @@ package clase25;
  * @author alumno
  */
 public interface IAritmetica {
-    public void Sumar(IAritmetica toAdd);
-    public void Restar(IAritmetica toAdd);
-    public void Multiplicar(IAritmetica toAdd);
-    public void Dividir(IAritmetica toAdd);
-    public Boolean EsIgualA(IAritmetica toAdd);
+    public void Sumar(IAritmetica aSumar);
+    public void Restar(IAritmetica aRestar);
+    public void Multiplicar(IAritmetica aMultiplicar);
+    public void Dividir(IAritmetica aDividir);
+    public Boolean EsIgualA(IAritmetica aIgular);
     
-    
+    public String descripcion();
 }
