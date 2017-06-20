@@ -6,38 +6,111 @@
 package clase21;
 
 /**
- *
+ * Clase donde estan las propiedades del vehiculo
  * @author alumno
  */
 public class Vehiculo implements IVehiculo {
-    
+
     protected Integer pasajeros;
-    protected Integer ruedas;
-    protected String tipoMotor;
-    protected String combustible;
-    protected String marca;
-    protected String modelo;
-    protected Integer año;
-    protected String patente;
-    
-    public String dameTuMarca(){
+    private Integer ruedas;
+    private String tipoMotor;
+    private String combustible;
+    private String marca;
+    private String modelo;
+    private Integer año;
+    private String patente;
+
+    public Vehiculo() {
+        pasajeros = 0;
+        ruedas = 0;
+        tipoMotor = "Definir";
+        combustible = "Definir";
+        marca = "Definir";
+        modelo = "Definir";
+        año = 0;
+        patente = "Definir";
+    }
+
+    public Integer getPasajeros() {
+        return pasajeros;
+    }
+
+    public void setPasajeros(int cant_pasajeros) {
+        pasajeros = cant_pasajeros;
+    }
+
+    public Integer getRuedas() {
+        return ruedas;
+    }
+
+    public void setRuedas(Integer cant_ruedas) {
+        ruedas = cant_ruedas;
+    }
+
+    public String getTipoMotor() {
+        return tipoMotor;
+    }
+
+    public void setTipoMotor(String tipomotor) {
+        tipoMotor = tipomotor;
+    }
+
+    public String getCombustible() {
+        return combustible;
+    }
+
+    public void setCombustible(String Combustible) {
+        combustible = Combustible;
+    }
+
+    public String getMarca() {
         return marca;
     }
-    
-    public void AhoraTuMarcaEs(String nuevaMarca){
-        marca = nuevaMarca;
+
+    public void setMarca(String Marca) {
+        marca = Marca;
     }
-    
-    public Vehiculo(){
-        
+
+    public String getModelo() {
+        return modelo;
     }
-    
-    public Vehiculo(String nuevaMarca) {
-        marca = nuevaMarca;
+
+    public void setModelo(String Modelo) {
+        modelo = Modelo;
     }
-    
-    public boolean Frenar(){
+
+    public Integer getAño() {
+        return año;
+    }
+
+    public void setAño(Integer anio) {
+        año = anio;
+    }
+
+    public String getPatente() {
+        return patente;
+    }
+
+    public void setPatente(String Patente) {
+        patente = Patente;
+    }
+
+    public void Moverse(int km) {
+        if (km > 0) {
+            Arrancar();
+            System.out.println("Tiene que avanzar " + km + " km");
+        } else {
+            Frenar();
+            System.out.println("Esta detenido ...");
+        }
+    }
+
+    public boolean Arrancar() {
         return true;
     }
-            
+
+    public boolean Frenar() {
+        return true;
+    }
+
 }

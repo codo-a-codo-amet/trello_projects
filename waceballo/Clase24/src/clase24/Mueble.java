@@ -27,10 +27,7 @@ public class Mueble implements IMueble{
     public Mueble(String marca){
         
     }
-    
-    
-    
-    
+
     public String dameTuMaterial(){
         return material;
     }    
