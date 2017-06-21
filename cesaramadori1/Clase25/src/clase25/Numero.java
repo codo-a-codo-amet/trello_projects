@@ -5,23 +5,21 @@
  */
 package clase25;
 
-import java.util.List;
-import java.util.ArrayList;
+
 
 /**
  *
  * @author alumno
  */
-public class Personas implements IAritmetica{
+public class Numero implements IAritmetica{
+    private int unNumeroEntero;
     
-    private int cantidad;
-        
-    public Personas(int valor){
-        cantidad = valor;
+    public Numero (int valor){
+        this.unNumeroEntero = valor;
     }
-   
+    
     public void Sumar(IAritmetica aSumar){
-         cantidad += cantidad;
+        
     }
     
     public void Restar(IAritmetica aRestar){
@@ -38,11 +36,6 @@ public class Personas implements IAritmetica{
     }
     
     public String descripcion(){
-        return "Un mensaje " + cantidad;
-    }        
-                
-    
-
-    
+        return "Esto es un numero de valor" + unNumeroEntero;
+    }
 }
-    

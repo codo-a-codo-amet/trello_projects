@@ -5,44 +5,31 @@
  */
 package clase25;
 
-import java.util.List;
-import java.util.ArrayList;
-
 /**
  *
  * @author alumno
  */
-public class Personas implements IAritmetica{
-    
-    private int cantidad;
-        
-    public Personas(int valor){
-        cantidad = valor;
-    }
-   
-    public void Sumar(IAritmetica aSumar){
-         cantidad += cantidad;
-    }
-    
+public class Manzana implements IAritmetica  {
+    private int unaManzanaEntera;
+
+public void Sumar(IAritmetica aSumar){
+
+}
     public void Restar(IAritmetica aRestar){
-        
-    }
+
+}
     public void Multiplicar(IAritmetica aMultiplicar){
-        
+    
     }
     public void Dividir(IAritmetica aDividir){
-        
+    
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
-        return Boolean.TRUE;
+        return true;
     }
     
     public String descripcion(){
-        return "Un mensaje " + cantidad;
-    }        
-                
-    
-
+        return "Esta es una manzana entera";
+    }
     
 }
-    
