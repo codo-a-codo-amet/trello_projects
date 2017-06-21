@@ -19,17 +19,17 @@ public class Numero implements IAritmetica{
     }
     
     public void Sumar(IAritmetica aSumar){
-        
+        System.out.println("Estoy sumando un entero");
     }
     
     public void Restar(IAritmetica aRestar){
-        
+        System.out.println("Estoy restando un entero");
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        
+        System.out.println("Estoy multiplicando un entero");
     }
     public void Dividir(IAritmetica aDividir){
-        
+        System.out.println("Estoy dividiendo un entero");
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
