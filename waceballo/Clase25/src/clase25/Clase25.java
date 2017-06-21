@@ -22,7 +22,7 @@ public class Clase25 {
         Personas algo = new Personas(10);
         System.out.println(algo.descripcion()); // esto es un numero valor: aada
         
-        Personas algo1 = new Personas(10);
+        Personas algo1 = new Personas(20);
         //algo1.Sumar(10);
         System.out.println(algo1.descripcion()); // esto es un numero valor: aada
         

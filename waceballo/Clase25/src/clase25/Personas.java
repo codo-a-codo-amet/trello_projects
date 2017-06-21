@@ -15,6 +15,10 @@ import java.util.ArrayList;
 public class Personas implements IAritmetica{
     
     private int cantidad;
+    
+    public Personas(){
+        
+    }
         
     public Personas(int valor){
         cantidad = valor;
@@ -45,4 +49,3 @@ public class Personas implements IAritmetica{
 
     
 }
-    
