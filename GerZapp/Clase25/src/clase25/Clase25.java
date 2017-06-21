@@ -16,16 +16,23 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-//        Numero unNumero = new Numero(30);        
-//        System.out.println(unNumero.descripcion()); // esto es un numero valor: aada
     
-        Personas algo = new Personas(10);
-        System.out.println(algo.descripcion()); // esto es un numero valor: aada
+        Numero primerNumero = new Numero();
+        Numero segundoNumero = new Numero();
         
-        Personas algo1 = new Personas(20);
-        //algo1.Sumar(10);
-        System.out.println(algo1.descripcion()); // esto es un numero valor: aada
-        
+        System.out.println(primerNumero.descripcion()); // esto es un numero valor: aada
+    
+        primerNumero.Sumar(segundoNumero);
+
+        System.out.println(primerNumero.descripcion()); // esto es un numero valor: aada
+    }
+    
+}
+
+    
+    
+    
+    
     }
     
 }
