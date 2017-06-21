@@ -17,7 +17,7 @@ public class Personas implements IAritmetica{
     private int cantidad;
     
     public Personas(){
-        
+        cantidad = 1;   
     }
         
     public Personas(int valor){
@@ -25,17 +25,17 @@ public class Personas implements IAritmetica{
     }
    
     public void Sumar(IAritmetica aSumar){
-         cantidad += cantidad;
+        System.out.println("Estoy sumando");
     }
     
     public void Restar(IAritmetica aRestar){
-        
+        System.out.println("Estoy restando");
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        
+        System.out.println("Estoy multiplicando");
     }
     public void Dividir(IAritmetica aDividir){
-        
+        System.out.println("Estoy dividiendo");
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
