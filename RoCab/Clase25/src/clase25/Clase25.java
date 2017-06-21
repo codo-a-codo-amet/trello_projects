@@ -30,6 +30,33 @@ public class Clase25 {
         System.out.println(unNumero.descripcion);
         
     
+    
+    
+        IAritmetica primerObjetoAProbar = new Numero();
+        IAritmetica segundoObjetoAProbar = new Numero(3);
+        
+        //Pruebas al objeto
+        // Prueba de suma
+        primerObjetoAProbar.Sumar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de Resta
+        primerObjetoAProbar.Restar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de Multiplicacion
+        primerObjetoAProbar.Multiplicar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de division
+        primerObjetoAProbar.Dividir(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de igualdad
+        Boolean esIgual = primerObjetoAProbar.EsIgualA(segundoObjetoAProbar);
+        System.out.println("Es igual: " + esIgual);
+        
+        
     }
     
 }

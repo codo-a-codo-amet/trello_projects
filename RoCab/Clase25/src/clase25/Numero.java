@@ -9,46 +9,32 @@ package clase25;
  *
  * @author alumno
  */
-public abstract class Numero implements IAritmetica{
-
-    /**
-     *
-     * @param aSumar
-     */
-    @Override
+public class Numero implements IAritmetica{
+    private int unNumeroEntero;
+    
+    public Numero(){
+        unNumeroEntero = 1;
+    }
+    
+    public Numero(int valor){
+        unNumeroEntero = valor;
+    }
+    
+    ///////////////////////////////////////////////
+    // 
     public void Sumar(IAritmetica aSumar){
-        
+        System.out.println("Sumando un entero");
     }
     
-    /**
-     *
-     * @param aRestar
-     */
-    @Override
     public void Restar(IAritmetica aRestar){
-        
+        System.out.println("Restando un entero");
     }
-
-    /**
-     *
-     * @param aMultiplicar
-     */
-    @Override
-
-    
     public void Multiplicar(IAritmetica aMultiplicar){
-        
+        System.out.println("Multiplicando un entero");
     }
-
-    /**
-     *
-     * @param aDividir
-     */
-    @Override
     public void Dividir(IAritmetica aDividir){
-        
-    }    @Override
-
+        System.out.println("Dividiendo un entero");
+    }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
     }
@@ -56,6 +42,6 @@ public abstract class Numero implements IAritmetica{
     public String descripcion(){
         return "Esto es un numero de valor" + unNumeroEntero;
     }
-  
-    
+
+
 }
