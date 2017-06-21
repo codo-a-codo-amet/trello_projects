@@ -16,14 +16,32 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Numero unNumero = new Numero(10);
-        Numero otroNumero = new Numero(11);
         
-        System.out.println(unNumero.descripcion()); // esto es un numero valor: 100
-    
-        unNumero.Sumar(otroNumero);
-
-        System.out.println(unNumero.descripcion()); // esto es un numero valor: 200
+        IAritmetica primerObjetoAProbar = new dados(3);
+        IAritmetica segundoObjetoAProbar = new dados(8);
+        
+        //Pruebas al objeto
+        // Prueba de suma
+        primerObjetoAProbar.Sumar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de Resta
+        primerObjetoAProbar.Restar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de Multiplicacion
+        primerObjetoAProbar.Multiplicar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de division
+        primerObjetoAProbar.Dividir(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de igualdad
+        Boolean esIgual = primerObjetoAProbar.EsIgualA(segundoObjetoAProbar);
+        System.out.println("Es igual: " + esIgual);
+        
+        
     }
     
 }
