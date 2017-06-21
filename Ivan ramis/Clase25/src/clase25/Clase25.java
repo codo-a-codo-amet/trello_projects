@@ -16,14 +16,19 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Numero unNumero = new Numero();
-        Numero otroNumero = new Numero();
+        Antropologa unNumero = new Antropologa(3);
+        Antropologa otroNumero = new Antropologa(3);
         
-        System.out.println(unNumero.descripcion()); // esto es un numero valor: aada
-    
         unNumero.Sumar(otroNumero);
-
-        System.out.println(unNumero.descripcion()); // esto es un numero valor: aada
+        System.out.println(unNumero.descripcion());
+        unNumero.Restar(otroNumero);
+        System.out.println(unNumero.descripcion());
+        unNumero.Multiplicar(otroNumero);
+        System.out.println(unNumero.descripcion());
+        unNumero.Dividir(otroNumero);
+        System.out.println(unNumero.descripcion());
+        unNumero.EsIgualA(otroNumero);
+        System.out.println(unNumero.descripcion());        
     }
     
 }
