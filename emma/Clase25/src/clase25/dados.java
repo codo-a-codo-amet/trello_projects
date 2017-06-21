@@ -5,47 +5,41 @@
  */
 package clase25;
 
-import java.util.List;
-import java.util.ArrayList;
-
 /**
  *
  * @author alumno
  */
-public class Personas implements IAritmetica{
+public class dados implements IAritmetica{
+    private int dados;
     
-    private int cantidad;
+    public dados(){
+        dados = 1;
+    }
     
-    public Personas(){
-        
+    public dados(int valor){
+        dados = valor;
+        valor = 12;
     }
-        
-    public Personas(int valor){
-        cantidad = valor;
-    }
-   
+    
+    ///////////////////////////////////////////////
     public void Sumar(IAritmetica aSumar){
-         cantidad += cantidad;
+        System.out.println("Sumando un dados");
     }
     
     public void Restar(IAritmetica aRestar){
-        
+        System.out.println("Restando un dados");
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        
+        System.out.println("Multiplicando un dados");
     }
     public void Dividir(IAritmetica aDividir){
-        
+        System.out.println("Dividiendo un dados");
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
     }
     
     public String descripcion(){
-        return "Un mensaje " + cantidad;
-    }        
-                
-    
-
-    
+        return "Estos son " + dados;
+    }
 }

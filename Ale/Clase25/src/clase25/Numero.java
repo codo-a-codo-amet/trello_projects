@@ -14,28 +14,22 @@ package clase25;
 public class Numero implements IAritmetica{
     private int unNumeroEntero;
     
-    public Numero(){
-        unNumeroEntero = 1;
+    public Numero (int valor){
+        this.unNumeroEntero = valor;
     }
     
-    public Numero(int valor){
-        unNumeroEntero = valor;
-    }
-    
-    ///////////////////////////////////////////////
-    // 
     public void Sumar(IAritmetica aSumar){
-        System.out.println("Sumando un entero");
+        System.out.println("Estoy sumando un entero");
     }
     
     public void Restar(IAritmetica aRestar){
-        System.out.println("Restando un entero");
+        System.out.println("Estoy restando un entero");
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        System.out.println("Multiplicando un entero");
+        System.out.println("Estoy multiplicando un entero");
     }
     public void Dividir(IAritmetica aDividir){
-        System.out.println("Dividiendo un entero");
+        System.out.println("Estoy dividiendo un entero");
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
