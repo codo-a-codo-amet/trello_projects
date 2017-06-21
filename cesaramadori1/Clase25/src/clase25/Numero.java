@@ -14,13 +14,12 @@ package clase25;
 public class Numero implements IAritmetica{
     private int unNumeroEntero;
     
-    public Numero(int valor){
-        unNumeroEntero = valor;
+    public Numero (int valor){
+        this.unNumeroEntero = valor;
     }
     
-    
     public void Sumar(IAritmetica aSumar){
-         
+        
     }
     
     public void Restar(IAritmetica aRestar){
@@ -37,6 +36,6 @@ public class Numero implements IAritmetica{
     }
     
     public String descripcion(){
-        return "Esto es un numero de valor " + unNumeroEntero;
+        return "Esto es un numero de valor" + unNumeroEntero;
     }
 }
