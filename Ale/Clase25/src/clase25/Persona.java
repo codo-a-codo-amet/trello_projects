@@ -5,43 +5,39 @@
  */
 package clase25;
 
-
-
 /**
  *
  * @author alumno
  */
-public class Numero implements IAritmetica{
-    private int unNumeroEntero;
+public class Persona  implements IAritmetica{
+    private String nombre;
     
-    public Numero(){
-        unNumeroEntero = 1;
+    public Persona( String nombre){
+        this.nombre = nombre;
     }
     
-    public Numero(int valor){
-        unNumeroEntero = valor;
-        valor = 12;
+    public Persona (){
+        
     }
     
-    ///////////////////////////////////////////////
     public void Sumar(IAritmetica aSumar){
-        System.out.println("Sumando un entero");
+        System.out.println("Estoy sumando una Persona con nombre" + nombre);
     }
     
     public void Restar(IAritmetica aRestar){
-        System.out.println("Restando un entero");
+        System.out.println("Estoy restando una Persona con nombre" + nombre);
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        System.out.println("Multiplicando un entero");
+        System.out.println("Estoy multiplicando una Persona con nombre" + nombre);
     }
     public void Dividir(IAritmetica aDividir){
-        System.out.println("Dividiendo un entero");
+        System.out.println("Estoy dividiendo una Persona con nombre" + nombre);
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
     }
     
     public String descripcion(){
-        return "Esto es un numero de valor" + unNumeroEntero;
+        return "Esto es una Persona con nombre" + nombre;
     }
 }

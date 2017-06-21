@@ -5,43 +5,47 @@
  */
 package clase25;
 
-
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
  * @author alumno
  */
-public class Numero implements IAritmetica{
-    private int unNumeroEntero;
+public class Personas implements IAritmetica{
     
-    public Numero(){
-        unNumeroEntero = 1;
+    private int cantidad;
+    
+    public Personas(){
+        
     }
-    
-    public Numero(int valor){
-        unNumeroEntero = valor;
-        valor = 12;
+        
+    public Personas(int valor){
+        cantidad = valor;
     }
-    
-    ///////////////////////////////////////////////
+   
     public void Sumar(IAritmetica aSumar){
-        System.out.println("Sumando un entero");
+         cantidad += cantidad;
     }
     
     public void Restar(IAritmetica aRestar){
-        System.out.println("Restando un entero");
+        
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        System.out.println("Multiplicando un entero");
+        
     }
     public void Dividir(IAritmetica aDividir){
-        System.out.println("Dividiendo un entero");
+        
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
     }
     
     public String descripcion(){
-        return "Esto es un numero de valor" + unNumeroEntero;
-    }
+        return "Un mensaje " + cantidad;
+    }        
+                
+    
+
+    
 }

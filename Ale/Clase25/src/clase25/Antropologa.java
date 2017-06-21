@@ -11,37 +11,30 @@ package clase25;
  *
  * @author alumno
  */
-public class Numero implements IAritmetica{
+public class Antropologa implements IAritmetica{
     private int unNumeroEntero;
     
-    public Numero(){
-        unNumeroEntero = 1;
+    public Antropologa (int valor){
+        this.unNumeroEntero = valor;
     }
     
-    public Numero(int valor){
-        unNumeroEntero = valor;
-        valor = 12;
-    }
-    
-    ///////////////////////////////////////////////
     public void Sumar(IAritmetica aSumar){
-        System.out.println("Sumando un entero");
+        System.out.println("Estoy sumando un antropologo");
     }
-    
     public void Restar(IAritmetica aRestar){
-        System.out.println("Restando un entero");
+        System.out.println("Estoy restando un antropologo");
     }
     public void Multiplicar(IAritmetica aMultiplicar){
-        System.out.println("Multiplicando un entero");
+        System.out.println("Estoy multiplicando un antropologo");
     }
     public void Dividir(IAritmetica aDividir){
-        System.out.println("Dividiendo un entero");
+        System.out.println("Estoy dividiendo un antropologo");
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
         return Boolean.TRUE;
     }
     
     public String descripcion(){
-        return "Esto es un numero de valor" + unNumeroEntero;
+        return "La cantidad de antropologos son " + unNumeroEntero;
     }
 }

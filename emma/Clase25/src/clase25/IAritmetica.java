@@ -16,7 +16,5 @@ public interface IAritmetica {
     public void Dividir(IAritmetica aDividir);
     public Boolean EsIgualA(IAritmetica aObjeto);
     
-    
-    
     public String descripcion();
 }
