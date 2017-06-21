@@ -12,20 +12,35 @@ import java.util.ArrayList;
  *
  * @author alumno
  */
-public class Personas {
+public class Personas implements IAritmetica{
     
-    String Lista_Personas[];
-    
-    public Personas(String nombre){
-        Lista_Personas = new String[10];
+    private int cantidad;
         
-        for (int i = 0; i < 10; i++) {
-            Lista_Personas[i]= nombre;
-        }
-        
-                
-                
+    public Personas(int valor){
+        cantidad = valor;
     }
+   
+    public void Sumar(IAritmetica aSumar){
+         cantidad += cantidad;
+    }
+    
+    public void Restar(IAritmetica aRestar){
+        
+    }
+    public void Multiplicar(IAritmetica aMultiplicar){
+        
+    }
+    public void Dividir(IAritmetica aDividir){
+        
+    }
+    public Boolean EsIgualA(IAritmetica aObjeto){
+        return Boolean.TRUE;
+    }
+    
+    public String descripcion(){
+        return "Un mensaje " + cantidad;
+    }        
+                
     
 
     
