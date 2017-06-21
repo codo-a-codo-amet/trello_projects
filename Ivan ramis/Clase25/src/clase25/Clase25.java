@@ -16,6 +16,15 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Antropologa unNumero = new Antropologa(3);
+        Antropologa otroNumero = new Antropologa(3);
+        
+        unNumero.Sumar(otroNumero);
+        unNumero.Restar(otroNumero);
+        unNumero.Multiplicar(otroNumero);
+        unNumero.Dividir(otroNumero);
+        unNumero.EsIgualA(otroNumero);
+        System.out.println(unNumero.descripcion());        
     }
     
 }

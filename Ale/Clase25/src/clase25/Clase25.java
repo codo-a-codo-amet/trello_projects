@@ -16,6 +16,32 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        IAritmetica primerObjetoAProbar = new Antropologa(0);
+        IAritmetica segundoObjetoAProbar = new Manzana(4);
+        
+        //Pruebas al objeto
+        // Prueba de suma
+        primerObjetoAProbar.Sumar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de Resta
+        primerObjetoAProbar.Restar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de Multiplicacion
+        primerObjetoAProbar.Multiplicar(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de division
+        primerObjetoAProbar.Dividir(segundoObjetoAProbar);
+        System.out.println(primerObjetoAProbar.descripcion());
+        
+        //prueba de igualdad
+        Boolean esIgual = primerObjetoAProbar.EsIgualA(segundoObjetoAProbar);
+        System.out.println("Es igual: " + esIgual);
+        
+        
     }
     
 }

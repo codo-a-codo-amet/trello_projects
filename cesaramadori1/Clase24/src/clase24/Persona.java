@@ -20,6 +20,10 @@ public class Persona {
     private Ropa sombrero;
     private String religion;
     
+    public Persona (String nombre, String apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
     public Persona (){
         nombre ="N";
         apellido="N";
