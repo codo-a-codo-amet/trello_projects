@@ -10,7 +10,9 @@ package clase25;
  * @author alumno
  */
 public class Perro implements IAritmetica{
-     private int unPerroEntero;
+    
+    
+    private int unPerroEntero;
     boolean descripcion;
     
     public Perro(){
