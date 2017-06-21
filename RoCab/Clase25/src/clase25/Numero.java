@@ -11,6 +11,7 @@ package clase25;
  */
 public class Numero implements IAritmetica{
     private int unNumeroEntero;
+    boolean descripcion;
     
     public Numero(){
         unNumeroEntero = 1;

@@ -17,5 +17,7 @@ public interface IAritmetica {
     public boolean EsIgualA (IAritmetica Objeto);
     
     public String Descripcion ();
+
+    public boolean descripcion();
     
 }
