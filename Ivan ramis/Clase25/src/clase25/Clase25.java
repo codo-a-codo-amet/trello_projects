@@ -20,9 +20,13 @@ public class Clase25 {
         Antropologa otroNumero = new Antropologa(3);
         
         unNumero.Sumar(otroNumero);
+        System.out.println(unNumero.descripcion());
         unNumero.Restar(otroNumero);
+        System.out.println(unNumero.descripcion());
         unNumero.Multiplicar(otroNumero);
+        System.out.println(unNumero.descripcion());        
         unNumero.Dividir(otroNumero);
+        System.out.println(unNumero.descripcion());
         unNumero.EsIgualA(otroNumero);
         System.out.println(unNumero.descripcion());        
     }
