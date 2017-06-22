@@ -9,7 +9,7 @@ package clase25;
  *
  * @author alumno
  */
-public class Perro implements IAritmetica{
+public abstract class Perro implements IAritmetica{
     
     
     private int unPerroEntero;
@@ -22,6 +22,30 @@ public class Perro implements IAritmetica{
     public Perro(int valor){
         unPerroEntero = valor;
     }
+
+    public void Sumar(IAritmetica toAdd){
+        System.out.println("Sumando Perros");
+    }
+    public void Restar(IAritmetica toAdd){
+        System.out.println("Restando Perros");
+    }
+    public void Multiplicar(IAritmetica toAdd){
+        System.out.println("Multiplicando Perros");
+    }
+    public void Dividir(IAritmetica toAdd){
+        System.out.println("Dividiendo Perros");
+    }
+   // public Boolean EsIgualA(IAritmetica toAdd){
+     //   return false;
+    }
+    
+   // void Sumar(Perro otroPerro) {
+   //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   // }
+
+    //boolean descripcion() {
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
    
     
     
