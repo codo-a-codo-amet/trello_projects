@@ -37,7 +37,6 @@ public abstract class Perro implements IAritmetica{
     }
    // public Boolean EsIgualA(IAritmetica toAdd){
      //   return false;
-    }
     
    // void Sumar(Perro otroPerro) {
    //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -47,6 +46,6 @@ public abstract class Perro implements IAritmetica{
     //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     //}
    
-    
-    
 }
+    
+    
