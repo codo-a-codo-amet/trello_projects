@@ -17,9 +17,23 @@ public class Clase25 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Numero unNumero = new Numero();
-        Numero otroNumero = new Numero();
         
+        IAritmetica primerObjetoAProbar = new IngenieroCivil();
+        IAritmetica segundoObjetoAProbar = new IngenieroCivil();
+        
+        //Pruebas al objeto
+        // Prueba de suma
+        primerObjetoAProbar.Sumar(segundoObjetoAProbar);
+        
+        //prueba de Resta
+        primerObjetoAProbar.Restar(segundoObjetoAProbar);        
+        //prueba de Multiplicacion
+        primerObjetoAProbar.Multiplicar(segundoObjetoAProbar);        
+        //prueba de division
+        primerObjetoAProbar.Dividir(segundoObjetoAProbar);        
+        //prueba de igualdad
+        Boolean esIgual = primerObjetoAProbar.EsIgualA(segundoObjetoAProbar);
+        System.out.println("Es igual: " + esIgual);
         
       
         
