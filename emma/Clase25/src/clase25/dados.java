@@ -29,22 +29,22 @@ public class dados implements IAritmetica<Integer>{
     
     public void Restar(IAritmetica<Integer> aRestar){
         System.out.println("Restando un dados");
-        this.dados = this.dados + aRestar.obtenerValor();
+        this.dados = this.dados - aRestar.obtenerValor();
     }
     public void Multiplicar(IAritmetica<Integer> aMultiplicar){
         System.out.println("Multiplicando un dados");
+        this.dados = this.dados * aMultiplicar.obtenerValor();
     }
     public void Dividir(IAritmetica<Integer> aDividir){
         System.out.println("Dividiendo un dados");
-        this.dados = this.dados + aDividir.obtenerValor();
+        this.dados = this.dados / aDividir.obtenerValor();
     }
     public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
-        this.dados = this.dados + aObjeto.obtenerValor();
-        return Boolean.TRUE;
+        return dados == aObjeto.obtenerValor();
     }
     
     public String descripcion(){
-        return "Estos son " + dados;
+        return "Hay " + dados;
     }
     public Integer obtenerValor(){
         return this.dados;
