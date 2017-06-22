@@ -19,11 +19,12 @@ public class Numero implements IAritmetica<Integer>{
     }
     
     public void Sumar(IAritmetica<Integer> aSumar){
-        System.out.println("Estoy sumando un entero");
+       this.unNumeroEntero = this.unNumeroEntero + aSumar.obtenerValor();
+               
     }
     
     public void Restar(IAritmetica<Integer> aRestar){
-        System.out.println("Estoy restando un entero");
+        this.unNumeroEntero = this.unNumeroEntero - aRestar.obtenerValor();   
     }
     public void Multiplicar(IAritmetica<Integer> aMultiplicar){
         System.out.println("Estoy multiplicando un entero");
@@ -32,7 +33,7 @@ public class Numero implements IAritmetica<Integer>{
         System.out.println("Estoy dividiendo un entero");
     }
     public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
-        return Boolean.TRUE;
+        return unNumeroEntero == aObjeto.obtenerValor();
     }
     
     public String descripcion(){
