@@ -17,8 +17,8 @@ public class Clase25 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        IAritmetica primerObjetoAProbar = new Antropologa(0);
-        IAritmetica segundoObjetoAProbar = new Manzana(4);
+        IAritmetica primerObjetoAProbar = new Dias();
+        IAritmetica segundoObjetoAProbar = new Antropologa(4);
         
         //Pruebas al objeto
         // Prueba de suma
