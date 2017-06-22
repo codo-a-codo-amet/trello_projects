@@ -33,7 +33,7 @@ public class Numero implements IAritmetica<Integer>{
         System.out.println("Estoy dividiendo un entero");
     }
     public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
-        return Boolean.TRUE;
+        return unNumeroEntero == aObjeto.obtenerValor();
     }
     
     public String descripcion(){
