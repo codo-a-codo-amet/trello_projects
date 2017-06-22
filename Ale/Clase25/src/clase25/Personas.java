@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author alumno
  */
-public class Personas implements IAritmetica{
+public class Personas implements IAritmetica<Integer>{
     
     private int cantidad;
     
@@ -28,16 +28,16 @@ public class Personas implements IAritmetica{
          cantidad += cantidad;
     }
     
-    public void Restar(IAritmetica aRestar){
+    public void Restar(IAritmetica<Integer> aRestar){
         
     }
-    public void Multiplicar(IAritmetica aMultiplicar){
+    public void Multiplicar(IAritmetica<Integer> aMultiplicar){
         
     }
-    public void Dividir(IAritmetica aDividir){
+    public void Dividir(IAritmetica<Integer> aDividir){
         
     }
-    public Boolean EsIgualA(IAritmetica aObjeto){
+    public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
         return Boolean.TRUE;
     }
     
@@ -45,7 +45,9 @@ public class Personas implements IAritmetica{
         return "Un mensaje " + cantidad;
     }        
                 
-    
+    public Integer obtenerValor(){
+        return cantidad;
+    }
 
     
 }

@@ -9,7 +9,7 @@ package clase25;
  *
  * @author alumno
  */
-public class Numero_ger implements IAritmetica{
+public class Numero_ger implements IAritmetica<Integer>{
     
         private int unNumeroEntero;
         
@@ -17,23 +17,23 @@ public class Numero_ger implements IAritmetica{
         unNumeroEntero = valor;
         }
             
-    public void Sumar(IAritmetica toAdd) {
+    public void Sumar(IAritmetica<Integer> toAdd) {
 
     }
 
-    public void Restar(IAritmetica toAdd) {
+    public void Restar(IAritmetica<Integer> toAdd) {
 
     }
 
-    public void Multiplicar(IAritmetica toAdd) {
+    public void Multiplicar(IAritmetica<Integer> toAdd) {
 
     }
 
-    public void Dividir(IAritmetica toAdd) {
+    public void Dividir(IAritmetica<Integer> toAdd) {
 
     }
 
-    public Boolean EsIgualA(IAritmetica toAdd) {
+    public Boolean EsIgualA(IAritmetica<Integer> toAdd) {
            return Boolean.FALSE;
     }
     
@@ -41,6 +41,9 @@ public class Numero_ger implements IAritmetica{
         return "";
     }
     
+    public Integer obtenerValor(){
+        return unNumeroEntero;
+    }
     
     
 }

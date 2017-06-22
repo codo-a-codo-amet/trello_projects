@@ -11,7 +11,7 @@ package clase25;
  *
  * @author alumno
  */
-public class Numero_prf implements IAritmetica{
+public class Numero_prf implements IAritmetica<Integer>{
     private int unNumeroEntero;
     
     public Numero_prf(){
@@ -24,17 +24,17 @@ public class Numero_prf implements IAritmetica{
     
     ///////////////////////////////////////////////
     // 
-    public void Sumar(IAritmetica aSumar){
+    public void Sumar(IAritmetica<Integer> aSumar){
         System.out.println("Sumando un entero");
     }
     
-    public void Restar(IAritmetica aRestar){
+    public void Restar(IAritmetica<Integer> aRestar){
         System.out.println("Restando un entero");
     }
-    public void Multiplicar(IAritmetica aMultiplicar){
+    public void Multiplicar(IAritmetica<Integer> aMultiplicar){
         System.out.println("Multiplicando un entero");
     }
-    public void Dividir(IAritmetica aDividir){
+    public void Dividir(IAritmetica<Integer> aDividir){
         System.out.println("Dividiendo un entero");
     }
     public Boolean EsIgualA(IAritmetica aObjeto){
@@ -43,5 +43,9 @@ public class Numero_prf implements IAritmetica{
     
     public String descripcion(){
         return "Esto es un numero de valor" + unNumeroEntero;
+    }
+    
+    public Integer obtenerValor(){
+        return unNumeroEntero;
     }
 }
