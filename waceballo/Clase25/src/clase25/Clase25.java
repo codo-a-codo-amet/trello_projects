@@ -19,12 +19,29 @@ public class Clase25 {
 //        Numero unNumero = new Numero(30);        
 //        System.out.println(unNumero.descripcion()); // esto es un numero valor: aada
     
-        Personas algo = new Personas(10);
+        IAritmetica algo = new Personas();       
+        IAritmetica algo1 = new Personas(20);
+
+        //prueba sumando
+        algo.Sumar(algo1);
         System.out.println(algo.descripcion()); // esto es un numero valor: aada
-        
-        Personas algo1 = new Personas(20);
-        //algo1.Sumar(10);
+
+        //prueba restando
+        algo.Restar(algo1);
         System.out.println(algo1.descripcion()); // esto es un numero valor: aada
+
+        //prueba multiplicando
+        algo.Multiplicar(algo1);
+        System.out.println(algo1.descripcion()); // esto es un numero valor: aada
+
+        //prueba dividiendo
+        algo.Dividir(algo1);
+        System.out.println(algo1.descripcion()); // esto es un numero valor: aada
+
+        //prueba de igualdad
+        Boolean esigual = algo.EsIgualA(algo1);
+        System.out.println("Es igual a: "+esigual); // esto es un numero valor: aada
+
         
     }
     

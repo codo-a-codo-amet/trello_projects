@@ -16,9 +16,24 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Perro unPerro = new Perro () {
         
-        IAritmetica primerObjetoAProbar = new dados();
-        IAritmetica segundoObjetoAProbar = new dados(4);
+        };
+        Perro otroPerro = new Perro () {
+        
+        };
+        
+        System.out.println(unPerro.descripcion());
+        
+        unPerro.Sumar(otroPerro);
+    
+        System.out.println(unPerro.descripcion);
+        
+    
+    
+    
+        IAritmetica primerObjetoAProbar = new Perro();
+        IAritmetica segundoObjetoAProbar = new Perro(3);
         
         //Pruebas al objeto
         // Prueba de suma
