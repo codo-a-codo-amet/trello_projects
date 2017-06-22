@@ -5,38 +5,42 @@
  */
 package clase25;
 
+
+
 /**
  *
  * @author alumno
  */
-public class Numero implements IAritmetica{
-    public Numero(){
-        
+public class Numero implements IAritmetica<Integer>{
+    private int unNumeroEntero;
+    
+    public Numero (int valor){
+        this.unNumeroEntero = valor;
     }
     
-    
-    public void Sumar(IAritmetica toAdd){
-        
-    }
-    public void Restar(IAritmetica toAdd){
-        
-    }
-    public void Multiplicar(IAritmetica toAdd){
-        
-    }
-    public void Dividir(IAritmetica toAdd){
-        
-    }
-    public boolean EsIgualA(IAritmetica toAdd){
-        return true;
+    public void Sumar(IAritmetica<Integer> aSumar){
+       this.unNumeroEntero = this.unNumeroEntero + aSumar.obtenerValor();
+               
     }
     
-   
-
-    public String descripcion() {
-        return "Entero"; //To change body of generated methods, choose Tools | Templates.
+    public void Restar(IAritmetica<Integer> aRestar){
+        this.unNumeroEntero = this.unNumeroEntero - aRestar.obtenerValor();   
+    }
+    public void Multiplicar(IAritmetica<Integer> aMultiplicar){
+        System.out.println("Estoy multiplicando un entero");
+    }
+    public void Dividir(IAritmetica<Integer> aDividir){
+        System.out.println("Estoy dividiendo un entero");
+    }
+    public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
+        return unNumeroEntero ==;
     }
     
+    public String descripcion(){
+        return "Esto es un numero de valor" + unNumeroEntero;
+    }
     
-    
+    public Integer obtenerValor(){
+        return this.unNumeroEntero;
+    }
 }

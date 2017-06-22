@@ -20,7 +20,7 @@ public class Clase25 {
         Numero unNumero = new Numero();
         Numero otroNumero = new Numero();
         
-        System.out.println (unNumero.despcripcion());
+        System.out.println (unNumero.descripcion());
         
         unNumero.Sumar(otroNumero);
         
