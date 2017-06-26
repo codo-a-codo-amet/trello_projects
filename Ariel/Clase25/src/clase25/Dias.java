@@ -9,22 +9,27 @@ package clase25;
  *
  * @author alumno
  */
-public class Dias implements IAritmetica {
+public class Dias implements IAritmetica <Integer>{
+    public int elNumeroEntero;
     
-    public void Sumar(IAritmetica toAdd){
-        System.out.println("Sumando días");
+    public Dias (int Valor){
+        this.elNumeroEntero = Valor;
     }
-    public void Restar(IAritmetica toAdd){
-        System.out.println("Restando días");
+    
+    public void Sumar(IAritmetica<Integer> aSumar){
+        this.elNumeroEntero = this.elNumeroEntero + aSumar.obtenerValor();
     }
-    public void Multiplicar(IAritmetica toAdd){
-        System.out.println("Multiplicando días");
+    public void Restar(IAritmetica <Integer> aRestar){
+        this.elNumeroEntero = this.elNumeroEntero - aRestar.obtenerValor();
     }
-    public void Dividir(IAritmetica toAdd){
+    public void Multiplicar(IAritmetica <Integer> aMultiplicar){
+        this.elNumeroEntero = this.elNumeroEntero * aMultiplicar.obtenerValor();
+    }
+    public void Dividir(IAritmetica <Integer> aDividir){
         System.out.println("Dividiendo días");
     }
-    public boolean EsIgualA(IAritmetica toAdd){
-        return false;
+    public Boolean EsIgualA(IAritmetica <Integer> aObjeto){
+        return Boolean.TRUE;
     }
     
 
@@ -32,6 +37,9 @@ public class Dias implements IAritmetica {
    
     public String descripcion() {
         return "Dias Enteros"; //To change body of generated methods, choose Tools | Templates.
+    }
+    public Integer obtenerValor(){
+        return this.elNumeroEntero;
     }
 
   

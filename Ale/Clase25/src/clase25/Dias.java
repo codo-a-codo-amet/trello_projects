@@ -9,18 +9,18 @@ package clase25;
  *
  * @author alumno
  */
-public class Dias implements IAritmetica {
+public class Dias implements IAritmetica<String> {
     
-    public void Sumar(IAritmetica toAdd){
+    public void Sumar(IAritmetica<String> toAdd){
         System.out.println("Sumando días");
     }
-    public void Restar(IAritmetica toAdd){
+    public void Restar(IAritmetica<String> toAdd){
         System.out.println("Restando días");
     }
-    public void Multiplicar(IAritmetica toAdd){
+    public void Multiplicar(IAritmetica<String> toAdd){
         System.out.println("Multiplicando días");
     }
-    public void Dividir(IAritmetica toAdd){
+    public void Dividir(IAritmetica<String> toAdd){
         System.out.println("Dividiendo días");
     }
     public Boolean EsIgualA(IAritmetica toAdd){
@@ -28,7 +28,9 @@ public class Dias implements IAritmetica {
     }
     
 
-
+    public String obtenerValor(){
+        return "";
+    }
    
     public String descripcion() {
         return "Dias Enteros"; //To change body of generated methods, choose Tools | Templates.
