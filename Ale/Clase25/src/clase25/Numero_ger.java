@@ -9,8 +9,12 @@ package clase25;
  *
  * @author alumno
  */
+<<<<<<< HEAD
+public class Numero_ger implements IAritmetica{
+=======
 public class Numero_ger implements IAritmetica<Integer>{
     
+>>>>>>> 17e18365ee98d37f58996da0e1aecb5affa8ec2b
         private int unNumeroEntero;
         
         public Numero_ger (int valor){
