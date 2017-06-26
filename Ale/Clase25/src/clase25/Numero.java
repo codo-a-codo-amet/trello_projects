@@ -11,27 +11,36 @@ package clase25;
  *
  * @author alumno
  */
-public class Numero implements IAritmetica{
+public class Numero implements IAritmetica<Integer>{
     private int unNumeroEntero;
     
-    public void Sumar(IAritmetica aSumar){
-        
+    public Numero (int valor){
+        this.unNumeroEntero = valor;
     }
     
-    public void Restar(IAritmetica aRestar){
-        
+    public void Sumar(IAritmetica<Integer> aSumar){
+       this.unNumeroEntero = this.unNumeroEntero + aSumar.obtenerValor();
+               
     }
-    public void Multiplicar(IAritmetica aMultiplicar){
-        
+    
+    public void Restar(IAritmetica<Integer> aRestar){
+        this.unNumeroEntero = this.unNumeroEntero - aRestar.obtenerValor();   
     }
-    public void Dividir(IAritmetica aDividir){
-        
+    public void Multiplicar(IAritmetica<Integer> aMultiplicar){
+        System.out.println("Estoy multiplicando un entero");
     }
-    public Boolean EsIgualA(IAritmetica aObjeto){
-        return Boolean.TRUE;
+    public void Dividir(IAritmetica<Integer> aDividir){
+        System.out.println("Estoy dividiendo un entero");
+    }
+    public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
+        return unNumeroEntero == aObjeto.obtenerValor();
     }
     
     public String descripcion(){
         return "Esto es un numero de valor" + unNumeroEntero;
+    }
+    
+    public Integer obtenerValor(){
+        return this.unNumeroEntero;
     }
 }
