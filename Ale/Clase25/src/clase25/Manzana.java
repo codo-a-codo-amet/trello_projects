@@ -9,27 +9,31 @@ package clase25;
  *
  * @author alumno
  */
-public class Manzana implements IAritmetica  {
+public class Manzana implements IAritmetica<Integer>  {
     private int manzanas;
     
 public Manzana (int manzanas){
     this.manzanas = manzanas;
 }
 
-public void Sumar(IAritmetica aSumar){
+public void Sumar(IAritmetica<Integer> aSumar){
     System.out.println("Estoy sumando manzanas");
 }
-    public void Restar(IAritmetica aRestar){
+    public void Restar(IAritmetica<Integer> aRestar){
     System.out.println("Estoy restando manzanas");
 }
-    public void Multiplicar(IAritmetica aMultiplicar){
+    public void Multiplicar(IAritmetica<Integer> aMultiplicar){
     System.out.println("Estoy multiplicando manzanas");
     }
-    public void Dividir(IAritmetica aDividir){
+    public void Dividir(IAritmetica<Integer> aDividir){
     System.out.println("Estoy dividiendo manzanas");
     }
-    public Boolean EsIgualA(IAritmetica aObjeto){
+    public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
         return true;
+    }
+    
+    public Integer obtenerValor(){
+        return manzanas;
     }
     
     public String descripcion(){

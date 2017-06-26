@@ -9,7 +9,7 @@ package clase25;
  *
  * @author alumno
  */
-public class Persona  implements IAritmetica{
+public class Persona  implements IAritmetica<String>{
     private String nombre;
     
     public Persona( String nombre){
@@ -20,24 +20,28 @@ public class Persona  implements IAritmetica{
         
     }
     
-    public void Sumar(IAritmetica aSumar){
+    public void Sumar(IAritmetica<String> aSumar){
+        this.nombre = this.nombre +aSumar.obtenerValor();
         System.out.println("Estoy sumando una Persona con nombre" + nombre);
     }
     
-    public void Restar(IAritmetica aRestar){
+    public void Restar(IAritmetica<String> aRestar){
         System.out.println("Estoy restando una Persona con nombre" + nombre);
     }
-    public void Multiplicar(IAritmetica aMultiplicar){
+    public void Multiplicar(IAritmetica<String> aMultiplicar){
         System.out.println("Estoy multiplicando una Persona con nombre" + nombre);
     }
-    public void Dividir(IAritmetica aDividir){
+    public void Dividir(IAritmetica<String> aDividir){
         System.out.println("Estoy dividiendo una Persona con nombre" + nombre);
     }
-    public Boolean EsIgualA(IAritmetica aObjeto){
-        return Boolean.TRUE;
+    public Boolean EsIgualA(IAritmetica<String> aObjeto){
+        return this.nombre == aObjeto.obtenerValor();
     }
     
     public String descripcion(){
         return "Esto es una Persona con nombre" + nombre;
+    }
+    public String obtenerValor(){
+        return this.nombre;
     }
 }
