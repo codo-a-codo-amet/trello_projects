@@ -16,6 +16,20 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
+    
+    
+  cine unCine = new cine();
+        
+            
+        System.out.println(unCine.dameelcomplejo());
+        System.out.println(unCine.damelapelicula());
+        System.out.println(unCine.dameloshorario());
+        System.out.println(unCine.damelassala());
+        System.out.println(unCine.damelasbutacas());
+                
+         cine unComplejo = new complejo ();
+         System.out.println(unComplejo.damelapelicula());
+         
+         }
     
 }
