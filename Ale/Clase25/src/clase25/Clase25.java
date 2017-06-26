@@ -5,6 +5,8 @@
  */
 package clase25;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
@@ -17,13 +19,17 @@ public class Clase25 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        IAritmetica primerObjetoAProbar = new Antropologa(2);
-        IAritmetica segundoObjetoAProbar = new Persona();
+        List<Persona> lista_de_personas = new ArrayList();
+        
+        
+        IAritmetica primerObjetoAProbar = new dados(2);
+        IAritmetica segundoObjetoAProbar = new dados();
         
         //Pruebas al objeto
         // Prueba de suma
         primerObjetoAProbar.Sumar(segundoObjetoAProbar);
         System.out.println(primerObjetoAProbar.descripcion());
+        
         
         //prueba de Resta
         primerObjetoAProbar.Restar(segundoObjetoAProbar);
