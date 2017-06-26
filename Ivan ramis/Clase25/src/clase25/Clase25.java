@@ -16,6 +16,19 @@ public class Clase25 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Antropologa unNumero = new Antropologa(3);
+        Antropologa otroNumero = new Antropologa(3);
+        
+        unNumero.Sumar(otroNumero);
+        System.out.println(unNumero.descripcion());
+        unNumero.Restar(otroNumero);
+        System.out.println(unNumero.descripcion());
+        unNumero.Multiplicar(otroNumero);
+        System.out.println(unNumero.descripcion());        
+        unNumero.Dividir(otroNumero);
+        System.out.println(unNumero.descripcion());
+        unNumero.EsIgualA(otroNumero);
+        System.out.println(unNumero.descripcion());        
     }
     
 }

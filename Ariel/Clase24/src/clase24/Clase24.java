@@ -26,6 +26,12 @@ public class Clase24 {
         
         System.out.println("La cantidad de mesas es: "+ unaMesa.DameCanidadDeMesas());
         
+        Aula unAlumno = new Aula();
+        
+        System.out.println("La cantidad de Alumnos es: "+ unAlumno.DameCantidadAlumno());
+        
+        
+        
     }
     
 }
