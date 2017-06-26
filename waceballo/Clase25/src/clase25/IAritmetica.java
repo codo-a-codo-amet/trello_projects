@@ -9,12 +9,18 @@ package clase25;
  *
  * @author alumno
  */
-public interface IAritmetica {
-    public void Sumar(IAritmetica aSumar);
-    public void Restar(IAritmetica aRestar);
-    public void Multiplicar(IAritmetica aMultiplicar);
-    public void Dividir(IAritmetica aDividir);
-    public Boolean EsIgualA(IAritmetica aIgular);
+public interface IAritmetica <Tipo>{
+    public void Sumar(IAritmetica <Tipo> aSumar);
+    public void Restar(IAritmetica <Tipo> aRestar);
+    public void Multiplicar(IAritmetica <Tipo> aMultiplicar);
+    public void Dividir(IAritmetica <Tipo> aDividir);
+    public Boolean EsIgualA(IAritmetica <Tipo> aIgular);
     
     public String descripcion();
+    ///////////////////////////
+    
+    public Tipo obtenerValor();
+
+
+
 }
