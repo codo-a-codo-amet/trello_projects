@@ -1,0 +1,12 @@
+diff a/.gitignore b/.gitignore	(rejected hunks)
+@@ -36,4 +36,7 @@
+ =======
+ >>>>>>> 4290d48afd630e53f1670c499715629623115c16
+ >>>>>>> 252d8f8b6cf85fad931a56e100c9f01eb351e01a
+-/Ale/Clase25/nbproject/private/
+\ No newline at end of file
++/cesaramadori1/Clase24/nbproject/private/
++/cesaramadori1/JavaApplication67/nbproject/private/
++/cesaramadori1/Clase21/nbproject/private/
++/Ezequiel Ramirez/Clase 24/build/
+\ No newline at end of file

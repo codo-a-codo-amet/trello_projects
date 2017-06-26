@@ -6,69 +6,111 @@
 package clase21;
 
 /**
- *
+ * Clase donde estan las propiedades del vehiculo
  * @author alumno
  */
 public class Vehiculo implements IVehiculo {
-    
+
     protected Integer pasajeros;
-    protected Integer ruedas;
-    protected String tipoMotor;
+    private Integer ruedas;
+    private String tipoMotor;
     private String combustible;
-    protected String marca;
-    protected String modelo;
+    private String marca;
+    private String modelo;
     private Integer año;
-    protected String patente;
-    
-   
-    
-    
-    public Vehiculo(){
-        pasajeros = 4;
-        ruedas = 4;
-        tipoMotor = "Ferrari";
-        combustible = "Magico";
-        marca = "Ferrari";
-        modelo = "Ferrari Classic";
-        año = 2017;
-        patente = "ZZZ 000";
+    private String patente;
+
+    public Vehiculo() {
+        pasajeros = 0;
+        ruedas = 0;
+        tipoMotor = "Definir";
+        combustible = "Definir";
+        marca = "Definir";
+        modelo = "Definir";
+        año = 0;
+        patente = "Definir";
     }
-    
-    public boolean Frenar(){
-        return true;
-    }
-    
-   public Integer obtenerPasajeros(){
+
+    public Integer getPasajeros() {
         return pasajeros;
     }
-   public Integer obtenerRuedas(){
-       return ruedas;
-   }
-   public String obtenerMotor(){
-       return tipoMotor;
-   }
-   public String obtenerCombustible(){
+
+    public void setPasajeros(int cant_pasajeros) {
+        pasajeros = cant_pasajeros;
+    }
+
+    public Integer getRuedas() {
+        return ruedas;
+    }
+
+    public void setRuedas(Integer cant_ruedas) {
+        ruedas = cant_ruedas;
+    }
+
+    public String getTipoMotor() {
+        return tipoMotor;
+    }
+
+    public void setTipoMotor(String tipomotor) {
+        tipoMotor = tipomotor;
+    }
+
+    public String getCombustible() {
         return combustible;
     }
-    public String obtenerMarca() {
+
+    public void setCombustible(String Combustible) {
+        combustible = Combustible;
+    }
+
+    public String getMarca() {
         return marca;
     }
 
-    public String obtenerModelo(){
-        return modelo;
-    }
-    public Integer obtenerAño(){
-        return año;
-    }
-    public String obtenerPatente(){
-        return patente;
-    }
-    public void Moverse (int km){
-        System.out.println("El auto se movio " + km);
+    public void setMarca(String Marca) {
+        marca = Marca;
     }
 
-    @Override
-    public boolean Arrancar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getModelo() {
+        return modelo;
     }
+
+    public void setModelo(String Modelo) {
+        modelo = Modelo;
+    }
+
+    public Integer getAño() {
+        return año;
+    }
+
+    public void setAño(Integer anio) {
+        año = anio;
+    }
+
+    public String getPatente() {
+        return patente;
+    }
+
+    public void setPatente(String Patente) {
+        patente = Patente;
+    }
+
+    public void Moverse(int km) {
+        if (km > 0) {
+            Arrancar();
+            System.out.println("Tiene que avanzar " + km + " km");
+        } else {
+            Frenar();
+            System.out.println("Esta detenido ...");
+        }
+    }
+
+    public boolean Arrancar() {
+        return true;
+    }
+
+    public boolean Frenar() {
+        return true;
+    }
+
 }

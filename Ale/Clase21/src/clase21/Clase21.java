@@ -17,36 +17,22 @@ public class Clase21 {
     public static void main(String[] args) {
         // TODO code application logic here
         Vehiculo unVehiculo = new Vehiculo();
-        Bicicleta mibici = new Bicicleta();
-        Moto motito = new Moto();
-        motito.setAño(2016);
-        motito.setModelo("Ninja");
-        motito.setMarca("Kawasaki");
-        motito.setCombustible("Gasolina");
-        motito.setRuedas(2);
-        motito.Arrancar();
-        motito.setPasajeros(2);
-        System.out.println("La "+nombreDeObjeto(str)+" "+motito.getMarca()+" modelo "+motito.getModelo()+" es del año "+ motito.getAño());
-        Lancha lanchita = new Lancha();
-        System.out.println(unVehiculo.getMarca()+" "+unVehiculo.getModelo()+" "+unVehiculo.getAño()+" Esta detenido?"+ unVehiculo.Frenar());
-        String objetoBici = nombreDeObjeto(mibici.getClass().getName().toString());
-        nombreDeObjeto(objetoBici);
-        //System.out.println(mibici.getClass().getName().toString());
         
-        System.out.println("Tengo una "+nombreDeObjeto(objetoBici)+" marca "+mibici.marca+" del año "+mibici.anio);
+        Vehiculo otroVehiculo = new Vehiculo("Peugeot");
+        
+        System.out.println(otroVehiculo.dameTuMarca());
+        
+        IVehiculo unAvion = new Avion(); // ahora este fiat
+        
+        System.out.println(unVehiculo.Frenar());
+        
+        System.out.println(unAvion.dameTuMarca());
+        
+        IVehiculo otroAvion = new Avion("Chevrolet", "Hidroavion"); // ahora este lo quiero chevrolet
+        
+        System.out.println(otroAvion.dameTuMarca());
+        
+        //System.out.println(otroAvion.dameTusAlas());
     }
     
-    public static String nombreDeObjeto(Object str){
-        //System.out.println(str);
-        //String[] parts= str.split(".");
-        String nombre = str.getClass().getName().toString();
-        System.out.println("");
-        //int largo parts[].length();
-        //System.out.println(parts[].length());
-        //System.out.println(parts[1]);
-        //String elNombre = parts[1];
-  
-        
-        return nombre.substring(str.indexOf(".")+1, str.length());;
-    }
 }

@@ -10,35 +10,19 @@ package clase21;
  * @author alumno
  */
 public class Moto extends Vehiculo {
-    
-    public Moto(){
-        pasajeros = 1;
-        ruedas = 2;
-        marca = "BMW";
-        modelo = "BMW Classic";
-        patente = "ZZZ 001";
+
+    public Moto() {
+       pasajeros=2;
     }
     
-    public Integer obtenerPasajeros(){
-        return pasajeros;
-    }
-   public Integer obtenerRuedas(){
-       return ruedas;
-   }
-   public String obtenerMotor(){
-       return tipoMotor;
-   }
-    public String obtenerMarca() {
-        return marca;
+    public void Moverse(int km) {
+        if (km > 0) {
+            Arrancar();
+            System.out.println("La moto tiene que avanzar " + km + " km");
+        } else {
+            Frenar();
+            System.out.println("Esta detenida ...");
+        }
     }
 
-    public String obtenerModelo(){
-        return modelo;
-    }
-    
-    public String obtenerPatente(){
-        return patente;
-                
-    }
-    
 }
