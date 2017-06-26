@@ -11,30 +11,34 @@ package clase25;
  *
  * @author alumno
  */
-public class Antropologa implements IAritmetica{
+public class Antropologa implements IAritmetica<Integer>{
     private int unNumeroEntero;
     
     public Antropologa (int valor){
         this.unNumeroEntero = valor;
     }
     
-    public void Sumar(IAritmetica aSumar){
-        System.out.println("Estoy sumando un antropologo");
+    public void Sumar(IAritmetica<Integer> aSumar){
+        this.unNumeroEntero = this.unNumeroEntero + aSumar.obtenerValor();
     }
-    public void Restar(IAritmetica aRestar){
-        System.out.println("Estoy restando un antropologo");
+    public void Restar(IAritmetica<Integer> aRestar){
+        this.unNumeroEntero = this.unNumeroEntero - aRestar.obtenerValor();
     }
-    public void Multiplicar(IAritmetica aMultiplicar){
-        System.out.println("Estoy multiplicando un antropologo");
+    public void Multiplicar(IAritmetica<Integer> aMultiplicar){
+        this.unNumeroEntero = this.unNumeroEntero * aMultiplicar.obtenerValor();
     }
-    public void Dividir(IAritmetica aDividir){
-        System.out.println("Estoy dividiendo un antropologo");
+    public void Dividir(IAritmetica<Integer> aDividir){
+        this.unNumeroEntero = this.unNumeroEntero / aDividir.obtenerValor();
     }
-    public Boolean EsIgualA(IAritmetica aObjeto){
-        return Boolean.TRUE;
+    public Boolean EsIgualA(IAritmetica<Integer> aObjeto){
+        return unNumeroEntero == aObjeto.obtenerValor();
     }
     
     public String descripcion(){
         return "La cantidad de antropologos son " + unNumeroEntero;
+    }
+    
+    public Integer obtenerValor (){
+        return this.unNumeroEntero;
     }
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author alumno
  */
-public class Personas implements IAritmetica{
+public class Personas implements IAritmetica<Integer>{
     
     private int cantidad;
     
@@ -44,6 +44,11 @@ public class Personas implements IAritmetica{
     public String descripcion(){
         return "Un mensaje " + cantidad;
     }        
+
+    
+    public Integer obtenerValor() {
+        return this.cantidad;
+    }
                 
     
 
