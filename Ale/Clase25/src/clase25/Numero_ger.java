@@ -10,7 +10,6 @@ package clase25;
  * @author alumno
  */
 public class Numero_ger implements IAritmetica{
-    
         private int unNumeroEntero;
         
         public Numero_ger (int valor){

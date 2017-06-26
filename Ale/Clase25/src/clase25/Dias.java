@@ -10,7 +10,7 @@ package clase25;
  * @author alumno
  */
 public class Dias implements IAritmetica {
-    
+
     public void Sumar(IAritmetica toAdd){
         System.out.println("Sumando días");
     }
@@ -27,7 +27,7 @@ public class Dias implements IAritmetica {
         return false;
     }
     
-
+}
 
    
     public String descripcion() {
