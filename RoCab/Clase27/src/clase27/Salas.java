@@ -5,10 +5,14 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
  */
-public class Salas {
+public class Salas extends Complejo{
+    
+    List<Butacas> Butaca;
     
 }

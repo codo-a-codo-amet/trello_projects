@@ -9,6 +9,9 @@ package clase27;
  *
  * @author alumno
  */
-public class Director {
+public class Director extends Pelicula{
     
+    protected String nombre;
+    protected String apellido;
+
 }
