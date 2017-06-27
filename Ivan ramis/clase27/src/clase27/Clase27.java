@@ -16,6 +16,12 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Complejo unComplejo = new Complejo();
+        
+        System.out.println("Cantidad de Salas " + unComplejo.CantidadDeSalas());
+        System.out.println("El nombre de butacas es " + unComplejo.());
+        
     }
     
 }

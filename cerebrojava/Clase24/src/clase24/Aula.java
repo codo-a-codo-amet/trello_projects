@@ -15,9 +15,12 @@ import java.util.List;
 public class Aula {
     final static int cantidad_sillas = 25;
     List<Silla> sillas;
+    List<Alumnos> private int Aleatorio(int d, int h){
+        return (int)(Math.random()*(h - d))+d;
+    }
     private Profesor unProfesor;
     
-    private int obtenerCantidadAlumnos(int min, int max){
+    priva te int obtenerCantidadAlumnos(int min, int max){
         return min + ( ( max - min) * (int)(Math.random()*1000)) / 1000;
     }
     

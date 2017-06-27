@@ -11,4 +11,18 @@ package clase27;
  */
 public class Pelicula {
     
+    protected String nombre;
+    protected String horario;
+    protected String clasificacion;
+    
+public Pelicula (){
+    
+    nombre = "Vacio";
+    horario= "Vacio";
+    clasificacion = "Vacio";    
+}
+
+public String GetNombre(){
+    return nombre;
+}
 }
