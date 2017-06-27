@@ -36,13 +36,13 @@ public class Numero implements IAritmetica{
     public void Dividir(IAritmetica aDividir){
         System.out.println("Dividiendo un entero");
     }
-    public Boolean EsIgualA(IAritmetica aObjeto){
-        return Boolean.TRUE;
-    }
+   // public Boolean EsIgualA(IAritmetica aObjeto){
+     //   return Boolean.TRUE;
+    //}
     
-    public String descripcion(){
-        return "Esto es un numero de valor" + unNumeroEntero;
-    }
+    //public String descripcion(){
+      //  return "Esto es un numero de valor" + unNumeroEntero;
+    //}
 
 
 }

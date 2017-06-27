@@ -30,16 +30,9 @@ public class Aula {
         mesas = new ArrayList<Mesa>();
         for (int i=0; i<7; i++){
             mesas.add(new Mesa());
-        
-    
     }
-    
-    public int dameCantidadDe Mesas(ArrayList<Mesa>){
+        public int dameCantidadDe Mesas(ArrayList<Mesa>){
         return mesas.size();
     }
-    
-    
-    
-}
-
+        
 }
