@@ -5,10 +5,37 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author ivanr
  */
 public class Complejo {
     
+    protected String nombre;
+    protected String direccion;
+    
+    List<Sala> Salas;
+    List<Pelicula> peliculas;    
+    List<Butaca> butacas;    
+
+
+public Complejo() {
+    
+    nombre = "Village Recoleta";
+    direccion = "Vicente Lopez 2050";        
+
+    Salas = new ArrayList<>();
+    Salas.add(new Sala());
+    
+    peliculas = new ArrayList<>();
+    peliculas.add(new Pelicula());
+    
+    butacas = new ArrayList<>();
+    butacas.add(new Butaca());
+
+    }
+
 }
+

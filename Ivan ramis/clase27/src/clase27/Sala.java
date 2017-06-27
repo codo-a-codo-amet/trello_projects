@@ -13,6 +13,5 @@ public class Sala {
     
     protected Integer numero;
     protected Integer cantButacas;
-    
-    
+       
 }

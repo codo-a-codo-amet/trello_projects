@@ -9,10 +9,6 @@ package clase27;
  *
  * @author ivanr
  */
-public class Pelicula {
+public class Butaca {
     
-    protected String nombre;
-    protected String horario;
-    protected String clasificacion;
-        
 }
