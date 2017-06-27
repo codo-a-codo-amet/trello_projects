@@ -9,6 +9,15 @@ package clase27;
  *
  * @author alumno
  */
-public class complejo {
+public class complejo extends cine {
+       
+    public complejo () {
     
-}
+    complejo = "Village Caballito";
+    pelicula = "Mi Villano Favorito 3";
+    horarioPelicula = "19.25";        
+    sala = "8";
+    butacas = "c23, c24";
+    }
+
+}     
