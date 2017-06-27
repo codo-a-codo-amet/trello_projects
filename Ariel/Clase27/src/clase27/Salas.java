@@ -9,6 +9,10 @@ package clase27;
  *
  * @author alumno
  */
-public class Salas {
+public class Salas{
+    
+    public Salas (){
+        
+    }
     
 }

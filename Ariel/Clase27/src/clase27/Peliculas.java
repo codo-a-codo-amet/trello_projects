@@ -9,6 +9,12 @@ package clase27;
  *
  * @author alumno
  */
-public class Peliculas {
+public class Peliculas extends Complejo{
+    
+    public Peliculas(){
+        
+        
+        
+    }
     
 }
