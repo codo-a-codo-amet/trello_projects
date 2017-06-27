@@ -5,6 +5,9 @@
  */
 package clase27;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -12,4 +15,15 @@ package clase27;
 public class Complejo {
     protected String nombre;
     protected String direccion;
+    List <Sala> salas ;
+    
+    public Complejo(){
+        nombre = "Hoyts Unicenter";
+        direccion = "Paraná 3475 Unicenter Shopping";
+        salas = new ArrayList();
+        for (int i = 0; i < 10; i++) {
+            salas.add(new Sala("Sala "+i));
+        }
+        
+    }
 }
