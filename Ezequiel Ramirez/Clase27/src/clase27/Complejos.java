@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package clase27;
+import java.util.*;
 
 /**
  *
@@ -13,4 +14,7 @@ public class Complejos {
     
     protected String nombreComplejo;
     protected String direccionComplejo;
+    
+      final static int cantidad_salas = 8;
+    List<Sala> salas;
 }
