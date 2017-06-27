@@ -16,9 +16,8 @@ public class Complejo {
     protected String nombre;
     protected String direccion;
     
-    List<Sala> Salas;
-    List<Pelicula> peliculas;    
-    List<Butaca> butacas;    
+    protected List<Sala> Salas;
+       
 
 
 public Complejo() {
@@ -27,14 +26,15 @@ public Complejo() {
     direccion = "Vicente Lopez 2050";        
 
     Salas = new ArrayList<>();
-    Salas.add(new Sala());
     
-    peliculas = new ArrayList<>();
-    peliculas.add(new Pelicula());
+    for (int i = 0; i < 10; i++) {
+        Salas.add(new Sala());
+        }
     
-    butacas = new ArrayList<>();
-    butacas.add(new Butaca());
+    }
 
+public int CantidadDeSalas(){
+        return Salas.size();
     }
 
 }
