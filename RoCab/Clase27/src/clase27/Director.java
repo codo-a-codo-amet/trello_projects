@@ -14,4 +14,8 @@ public class Director extends Pelicula{
     protected String nombre;
     protected String apellido;
 
+    public Director(String titulo, String genero, int horario, String breveDescripcion) {
+        super(titulo, genero, horario, breveDescripcion);
+    }
+
 }
