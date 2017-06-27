@@ -11,4 +11,13 @@ package clase27;
  */
 public class Butaca {
     
+    protected Integer numero;
+    protected Boolean ocupada;
+    
+ public Butaca(){
+     
+     numero = 0;
+     ocupada = true;
+ }
+    
 }
