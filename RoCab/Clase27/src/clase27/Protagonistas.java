@@ -13,5 +13,9 @@ public class Protagonistas extends Pelicula{
     
     protected String nombre;
     protected String apellido;
+
+    public Protagonistas(String titulo, String genero, int horario, String breveDescripcion) {
+        super(titulo, genero, horario, breveDescripcion);
+    }
     
 }

@@ -5,20 +5,10 @@
  */
 package clase27;
 
-import java.util.*;
-
 /**
  *
  * @author alumno
  */
-public class Sala extends Peliculas {
-    
-protected String pelicula;
-
-List<Peliculas>peliculas;
-
-
-    
-    
+class ButacasOcupadas {
     
 }

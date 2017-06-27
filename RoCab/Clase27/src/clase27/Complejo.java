@@ -10,5 +10,7 @@ package clase27;
  * @author alumno
  */
 public class Complejo {
+    protected String nombre;
+    protected String direccion;
     
 }

@@ -11,8 +11,10 @@ package clase27;
  */
 public class Butacas extends Salas{
     public Butacas(){
-            Protected Int Numero;
-    
+                int Numero;
+                int Cantidad;
+                int Libres;
+                
     }
 
 }
