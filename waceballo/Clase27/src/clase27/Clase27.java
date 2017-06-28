@@ -16,13 +16,17 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Complejo cine = new Complejo();
-        System.out.println(cine.dameComplejo(0)+" "+cine.damePelicula(0) +" "+cine.damePeliculaSala(0)+" "+cine.damePeliculaHorario(0));
-
-        Complejo cine1 = new Complejo();
-        System.out.println(cine1.dameComplejo(1)+" "+cine1.damePelicula(1) +" "+cine1.damePeliculaSala(1)+" "+cine1.damePeliculaHorario(3));
+//        Complejo cine = new Complejo();
+//        System.out.println(cine.dameComplejo(0)+" "+cine.damePelicula(0) +" "+cine.damePeliculaSala(0)+" "+cine.damePeliculaHorario(0));
+//
+//        Complejo cine1 = new Complejo();
+//        System.out.println(cine1.dameComplejo(1)+" "+cine1.damePelicula(1) +" "+cine1.damePeliculaSala(1)+" "+cine1.damePeliculaHorario(3));
         
-        
+        Complejo cine = new Complejo(10);
+        System.out.println(cine.getComplejos().get(0));
+    
+    
+    
     }
     
 }

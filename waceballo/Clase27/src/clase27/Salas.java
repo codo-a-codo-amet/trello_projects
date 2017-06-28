@@ -24,8 +24,12 @@ public class Salas {
         cantidadSalas.add(3);
     }
     
+    public Salas(int butacas){
+        butaca.setCantButacas(10);
+    }
+    
     public int dameButacasDisponibles(){
-        return butaca.dameButacasDisponibles();
+        return butaca.salaButacas(10);
     }
     
     

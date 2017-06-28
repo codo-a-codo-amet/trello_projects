@@ -13,24 +13,31 @@ import java.util.List;
  * @author alumno
  */
 public class Complejo {
-    List<String> nombre;
+    List<String> nombres;
     protected String localidad;
     
     Peliculas pelicula;
     
     
     public Complejo() {
-        nombre = new ArrayList<>();
-        nombre.add("Abasto");
-        nombre.add("Dot");
-        
-        pelicula = new Peliculas();
-
         
     }
-
-    public String dameComplejo(int valor){
-        return "Complejo "+nombre.get(valor);
+    
+    private int v;
+    
+    public Complejo(int complejo) {
+        v = complejo;
+    }
+    
+    public List<String> getComplejos(){
+        nombres = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            nombres.add("Complejo "+i);
+        }
+        
+        return nombres;
+        
     }
     
     public String damePelicula(int valor){
@@ -38,7 +45,7 @@ public class Complejo {
     }
     
     public String damePeliculaSala(int valor){
-        return "Sala "+pelicula.sala.cantidadSalas.get(valor);
+        return "Sala "+pelicula.sala.cantidadSalas.get(valor) + " Butacas "+pelicula.sala.butaca.dameButacasDisponibles();
     }
     
     public String damePeliculaHorario(int valor){
