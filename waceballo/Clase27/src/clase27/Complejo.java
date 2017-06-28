@@ -14,10 +14,10 @@ import java.util.List;
  */
 public class Complejo {
     List<String> nombres;
-    protected String localidad;
     
     Peliculas pelicula = new Peliculas(10);
     Salas sala = new Salas(5);
+    Butacas butaca = new Butacas(20);
     
     public Complejo() {
         
@@ -48,8 +48,8 @@ public class Complejo {
         return sala.getSalas().get(valor);
     }
     
-    public String damePeliculaHorario(int valor){
-        return "Horario "+pelicula.hora.hora.get(valor);
+    public Integer getButacas(int valor){
+        return butaca.getButacas().get(valor);
     }
     
     
