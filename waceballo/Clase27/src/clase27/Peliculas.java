@@ -14,24 +14,12 @@ import java.util.List;
  */
 public class Peliculas {
     
-    
     List<String> nombrePeliculas;
     protected String generoPelicula;
     
-    Horarios hora;
-    Salas sala;
-    Butacas butacasSalas;
-    
-    public Peliculas() {
-       
+    public Peliculas() {      
         generoPelicula = "Infantil";
         
-        sala = new Salas();
-        sala.cantidadSalas.get(0);
-        
-        hora =  new Horarios();
-        hora.hora.get(0);
-        //butacasSalas.dameButacasDisponibles();
     }
     
     private int v;
