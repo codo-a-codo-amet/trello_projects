@@ -10,14 +10,14 @@ package clase27;
  * @author ivanr
  */
 public class Butaca {
-    
+
     protected Integer numero;
     protected Boolean ocupada;
-    
- public Butaca(){
-     
-     numero = 0;
-     ocupada = true;
- }
-    
+
+    public Butaca() {
+
+        numero = 0;
+        ocupada = true;
+    }
+
 }
