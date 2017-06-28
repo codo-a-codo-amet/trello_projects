@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author ivanr
  */
-public class Complejo {
+public class Complejo implements IComplejo {
 
     protected String nombre;
     protected String direccion;
@@ -30,17 +30,22 @@ public class Complejo {
         }
 
     }
+    public List<Sala> getListaDeSalas() {
+        return Salas;
+    }
 
     public int CantidadDeSalas() {
         return Salas.size();
     }
     
-    public String getNombre (){
+    public String getComplejoNombre (){
         return nombre;
     }
     
     public String getDireccion(){
         return direccion;
     }
+    
+    
 
 }
