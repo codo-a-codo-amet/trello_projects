@@ -11,17 +11,16 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Sala {
+public class Complejo {
 
-    protected Pelicula unaPelicula;
-    protected List<Butaca> lista_de_butacas;
+    protected List<Sala> lista_de_salas;
 
-    public Sala() {
-        unaPelicula = new Pelicula();
-        lista_de_butacas = new ArrayList<>();
+    public Complejo() {
+        lista_de_salas = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            lista_de_butacas.add(new Butaca());
+            lista_de_salas.add(new Sala());
         }
+
     }
 }
