@@ -16,6 +16,10 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Complejo lasSalas = new Complejo();
+        
+        System.out.println("El numero de salas es:" + lasSalas.DameCantidadSalas());
     }
     
 }

@@ -10,6 +10,28 @@ package clase27;
  * @author alumno
  */
 public class Butacas {
-    private final int filas = 13;
-    private final int asientosPorFila = 20;
+    private boolean ocupada = false;
+    private String ubicacion;
+
+    public Butacas(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public boolean isOcupada() {
+        return ocupada;
+    }
+
+    public void setOcupada(boolean ocupada) {
+        this.ocupada = ocupada;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+    
+    
 }

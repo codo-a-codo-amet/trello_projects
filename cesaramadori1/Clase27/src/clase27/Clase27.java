@@ -15,7 +15,16 @@ public class Clase27 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+    Complejo Hoyts =new Complejo();
+        System.out.println("El nombre del complejo seleccionado es " + Hoyts.nombre);
+        System.out.println("La direccion es "+Hoyts.direccion );
+        System.out.println("Cantidad de Salas: "+ Hoyts.salas.size());
+        System.out.println("En la " +Hoyts.salas.get(3).nombre + " se proyecta el film " + Hoyts.salas.get(3).peli1.getNombre() );
+        System.out.println("Tiene " + Hoyts.salas.get(3).asientos.size() +" butacas");
+        System.out.println("La butaca " + Hoyts.salas.get(3).asientos.get(34).getUbicacion()+ " no esta ocupada");
+        Hoyts.salas.get(3).asientos.get(34).setOcupada(true);
+        System.out.println("La butaca " + Hoyts.salas.get(3).asientos.get(34).getUbicacion()  + " ahora esta ocupada " + Hoyts.salas.get(3).asientos.get(34).isOcupada());
     }
     
 }
