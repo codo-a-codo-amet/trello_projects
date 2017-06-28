@@ -5,7 +5,6 @@
  */
 package clase27;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
 public class Peliculas {
     
     
-    List<String> nombrePelicula;
+    List<String> nombrePeliculas;
     protected String generoPelicula;
     
     Horarios hora;
@@ -24,10 +23,7 @@ public class Peliculas {
     Butacas butacasSalas;
     
     public Peliculas() {
-        nombrePelicula = new ArrayList<>();
-        nombrePelicula.add("Mi Villano Favorito 3");
-        nombrePelicula.add("La Momia");
-        
+       
         generoPelicula = "Infantil";
         
         sala = new Salas();
@@ -38,7 +34,24 @@ public class Peliculas {
         //butacasSalas.dameButacasDisponibles();
     }
     
-
+    private int v;
     
+    public Peliculas(int peli) {
+        v = peli;
+    }
+    
+    public List<String> getPeliculas(){
+        nombrePeliculas = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            nombrePeliculas.add("Pelicula "+i);
+        }
+        
+        return nombrePeliculas;
+        
+    }
+    
+
+
     
 }

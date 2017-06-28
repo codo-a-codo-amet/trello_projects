@@ -15,17 +15,26 @@ import java.util.List;
 public class Salas {
 
     List<Integer> cantidadSalas;
-    Butacas butaca;
-    
+
     public Salas() {
-        cantidadSalas = new ArrayList<>();
-        cantidadSalas.add(1);
-        cantidadSalas.add(2);
-        cantidadSalas.add(3);
+
+    }
+        
+    private int v;
+    
+    public Salas(int salas) {
+        v = salas;
     }
     
-    public int dameButacasDisponibles(){
-        return butaca.dameButacasDisponibles();
+    public List<Integer> getSalas(){
+        cantidadSalas = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            cantidadSalas.add(i);
+        }
+        
+        return cantidadSalas;
+        
     }
     
     
