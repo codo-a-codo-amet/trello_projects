@@ -11,8 +11,13 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Salas extends Complejo{
+public class Sala extends Complejo{
+    protected String nombreSala;
+    protected Pelicula unaPelicula;
     
-    List<Butacas> Butaca;
+    protected List<Butacas> Butaca;
     
+    public Sala(){
+        unaPelicula = new Pelicula();
+    }
 }

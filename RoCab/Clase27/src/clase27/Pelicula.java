@@ -8,11 +8,15 @@ package clase27;
  *
  * @author alumno
  */
-public class Pelicula {
+public class Pelicula extends Sala{
     private String titulo;
     private String genero;
     private int horario;
     private String breveDescripcion;
+
+    //Pelicula() {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
     
     public String getTitulo(){
         return titulo;

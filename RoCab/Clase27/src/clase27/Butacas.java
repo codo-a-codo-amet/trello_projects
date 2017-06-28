@@ -9,7 +9,7 @@ package clase27;
  *
  * @author alumno
  */
-public class Butacas extends Salas{
+public class Butacas extends Sala{
     public Butacas(){
                 int Numero;
                 int Cantidad;
