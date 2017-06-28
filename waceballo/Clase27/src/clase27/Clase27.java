@@ -23,7 +23,9 @@ public class Clase27 {
 //        System.out.println(cine1.dameComplejo(1)+" "+cine1.damePelicula(1) +" "+cine1.damePeliculaSala(1)+" "+cine1.damePeliculaHorario(3));
         
         Complejo cine = new Complejo(10);
-        System.out.println(cine.getComplejos().get(0));
+        Peliculas peli = new Peliculas(10);
+        System.out.println(cine.getComplejos().get(1)+" "+cine.getPelicula(0)+" sala "+cine.getSalas(3));
+
     
     
     

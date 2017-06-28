@@ -16,8 +16,8 @@ public class Complejo {
     List<String> nombres;
     protected String localidad;
     
-    Peliculas pelicula;
-    
+    Peliculas pelicula = new Peliculas(10);
+    Salas sala = new Salas(5);
     
     public Complejo() {
         
@@ -40,12 +40,12 @@ public class Complejo {
         
     }
     
-    public String damePelicula(int valor){
-        return "Pelicula "+pelicula.nombrePelicula.get(valor)+" genero "+pelicula.generoPelicula;
+    public String getPelicula(int valor){
+        return pelicula.getPeliculas().get(valor);
     }
     
-    public String damePeliculaSala(int valor){
-        return "Sala "+pelicula.sala.cantidadSalas.get(valor) + " Butacas "+pelicula.sala.butaca.dameButacasDisponibles();
+    public Integer getSalas(int valor){
+        return sala.getSalas().get(valor);
     }
     
     public String damePeliculaHorario(int valor){
