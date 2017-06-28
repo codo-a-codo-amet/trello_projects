@@ -9,8 +9,14 @@ package clase27;
  *
  * @author alumno
  */
-public class Butacas extends Sala{
-    public Butacas(){
+public class Butaca extends Sala{
+
+    static void add(Butaca butaca) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+       
+    public Butaca(){
                 int Numero;
                 int Cantidad;
                 int Libres;
