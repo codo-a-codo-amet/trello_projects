@@ -24,4 +24,8 @@ public class Sala {
             lista_de_butacas.add(new Butaca());
         }
     }
+    
+    public Pelicula getPelicula(){
+        return unaPelicula;
+    }
 }
