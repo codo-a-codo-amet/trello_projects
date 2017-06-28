@@ -15,4 +15,12 @@ public class Salas {
     
     public Salas(){
   
+        unaPeliculas = new Peliculas();
+             
+        lista_de_Butacas = new ArrayList<>();
+        
+        for (int i = 0;i <10;i++){
+        lista_de_Butacas.add (new Butacas());
+        
+        
 }
