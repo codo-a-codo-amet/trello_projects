@@ -9,6 +9,6 @@ package clase27;
  *
  * @author alumno
  */
-public class Cine {
+public class butacas {
     
 }

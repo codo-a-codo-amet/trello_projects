@@ -4,16 +4,11 @@
  * and open the template in the editor.
  */
 package clase27;
-import java.util.*;
+
 /**
  *
  * @author alumno
  */
-public class Butacas  {
+public class peliculas {
     
-    private final int filasxLetra = 8;
-    private final int asientoxNumero = 10;
-    
-   
-     
 }

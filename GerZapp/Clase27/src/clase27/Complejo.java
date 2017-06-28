@@ -5,10 +5,38 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
  */
 public class Complejo {
+    
+    private List<Salas> unasSalas;
+    private List<Peliculas> UnasPeliculas;
+    private List<Butacas> UnasButacas;
+   
+    
+    public Complejo() {
+    
+    Salas = new ArrayList<>();
+    Salas.add(new Salas());
+    
+    peliculas = new ArrayList<>();
+    peliculas.add(new Pelicula());
+    
+    butacas = new ArrayList<>();
+    butacas.add(new Butaca());
+
+    }
+
+}
+
+    
+    
+    
+    
+    
     
 }

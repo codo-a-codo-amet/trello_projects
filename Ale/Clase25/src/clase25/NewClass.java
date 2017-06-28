@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase27;
-import java.util.*;
+package clase25;
+
 /**
  *
  * @author alumno
  */
-public class Butacas  {
+public class NewClass {
     
-    private final int filasxLetra = 8;
-    private final int asientoxNumero = 10;
-    
-   
-     
 }

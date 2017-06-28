@@ -5,6 +5,7 @@
  */
 package clase27;
 
+import java.util.*;
 /**
  *
  * @author alumno
@@ -16,10 +17,13 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    
-         cine.cantidad_butacas = 180
-         cine.cantidad_salas = 9        
-    
+      
+        
+        Complejo VillageCaballito = new Complejo();
+        
+        Complejo VillageRecoleta = new Complejo ();
+        
+        Complejo VillageMerlo = new Complejo ();
 
     }
     

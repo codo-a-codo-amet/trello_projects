@@ -9,11 +9,10 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Butacas  {
+public class Salas {
+      protected  Peliculas unaPeliculas;
+      protected  List <Butacas> lista_de_Butacas;
     
-    private final int filasxLetra = 8;
-    private final int asientoxNumero = 10;
-    
-   
-     
+    public Salas(){
+  
 }

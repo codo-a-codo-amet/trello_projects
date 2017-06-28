@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package clase27;
-
+import java.util.*;
 /**
  *
  * @author alumno
  */
 public class Peliculas {
-    
+ 
+    private String nombre;
+    private String genero;
+    private int duracion;
+    private string Clasificacion
 }
