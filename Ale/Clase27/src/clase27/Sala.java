@@ -5,10 +5,23 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
  */
 public class Sala {
-    
+
+    protected Pelicula unaPelicula;
+    protected List<Butaca> lista_de_butacas;
+
+    public Sala() {
+        unaPelicula = new Pelicula();
+        lista_de_butacas = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            lista_de_butacas.add(new Butaca());
+        }
+    }
 }

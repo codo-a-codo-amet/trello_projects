@@ -5,19 +5,41 @@
  */
 package clase27;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class Peliculas {
     
-    protected String nombre;
-    protected String genero;
+    List<String> nombrePeliculas;
+    protected String generoPelicula;
     
-    public Peliculas() {
-    
+    public Peliculas() {      
+        generoPelicula = "Infantil";
+        
     }
     
+    private int v;
     
+    public Peliculas(int peli) {
+        v = peli;
+    }
+    
+    public List<String> getPeliculas(){
+        nombrePeliculas = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            nombrePeliculas.add("Pelicula "+i);
+        }
+        
+        return nombrePeliculas;
+        
+    }
+    
+
+
     
 }

@@ -11,14 +11,12 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Sala extends Peliculas {
+public interface IComplejo {
+    public String getComplejoNombre();
     
-protected String pelicula;
-
-List<Peliculas>peliculas;
-
-
+    public List<Pelicula> getListaDePeliculas();
     
+    public List<Sala> getListaDeSalas();
     
-    
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
 }

@@ -11,4 +11,9 @@ package clase27;
  */
 public class Peliculas {
     
+    protected Integer Horario;
+    protected String Clasificacion;
+    protected String Nombre;
+    
+    
 }
