@@ -16,6 +16,7 @@ import java.util.List;
 public class Complejo implements IComplejo {
     protected String nombre;
     protected String direccion;
+    protected int cantida_de_salas = 10;
     List <Sala> salas ;
     Iterator <Sala> iteradorSala;
                 
@@ -23,7 +24,7 @@ public class Complejo implements IComplejo {
         nombre = "Hoyts Unicenter";
         direccion = "Paraná 3475 Unicenter Shopping";
         salas = new ArrayList();
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i <= cantida_de_salas; i++) {
             salas.add(new Sala("Sala "+i));
         }
         Sala s;
