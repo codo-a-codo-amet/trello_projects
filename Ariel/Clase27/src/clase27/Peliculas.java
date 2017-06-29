@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Peliculas extends Complejo{
+public class Peliculas implements IComplejo{
     
     List<Peliculas>lista_de_peliculas;
     
@@ -21,6 +21,26 @@ public class Peliculas extends Complejo{
             lista_de_peliculas.add(new Peliculas());
         }
         
+    }
+
+    @Override
+    public String getComplejoNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Peliculas> getListaDePeliculas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Salas> getListaDeSalas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Butacas> getListaButacasLibres(Salas paraEstaSala) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
         
    

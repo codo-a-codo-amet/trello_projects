@@ -5,18 +5,21 @@
  */
 package clase27;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class Salas {
 
-    private final int cantidadSalas = 5;
+    List<Peliculas> pelicula;
     
     public Salas() {
-        
+        for (int i = 0; i < 10; i++) {
+            pelicula.add(new Peliculas());
+        }
     }
-    
-    
     
 }

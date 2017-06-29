@@ -11,21 +11,20 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Sala {
-
+public class Sala extends Complejo{
+    protected String nombreSala;
     protected Pelicula unaPelicula;
-    protected List<Butaca> lista_de_butacas;
-
-    public Sala() {
-        unaPelicula = new Pelicula();
-        lista_de_butacas = new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            lista_de_butacas.add(new Butaca());
-        }
-    }
     
-    public Pelicula getPelicula(){
-        return unaPelicula;
+    protected List<Butaca> lista_Butacas;
+    
+    
+    public Sala(){
+        unaPelicula = new Pelicula();
+        
+        lista_Butacas = new ArrayList<Butaca>();
+            
+        for (int i = 0; i<24; i++){
+            Butaca.add(new Butaca());
+        }
     }
 }

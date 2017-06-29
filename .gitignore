@@ -66,6 +66,13 @@ Ale/Clase21/nbproject/private/private.xml
 /Ale/fun/build/
 <<<<<<< HEAD
 /emma/Clase27/nbproject/private/
+<<<<<<< .merge_file_a06016
+=======
+/cesaramadori1/Clase27/build/
+=======
+<<<<<<< HEAD
+/emma/Clase27/nbproject/private/
+>>>>>>> .merge_file_a03488
 /emma/Clase27/build/
 =======
 <<<<<<< HEAD
@@ -76,126 +83,21 @@ Ale/Clase21/nbproject/private/private.xml
 /javier/Clase27/nbproject/private/
 >>>>>>> 559894c5f88439bbef75005f2190eb345de57abc
 /RoCab/Clase27/build/
-/Ariel/JavaApplication37/nbproject/private/
-/Ariel/JavaApplication37/build
-/Ariel/JavaApplication38/nbproject/private/
-/Ariel/JavaApplication38/build/
-/Ariel/JavaApplication39/nbproject/private/
-/Ariel/JavaApplication40/nbproject/private/
-/Ariel/JavaApplication41/nbproject/private/
-/Ariel/JavaApplication42/nbproject/private/
-/Ariel/C/nbproject/private/
-/Ariel/Primer video/nbproject/private/
-/Ariel/Auto/nbproject/private/
-/Ariel/carro/nbproject/private/
-/Ariel/carro/build/
-/Ariel/1er video/nbproject/private/
-/Ariel/funcion/nbproject/private/
-/Ariel/funion/nbproject/private/
-/Ariel/funcion1/nbproject/private/
-/Ariel/funcion1/build/
-/Ariel/funcion_operacion/nbproject/private/
-Ariel/1er video/build.xml
-Ariel/1er video/nbproject/genfiles.properties
-Ariel/1er video/nbproject/project.properties
-Ariel/1er video/nbproject/build-impl.xml
-Ariel/1er video/src/pkg1er/video/carro.java
-Ariel/1er video/src/pkg1er/video/Video.java
-Ariel/1er video/nbproject/project.xml
-Ariel/Auto/nbproject/build-impl.xml
-Ariel/Primer video/src/primer/video/PrimerVideo.java
-Ariel/Primer video/src/primer/video/NewClass.java
-Ariel/Primer video/nbproject/project.xml
-Ariel/Primer video/nbproject/project.properties
-Ariel/Primer video/nbproject/genfiles.properties
-Ariel/Primer video/nbproject/build-impl.xml
-Ariel/Primer video/manifest.mf
-Ariel/Primer video/build.xml
-Ariel/JavaApplication42/src/clase/Programa.java
-Ariel/JavaApplication42/nbproject/project.xml
-Ariel/JavaApplication42/nbproject/project.properties
-Ariel/JavaApplication42/nbproject/genfiles.properties
-Ariel/JavaApplication42/nbproject/build-impl.xml
-Ariel/JavaApplication42/manifest.mf
-Ariel/JavaApplication42/build.xml
-Ariel/JavaApplication41/src/PasarGradosFarenheit.java
-Ariel/JavaApplication41/nbproject/project.xml
-Ariel/JavaApplication41/nbproject/project.properties
-Ariel/JavaApplication41/nbproject/genfiles.properties
-Ariel/JavaApplication41/nbproject/build-impl.xml
-Ariel/JavaApplication41/manifest.mf
-Ariel/JavaApplication41/build.xml
-Ariel/JavaApplication40/src/javaapplication40/JavaApplication40.java
-Ariel/JavaApplication40/nbproject/project.xml
-Ariel/JavaApplication40/nbproject/project.properties
-Ariel/JavaApplication40/nbproject/genfiles.properties
-Ariel/JavaApplication40/nbproject/build-impl.xml
-Ariel/JavaApplication40/manifest.mf
-Ariel/JavaApplication40/build.xml
-Ariel/JavaApplication39/src/javaapplication39/JavaApplication39.java
-Ariel/JavaApplication39/nbproject/project.xml
-Ariel/JavaApplication39/nbproject/project.properties
-Ariel/JavaApplication39/nbproject/genfiles.properties
-Ariel/JavaApplication39/nbproject/build-impl.xml
-Ariel/funion/nbproject/genfiles.properties
-Ariel/funion/nbproject/build-impl.xml
-Ariel/funion/manifest.mf
-Ariel/JavaApplication39/manifest.mf
-Ariel/JavaApplication39/build.xml
-Ariel/JavaApplication38/src/javaapplication38/Perimetro.java
-Ariel/JavaApplication38/nbproject/project.xml
-Ariel/JavaApplication38/nbproject/project.properties
-Ariel/JavaApplication38/nbproject/genfiles.properties
-Ariel/JavaApplication38/nbproject/build-impl.xml
-Ariel/JavaApplication38/manifest.mf
-Ariel/JavaApplication38/build.xml
-Ariel/JavaApplication37/src/javaapplication37/JavaApplication37.java
-Ariel/JavaApplication37/manifest.mf
-Ariel/funion/src/funion/Funion.java
-Ariel/funion/nbproject/project.xml
-Ariel/funion/nbproject/project.properties
-Ariel/funion/build.xml
-Ariel/funcion_operacion/src/funcion_operacion/Funcion_operacion.java
-Ariel/funcion_operacion/nbproject/project.xml
-Ariel/funcion1/src/funcion1/Funcion1.java
-Ariel/funcion1/nbproject/project.xml
-Ariel/funcion1/nbproject/project.properties
-Ariel/funcion1/nbproject/genfiles.properties
-Ariel/funcion1/nbproject/build-impl.xml
-Ariel/funcion1/manifest.mf
-Ariel/funcion1/build.xml
-Ariel/funcion/nbproject/build-impl.xml
-Ariel/funcion/manifest.mf
-Ariel/funcion/build.xml
-Ariel/carro/src/carro/Carro.java
-Ariel/carro/nbproject/project.xml
-Ariel/carro/nbproject/project.properties
-Ariel/carro/nbproject/genfiles.properties
-Ariel/carro/nbproject/build-impl.xml
-Ariel/carro/manifest.mf
-Ariel/carro/build.xml
-Ariel/Clase27/src/clase27/IComplejo.java
-Ariel/Clase27/nbproject/private/private.xml
-Ariel/C/src/Metodos/Metodos.java
-Ariel/funcion_operacion/nbproject/project.properties
-Ariel/funcion_operacion/nbproject/genfiles.properties
-Ariel/funcion_operacion/nbproject/build-impl.xml
-Ariel/funcion_operacion/manifest.mf
-Ariel/funcion_operacion/build.xml
-Ariel/funcion/src/funcion/Funcion.java
-Ariel/funcion/nbproject/project.xml
-Ariel/funcion/nbproject/project.properties
-Ariel/funcion/nbproject/genfiles.properties
-Ariel/C/nbproject/project.xml
-Ariel/C/nbproject/project.properties
-Ariel/C/nbproject/genfiles.properties
-Ariel/C/nbproject/build-impl.xml
-Ariel/C/manifest.mf
-Ariel/C/build.xml
-Ariel/Auto/src/auto/Auto.java
-Ariel/Auto/nbproject/project.xml
-Ariel/Auto/nbproject/project.properties
-Ariel/Auto/nbproject/genfiles.properties
-Ariel/Auto/manifest.mf
-Ariel/Auto/build.xml
-Ariel/1er video/manifest.mf
+<<<<<<< .merge_file_a06016
+/Seba/Clase 1 (Seba Pierola)/nbproject/private/
+/Seba/Clase 1 (Seba Pierola)/build/
+/Seba/Clase 1 PROYECTO/nbproject/private/
+/Seba/Clase 1 PROYECTO/build/
+/Seba/Perimetro/nbproject/private/
+/Seba/Perimetro/build/
+/Seba/Scanner/nbproject/private/
+/Seba/Scanner/build/
+/Seba/Grados a Fht/nbproject/private/
+/Seba/Grados a Fht/build/
+/Seba/FuncionN/nbproject/private/
+/Seba/FuncionN/build/
+/Seba/OperacionesB_JOP/nbproject/private/
+=======
+>>>>>>> d8e036d14ea4ad76ac054bbcaa8c3ebfc5a1878a
+/Ivan ramis/clase27/build/
+>>>>>>> .merge_file_a03488

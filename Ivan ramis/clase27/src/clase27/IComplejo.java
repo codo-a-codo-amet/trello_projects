@@ -9,12 +9,6 @@ package clase27;
  *
  * @author alumno
  */
-public class Butacas extends Salas{
-    public Butacas(){
-                int Numero;
-                int Cantidad;
-                int Libres;
-                
-    }
-
+public interface IComplejo {
+    
 }

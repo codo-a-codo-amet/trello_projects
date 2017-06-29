@@ -6,7 +6,7 @@
 package clase27;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -46,16 +46,28 @@ public class Complejo implements IComplejo {
         return "Hoyts Salta";
     }
     
+    @Override
     public List<Peliculas> getListaDePeliculas(){
         return null;
     }
     
+    @Override
     public List<Salas> getListaDeSalas(){
         return new ArrayList();
     }
     
-    public List<Butacas> getListaDeButacasLibres(){
+    public List<Butacas> getListaDeButacasLibres(Salas ParaEstaSala){
         return null;
+    }
+
+    @Override
+    public String getComplejoNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Butacas> getListaButacasLibres(Salas paraEstaSala) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -11,8 +11,12 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Salas extends Complejo{
+public interface IComplejo {
+    public String getComplejoNombre();
     
-    List<Butacas> Butaca;
+    public List<Pelicula> getListaDePeliculas();
     
+    public List<Sala> getListaDeSalas();
+    
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
 }

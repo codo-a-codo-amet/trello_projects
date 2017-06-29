@@ -16,6 +16,14 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Complejo cine = new Complejo();
+
+        //System.out.println(cine.getComplejos().get(1)+" "+cine.getPelicula(0)+" sala "+cine.getSalas(3)+" butaca "+cine.getButacas(10));
+
+    
+    
+    
     }
     
 }
