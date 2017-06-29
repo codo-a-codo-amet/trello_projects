@@ -11,18 +11,10 @@ import java.util.*;
  *
  * @author alumno
  */
-
-
-public class cine {
-
-    protected List<sala> lista_de_salas;
-
-    public cine() {
-        lista_de_salas = new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            lista_de_salas.add(new sala());
-        }
-
-    }
+public interface Ipeliculas {
+    public String getComplejoNombre();
+    
+    public List<sala> getListaDeSalas();
+    
+    public List<butacas> getListaButacasLibres(sala paraEstaSala);
 }

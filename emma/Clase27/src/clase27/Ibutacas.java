@@ -5,14 +5,15 @@
  */
 package clase27;
 
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
-public class butacas {
-   public Boolean estaOcupada;
-   
-   public butacas(){
-       estaOcupada = Boolean.FALSE;
-   }
+public interface Ibutacas {
+    
+    public String getComplejoNombre();
+    
+    public List<butacas> getListaButacasLibres(sala paraEstaSala);
 }
