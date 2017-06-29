@@ -17,12 +17,16 @@ public class Pelicula {
     
 public Pelicula (){
     
-    nombre = "Vacio";
-    horario= "Vacio";
-    clasificacion = "Vacio";    
+    nombre = "La antropologa asesina II";
+    horario= "21:45";
+    clasificacion = "+21";    
 }
 
 public String GetNombre(){
     return nombre;
+}
+
+public String GetHorario(){
+    return horario;
 }
 }

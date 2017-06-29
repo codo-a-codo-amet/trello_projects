@@ -11,31 +11,41 @@ import java.util.*;
  *
  * @author ivanr
  */
-public class Complejo {
-    
+public class Complejo implements IComplejo {
+
     protected String nombre;
     protected String direccion;
-    
+
     protected List<Sala> Salas;
-       
 
+    public Complejo() {
 
-public Complejo() {
-    
-    nombre = "Village Recoleta";
-    direccion = "Vicente Lopez 2050";        
+        nombre = "Village Recoleta";
+        direccion = "Vicente Lopez 2050";
 
-    Salas = new ArrayList<>();
-    
-    for (int i = 0; i < 10; i++) {
-        Salas.add(new Sala());
+        Salas = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            Salas.add(new Sala());
         }
-    
+
+    }
+    public List<Sala> getListaDeSalas() {
+        return Salas;
     }
 
-public int CantidadDeSalas(){
+    public int CantidadDeSalas() {
         return Salas.size();
     }
+    
+    public String getComplejoNombre (){
+        return nombre;
+    }
+    
+    public String getDireccion(){
+        return direccion;
+    }
+    
+    
 
 }
-

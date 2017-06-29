@@ -13,38 +13,16 @@ import java.util.List;
  * @author alumno
  */
 public class Complejo {
-    List<String> nombre;
-    protected String localidad;
-    
-    Peliculas pelicula;
-    
+    List<Salas> lista_salas;
     
     public Complejo() {
-        nombre = new ArrayList<>();
-        nombre.add("Abasto");
-        nombre.add("Dot");
+        lista_salas = new ArrayList<>();
         
-        pelicula = new Peliculas();
-
-        
+        for (int i = 0; i < 10; i++) {
+            lista_salas.add(new Salas());
+        }
     }
 
-    public String dameComplejo(int valor){
-        return "Complejo "+nombre.get(valor);
-    }
-    
-    public String damePelicula(int valor){
-        return "Pelicula "+pelicula.nombrePelicula.get(valor)+" genero "+pelicula.generoPelicula;
-    }
-    
-    public String damePeliculaSala(int valor){
-        return "Sala "+pelicula.sala.cantidadSalas.get(valor);
-    }
-    
-    public String damePeliculaHorario(int valor){
-        return "Horario "+pelicula.hora.hora.get(valor);
-    }
-    
     
     
 }

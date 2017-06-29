@@ -5,46 +5,24 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
  */
+
+
 public class cine {
-    
-   protected String complejo;
-   protected String pelicula;
-   protected String horarioPelicula;
-   protected String sala;
-   protected String butacas;
 
+    protected List<sala> lista_de_salas;
 
-public cine(){
-complejo = "Village caballito";
-pelicula = "Mi Villano Favorito 3";
-horarioPelicula = "19.25";        
-sala = "8";
-butacas = "c23, c24";
+    public cine() {
+        lista_de_salas = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            lista_de_salas.add(new sala());
+        }
+
     }
-
-public String dameelcomplejo(){
-        return complejo;
-       } 
-    public String damelapelicula(){
-          return pelicula;
-      }
- 
-public String dameloshorario(){
-        return horarioPelicula;
-} 
-
-public String damelassala(){
-        return sala;
-       } 
-
-
-public String damelasbutacas(){
-        return butacas;
-       } 
-
- }
-
+}

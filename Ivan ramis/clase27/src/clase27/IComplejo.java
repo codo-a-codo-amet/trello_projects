@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package clase27;
 
 /**
  *
  * @author alumno
  */
-public interface Icine {
-    public String dameelcomplejo();
-    public String damelapelicula();
-    public String dameloshorario();
-    public String damelassala();
-    public String damelasbutacas();
+public interface IComplejo {
+    
 }

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package clase27;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,8 +13,34 @@ package clase27;
  */
 public class Salas{
     
+          protected Peliculas unaPelicula;
+          List<Peliculas>Peliculass;
+          List<Butacas> lista_de_butacas;
     public Salas (){
+        lista_de_butacas = new ArrayList<>();
+        lista_de_butacas.add(new Butacas());
+        for (int f = 0; f < 50;f++){
+            lista_de_butacas.add(new Butacas());
+        }
         
+   
     }
+    
+      public String GetComplejoNombre(){
+        return "Hoyts Salta";
+    }
+    
+    public List<Peliculas> getListaDePeliculas(){
+        return null;
+    }
+    
+    public List<Salas> getListaDeSalas(){
+        return null;
+    }
+    
+    public List<Butacas> getListaDeButacas(){
+        return null;
+    }
+    
     
 }
