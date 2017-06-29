@@ -18,13 +18,13 @@ public class Clase27 {
         // TODO code application logic here
 
         Complejo unComplejo = new Complejo();
-        Pelicula unaPelicula = new Pelicula();
-        Sala unaSala = new Sala();
-        Butaca unaButaca = new Butaca();
+        //Pelicula unaPelicula = new Pelicula();
+        //Sala unaSala = new Sala();
+        //Butaca unaButaca = new Butaca();
 
-        System.out.println("El complejo seleccionado es: " + unComplejo.getNombre() + " que se encuentra en " + unComplejo.getDireccion());
-        System.out.println("La cantidad de salas disponibles son " + unComplejo.CantidadDeSalas());
-        System.out.println("El nombre de la pelicula es " + unaPelicula.GetNombre()+ " en el horario " + unaPelicula.GetHorario());
+       // System.out.println("El complejo seleccionado es: " + unComplejo.getNombre() + " que se encuentra en " + unComplejo.getDireccion());
+       // System.out.println("La cantidad de salas disponibles son " + unComplejo.CantidadDeSalas());
+       // System.out.println("El nombre de la pelicula es " + unaPelicula.GetNombre()+ " en el horario " + unaPelicula.GetHorario());
         
     }
 

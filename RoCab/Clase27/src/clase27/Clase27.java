@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package clase27;
-
+import java.util.*;
 /**
  *
  * @author alumno
@@ -16,7 +16,8 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        Complejo ComplejoHoyts = new Complejo();
+        Complejo ComplejoDOT = new Complejo();
     }
     
 }
