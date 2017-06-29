@@ -5,31 +5,40 @@
  */
 package clase27;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class Butacas {
 
-    private Integer cantButacas;
+    List<Integer> cantidadButacas;
+
     private Integer cantDisponibles;
     private Integer cantOcupadas;
-    
+
     public Butacas() {
 
     }
 
+    private int v;
+    
     public Butacas(int cantidad) {
-        salaButacas(cantidad);
+        v = cantidad;
     }
 
-    public Integer getCantButacas() {
-        return cantButacas;
+    public List<Integer> getButacas(){
+        cantidadButacas = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            cantidadButacas.add(i);
+        }
+        
+        return cantidadButacas;        
     }
-
-    public void setCantButacas(Integer cantButacas) {
-        this.cantButacas = cantButacas;
-    }
+    
 
     public Integer getCantDisponibles() {
         return cantDisponibles;
@@ -47,25 +56,15 @@ public class Butacas {
         this.cantOcupadas = cantOcupadas;
     }
 
-
-    
-    
-    protected int salaButacas(int v){
-        
-        for (int i = 0; i < v; i++) {
-            cantButacas += v;
-        }
-        
-        return cantButacas;
-    }
-    
-    public int dameButacasOcupadas(){
+    public int dameButacasOcupadas() {
         return cantOcupadas = 10;
     }
-    
-    public int dameButacasDisponibles(){
+
+    public int dameButacasDisponibles() {
         return cantDisponibles = 5;
     }
+
+    
     
     
 }

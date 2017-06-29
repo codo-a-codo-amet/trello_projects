@@ -5,6 +5,8 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
@@ -12,5 +14,23 @@ package clase27;
 public class Complejo {
     protected String nombre;
     protected String direccion;
+    
+    /**
+     *
+     */
+    protected List<Sala> Salas;
+    
+    
+    public Complejo(){
+        Complejo unComplejo = new Complejo();
+        
+        Salas = new ArrayList<Sala>();
+            
+        for (int i = 0; i<10; i++){
+            Salas.add(new Sala());
+        }
+        
+    }
+       
     
 }

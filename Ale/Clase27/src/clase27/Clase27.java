@@ -16,9 +16,20 @@ public class Clase27 {
      */
     public static void main(String[] args) {
         // TODO code application logic here    
-                
-        
-        
-    }
+
+        IComplejo hoytsAbasto = new Complejo();
+
+        System.out.println(hoytsAbasto.getComplejoNombre());
+
+        /*
+    public List<Pelicula> getListaDePeliculas();
     
+    public List<Sala> getListaDeSalas();
+    
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
+         */
+        IComplejo hoytDot = new Complejo();
+
+    }
+
 }
