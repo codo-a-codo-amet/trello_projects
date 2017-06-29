@@ -49,13 +49,18 @@ public class Complejo implements IComplejo {
         List <Butacas> lista_de_butacas = paraEstaSala.getAsientos();
         List <Butacas> listaAsientosLibres = new ArrayList();
         
+        for (Iterator<Butacas> iterator = lista_de_butacas.iterator(); iterator.hasNext();) {
+            Butacas unaButaca = iterator.next();
+            if (!unaButaca.isOcupada()) {
+                listaAsientosLibres.add(unaButaca);
+            }
+        }
         
         
         
         
         
-        
-        return paraEstaSala.asientos;
+        return listaAsientosLibres;
     }
     
 

@@ -23,7 +23,12 @@ public class Clase27 {
         for (Iterator<Sala> iterator = Hoyts.getListaDeSalas().iterator(); iterator.hasNext();) {
             Sala unaSala = iterator.next();
             System.out.println("En la "+ unaSala.nombre + " se proyecta " + unaSala.peli1.getNombre());
+            System.out.println();
+            for (Iterator<Butacas> iterator2 = Hoyts.getListaButacasLibres(unaSala).iterator(); iterator.hasNext();) {
+            Butacas unaButaca = iterator2.next();
+            System.out.println(unaButaca.getUbicacion());
         }
+        
         
            
     
