@@ -12,9 +12,9 @@ import java.util.List;
  *
  * @author alumno
  */
-public class Complejo {
+public class Complejo implements IComplejo {
     private int sala ;
-    private String pelicula;
+
     private int butaca;
     List<Salas> numSalas;
     List<Butacas> numButaca;
@@ -25,7 +25,7 @@ public class Complejo {
         numSalas.add(new Salas());
         
         
-        for (int i = 0; i < 100; i++){
+        for (int i = 0; i < 10; i++){
          numSalas.add(new Salas());    
         }
         
@@ -34,19 +34,28 @@ public class Complejo {
         
          for (int j = 0; j < 10; j++){
          numButaca.add(new Butacas()); 
-         }
-        
-        
-       
-            }
+         }      
+        }
          
     public int DameCantidadSalas (){
         
         return numSalas.size();
     }
     
+    public String GetComplejoNombre(){
+        return "Hoyts Salta";
+    }
     
+    public List<Peliculas> getListaDePeliculas(){
+        return null;
+    }
     
+    public List<Salas> getListaDeSalas(){
+        return new ArrayList();
+    }
     
+    public List<Butacas> getListaDeButacasLibres(){
+        return null;
+    }
     
 }
