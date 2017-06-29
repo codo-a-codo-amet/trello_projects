@@ -19,15 +19,14 @@ public class Sala {
     public int numeroasiento;
     public String nombre;
     
-    public  String listado_de_Peliculas[] = new String[]{"E.T., el extraterrestre (1982)",
-            "Volver al futuro (1985)", "Tiburon (1975)", "Cortocircuito (1986)","Gremlins (1984)",
-            "StarWars - Una nueva esperanza (1977)", "IT (1990)", "Martes 13 (1980)", "Critters - Ojo, Muerden (1986)", "Chucky - Muñeco Diabólico (1988)"};
+    
     Pelicula laPelicula;
     List<Butacas> asientos;
     List<Horario> horarios;
 
-    public Sala(String nombre) {
+    public Sala(String nombre, Pelicula laPelicula) {
         this.nombre = nombre;
+        this.laPelicula = laPelicula;
         asientos = new ArrayList();
         for (int i = 0; i < filas.length; i++) {
             for (int j = 1; j < asientosPorFila; j++) {
@@ -40,9 +39,7 @@ public class Sala {
             i++;
         }
         
-        for (int i = 0; i < listado_de_Peliculas.length; i++) {
-            laPelicula = new Pelicula(listado_de_Peliculas[i]);
-        }
+        
         
         
     }

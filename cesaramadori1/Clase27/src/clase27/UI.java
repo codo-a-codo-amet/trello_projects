@@ -6,6 +6,7 @@
 package clase27;
 
 import clase27.Complejo;
+import java.awt.event.ItemEvent;
 import java.util.*;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JList;
@@ -26,7 +27,7 @@ public class UI extends javax.swing.JFrame  {
         Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
         System.out.println(salaSeleccionada.laPelicula.getNombre());
         
-        
+        butacasLibres(salaSeleccionada);
         
        
        
@@ -46,8 +47,9 @@ public class UI extends javax.swing.JFrame  {
     }
     
     
-    public void obtenerPelicula(Sala salaSeleccionada){
-        
+    public void obtenerPelicula(){
+        Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
+        txtPelicula.setText(salaSeleccionada.laPelicula.getNombre());
          
         }
     /**
@@ -74,9 +76,19 @@ public class UI extends javax.swing.JFrame  {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         comboSalas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboSalas.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                comboSalasItemStateChanged(evt);
+            }
+        });
         comboSalas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboSalasActionPerformed(evt);
+            }
+        });
+        comboSalas.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                comboSalasPropertyChange(evt);
             }
         });
 
@@ -92,8 +104,13 @@ public class UI extends javax.swing.JFrame  {
         });
         jScrollPane1.setViewportView(jButlibres);
 
+        txtPelicula.setEditable(false);
         txtPelicula.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        txtPelicula.setEnabled(false);
+        txtPelicula.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                txtPeliculaComponentAdded(evt);
+            }
+        });
         txtPelicula.addCaretListener(new javax.swing.event.CaretListener() {
             public void caretUpdate(javax.swing.event.CaretEvent evt) {
                 txtPeliculaCaretUpdate(evt);
@@ -194,7 +211,7 @@ public class UI extends javax.swing.JFrame  {
     }//GEN-LAST:event_comboSalasActionPerformed
 
     private void txtPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPeliculaActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_txtPeliculaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -202,10 +219,7 @@ public class UI extends javax.swing.JFrame  {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtPeliculaCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtPeliculaCaretUpdate
-       
-        Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
-        obtenerPelicula(salaSeleccionada);
-        
+      
     }//GEN-LAST:event_txtPeliculaCaretUpdate
 
     private void txtPeliculaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPeliculaMouseClicked
@@ -213,8 +227,25 @@ public class UI extends javax.swing.JFrame  {
     }//GEN-LAST:event_txtPeliculaMouseClicked
 
     private void jButlibresPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButlibresPropertyChange
-        butacasLibres((Sala)comboSalas.getSelectedItem());
+        
     }//GEN-LAST:event_jButlibresPropertyChange
+
+    private void comboSalasPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_comboSalasPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboSalasPropertyChange
+
+    private void comboSalasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboSalasItemStateChanged
+        Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+           
+                this.txtPelicula.setText(salaSeleccionada.laPelicula.getNombre());
+            
+        }
+    }//GEN-LAST:event_comboSalasItemStateChanged
+
+    private void txtPeliculaComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_txtPeliculaComponentAdded
+      
+    }//GEN-LAST:event_txtPeliculaComponentAdded
 
     /**
      * @param args the command line arguments
