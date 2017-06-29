@@ -28,4 +28,8 @@ public class Sala {
     public Pelicula getPelicula(){
         return unaPelicula;
     }
+    
+    public List<Butaca> getListaButacas() {
+        return lista_de_butacas;
+    }
 }
