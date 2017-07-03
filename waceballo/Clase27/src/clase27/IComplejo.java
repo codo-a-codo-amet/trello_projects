@@ -5,11 +5,11 @@
  */
 package clase27;
 
-import java.util.*;
+import java.util.List;
 
 /**
  *
- * @author alumno
+ * @author walter
  */
 public interface IComplejo {
 

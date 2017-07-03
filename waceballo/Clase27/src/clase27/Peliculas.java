@@ -10,9 +10,48 @@ package clase27;
  * @author alumno
  */
 public class Peliculas {
+<<<<<<< HEAD
     
     public Peliculas(){
         
     }
     
+=======
+
+    List<String> nombrePeliculas;
+
+    Salas sala = new Salas(5);
+
+    public Peliculas() {
+
+    }
+
+    private int v;
+
+    public Peliculas(int peli) {
+        v = peli;
+    }
+
+    public List<String> getPeliculas() {
+        nombrePeliculas = new ArrayList<>();
+
+        nombrePeliculas.add("Mi Villano Favorito 3");
+        nombrePeliculas.add("Mujer Maravilla");
+        nombrePeliculas.add("La Momia");
+        nombrePeliculas.add("Piratas del Caribe 5");
+        nombrePeliculas.add("Solo se vive una vez");
+
+        return nombrePeliculas;
+
+    }
+
+    public Integer getSalas(int valor) {
+        return sala.getSalas().get(valor);
+    }
+
+    public String damePeliculaHorario(int valor) {
+        return "Horario ";
+    }
+
+>>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
 }
