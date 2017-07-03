@@ -5,14 +5,14 @@
  */
 package clase27;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class Butacas {
-<<<<<<< HEAD
-    
-=======
 
     List<Integer> listaButacas;
     
@@ -58,5 +58,5 @@ public class Butacas {
         this.cantOcupadas = cantOcupadas;
     }
 
->>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
+
 }

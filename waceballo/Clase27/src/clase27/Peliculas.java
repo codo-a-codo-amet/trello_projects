@@ -5,20 +5,16 @@
  */
 package clase27;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class Peliculas {
-<<<<<<< HEAD
-    
-    public Peliculas(){
-        
-    }
-    
-=======
 
-    List<String> nombrePeliculas;
+   List<String> nombrePeliculas;
 
     Salas sala = new Salas(5);
 
@@ -53,5 +49,5 @@ public class Peliculas {
         return "Horario ";
     }
 
->>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
+
 }
