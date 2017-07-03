@@ -14,12 +14,31 @@ import java.util.List;
  */
 public class Salas {
 
-    List<Peliculas> pelicula;
-    
+    List<Integer> cantidadSalas;
+    Butacas listaButacas;
+
     public Salas() {
-        for (int i = 0; i < 10; i++) {
-            pelicula.add(new Peliculas());
-        }
+        listaButacas = new Butacas(10);
     }
+        
+    private int v;
+    
+    public Salas(int salas) {
+        v = salas;
+    }
+    
+    public List<Integer> getSalas(){
+        cantidadSalas = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            cantidadSalas.add(i);
+        }
+        
+        return cantidadSalas;
+        
+    }
+    
+    
+    
     
 }
