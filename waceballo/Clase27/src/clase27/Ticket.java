@@ -7,12 +7,17 @@ package clase27;
 
 /**
  *
- * @author alumno
+ * @author walter
  */
-public class butacas {
-   public Boolean estaOcupada;
-   
-   public butacas(){
-       estaOcupada = Boolean.FALSE;
-   }
+public class Ticket {
+
+    public Ticket() {
+    
+    }
+    
+    
+    public void generaTicket(){
+        String nombre;
+    }
+    
 }

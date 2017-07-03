@@ -9,16 +9,11 @@ import java.util.List;
 
 /**
  *
- * @author walter
+ * @author alumno
  */
-public interface IComplejo {
-
+public interface Ibutacas {
+    
     public String getComplejoNombre();
-
-    public List<Peliculas> getListaDePeliculas();
-
-    public List<Salas> getListaDeSalas();
-
-    public List<Butacas> getListaButacasLibres(Salas paraEstaSala);
-
+    
+    public List<butacas> getListaButacasLibres(sala paraEstaSala);
 }

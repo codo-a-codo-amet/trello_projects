@@ -5,26 +5,41 @@
  */
 package clase27;
 
+
+import java.util.*;
+import javax.swing.UIManager;
+
+
 /**
  *
  * @author alumno
  */
 public class Clase27 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
     
-    Complejo Hoyts =new Complejo();
-        System.out.println("El nombre del complejo seleccionado es " + Hoyts.nombre);
-        System.out.println("La direccion es "+Hoyts.direccion );
-        System.out.println("Cantidad de Salas: "+ Hoyts.salas.size());
-        System.out.println("En la " +Hoyts.salas.get(3).nombre + " se proyecta el film " + Hoyts.salas.get(3).peli1.getNombre() );
-        System.out.println("Tiene " + Hoyts.salas.get(3).asientos.size() +" butacas");
-        System.out.println("La butaca " + Hoyts.salas.get(3).asientos.get(34).getUbicacion()+ " no esta ocupada");
-        Hoyts.salas.get(3).asientos.get(34).setOcupada(true);
-        System.out.println("La butaca " + Hoyts.salas.get(3).asientos.get(34).getUbicacion()  + " ahora esta ocupada " + Hoyts.salas.get(3).asientos.get(34).isOcupada());
+    public static void main(String[] args) {
+        try {
+		UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+        UI swing = new UI();
+        swing.setVisible(true);
+        IComplejo Hoyts = new Complejo();
+        System.out.println("El nombre del complejo es " + Hoyts.getComplejoNombre());
+
+        for (Iterator<Sala> iterator = Hoyts.getListaDeSalas().iterator(); iterator.hasNext();) {
+            Sala unaSala = iterator.next();
+            //System.out.println("En la "+ unaSala + " se proyecta " + unaSala.peli1.getNombre());
+            //System.out.println();
+            Iterator<Butacas> iterator2 = Hoyts.getListaButacasLibres(unaSala).iterator();
+            while (iterator2.hasNext()) {
+                Butacas unaButaca = iterator2.next();
+               // System.out.println(unaButaca);
+            }
+        }
+        
     }
+
+   
     
 }
