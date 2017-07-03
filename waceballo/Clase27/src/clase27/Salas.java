@@ -5,8 +5,7 @@
  */
 package clase27;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -14,12 +13,49 @@ import java.util.List;
  */
 public class Salas {
 
-    List<Peliculas> pelicula;
-    
+<<<<<<< HEAD
+    protected Peliculas unaPelicula;
+    protected List<Butacas> lista_de_butacas;
+
     public Salas() {
+        unaPelicula = new Peliculas();
+        lista_de_butacas = new ArrayList<>();
+
         for (int i = 0; i < 10; i++) {
-            pelicula.add(new Peliculas());
-        }
+            lista_de_butacas.add(new Butacas());
+=======
+    List<Integer> cantidadSalas;
+    Butacas listaButacas;
+
+    public Salas() {
+        listaButacas = new Butacas(10);
+    }
+        
+    private int v;
+    
+    public Salas(int salas) {
+        v = salas;
     }
     
+    public List<Integer> getSalas(){
+        cantidadSalas = new ArrayList<>();
+        
+        for (int i = 0; i < v; i++) {
+            cantidadSalas.add(i);
+>>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
+        }
+        
+        return cantidadSalas;
+        
+    }
+    
+<<<<<<< HEAD
+    public Peliculas getPelicula(){
+        return unaPelicula;
+    }
+=======
+    
+    
+    
+>>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
 }

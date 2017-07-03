@@ -5,6 +5,8 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
@@ -20,6 +22,14 @@ public class Clase27 {
         IComplejo hoytsAbasto = new Complejo();
 
         System.out.println(hoytsAbasto.getComplejoNombre());
+        
+        Iterator<Sala> iteratorSala = hoytsAbasto.getListaDeSalas().iterator();
+        
+        while (  iteratorSala.hasNext()) {
+            Sala unaSala = iteratorSala.next();
+            System.out.println("sala: " + unaSala);
+        }
+        
 
         /*
     public List<Pelicula> getListaDePeliculas();
