@@ -14,11 +14,11 @@ import java.util.List;
  */
 public class Peliculas {
 
-    List<String> nombrePeliculas;
-    protected String generoPelicula;
+   List<String> nombrePeliculas;
+
+    Salas sala = new Salas(5);
 
     public Peliculas() {
-        generoPelicula = "Infantil";
 
     }
 
@@ -31,12 +31,23 @@ public class Peliculas {
     public List<String> getPeliculas() {
         nombrePeliculas = new ArrayList<>();
 
-        for (int i = 0; i < v; i++) {
-            nombrePeliculas.add("Pelicula " + i);
-        }
+        nombrePeliculas.add("Mi Villano Favorito 3");
+        nombrePeliculas.add("Mujer Maravilla");
+        nombrePeliculas.add("La Momia");
+        nombrePeliculas.add("Piratas del Caribe 5");
+        nombrePeliculas.add("Solo se vive una vez");
 
         return nombrePeliculas;
 
     }
+
+    public Integer getSalas(int valor) {
+        return sala.getSalas().get(valor);
+    }
+
+    public String damePeliculaHorario(int valor) {
+        return "Horario ";
+    }
+
 
 }

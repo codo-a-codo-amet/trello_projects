@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package clase27;
+
+import java.util.List;
 
 /**
  *
  * @author alumno
  */
-public interface Icine {
-    public String dameelcomplejo();
-    public String damelapelicula();
-    public String dameloshorario();
-    public String damelassala();
-    public String damelasbutacas();
+public interface Isala {
+    
+    public String getComplejoNombre();
+    
+    public List<butacas> getListaButacasLibres(sala paraEstaSala);
 }

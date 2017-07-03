@@ -5,11 +5,11 @@
  */
 package clase27;
 
-import java.util.*;
+import java.util.List;
 
 /**
  *
- * @author alumno
+ * @author walter
  */
 public interface IComplejo {
 
@@ -20,5 +20,4 @@ public interface IComplejo {
     public List<Salas> getListaDeSalas();
 
     public List<Butacas> getListaButacasLibres(Salas paraEstaSala);
-
 }
