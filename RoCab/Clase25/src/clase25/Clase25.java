@@ -17,6 +17,20 @@ public class Clase25 {
     public static void main(String[] args) {
         // TODO code application logic here
         Perro unPerro = new Perro () {
+            @Override
+            public boolean EsIgualA(IAritmetica Objeto) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public String Descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public boolean descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
         
         };
         Perro otroPerro = new Perro () {

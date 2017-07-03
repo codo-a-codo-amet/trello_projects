@@ -14,6 +14,10 @@ public class Pelicula {
     private String genero;
     private int duracion;
 
+    public Pelicula(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -42,5 +46,8 @@ public class Pelicula {
         this.nombre = nombre;
         this.genero = genero;
         this.duracion = duracion;
+    }
+    public String toString(){
+        return nombre;
     }
 }

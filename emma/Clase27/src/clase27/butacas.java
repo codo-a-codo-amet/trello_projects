@@ -10,5 +10,9 @@ package clase27;
  * @author alumno
  */
 public class butacas {
-    
+   public Boolean estaOcupada;
+   
+   public butacas(){
+       estaOcupada = Boolean.FALSE;
+   }
 }

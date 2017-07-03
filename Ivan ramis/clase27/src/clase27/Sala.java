@@ -5,13 +5,42 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author ivanr
  */
 public class Sala {
-    
+
     protected Integer numero;
     protected Integer cantButacas;
-       
+    protected Pelicula unaPelicula;
+
+    List<Butaca> butacas;
+    
+
+    public Sala() {
+
+        unaPelicula = new Pelicula();
+
+        butacas = new ArrayList<>();
+
+        for (int i = 0; i < 30; i++) {
+            butacas.add(new Butaca());
+        }
+
+    }
+
+    public Pelicula getPelicula(){
+        return unaPelicula;
+    }
+
+    public Integer CantButacass() {
+        return cantButacas;
+    }
+    
+    public List<Butaca> getListaDeButacas (){
+        return butacas;
+    }
 }

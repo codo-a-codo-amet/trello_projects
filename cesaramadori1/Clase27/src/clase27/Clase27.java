@@ -5,17 +5,41 @@
  */
 package clase27;
 
+
+import java.util.*;
+import javax.swing.UIManager;
+
+
 /**
  *
  * @author alumno
  */
 public class Clase27 {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+		UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+        UI swing = new UI();
+        swing.setVisible(true);
+        IComplejo Hoyts = new Complejo();
+        System.out.println("El nombre del complejo es " + Hoyts.getComplejoNombre());
+
+        for (Iterator<Sala> iterator = Hoyts.getListaDeSalas().iterator(); iterator.hasNext();) {
+            Sala unaSala = iterator.next();
+            //System.out.println("En la "+ unaSala + " se proyecta " + unaSala.peli1.getNombre());
+            //System.out.println();
+            Iterator<Butacas> iterator2 = Hoyts.getListaButacasLibres(unaSala).iterator();
+            while (iterator2.hasNext()) {
+                Butacas unaButaca = iterator2.next();
+               // System.out.println(unaButaca);
+            }
+        }
+        
     }
+
+   
     
 }

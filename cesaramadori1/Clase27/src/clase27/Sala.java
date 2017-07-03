@@ -12,7 +12,58 @@ import java.util.List;
  *
  * @author alumno
  */
-public class Sala extends Complejo {
-    Pelicula peli1 = new Pelicula("E.T., el extraterrestre (1982)", "Ciencia Ficción", 115) ;
-    List <Butacas> asientos = new ArrayList();
+public class Sala {
+
+    public String[] filas = new String[]{"D ", "E ", "F ", "G ", "H ", "I ", "J ", "K ", "L ", "M ", "N ", "O "};
+    public int asientosPorFila = 20;
+    public int numeroasiento;
+    public String nombre;
+
+    public Sala() {
+    }
+    
+    
+    Pelicula laPelicula;
+    List<Butacas> asientos;
+    List<Horario> horarios;
+
+    public Sala(String nombre, Pelicula laPelicula) {
+        this.nombre = nombre;
+        this.laPelicula = laPelicula;
+        asientos = new ArrayList();
+        for (int i = 0; i < filas.length; i++) {
+            for (int j = 1; j < asientosPorFila; j++) {
+                asientos.add(new Butacas(filas[i] + j));
+            }
+        }
+        horarios = new ArrayList();
+        for (int i = 12; i <= 24; i++) {
+            horarios.add(new Horario(i));
+            i++;
+        }
+        
+        
+        
+        
+    }
+
+    public Pelicula getLaPelicula() {
+        return laPelicula;
+    }
+
+    public void setPeli1(Pelicula laPelicula) {
+        this.laPelicula = laPelicula;
+    }
+
+    public List<Butacas> getAsientos() {
+        return asientos;
+    }
+
+    public void setAsientos(List<Butacas> asientos) {
+        this.asientos = asientos;
+    }
+    
+    public String toString(){
+        return nombre;
+    }
 }
