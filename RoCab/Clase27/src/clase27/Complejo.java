@@ -24,7 +24,7 @@ public class Complejo {
     public Complejo(){
         Complejo unComplejo = new Complejo();
         
-        Salas = new ArrayList<Sala>();
+        Salas = new ArrayList<>();
             
         for (int i = 0; i<10; i++){
             Salas.add(new Sala());

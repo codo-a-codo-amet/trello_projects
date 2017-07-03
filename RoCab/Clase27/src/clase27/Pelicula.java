@@ -9,24 +9,20 @@ package clase27;
  * @author alumno
  */
 public class Pelicula extends Sala{
-    private String titulo;
-    private String genero;
-    private int horario;
-    private String breveDescripcion;
+    private String titulo ="Matrix";
+    private String genero ="Ciencia Ficcion";
+    private int horario =22;
+    private String breveDescripcion = "...";
 
     Pelicula() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    //Pelicula() {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
-    
     public String getTitulo(){
         return titulo;
     }
     
-    public void setNombre(String titulo){
+    public void setTitulo(String titulo){
         this.titulo = titulo;
     }
     
