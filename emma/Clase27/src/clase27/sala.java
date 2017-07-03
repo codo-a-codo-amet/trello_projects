@@ -11,25 +11,25 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Sala {
+public class sala {
 
-    protected Pelicula unaPelicula;
-    protected List<Butaca> lista_de_butacas;
+    protected peliculas unaPelicula;
+    protected List<butacas> lista_de_butacas;
 
-    public Sala() {
-        unaPelicula = new Pelicula();
+    public sala() {
+        unaPelicula = new peliculas();
         lista_de_butacas = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            lista_de_butacas.add(new Butaca());
+            lista_de_butacas.add(new butacas());
         }
     }
     
-    public Pelicula getPelicula(){
+    public peliculas getPelicula(){
         return unaPelicula;
     }
     
-    public List<Butaca> getListaButacas() {
+    public List<butacas> getListaButacas() {
         return lista_de_butacas;
     }
 }
