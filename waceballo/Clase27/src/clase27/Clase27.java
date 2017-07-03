@@ -17,7 +17,7 @@ public class Clase27 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-<<<<<<< HEAD
+
         // TODO code application logic here    
 
         IComplejo hoytsAbasto = new Complejo();
@@ -26,7 +26,7 @@ public class Clase27 {
 
         IComplejo hoytDot = new Complejo();
         System.out.println(hoytDot.getComplejoNombre());
-=======
+
         Complejo cine = new Complejo();
 
         System.out.println("Seleccione un Complejo");
@@ -70,7 +70,7 @@ public class Clase27 {
         System.out.println("Desea confirmar la compra...");
         
         
->>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
+
     }
 
 }
