@@ -111,11 +111,14 @@ public class UI extends javax.swing.JFrame  {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 480));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtSala.setEditable(false);
+        jtxtSala.setFont(new java.awt.Font("Tahoma", 2, 13)); // NOI18N
         jtxtSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtSalaActionPerformed(evt);
@@ -161,6 +164,7 @@ public class UI extends javax.swing.JFrame  {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 93, 230));
 
         txtPelicula.setEditable(false);
+        txtPelicula.setFont(new java.awt.Font("Tahoma", 2, 13)); // NOI18N
         txtPelicula.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtPelicula.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
@@ -187,8 +191,9 @@ public class UI extends javax.swing.JFrame  {
         jLabel1.setText("Sala");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 28, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 2, 13)); // NOI18N
         jLabel2.setText("Pelicula");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 60, -1));
 
         jButocupadas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -205,7 +210,7 @@ public class UI extends javax.swing.JFrame  {
                 btnComprarEntradaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnComprarEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
+        getContentPane().add(btnComprarEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
 
         jLabel3.setText("Butacas Libres");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 100, -1));
@@ -235,10 +240,10 @@ public class UI extends javax.swing.JFrame  {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 110, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 110, -1));
 
         jLabel5.setText("Pelicula");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 6, -1, 40));
 
         jLabel6.setText("Listado Vendidas");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, -1, 20));
@@ -252,17 +257,24 @@ public class UI extends javax.swing.JFrame  {
                 comboPeliculasItemStateChanged(evt);
             }
         });
-        getContentPane().add(comboPeliculas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 250, 30));
+        getContentPane().add(comboPeliculas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 250, 30));
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 2, 13)); // NOI18N
         jLabel8.setText("Sala");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 6, 40, 40));
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel9.setText("Buscar Sala por Pelicula");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel10.setText("Buscar Pelicula por Sala");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 70, -1, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 780, 20));
+
+        fondo.setBackground(new java.awt.Color(255, 255, 255));
+        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\TheGuru\\Documents\\trello_projects\\cesaramadori1\\Clase27\\img\\90070487e785a81382491d4c89b508a1.png")); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 800, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -387,6 +399,7 @@ public class UI extends javax.swing.JFrame  {
     private javax.swing.JButton btnComprarEntrada;
     private javax.swing.JComboBox<String> comboPeliculas;
     private javax.swing.JComboBox<String> comboSalas;
+    private javax.swing.JLabel fondo;
     private javax.swing.JList<String> jButlibres;
     private javax.swing.JList<String> jButocupadas;
     private javax.swing.JButton jButton1;

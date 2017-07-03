@@ -18,6 +18,9 @@ public class Sala {
     public int asientosPorFila = 20;
     public int numeroasiento;
     public String nombre;
+
+    public Sala() {
+    }
     
     
     Pelicula laPelicula;
