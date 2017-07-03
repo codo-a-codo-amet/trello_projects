@@ -7,6 +7,7 @@ package clase27;
 
 
 import java.util.*;
+import javax.swing.UIManager;
 
 
 /**
@@ -16,6 +17,11 @@ import java.util.*;
 public class Clase27 {
     
     public static void main(String[] args) {
+        try {
+		UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
         UI swing = new UI();
         swing.setVisible(true);
         IComplejo Hoyts = new Complejo();
