@@ -9,11 +9,6 @@ package clase27;
  *
  * @author alumno
  */
-public class complejo {
+public class Pelicula {
     
-}public class Complejo implements IComplejo {
-
-    protected String nombre;
-    protected String direccion;
-
-    protected List<Sala> Salas;
+}

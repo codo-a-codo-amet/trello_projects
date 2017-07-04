@@ -9,11 +9,10 @@ package clase27;
  *
  * @author alumno
  */
-public class complejo {
-    
-}public class Complejo implements IComplejo {
+public class Butaca {
+    public Boolean estaOcupada;
 
-    protected String nombre;
-    protected String direccion;
-
-    protected List<Sala> Salas;
+    public Butaca() {
+        estaOcupada = Boolean.FALSE;
+    }
+}
