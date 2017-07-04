@@ -28,6 +28,7 @@ public class Clase27 {
         while (  iteratorSala.hasNext()) {
             Sala unaSala = iteratorSala.next();
             System.out.println("sala: " + unaSala);
+            System.out.println(hoytsAbasto.getListaButacasLibres(unaSala));
         }
         
 
