@@ -5,10 +5,19 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
  */
 public interface IComplejo {
-    
+
+    public String getComplejoNombre();
+
+    public List<Pelicula> getListaDePeliculas();
+
+    public List<Sala> getListaDeSalas();
+
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
 }

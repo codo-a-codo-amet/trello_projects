@@ -5,8 +5,7 @@
  */
 package clase27;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -14,12 +13,22 @@ import java.util.List;
  */
 public class Salas {
 
-    List<Integer> cantidadSalas;
-    Butacas listaButacas;
+
+    protected Peliculas unaPelicula;
+    protected List<Butacas> lista_de_butacas;
 
     public Salas() {
-        listaButacas = new Butacas(10);
+        unaPelicula = new Peliculas();
+        lista_de_butacas = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            lista_de_butacas.add(new Butacas());
+        }
+        
     }
+    
+    List<Integer> cantidadSalas;
+        Butacas listaButacas;
         
     private int v;
     
@@ -32,12 +41,16 @@ public class Salas {
         
         for (int i = 0; i < v; i++) {
             cantidadSalas.add(i);
+
         }
         
         return cantidadSalas;
         
     }
     
+    public Peliculas getPelicula(){
+        return unaPelicula;
+    }
     
     
     

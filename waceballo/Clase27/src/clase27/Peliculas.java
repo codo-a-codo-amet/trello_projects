@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Peliculas {
 
-    List<String> nombrePeliculas;
+   List<String> nombrePeliculas;
 
     Salas sala = new Salas(5);
 
@@ -48,5 +48,6 @@ public class Peliculas {
     public String damePeliculaHorario(int valor) {
         return "Horario ";
     }
+
 
 }

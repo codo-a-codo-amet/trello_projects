@@ -20,5 +20,4 @@ public interface IComplejo {
     public List<Salas> getListaDeSalas();
 
     public List<Butacas> getListaButacasLibres(Salas paraEstaSala);
-
 }

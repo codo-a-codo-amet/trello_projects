@@ -5,47 +5,50 @@
  */
 package clase27;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  *
  * @author alumno
  */
-public class Complejo implements IComplejo{
-    List<String> nombres;
+public class Complejo implements IComplejo {
+
+    protected List<Salas> lista_de_salas;
     protected String localidad;
-    
-    Peliculas pelicula;
     private int v;
-    
+
+    Peliculas pelicula;
+    List<String> nombres;
+
     public Complejo() {
-        pelicula = new Peliculas();
-        
+        lista_de_salas = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            lista_de_salas.add(new Salas());
+
+            pelicula = new Peliculas();
+
+        }
+
     }
     
-    public Complejo(int complejo) {
-        v = complejo;
-    }
-    
-    public List<String> getComplejos(){
+    public List<String> getComplejos() {
         nombres = new ArrayList<>();
         nombres.add("Abasto");
         nombres.add("Dot");
         nombres.add("Village");
         nombres.add("Cinemax");
         nombres.add("Avellaneda");
-        
+
         return nombres;
-        
+
     }
-    
-    public String getPelicula(int valor){
+
+    public String getPelicula(int valor) {
         return pelicula.getPeliculas().get(valor);
     }
-    
-    public Integer getSala(int valor){
+
+    public Integer getSala(int valor) {
         return pelicula.getSalas(valor);
     }
 
@@ -59,22 +62,17 @@ public class Complejo implements IComplejo{
         List<Peliculas> listaPeliculas = new ArrayList<>();
         for (Iterator<Peliculas> iterator = listaPeliculas.iterator(); iterator.hasNext();) {
             Peliculas peli = iterator.next();
-            
         }
         return listaPeliculas;
     }
 
-    @Override
     public List<Salas> getListaDeSalas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return lista_de_salas;
     }
 
-    @Override
     public List<Butacas> getListaButacasLibres(Salas paraEstaSala) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ArrayList<>();
     }
-    
-    
-    
-    
+
+
 }
