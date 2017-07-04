@@ -5,12 +5,14 @@
  */
 package clase27;
 
-import java.util.ArrayList;
-import java.util.*;
-
 /**
  *
  * @author alumno
  */
-public class peliculas {
+public class Butaca {
+    public Boolean estaOcupada;
+
+    public Butaca() {
+        estaOcupada = Boolean.FALSE;
+    }
 }

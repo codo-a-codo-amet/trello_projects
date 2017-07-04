@@ -13,49 +13,29 @@ import java.util.*;
  */
 public class Salas {
 
-<<<<<<< HEAD
-    protected Peliculas unaPelicula;
-    protected List<Butacas> lista_de_butacas;
-
-    public Salas() {
-        unaPelicula = new Peliculas();
-        lista_de_butacas = new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            lista_de_butacas.add(new Butacas());
-=======
-    List<Integer> cantidadSalas;
-    Butacas listaButacas;
-
-    public Salas() {
-        listaButacas = new Butacas(10);
-    }
-        
+    private List<Butacas> lista_de_butacas;
+    private Butacas listaButacas;
+    private List<Integer> cantidadSalas;
     private int v;
-    
+
+    public Salas() {
+
+    }
+
     public Salas(int salas) {
         v = salas;
     }
-    
-    public List<Integer> getSalas(){
+
+    public List<Integer> getListaSalas() {
         cantidadSalas = new ArrayList<>();
-        
+
         for (int i = 0; i < v; i++) {
             cantidadSalas.add(i);
->>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
+
         }
-        
+
         return cantidadSalas;
-        
+
     }
-    
-<<<<<<< HEAD
-    public Peliculas getPelicula(){
-        return unaPelicula;
-    }
-=======
-    
-    
-    
->>>>>>> c5aa40698d0f4966341a09c6e2383107e7674a00
+
 }

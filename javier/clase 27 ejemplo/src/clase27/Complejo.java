@@ -9,71 +9,54 @@ import java.util.*;
 
 /**
  *
- * @author ivanr
+ * @author alumno
  */
 public class Complejo implements IComplejo {
-
-    protected String nombre;
-    protected String direccion;
-
-    protected List<Sala> Salas;
+    protected String nombreComplejo;
+    protected List<Sala> lista_de_salas;
 
     public Complejo() {
-
-        nombre = "Village Recoleta";
-        direccion = "Vicente Lopez 2050";
-
-        Salas = new ArrayList<>();
+        nombreComplejo = "Ahora si le puse una property";
+        lista_de_salas = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            Salas.add(new Sala());
+            lista_de_salas.add(new Sala());
         }
-
-    }
-
-    public List<Pelicula> getListaDePeliculas() {
-        List<Pelicula> lista_de_peliculas = new ArrayList<>();
-        for (Iterator<Sala> iterator = Salas.iterator(); iterator.hasNext();) {
-            Sala unaSala = iterator.next();
-            lista_de_peliculas.add(unaSala.getPelicula());
-        }
-
-        return lista_de_peliculas;
-    }
-
-    public List<Butaca> getListaButacasLibres(Sala paraEstaSala) {
-
-        List<Butaca> lista_de_butacas = paraEstaSala.getListaDeButacas();
-
-        List<Butaca> lista_de_butacas_libres = new ArrayList<>();
-
-        for (Iterator<Butaca> iterator = lista_de_butacas.iterator(); iterator.hasNext();) {
-            Butaca unaButaca = iterator.next();
-            if (unaButaca.ocupada) {
-                System.out.println("EstaOcupada");
-            } else {
-                lista_de_butacas_libres.add(unaButaca);
-                System.out.println("Esta libre");
-            }
-        }
-
-        return lista_de_butacas_libres;
-    }
-
-    public List<Sala> getListaDeSalas() {
-        return Salas;
-    }
-
-    public int CantidadDeSalas() {
-        return Salas.size();
     }
 
     public String getComplejoNombre() {
-        return nombre;
+        return nombreComplejo;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public List<Pelicula> getListaDePeliculas() {
+        
+        List<Pelicula> lista_de_peliculas = new ArrayList<>();
+        
+        for (Iterator<Sala> iterator = lista_de_salas.iterator(); iterator.hasNext();) {
+            Sala unaSala = iterator.next();
+            lista_de_peliculas.add(unaSala.getPelicula());
+        }
+        
+        return lista_de_peliculas;
     }
 
+    public List<Sala> getListaDeSalas() {
+        return lista_de_salas;
+    }
+
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala){
+        
+        List<Butaca> lista_de_butacas = paraEstaSala.getListaButacas();
+        List<Butaca> lista_de_butacas_libres = new ArrayList<>();
+        for (Iterator<Butaca> iterator = lista_de_butacas.iterator(); iterator.hasNext();) {
+            Butaca unaButaca = iterator.next();
+            if ( unaButaca.estaOcupada ) {
+                System.out.println("EstaOcupada");
+            } else {
+                System.out.println("Esta libre");
+            }
+        }
+        
+        return lista_de_butacas_libres;
+    }
 }

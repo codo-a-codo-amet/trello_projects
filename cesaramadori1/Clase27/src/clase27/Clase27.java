@@ -22,22 +22,23 @@ public class Clase27 {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-        UI swing = new UI();
-        swing.setVisible(true);
         IComplejo Hoyts = new Complejo();
         System.out.println("El nombre del complejo es " + Hoyts.getComplejoNombre());
-
+        UI swing = new UI(Hoyts);
+        swing.setVisible(true);
+        
+/*
         for (Iterator<Sala> iterator = Hoyts.getListaDeSalas().iterator(); iterator.hasNext();) {
             Sala unaSala = iterator.next();
             //System.out.println("En la "+ unaSala + " se proyecta " + unaSala.peli1.getNombre());
-            //System.out.println();
+            System.out.println();
             Iterator<Butacas> iterator2 = Hoyts.getListaButacasLibres(unaSala).iterator();
             while (iterator2.hasNext()) {
                 Butacas unaButaca = iterator2.next();
-               // System.out.println(unaButaca);
+                System.out.println(unaButaca);
             }
         }
-        
+     */   
     }
 
    
