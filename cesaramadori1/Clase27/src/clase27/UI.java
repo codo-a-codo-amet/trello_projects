@@ -83,7 +83,16 @@ public class UI extends javax.swing.JFrame  {
         
     }
     public void anularVenta(){
-        //para hacer
+        Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
+        String item = jButocupadas.getSelectedValue();
+        for (int i = 0; i < Hoyts.getListaButacasLibres(salaSeleccionada).size(); i++) {
+            if (Hoyts.getListaButacasLibres(salaSeleccionada).get(i).getUbicacion() == item) {
+                Hoyts.getListaButacasLibres(salaSeleccionada).get(i).setOcupada(false);
+            }
+            
+        }
+        
+        
     }
     
     @SuppressWarnings("unchecked")
@@ -343,7 +352,7 @@ public class UI extends javax.swing.JFrame  {
     }//GEN-LAST:event_jButocupadasMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         anularVenta();
+        anularVenta();
        butacasVacias((Sala)comboSalas.getSelectedItem());
        butacasOcupadas((Sala)comboSalas.getSelectedItem());// TODO add your
     }//GEN-LAST:event_jButton1ActionPerformed
