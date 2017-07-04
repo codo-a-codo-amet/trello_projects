@@ -29,6 +29,15 @@ public class Clase27 {
             Sala unaSala = iteratorSala.next();
             System.out.println("sala: " + unaSala);
             System.out.println(hoytsAbasto.getListaButacasLibres(unaSala));
+            
+            Iterator<Butaca> iterator = hoytsAbasto.getListaButacasLibres(unaSala).iterator();
+            for (; iterator.hasNext();) {
+                Butaca next = iterator.next();
+                next.estaOcupada = true;
+            }
+            
+            System.out.println(hoytsAbasto.getListaButacasLibres(unaSala));
+            
         }
         
 
