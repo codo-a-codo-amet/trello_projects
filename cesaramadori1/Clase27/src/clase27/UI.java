@@ -12,17 +12,17 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 
 
-/**
- *
- * @author TheGuru
- */
+
 public class UI extends javax.swing.JFrame  {
 
-    Complejo Hoyts = new Complejo();
-    public UI() {
+    private IComplejo Hoyts;
+  
+    public UI(IComplejo Hoyts) {
+        this.Hoyts = Hoyts;
         initComponents();
         //Asignar la lista de salas al combo box
-        comboSalas.setModel(new DefaultComboBoxModel(Hoyts.salas.toArray()));
+        comboSalas.setModel(new DefaultComboBoxModel(Hoyts.getListaDeSalas().toArray()));
+        //comboSalas.setModel(new DefaultComboBoxModel(Hoyts.salas.toArray()));
         //Instanciar una sala para asignarle la que esta seleccionada en el combo box
         Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
         //Llamado al metodo para mostar en txtPelicula, segun sala seleccionada
@@ -30,7 +30,7 @@ public class UI extends javax.swing.JFrame  {
         //Llamado al metodo que muestra las butacas vacias de la sala seleccionada
         //butacasVacias(salaSeleccionada);
         //Asignar la lista de peliculas al combo box para seleccionar por pelicula la sala
-        comboPeliculas.setModel(new DefaultComboBoxModel(Hoyts.listado_de_Peliculas));
+        comboPeliculas.setModel(new DefaultComboBoxModel(Hoyts.getListaDePeliculas().toArray()));
         salaporPelicula();
         
     }
@@ -68,9 +68,11 @@ public class UI extends javax.swing.JFrame  {
         jtxttotalvendidas.setText(cantidad);
     }
     public void salaporPelicula (){
-        for (int i = 0; i < Hoyts.salas.size(); i++) {
-                if (Hoyts.salas.get(i).laPelicula.getNombre() == (String) comboPeliculas.getSelectedItem()) {
-                    jtxtSala.setText(Hoyts.salas.get(i).nombre);
+        for (int i = 0; i < Hoyts.getListaDeSalas().size(); i++) {
+            
+                if (Hoyts.getListaDeSalas().get(i).laPelicula.getNombre() == comboPeliculas.getSelectedItem().toString()){
+                    jtxtSala.setText(Hoyts.getListaDeSalas().get(i).nombre);
+                    
                 }
             }
     }
@@ -273,7 +275,6 @@ public class UI extends javax.swing.JFrame  {
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 780, 20));
 
         fondo.setBackground(new java.awt.Color(255, 255, 255));
-        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\TheGuru\\Documents\\trello_projects\\cesaramadori1\\Clase27\\img\\90070487e785a81382491d4c89b508a1.png")); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 800, 510));
 
         pack();
@@ -289,7 +290,7 @@ public class UI extends javax.swing.JFrame  {
 
     private void btnComprarEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarEntradaActionPerformed
        comprarentradas();
-       butacasVacias((Sala)comboSalas.getSelectedItem());
+       butacasVacias( (Sala)comboSalas.getSelectedItem());
        butacasOcupadas((Sala)comboSalas.getSelectedItem());
     }//GEN-LAST:event_btnComprarEntradaActionPerformed
 
@@ -390,7 +391,7 @@ public class UI extends javax.swing.JFrame  {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UI().setVisible(true);
+                //new UI().setVisible(true);
             }
         });
     }

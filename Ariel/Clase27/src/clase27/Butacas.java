@@ -12,8 +12,11 @@ import java.util.List;
  * @author alumno
  */
 public class Butacas implements IComplejo{
+    protected String nombre;
     
     public Butacas (){
+        
+        nombre="butaca";
         
         
     }
