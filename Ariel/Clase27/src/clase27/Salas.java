@@ -6,6 +6,7 @@
 package clase27;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -14,16 +15,31 @@ import java.util.ArrayList;
 public class Salas{
     
           protected Peliculas unaPelicula;
+          protected int numeroDeButacas;
+          protected boolean butacaLibre;
+          protected String filaButacas;
+          String valorNumFilaButacas;
           List<Peliculas>Peliculass;
           List<Butacas> lista_de_butacas;
+          
     public Salas (){
+        butacaLibre = true;
+        filaButacas  = "ABCDE";
+        valorNumFilaButacas="";
+        int numfilaButacas = filaButacas.length();
+        numeroDeButacas = 50;
         lista_de_butacas = new ArrayList<>();
-        lista_de_butacas.add(new Butacas());
-        for (int f = 0; f < 50;f++){
+      
+        for (int f = 0; f < numeroDeButacas;f++){
+            
             lista_de_butacas.add(new Butacas());
         }
         
-   
+        System.out.println(lista_de_butacas);
+    }
+    
+    public int NumeroListaButacas(){
+        return lista_de_butacas.size();
     }
     
       public String GetComplejoNombre(){
@@ -35,7 +51,7 @@ public class Salas{
     }
     
     public List<Salas> getListaDeSalas(){
-        return null;
+   
     }
     
     public List<Butacas> getListaDeButacas(){
