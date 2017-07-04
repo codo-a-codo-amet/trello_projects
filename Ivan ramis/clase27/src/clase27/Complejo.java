@@ -52,6 +52,7 @@ public class Complejo implements IComplejo {
             if (unaButaca.ocupada) {
                 System.out.println("EstaOcupada");
             } else {
+                lista_de_butacas_libres.add(unaButaca);
                 System.out.println("Esta libre");
             }
         }
