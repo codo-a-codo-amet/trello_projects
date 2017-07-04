@@ -13,22 +13,18 @@ import java.util.*;
  */
 public class Complejo implements IComplejo {
 
-    protected List<Salas> lista_de_salas;
-    protected String localidad;
+    private List<Salas> lista_de_salas;
+    private List<Peliculas> lista_de_peliculas;
+    
+    private Salas sala = new Salas(5);
+
+    protected String localidpad;
     private int v;
 
-    Peliculas pelicula;
-    List<String> nombres;
+    private Peliculas pelicula;
+    private List<String> nombres;
 
     public Complejo() {
-        lista_de_salas = new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            lista_de_salas.add(new Salas());
-
-            pelicula = new Peliculas();
-
-        }
 
     }
     
@@ -45,31 +41,35 @@ public class Complejo implements IComplejo {
     }
 
     public String getPelicula(int valor) {
-        return pelicula.getPeliculas().get(valor);
+        return pelicula.getListaPeliculas().get(valor);
     }
 
-    public Integer getSala(int valor) {
-        return pelicula.getSalas(valor);
+    public Integer getSalas(int valor) {
+        return sala.getListaSalas().get(valor);
     }
 
     @Override
     public String getComplejoNombre() {
-        return getComplejos().get(v);
+        return null;
     }
-
+  
     @Override
     public List<Peliculas> getListaDePeliculas() {
-        List<Peliculas> listaPeliculas = new ArrayList<>();
-        for (Iterator<Peliculas> iterator = listaPeliculas.iterator(); iterator.hasNext();) {
+        List<Peliculas> listaPeliculas;
+        listaPeliculas = new ArrayList<>();
+        for (Iterator<Peliculas> iterator = lista_de_peliculas.iterator(); iterator.hasNext();) {
             Peliculas peli = iterator.next();
+            //listaPeliculas.add(peli.getListaPeliculas());
         }
         return listaPeliculas;
     }
 
+    @Override
     public List<Salas> getListaDeSalas() {
         return lista_de_salas;
     }
 
+    @Override
     public List<Butacas> getListaButacasLibres(Salas paraEstaSala) {
         return new ArrayList<>();
     }

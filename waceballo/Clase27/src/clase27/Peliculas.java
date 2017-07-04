@@ -14,21 +14,13 @@ import java.util.List;
  */
 public class Peliculas {
 
-   List<String> nombrePeliculas;
-
-    Salas sala = new Salas(5);
+    List<String> nombrePeliculas;
 
     public Peliculas() {
 
     }
 
-    private int v;
-
-    public Peliculas(int peli) {
-        v = peli;
-    }
-
-    public List<String> getPeliculas() {
+    public List<String> getListaPeliculas() {
         nombrePeliculas = new ArrayList<>();
 
         nombrePeliculas.add("Mi Villano Favorito 3");
@@ -41,13 +33,9 @@ public class Peliculas {
 
     }
 
-    public Integer getSalas(int valor) {
-        return sala.getSalas().get(valor);
-    }
 
     public String damePeliculaHorario(int valor) {
         return "Horario ";
     }
-
 
 }
