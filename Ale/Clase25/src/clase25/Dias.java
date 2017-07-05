@@ -9,15 +9,15 @@ package clase25;
  *
  * @author alumno
  */
-<<<<<<< HEAD
+
 public class Dias implements IAritmetica {
 
     public void Sumar(IAritmetica toAdd){
-=======
-public class Dias implements IAritmetica<String> {
+
+
     
     public void Sumar(IAritmetica<String> toAdd){
->>>>>>> 17e18365ee98d37f58996da0e1aecb5affa8ec2b
+
         System.out.println("Sumando días");
     }
     public void Restar(IAritmetica<String> toAdd){

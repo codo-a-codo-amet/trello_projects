@@ -20,6 +20,10 @@ public class Clase27 {
         Complejo lasSalas = new Complejo();
         
         System.out.println("El numero de salas es:" + lasSalas.DameCantidadSalas());
+        
+        Salas lasButacas = new Salas();
+        
+       System.out.println("La sala tiene "+lasButacas.NumeroListaButacas()+" butacas");
     }
     
 }

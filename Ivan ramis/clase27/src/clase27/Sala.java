@@ -15,14 +15,14 @@ public class Sala {
 
     protected Integer numero;
     protected Integer cantButacas;
-    protected Integer pelicula;
+    protected Pelicula unaPelicula;
 
     List<Butaca> butacas;
-    Pelicula peliculas;
+    
 
     public Sala() {
 
-        peliculas = new Pelicula();
+        unaPelicula = new Pelicula();
 
         butacas = new ArrayList<>();
 
@@ -32,11 +32,15 @@ public class Sala {
 
     }
 
-    public String NombrePelicula() {
-        return peliculas.GetNombre();
+    public Pelicula getPelicula(){
+        return unaPelicula;
     }
 
     public Integer CantButacass() {
         return cantButacas;
+    }
+    
+    public List<Butaca> getListaDeButacas (){
+        return butacas;
     }
 }

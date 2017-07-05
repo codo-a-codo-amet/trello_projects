@@ -17,7 +17,7 @@ public class Butaca {
     public Butaca() {
 
         numero = 0;
-        ocupada = true;
+        ocupada = Boolean.TRUE;
     }
 
 }

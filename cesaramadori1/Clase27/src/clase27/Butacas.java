@@ -33,5 +33,8 @@ public class Butacas {
         this.ubicacion = ubicacion;
     }
     
+    public String toString(){
+        return ubicacion;
+    }
     
 }
