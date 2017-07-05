@@ -11,32 +11,37 @@ import java.util.*;
  *
  * @author alumno
  */
-public class Complejo {
-    
-    private List<Salas> unasSalas;
-    private List<Peliculas> UnasPeliculas;
-    private List<Butacas> UnasButacas;
-   
-    
-    public Complejo() {
-    
-    Salas = new ArrayList<>();
-    Salas.add(new Salas());
-    
-    peliculas = new ArrayList<>();
-    peliculas.add(new Pelicula());
-    
-    butacas = new ArrayList<>();
-    butacas.add(new Butaca());
+public class Complejo  implements IComplejo {
+     
+    protected List<Salas> lista_de_salas;
 
+    public Complejo() {
+        lista_de_salas = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            lista_de_salas.add(new Salas());
+        }
     }
 
-}
+    public String getComplejoNombre() {
+        return "No le puse una property";
+    }
 
-    
-    
-    
-    
-    
-    
+    public List<Peliculas> getListaDePeliculas() {
+        List<Peliculas> lista_de_peliculas = new ArrayList<>();
+        for (Iterator<Salas> iterator = lista_de_salas.iterator(); iterator.hasNext();) {
+            Salas unaSala = iterator.next();
+            lista_de_peliculas.add(unaSala.getPeliculas());
+        }
+        
+        return lista_de_peliculas;
+    }
+
+    public List<Salas> getListaDeSalas() {
+        return lista_de_salas;
+    }
+
+    public List<Butacas> getListaButacasLibres(Salas paraEstaSala){
+        return new ArrayList<>();
+    }
 }
