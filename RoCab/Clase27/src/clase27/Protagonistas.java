@@ -11,8 +11,12 @@ package clase27;
  */
 public class Protagonistas extends Pelicula{
     
-    protected String nombre ="Keanu";
+    protected String nombreProtagonista ="Keanu";
     protected String apellido ="Reeves";
+    protected String nombreProtagonista2 ="Laurence";
+    protected String apellidoProtagonista2 = "Fishburne";
+    
+            
 
     public Protagonistas(String titulo, String genero, int horario, String breveDescripcion) {
         super(titulo, genero, horario, breveDescripcion);
