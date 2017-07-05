@@ -9,31 +9,44 @@ package clase24;
  *
  * @author alumno
  */
-public class Mueble {
+public class Mueble implements IMueble{
+    protected String material;
+    protected String tipo;
+    protected String tamanio;
+    protected String color;
+    protected String forma;
     
-   protected String Material;
-   protected String tipo;
-   protected String tamaño;
-   protected String color;
-   protected String Forma;
-
-
-public Mueble(){
-Material = "madera";
-tipo = "cocina";
-tamaño = "2metros";        
-color = "gris";
-Forma = "cuadrada";
+    public Mueble(){
+        material = "Placa";
+        tipo = "Escritorio";
+        tamanio = "Mediana";
+        color = "Blanca";
+        forma = "Rectangula";
+    }
+    
+    public Mueble(String marca){
+        
     }
 
-public String dameTuMaterial(){
-        return Material;
-       } 
-    public String dameTucolor(){
-          return color;
-      }
- 
-public String dameTutipo(){
+    public String dameTuMaterial(){
+        return material;
+    }    
+    
+    public String dameTuTipo(){
         return tipo;
-} 
+    }
+    
+    public String dameTuColor(){
+        return color;
+    }
+    
+    public String dameTuForma(){
+        return forma;
+    }
+            
+    public String dameTuTamanio(){
+        return tamanio;
+    }
+    
+    
 }
