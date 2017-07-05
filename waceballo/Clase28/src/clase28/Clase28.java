@@ -34,6 +34,13 @@ public class Clase28 {
             
             una_lista_personas.add(new Persona(nombre, apellido));
         }
+        
+        System.out.println("La lista de persona es: ");
+        
+        for (int i = 0; i < cantidad_de_personas; i++) {
+            System.out.println("Persona "+una_lista_personas.get(i));
+        }
+        
     }
     
 }
