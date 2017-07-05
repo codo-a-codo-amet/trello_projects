@@ -17,7 +17,7 @@ public class complejo implements IComplejo {
     protected List<salas> lista_de_salas;
 
     public complejo() {
-        nombreComplejo = "Ahora si le puse una property";
+        nombreComplejo = "VillageDevoto";
         lista_de_salas = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
