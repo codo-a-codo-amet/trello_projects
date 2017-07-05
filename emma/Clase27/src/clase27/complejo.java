@@ -11,6 +11,26 @@ import java.util.*;
  *
  * @author alumno
  */
+<<<<<<< HEAD
+<<<<<<< HEAD
+public class complejo {
+    
+}
+=======
+public class complejo extends cine {
+       
+    public complejo () {
+    
+    complejo = "Village Caballito";
+    pelicula = "Mi Villano Favorito 3";
+    horarioPelicula = "19.25";        
+    sala = "8";
+    butacas = "c23, c24";
+    }
+
+}     
+>>>>>>> ba0f585ddaf90f5eec4ae9bb470db98baceac1a4
+=======
 public class complejo implements IComplejo {
 
     protected String nombreComplejo;
@@ -62,3 +82,4 @@ public class complejo implements IComplejo {
         return lista_de_butacas_libres;
     }
 }
+>>>>>>> e3287e901a6e0301b586032fc5ffbf1b3fcdb7cd
