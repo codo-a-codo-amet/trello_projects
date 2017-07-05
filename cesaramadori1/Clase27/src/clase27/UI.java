@@ -14,52 +14,64 @@ import javax.swing.DefaultListModel;
 
 
 public class UI extends javax.swing.JFrame  {
-
+    //Objeto tipo IComplejo pasado por parametro desde el main
     private IComplejo Hoyts;
-  
+    // Constructor de la interfaz del complejo
     public UI(IComplejo Hoyts) {
+        //Asignacion del objeto 
         this.Hoyts = Hoyts;
+        //Inicializacion de los componentes de la vista 
         initComponents();
         //Asignar la lista de salas al combo box
         comboSalas.setModel(new DefaultComboBoxModel(Hoyts.getListaDeSalas().toArray()));
-        //comboSalas.setModel(new DefaultComboBoxModel(Hoyts.salas.toArray()));
         //Instanciar una sala para asignarle la que esta seleccionada en el combo box
         Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
         //Llamado al metodo para mostar en txtPelicula, segun sala seleccionada
         obtenerPelicula(salaSeleccionada);
-        //Llamado al metodo que muestra las butacas vacias de la sala seleccionada
-        //butacasVacias(salaSeleccionada);
         //Asignar la lista de peliculas al combo box para seleccionar por pelicula la sala
         comboPeliculas.setModel(new DefaultComboBoxModel(Hoyts.getListaDePeliculas().toArray()));
+        //Mostrar la sala segun la pelicula seleccionada
         salaporPelicula();
         
     }
     
     public void obtenerPelicula(Sala laSala){
-        
+        //Imprime en pantalla el nombre de la pelicula en funcion de la sala seleccionada
         txtPelicula.setText(laSala.laPelicula.getNombre()); 
+        //metodo que refresca la lista de butacas vacias
         butacasVacias(laSala);
+        //metodo que refresca la lista de butacas vacias
         butacasOcupadas(laSala);
     }
     
     public void butacasVacias (Sala laSala){
+        //Crea una lista de butacas vacias
         DefaultListModel listVacias = new DefaultListModel();
-        
+        //recorre el listado del metodo listabutacaslibres
         for (int i = 0; i < Hoyts.getListaButacasLibres(laSala).size(); i++)
-        {
+        {   
+            //verifica si la butaca esta libre(igualmente el listado deberia entregar solo butacas libres)
             if (Hoyts.getListaButacasLibres(laSala).get(i).isOcupada()== false) {
+                //agrega la butaca a la lista
                 listVacias.addElement(Hoyts.getListaButacasLibres(laSala).get(i));
             }
-              jButlibres.setModel(listVacias);
+            //asigna al elemento JButlibres el modelo de la lista
+            jButlibres.setModel(listVacias);
               
         }
+        //Convierte el valor de la cantidad de butacas a una cadena 
         String cantidad = String.valueOf(Hoyts.getListaButacasLibres(laSala).size());
+        //imprime en pantalla la cantidad de butacas
         jtxttotallibres.setText(cantidad);
     }
     public void butacasOcupadas (Sala laSala){
+        //Crea una lista de butacas ocupadas
         DefaultListModel listOcupadas = new DefaultListModel();
+        //recorre la lista de asientos de la sala
         for (int i = 0; i < laSala.asientos.size(); i++) {
+            //verifica si la butaca esta ocupada
             if (laSala.asientos.get(i).isOcupada()== true) {
+                //agrega a la lista la butaca que este ocupada
                 listOcupadas.addElement(laSala.asientos.get(i));
             }
         }
@@ -68,22 +80,39 @@ public class UI extends javax.swing.JFrame  {
         jtxttotalvendidas.setText(cantidad);
     }
     public void salaporPelicula (){
+        //Recorre el listado de salas
         for (int i = 0; i < Hoyts.getListaDeSalas().size(); i++) {
-            
+                // verifica si la pelicula seleccionada esta en alguna sala
                 if (Hoyts.getListaDeSalas().get(i).laPelicula.getNombre() == comboPeliculas.getSelectedItem().toString()){
+                    //muestra el nombre de la sala 
                     jtxtSala.setText(Hoyts.getListaDeSalas().get(i).nombre);
                     
                 }
             }
     }
     public void comprarentradas(){
+        // Busca la sala selecionada en la lista
         Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
+        // Asigna a item el numero de orden de la butaca en la lista
         int item = this.jButlibres.getSelectedIndex();
+        // Marca como ocupada la butaca seleccionada
         Hoyts.getListaButacasLibres(salaSeleccionada).get(item).setOcupada(true);
         
     }
     public void anularVenta(){
-        //para hacer
+        // Busca la sala selecionada en la lista
+        Sala salaSeleccionada = (Sala)comboSalas.getSelectedItem();
+        //Recorre la lista de butacas 
+        for (int i = 0; i < salaSeleccionada.asientos.size(); i++) {
+            //Si verifica si la butaca seleccionada sea igual a alguna de las butacas de la lista
+            if (salaSeleccionada.asientos.get(i).equals(jButocupadas.getSelectedValue())) {
+                //Cambia el estado de ocupada a libre
+                salaSeleccionada.asientos.get(i).setOcupada(false);
+            }
+            
+        }
+        
+        
     }
     
     @SuppressWarnings("unchecked")
@@ -343,7 +372,7 @@ public class UI extends javax.swing.JFrame  {
     }//GEN-LAST:event_jButocupadasMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         anularVenta();
+       anularVenta();
        butacasVacias((Sala)comboSalas.getSelectedItem());
        butacasOcupadas((Sala)comboSalas.getSelectedItem());// TODO add your
     }//GEN-LAST:event_jButton1ActionPerformed
