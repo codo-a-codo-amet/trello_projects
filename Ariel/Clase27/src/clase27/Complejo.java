@@ -17,7 +17,7 @@ public class Complejo implements IComplejo {
 
     private int butaca;
     List<Salas> numSalas;
- 
+    List<Butacas> numButaca;
     
     public Complejo(){
         
@@ -29,9 +29,12 @@ public class Complejo implements IComplejo {
          numSalas.add(new Salas());    
         }
         
-       
+        numButaca = new ArrayList<>();
+        numButaca.add(new Butacas());
         
-           
+         for (int j = 0; j < 10; j++){
+         numButaca.add(new Butacas()); 
+         }      
         }
          
     public int DameCantidadSalas (){
