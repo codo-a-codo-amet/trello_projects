@@ -9,6 +9,15 @@ package clase24;
  *
  * @author alumno
  */
-public class Profesor extends Persona{
+public class Persona {
+    
+    protected String nombre;
+    protected String apellido;
+    protected int dni;
+    
+    public Persona(){
+        
+    }
+    
     
 }
