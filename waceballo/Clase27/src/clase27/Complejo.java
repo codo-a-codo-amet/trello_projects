@@ -5,53 +5,74 @@
  */
 package clase27;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
  * @author alumno
  */
-public class Complejo {
-    List<String> nombres;
+public class Complejo implements IComplejo {
+
+    private List<Salas> lista_de_salas;
+    private List<Peliculas> lista_de_peliculas;
     
-    Peliculas pelicula = new Peliculas(10);
-    Salas sala = new Salas(5);
-    Butacas butaca = new Butacas(20);
-    
-    public Complejo() {
-        
-    }
-    
+    private Salas sala = new Salas(5);
+
+    protected String localidpad;
     private int v;
-    
-    public Complejo(int complejo) {
-        v = complejo;
+
+    private Peliculas pelicula;
+    private List<String> nombres;
+
+    public Complejo() {
+
     }
     
-    public List<String> getComplejos(){
+    public List<String> getComplejos() {
         nombres = new ArrayList<>();
-        
-        for (int i = 0; i < v; i++) {
-            nombres.add("Complejo "+i);
-        }
-        
+        nombres.add("Abasto");
+        nombres.add("Dot");
+        nombres.add("Village");
+        nombres.add("Cinemax");
+        nombres.add("Avellaneda");
+
         return nombres;
-        
+
     }
-    
-    public String getPelicula(int valor){
-        return pelicula.getPeliculas().get(valor);
+
+    public String getPelicula(int valor) {
+        return pelicula.getListaPeliculas().get(valor);
     }
-    
-    public Integer getSalas(int valor){
-        return sala.getSalas().get(valor);
+
+    public Integer getSalas(int valor) {
+        return sala.getListaSalas().get(valor);
     }
-    
-    public Integer getButacas(int valor){
-        return butaca.getButacas().get(valor);
+
+    @Override
+    public String getComplejoNombre() {
+        return null;
     }
-    
-    
-    
+  
+    @Override
+    public List<Peliculas> getListaDePeliculas() {
+        List<Peliculas> listaPeliculas;
+        listaPeliculas = new ArrayList<>();
+        for (Iterator<Peliculas> iterator = lista_de_peliculas.iterator(); iterator.hasNext();) {
+            Peliculas peli = iterator.next();
+            //listaPeliculas.add(peli.getListaPeliculas());
+        }
+        return listaPeliculas;
+    }
+
+    @Override
+    public List<Salas> getListaDeSalas() {
+        return lista_de_salas;
+    }
+
+    @Override
+    public List<Butacas> getListaButacasLibres(Salas paraEstaSala) {
+        return new ArrayList<>();
+    }
+
+
 }

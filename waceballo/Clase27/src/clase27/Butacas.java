@@ -14,8 +14,9 @@ import java.util.List;
  */
 public class Butacas {
 
-    List<Integer> cantidadButacas;
-
+    List<Integer> listaButacas;
+    
+    private Integer cantButacas;
     private Integer cantDisponibles;
     private Integer cantOcupadas;
 
@@ -23,22 +24,23 @@ public class Butacas {
 
     }
 
-    private int v;
-    
-    public Butacas(int cantidad) {
-        v = cantidad;
-    }
-
-    public List<Integer> getButacas(){
-        cantidadButacas = new ArrayList<>();
+    public Butacas(int v) {
+        listaButacas = new ArrayList<>();
         
         for (int i = 0; i < v; i++) {
-            cantidadButacas.add(i);
+            listaButacas.add(i);
         }
+
         
-        return cantidadButacas;        
     }
-    
+
+    public Integer getCantButacas() {
+        return cantButacas;
+    }
+
+    public void setCantButacas(Integer cantButacas) {
+        this.cantButacas = cantButacas;
+    }
 
     public Integer getCantDisponibles() {
         return cantDisponibles;
@@ -56,15 +58,5 @@ public class Butacas {
         this.cantOcupadas = cantOcupadas;
     }
 
-    public int dameButacasOcupadas() {
-        return cantOcupadas = 10;
-    }
 
-    public int dameButacasDisponibles() {
-        return cantDisponibles = 5;
-    }
-
-    
-    
-    
 }

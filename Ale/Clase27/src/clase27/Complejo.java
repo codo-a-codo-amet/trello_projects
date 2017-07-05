@@ -12,10 +12,11 @@ import java.util.*;
  * @author alumno
  */
 public class Complejo implements IComplejo {
-
+    protected String nombreComplejo;
     protected List<Sala> lista_de_salas;
 
     public Complejo() {
+        nombreComplejo = "Ahora si le puse una property";
         lista_de_salas = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
@@ -24,11 +25,13 @@ public class Complejo implements IComplejo {
     }
 
     public String getComplejoNombre() {
-        return "No le puse una property";
+        return nombreComplejo;
     }
 
     public List<Pelicula> getListaDePeliculas() {
+        
         List<Pelicula> lista_de_peliculas = new ArrayList<>();
+        
         for (Iterator<Sala> iterator = lista_de_salas.iterator(); iterator.hasNext();) {
             Sala unaSala = iterator.next();
             lista_de_peliculas.add(unaSala.getPelicula());
@@ -42,6 +45,19 @@ public class Complejo implements IComplejo {
     }
 
     public List<Butaca> getListaButacasLibres(Sala paraEstaSala){
-        return new ArrayList<>();
+        
+        List<Butaca> lista_de_butacas = paraEstaSala.getListaButacas();
+        List<Butaca> lista_de_butacas_libres = new ArrayList<>();
+        for (Iterator<Butaca> iterator = lista_de_butacas.iterator(); iterator.hasNext();) {
+            Butaca unaButaca = iterator.next();
+            if ( unaButaca.estaOcupada ) {
+                System.out.println("EstaOcupada");
+            } else {
+                lista_de_butacas_libres.add(unaButaca);
+                System.out.println("Esta libre");
+            }
+        }
+        
+        return lista_de_butacas_libres;
     }
 }

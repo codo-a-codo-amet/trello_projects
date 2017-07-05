@@ -13,33 +13,29 @@ import java.util.List;
  * @author alumno
  */
 public class Peliculas {
-    
+
     List<String> nombrePeliculas;
-    protected String generoPelicula;
-    
-    public Peliculas() {      
-        generoPelicula = "Infantil";
-        
+
+    public Peliculas() {
+
     }
-    
-    private int v;
-    
-    public Peliculas(int peli) {
-        v = peli;
-    }
-    
-    public List<String> getPeliculas(){
+
+    public List<String> getListaPeliculas() {
         nombrePeliculas = new ArrayList<>();
-        
-        for (int i = 0; i < v; i++) {
-            nombrePeliculas.add("Pelicula "+i);
-        }
-        
+
+        nombrePeliculas.add("Mi Villano Favorito 3");
+        nombrePeliculas.add("Mujer Maravilla");
+        nombrePeliculas.add("La Momia");
+        nombrePeliculas.add("Piratas del Caribe 5");
+        nombrePeliculas.add("Solo se vive una vez");
+
         return nombrePeliculas;
-        
+
     }
-    
 
 
-    
+    public String damePeliculaHorario(int valor) {
+        return "Horario ";
+    }
+
 }

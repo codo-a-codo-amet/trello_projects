@@ -5,8 +5,7 @@
  */
 package clase27;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -14,30 +13,29 @@ import java.util.List;
  */
 public class Salas {
 
-    List<Integer> cantidadSalas;
+    private List<Butacas> lista_de_butacas;
+    private Butacas listaButacas;
+    private List<Integer> cantidadSalas;
+    private int v;
 
     public Salas() {
 
     }
-        
-    private int v;
-    
+
     public Salas(int salas) {
         v = salas;
     }
-    
-    public List<Integer> getSalas(){
+
+    public List<Integer> getListaSalas() {
         cantidadSalas = new ArrayList<>();
-        
+
         for (int i = 0; i < v; i++) {
             cantidadSalas.add(i);
+
         }
-        
+
         return cantidadSalas;
-        
+
     }
-    
-    
-    
-    
+
 }

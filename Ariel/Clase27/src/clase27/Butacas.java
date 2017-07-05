@@ -5,15 +5,40 @@
  */
 package clase27;
 
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
-public class Butacas{
+public class Butacas implements IComplejo{
+    protected String nombre;
     
     public Butacas (){
         
+        nombre="butaca";
         
+        
+    }
+
+    @Override
+    public String getComplejoNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Peliculas> getListaDePeliculas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Salas> getListaDeSalas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Butacas> getListaButacasLibres(Salas paraEstaSala) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
