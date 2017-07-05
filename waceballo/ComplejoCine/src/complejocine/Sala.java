@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package complejocine;
+
+import java.util.*;
+
+/**
+ *
+ * @author walter
+ */
+public class Sala {
+
+    private List<Butaca> listaButacas;
+    
+    public Sala(){
+      
+        listaButacas = new ArrayList<>();
+        
+        for (int i = 0; i < 10; i++) {
+            listaButacas.add(new Butaca());
+
+        }
+        
+    }
+    
+    public List<Butaca> getListaButacas(){
+        return listaButacas;
+    }
+
+    
+
+
+
+
+
+    
+}
