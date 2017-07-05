@@ -19,7 +19,7 @@ public class ComplejoCine {
         Complejo cine = new Complejo();
         System.out.println(cine.getComplejoNombre());
         
-        System.out.println(cine.getListaDePeliculas().get(1));
+        System.out.println(cine.getListaDePeliculas());
     }
     
 }
