@@ -11,11 +11,4 @@ package clase24;
  */
 public class Silla extends Mueble{
     
-    public Silla(){
-        material = "Plastico";
-        forma = "ver";
-        color = "Azul";
-        tamanio = "Mediana";
-        tipo = "Aula";
-    }
 }

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/emma/Clase24/dist/
+=======
 Ale/Prueba001/build/classes/.netbeans_automatic_build
 Ale/Prueba001/build/classes/.netbeans_update_resources
 Ale/Prueba001/build/classes/prueba001/Prueba001.class
@@ -117,3 +120,4 @@ Ale/Clase21/nbproject/private/private.xml
 /Ale/Pilas/nbproject/private/
 /Ale/PilaEjercicio/nbproject/private/
 /Ale/Facturacion/build/
+>>>>>>> c3509210d2e4b842ae23b6e4fb4592a312efafbc
