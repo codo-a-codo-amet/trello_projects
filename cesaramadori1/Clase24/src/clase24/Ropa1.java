@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase28;
+package clase24;
 
 /**
  *
  * @author alumno
  */
-public class Ropa {
+public class Ropa1 {
     public String color;
     public String talle;
     public String tipo;
