@@ -41,8 +41,21 @@ public class Clase28 {
             System.out.println("Persona "+i+" "+una_lista_personas.get(i));
         }
         
-        
         System.out.println("Ingrese el nombre de la persona a buscar");
+        String nombreABuscar = teclado.next();
+        
+        for (int i = 0; i < cantidad_de_personas; i++) {
+            Persona unaPersona = una_lista_personas.get(i);
+            String nombrePersona = unaPersona.getNombre();
+            
+            if (nombrePersona.equalsIgnoreCase(nombreABuscar)){
+                System.out.println("Perona encontrada");
+                break;
+            }else{
+                System.out.println("No existe en la lista");
+            }
+        }
+        
     }
 
 
