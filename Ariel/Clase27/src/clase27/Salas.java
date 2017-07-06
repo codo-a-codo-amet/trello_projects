@@ -18,9 +18,11 @@ public class Salas{
           protected int numeroDeButacas;
           protected boolean butacaLibre;
           protected String filaButacas;
+          String[] letraFila = new String[]{"A","B"};
           String valorNumFilaButacas;
+          
           List<Peliculas>Peliculass;
-          List<Butacas> lista_de_butacas;
+          List<String> lista_de_butacas;
           
     public Salas (){
         butacaLibre = true;
@@ -31,10 +33,10 @@ public class Salas{
         lista_de_butacas = new ArrayList<>();
       
         for (int f = 0; f < numeroDeButacas;f++){
-            
-            lista_de_butacas.add(new Butacas());
+            for (int g = 0; g < numeroDeButacas; g ++){
+            lista_de_butacas.add( letraFila [f] +g);
         }
-        
+        }
         System.out.println(lista_de_butacas);
     }
     
@@ -52,6 +54,8 @@ public class Salas{
     
     public List<Salas> getListaDeSalas(){
    
+        return null;
+        
     }
     
     public List<Butacas> getListaDeButacas(){
