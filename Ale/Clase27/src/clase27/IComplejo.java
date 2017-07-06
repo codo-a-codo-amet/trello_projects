@@ -19,6 +19,4 @@ public interface IComplejo {
     public List<Sala> getListaDeSalas();
     
     public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
-    
-    
 }

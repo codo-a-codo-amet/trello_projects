@@ -11,9 +11,4 @@ package clase27;
  */
 public class complejo {
     
-}public class Complejo implements IComplejo {
-
-    protected String nombre;
-    protected String direccion;
-
-    protected List<Sala> Salas;
+}
