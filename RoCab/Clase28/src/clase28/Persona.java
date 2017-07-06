@@ -10,9 +10,9 @@ package clase28;
  * @author alumno
  */
 public class Persona {
-    private String nombre;
-    private String apellido;
-    private int edad;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
     private Integer dni;
     private String sexo;
     private Ropa calzado;
@@ -23,13 +23,33 @@ public class Persona {
     public Persona (String nombre, String apellido){
         this.nombre = nombre;
         this.apellido = apellido;
+        
+        
+
     }
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
     public String toString(){
-        return "Nombre: "+nombre+", Apellido: "+apellido;
+        return " Nombre= " + nombre + " Apellido = " + apellido;
     }
-    
-    
+
+    public Persona(int edad) {
+        this.edad = edad;
+    }
     public Persona (){
         nombre ="N";
         apellido="N";
@@ -52,14 +72,4 @@ public class Persona {
         sombrero.talle=("Medium");
         sombrero.marca=("Sin Marca");
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-    
-    
 }
