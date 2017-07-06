@@ -52,4 +52,14 @@ public class Persona {
         sombrero.talle=("Medium");
         sombrero.marca=("Sin Marca");
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+    
+    
 }
