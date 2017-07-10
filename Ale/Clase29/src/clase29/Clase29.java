@@ -30,6 +30,16 @@ public class Clase29 {
         System.out.println("Ingrese Nombre de Usuario");
         nombre_usuario = aScanner.next();
         
+        System.out.println("Ingrese email");
+        email = aScanner.next();
+        
+        System.out.println("Ingrese Contraseña");
+        password = aScanner.next();
+        
+        System.out.println("Ingrese Confirmacion de Contraseña");
+        String confirm_password = aScanner.next();
+        
+        
     }
     
 }
