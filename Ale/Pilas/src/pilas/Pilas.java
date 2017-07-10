@@ -32,6 +32,5 @@ pila.push(100); // Agrega el tercer elemento = indice 2
 System.out.println("El ultimo elemento de la pila es: " + pila.peek()); //Con el metodo peek podemos ver el ultimo elemento de la pila
 System.out.println(pila.pop()); // El metodo pop devuelve el ultimo elemento y lo elimina 
 System.out.println("El ultimo elemento de la pila es: " + pila.peek());
-
     } 
 }
