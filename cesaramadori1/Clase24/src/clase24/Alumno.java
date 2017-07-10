@@ -5,7 +5,7 @@
  */
 package clase24;
 
-import clase28.Persona;
+
 
 /**
  *
