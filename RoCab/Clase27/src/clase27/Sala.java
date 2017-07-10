@@ -21,10 +21,13 @@ public class Sala extends Complejo{
     public Sala(){
         unaPelicula = new Pelicula();
         
-        lista_Butacas = new ArrayList<Butaca>();
+        lista_Butacas = new ArrayList<>();
             
         for (int i = 0; i<24; i++){
-            Butaca.add(new Butaca());
+            lista_Butacas.add(new Butaca());
         }
+    }
+    public Pelicula getPelicula(){
+        return unaPelicula;
     }
 }

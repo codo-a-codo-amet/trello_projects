@@ -9,6 +9,10 @@ package clase29;
  *
  * @author alumno
  */
-public class UserProfile {
+public class UserProfile extends Persona {
     
+    protected String email;
+    protected String password;
+    
+    public UserProfile (String nombre,String apellido )
 }
