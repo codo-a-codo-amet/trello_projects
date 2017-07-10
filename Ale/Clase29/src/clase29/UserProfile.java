@@ -10,17 +10,39 @@ package clase29;
  * @author alumno
  */
 public class UserProfile extends Persona {
-     protected String email;
-     protected String password;
+
+    protected String email;
+    protected String password;
+
+    protected String username;
+
+    /**
+     * Get the value of username
+     *
+     * @return the value of username
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * Set the value of username
+     *
+     * @param username new value of username
+     */
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public UserProfile(String nombre, String apellido) {
         super(nombre, apellido);
     }
-    
-    public UserProfile(String email, String password, String nombre, String apellido) {
+
+    public UserProfile(String email, String password, String username, String nombre, String apellido) {
         super(nombre, apellido);
         this.email = email;
         this.password = password;
+        this.username = username;
     }
 
     public void setEmail(String email) {
@@ -30,6 +52,5 @@ public class UserProfile extends Persona {
     public void setPassword(String password) {
         this.password = password;
     }
-     
-     
+
 }
