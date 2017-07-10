@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase28;
+package clase29;
 
 /**
  *
@@ -15,10 +15,6 @@ public class Persona {
     private int edad;
     private Integer dni;
     private String sexo;
-    private Ropa calzado;
-    private Ropa pantalones;
-    private Ropa sombrero;
-    private String religion;
     
     public Persona (String nombre, String apellido){
         this.nombre = nombre;
@@ -36,21 +32,6 @@ public class Persona {
         edad=0;
         dni =0;
         sexo="Indefinido";
-        calzado= new Ropa();
-        calzado.talle="40";
-        calzado.tipo=("Cuero");
-        calzado.color=("Marron");
-        calzado.marca=("Kickers");
-        pantalones = new Ropa();
-        pantalones.color=("Azul");
-        pantalones.marca=("Levis");
-        pantalones.talle=("41");
-        pantalones.tipo=("Jean");
-        sombrero = new Ropa();
-        sombrero.color=("Gris");
-        sombrero.tipo=("Bombin");
-        sombrero.talle=("Medium");
-        sombrero.marca=("Sin Marca");
     }
 
     public String getNombre() {
