@@ -32,6 +32,7 @@ public class Clase29 {
         
         System.out.println("Ingrese email");
         email = aScanner.next();
+        // confirmar si es un email
         
         System.out.println("Ingrese Contraseña");
         password = aScanner.next();
@@ -39,7 +40,8 @@ public class Clase29 {
         System.out.println("Ingrese Confirmacion de Contraseña");
         String confirm_password = aScanner.next();
         
-        
+        // Confirmar si password y confirm_password son iguales Y ademas
+        // su longitud es mayor a 8 caracteres
     }
     
 }
