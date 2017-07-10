@@ -5,6 +5,8 @@
  */
 package clase29;
 
+import java.util.Scanner;
+
 /**
  *
  * @author alumno
@@ -17,7 +19,17 @@ public class Clase29 {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        String nombre = "";
+        String appelido = "";
+        String nombre_usuario = "";
+        String password = "";
+        String email = "";
+        
+        Scanner aScanner = new Scanner(System.in);
+        
         System.out.println("Ingrese Nombre de Usuario");
+        nombre_usuario = aScanner.next();
+        
     }
     
 }
