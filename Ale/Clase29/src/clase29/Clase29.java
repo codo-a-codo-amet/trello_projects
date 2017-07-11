@@ -18,30 +18,52 @@ public class Clase29 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         String nombre = "";
         String appelido = "";
         String nombre_usuario = "";
         String password = "";
         String email = "";
-        
+        UserProfile profile = null;
+
         Scanner aScanner = new Scanner(System.in);
+        Boolean registraion_complete = Boolean.FALSE;
         
-        System.out.println("Ingrese Nombre de Usuario");
-        nombre_usuario = aScanner.next();
-        
-        System.out.println("Ingrese email");
-        email = aScanner.next();
-        // confirmar si es un email
-        
-        System.out.println("Ingrese Contraseña");
-        password = aScanner.next();
-        
-        System.out.println("Ingrese Confirmacion de Contraseña");
-        String confirm_password = aScanner.next();
-        
-        // Confirmar si password y confirm_password son iguales Y ademas
-        // su longitud es mayor a 8 caracteres
+        //registraion_complete != Boolean.TRUE
+        while (registraion_complete) {
+            System.out.println("Ingrese Nombre de Usuario");
+            nombre_usuario = aScanner.next();
+
+            System.out.println("Ingrese email");
+            email = aScanner.next();
+            // confirmar si es un email
+            if (email.indexOf("@") == -1) {
+                System.out.println("Error debe ingresar email valido");
+                continue;
+            }
+
+            System.out.println("Ingrese Contraseña");
+            password = aScanner.next();
+
+            if (password.length() < 8) {
+                System.out.println("Error debe ingresar una contraseña mayor a 8");
+                continue;
+            }
+
+            System.out.println("Ingrese Confirmacion de Contraseña");
+            String confirm_password = aScanner.next();
+
+            // Confirmar si password y confirm_password son iguales Y ademas
+            // su longitud es mayor a 8 caracteres
+            
+            if ( password.compareTo(confirm_password) == 0) {
+                registraion_complete = Boolean.TRUE;
+                profile = new UserProfile(email, password, email, nombre, appelido);
+                profile.setUsername(nombre_usuario);
+            } else {
+                System.out.println("Error contraseña y confirmacion incorrectas");
+            }
+        }
     }
-    
+
 }
