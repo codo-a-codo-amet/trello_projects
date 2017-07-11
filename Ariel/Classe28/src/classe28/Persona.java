@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase28;
+package classe28;
 
 /**
  *
@@ -26,10 +26,10 @@ public class Persona {
     }
     
     public String toString(){
-        return "Nombre: "+nombre+", Apellido: "+apellido;
+       return "Nombre "+nombre+" Apellido "+apellido;
+        
+        
     }
-    
-    
     public Persona (){
         nombre ="N";
         apellido="N";
@@ -52,14 +52,13 @@ public class Persona {
         sombrero.talle=("Medium");
         sombrero.marca=("Sin Marca");
     }
-
-    public String getNombre() {
+    
+    public String getNombre(){
         return nombre;
+        
     }
-
-    public String getApellido() {
+    public String getApellido(){
         return apellido;
     }
-    
     
 }
