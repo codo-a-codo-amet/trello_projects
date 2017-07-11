@@ -28,8 +28,9 @@ public class Clase29 {
 
         Scanner aScanner = new Scanner(System.in);
         Boolean registraion_complete = Boolean.FALSE;
-
-        while (registraion_complete != Boolean.TRUE) {
+        
+        //registraion_complete != Boolean.TRUE
+        while (registraion_complete) {
             System.out.println("Ingrese Nombre de Usuario");
             nombre_usuario = aScanner.next();
 
@@ -58,6 +59,7 @@ public class Clase29 {
             if ( password.compareTo(confirm_password) == 0) {
                 registraion_complete = Boolean.TRUE;
                 profile = new UserProfile(email, password, email, nombre, appelido);
+                profile.setUsername(nombre_usuario);
             } else {
                 System.out.println("Error contraseña y confirmacion incorrectas");
             }
