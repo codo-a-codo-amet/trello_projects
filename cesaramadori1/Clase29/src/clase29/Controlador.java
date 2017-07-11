@@ -11,11 +11,11 @@ import java.util.Scanner;
 public class Controlador {
     
     protected Vista unaVista;
-    protected PerfilDeUsuario unperfil;
+    protected PerfilDeUsuario elusuario;
     
     public void run(){
     Scanner sc = new Scanner(System.in);
-        PerfilDeUsuario elusuario = new PerfilDeUsuario();
+        elusuario = new PerfilDeUsuario();
         System.out.println("Bienvenido al sistema de registro de usuario");
         
         System.out.println("\nIngrese su email");
@@ -40,34 +40,28 @@ public class Controlador {
         
         System.out.println("\nIngrese su contraseña (Minimo 8 caracteres)");
         boolean passok = false;
-        String pass1 = sc.nextLine();
+        String pass1 = sc.nextLine().toLowerCase();
         String pass2;
         while(passok == false){
             
-            if (pass1.length()>=8) {
-                System.out.println("Tiene mas o igual a 8");
-                passok = true;
-                System.out.println("\nVuelva a ingresar su contraseña");
-                pass2= sc.nextLine();
-                if (pass1.equals(pass2)) {
-                    passok = true;
-                    elusuario.setPassword(sc.nextLine());
-                    System.out.println("error 0");
-                }else{
-                    System.out.println("\nLa contraseña no tiene el minimo de 8 caracteres");
+            if (pass1.length()<=7) {
+                    System.out.println("\nLa contraseña no cumple con los requisitos");
                     passok = false;
                     System.out.println("\nIngrese su contraseña");
-                    pass1 = sc.nextLine();
-                    System.out.println("error1");
-                    
-                }
+                    pass1 = sc.nextLine().toLowerCase();
+                    //System.out.println("error menos de 8");
             }else{
-                System.out.println("La contraseña no tiene el minimo de 8 caracteres");
-                pass1 = sc.nextLine();
-                System.out.println("error2");
+                    System.out.println("\nVuelva a ingresar su contraseña(Repetir)");
+                    pass2= sc.nextLine().toLowerCase();
+                    if (pass1.equals(pass2)) {
+                        passok = true;
+                        elusuario.setPassword(pass1);
+                        System.out.println("Contraseña verificada!");
+                    }
+                    pass1="";
             }
-        
-        }
+                
+        }      
 
         System.out.println("\nIngrese su Nombre: ");
         elusuario.setNombre(sc.nextLine());
@@ -87,7 +81,7 @@ public class Controlador {
         
     
     }
-    public static boolean verificar_email(String email){
+    public boolean verificar_email(String email){
         
         int emaillong = email.length();
         int hayarroba = 0;
@@ -108,5 +102,7 @@ public class Controlador {
             return false;
         }
         
+    
     }
+    
 }
