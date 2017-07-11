@@ -32,27 +32,6 @@ public class PerfilUsuario extends Persona {
     }    
     
     
-    public Boolean EsCorreoValido(String correo) {
-        Boolean EsValido = Boolean.FALSE;
-
-        if (correo.contains("@")) {
-            EsValido = Boolean.TRUE;
-            
-        }
-        
-        return EsValido;
-    }
-
-    public Boolean EsContraseniaValida(String contra) {
-        Boolean EsValido = Boolean.FALSE;
-
-        if (contra.length() >= 8) {
-            EsValido = Boolean.TRUE;
-        }
-
-        return EsValido;
-    }
-
     
 
 }
