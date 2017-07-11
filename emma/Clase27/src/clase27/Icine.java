@@ -14,7 +14,7 @@ import java.util.*;
 public interface Icine {
     public String getComplejoNombre();
     
-    public List<peliculas> getListaDePeliculas();
+    public List<Pelicula> getListaDePeliculas();
     
     public List<sala> getListaDeSalas();
     

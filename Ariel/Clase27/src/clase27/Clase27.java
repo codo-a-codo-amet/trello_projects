@@ -23,6 +23,7 @@ public class Clase27 {
         Complejo lasSalas = new Complejo();
         
         System.out.println("El numero de salas es:" + lasSalas.DameCantidadSalas());
+<<<<<<< HEAD
         
         System.out.println(lasSalas.numSalas);
         
@@ -35,6 +36,8 @@ public class Clase27 {
         
        
          
+=======
+>>>>>>> b07f0be704eb3662bc286df95e60a573877cd12e
     }
     
 }

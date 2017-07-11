@@ -21,7 +21,7 @@ public class Complejo implements IComplejo {
         "'Piratas del Caribe 9 Subtitulado'","'El día de la independencia 3D'"
     } ;
     List<Salas> numSalas;
- 
+    List<Butacas> numButaca;
     
     public Complejo(){
         
@@ -33,9 +33,12 @@ public class Complejo implements IComplejo {
          numSalas.add(new Salas("Sala "+(i+1)+" "+lasPeliculas[i]));    
         }
         
-       
+        numButaca = new ArrayList<>();
+        numButaca.add(new Butacas());
         
-           
+         for (int j = 0; j < 10; j++){
+         numButaca.add(new Butacas()); 
+         }      
         }
          
     public int DameCantidadSalas (){
