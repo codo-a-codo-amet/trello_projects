@@ -9,10 +9,6 @@ package clase29;
  *
  * @author alumno
  */
-public class Logica {
-    public boolean verificar_email(String email){
-        
-        
-        return false;
-    }
+class Vista {
+    
 }
