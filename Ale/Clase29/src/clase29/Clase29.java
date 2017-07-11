@@ -20,7 +20,7 @@ public class Clase29 {
         // TODO code application logic here
 
         String nombre = "";
-        String appelido = "";
+        String apellido = "";
         String nombre_usuario = "";
         String password = "";
         String email = "";
@@ -58,12 +58,14 @@ public class Clase29 {
             
             if ( password.compareTo(confirm_password) == 0) {
                 registraion_complete = Boolean.TRUE;
-                profile = new UserProfile(email, password, email, nombre, appelido);
-                profile.setUsername(nombre_usuario);
+                profile = new UserProfile(email, password, nombre_usuario, nombre, apellido);
             } else {
                 System.out.println("Error contraseña y confirmacion incorrectas");
             }
         }
     }
 
+    /// Termino el registro de usuario magicamente tenemos el objeto profile
+    // con la informacion del usuairo
+    
 }
