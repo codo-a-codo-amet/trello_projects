@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package clase27;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -14,30 +16,50 @@ import java.util.Iterator;
  */
 public class Salas{
     
-          protected Peliculas unaPelicula;
-          protected int numeroDeButacas;
+         
+          
+          protected int numeroDeButacas = 11;
           protected boolean butacaLibre;
-          protected String filaButacas;
-          String[] letraFila = new String[]{"A","B"};
+          protected String filaButaca;
+          protected String [] filaButacas= new String[]{"A","B","C","D","E"};
+          public int numfilaButacas;
+          public String letraFila;
+          int xx;
+          int yy; 
+          public String pelis;
+          Peliculas laspelis;
           String valorNumFilaButacas;
-          
           List<Peliculas>Peliculass;
-          List<String> lista_de_butacas;
+          List<Butacas> lista_de_butacas;
           
-    public Salas (){
+    public Salas (String pelis){
+        this.pelis = pelis;
+        
+        letraFila = "";
         butacaLibre = true;
-        filaButacas  = "ABCDE";
         valorNumFilaButacas="";
-        int numfilaButacas = filaButacas.length();
-        numeroDeButacas = 50;
+        filaButaca = "ABCDE";
+        numfilaButacas = filaButaca.length();
+        
         lista_de_butacas = new ArrayList<>();
       
-        for (int f = 0; f < numeroDeButacas;f++){
-            for (int g = 0; g < numeroDeButacas; g ++){
-            lista_de_butacas.add( letraFila [f] +g);
+        for (int i = 0; i < numfilaButacas;i++){
+            for (int j = 1; j < numeroDeButacas; j++)
+            lista_de_butacas.add(new Butacas(filaButacas [i]+j));
         }
-        }
-        System.out.println(lista_de_butacas);
+        
+       
+}
+    public String toString(){
+        return this.pelis+" ";
+    }
+    
+    public String getPelis(){
+        return pelis;
+    }
+    
+    public void setPelis(String pelis){
+        this.pelis = pelis;
     }
     
     public int NumeroListaButacas(){
@@ -53,9 +75,7 @@ public class Salas{
     }
     
     public List<Salas> getListaDeSalas(){
-   
-        return null;
-        
+   return null;
     }
     
     public List<Butacas> getListaDeButacas(){
@@ -64,3 +84,4 @@ public class Salas{
     
     
 }
+

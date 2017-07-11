@@ -13,14 +13,31 @@ import java.util.List;
  */
 public class Butacas implements IComplejo{
     protected String nombre;
+    private String lugares;
+        
     
     public Butacas (){
         
         nombre="butaca";
-        
+      
         
     }
-
+    
+    public Butacas (String lugares){
+        this.lugares = lugares;
+    }
+    
+    public String getLugares(){
+        return lugares;
+    }
+    public void setLugares(String lugares){
+        this.lugares = lugares;
+    }
+    
+    public String toString(){
+        return this.lugares+" ";
+    }
+        
     @Override
     public String getComplejoNombre() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
