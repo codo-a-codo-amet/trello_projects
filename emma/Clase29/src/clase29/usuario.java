@@ -5,21 +5,10 @@
  */
 package clase29;
 
-import java.util.Scanner;
-
-
 /**
  *
  * @author alumno
  */
-public class Clase29 {
-
-    public static void main(String[] args) {
-    Controlador unControlador = new Controlador();
-        
-    unControlador.run();
-        
-        
-    }
-   
+public class usuario {
+    
 }
