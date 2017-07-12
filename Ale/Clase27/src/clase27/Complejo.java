@@ -25,13 +25,11 @@ public class Complejo implements IComplejo {
     }
 
     public String getComplejoNombre() {
-        return nombreComplejo;
+        return "No le puse una property";
     }
 
     public List<Pelicula> getListaDePeliculas() {
-        
         List<Pelicula> lista_de_peliculas = new ArrayList<>();
-        
         for (Iterator<Sala> iterator = lista_de_salas.iterator(); iterator.hasNext();) {
             Sala unaSala = iterator.next();
             lista_de_peliculas.add(unaSala.getPelicula());

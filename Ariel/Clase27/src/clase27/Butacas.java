@@ -12,12 +12,38 @@ import java.util.List;
  * @author alumno
  */
 public class Butacas implements IComplejo{
+<<<<<<< HEAD
+    protected String nombre;
+    private String lugares;
+        
     
     public Butacas (){
         
+        nombre="butaca";
+      
+=======
+    
+    public Butacas (){
+        
+>>>>>>> b07f0be704eb3662bc286df95e60a573877cd12e
         
     }
-
+    
+    public Butacas (String lugares){
+        this.lugares = lugares;
+    }
+    
+    public String getLugares(){
+        return lugares;
+    }
+    public void setLugares(String lugares){
+        this.lugares = lugares;
+    }
+    
+    public String toString(){
+        return this.lugares+" ";
+    }
+        
     @Override
     public String getComplejoNombre() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

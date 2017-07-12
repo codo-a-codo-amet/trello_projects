@@ -16,17 +16,21 @@ public class Complejo implements IComplejo {
     private int sala ;
 
     private int butaca;
+    private int cantidadSalas = 3;
+    private String[] lasPeliculas= new String []{"'La era de hielo 5 3D '",
+        "'Piratas del Caribe 9 Subtitulado'","'El día de la independencia 3D'"
+    } ;
     List<Salas> numSalas;
     List<Butacas> numButaca;
     
     public Complejo(){
         
         numSalas = new ArrayList<>();
-        numSalas.add(new Salas());
+       
         
-        
-        for (int i = 0; i < 10; i++){
-         numSalas.add(new Salas());    
+     
+        for (int i = 0; i < cantidadSalas; i++){
+         numSalas.add(new Salas("Sala "+(i+1)+" "+lasPeliculas[i]));    
         }
         
         numButaca = new ArrayList<>();
@@ -53,7 +57,7 @@ public class Complejo implements IComplejo {
     
     @Override
     public List<Salas> getListaDeSalas(){
-        return new ArrayList();
+        return numSalas;
     }
     
     public List<Butacas> getListaDeButacasLibres(Salas ParaEstaSala){
