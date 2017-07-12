@@ -5,7 +5,6 @@
  */
 package clase29;
 
-import java.util.Scanner;
 
 /**
  *
@@ -18,29 +17,8 @@ public class Clase29 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Controlador unControlador = new Controlador(new Vista());
         
-        String nombre = "";
-        String appelido = "";
-        String nombre_usuario = "";
-        String password = "";
-        String email = "";
-        Integer correcto = 0;
-        
-        Scanner aScanner = new Scanner(System.in);
-        
-        System.out.println("Ingrese Nombre de Usuario");
-        nombre_usuario = aScanner.next();
-        
-        System.out.println("Ingrese email");
-        email = aScanner.next();
-               
-        System.out.println("Ingrese Contraseña");
-        password = aScanner.next();
-        
-        System.out.println("Ingrese Confirmacion de Contraseña");
-        String confirm_password = aScanner.next();
-        
-                       
+        unControlador.run();
     }
-    
 }
