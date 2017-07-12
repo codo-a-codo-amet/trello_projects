@@ -17,7 +17,7 @@ public class PerfilDeUsuario extends Persona {
     public PerfilDeUsuario(){
     }
     
-    public PerfilDeUsuario(String email, String usuario, String password, String nombre, String apellido, String edad, char sexo, int dni) {
+    public PerfilDeUsuario(String email, String usuario, String password, String nombre, String apellido, int edad, String sexo, int dni) {
         super(nombre, apellido, edad, sexo, dni);
         this.email = email;
         this.usuario = usuario;

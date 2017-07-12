@@ -5,11 +5,11 @@ package clase29;
 public class Persona {
     private String nombre;
     private String apellido;
-    private String edad;
-    private char sexo;
+    private int edad;
+    private String sexo;
     private int dni;
 
-    public Persona(String nombre, String apellido, String edad, char sexo, int dni) {
+    public Persona(String nombre, String apellido, int edad, String sexo, int dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -37,19 +37,19 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
