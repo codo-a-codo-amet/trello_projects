@@ -19,37 +19,18 @@ public class Clase29 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      
+        LoginUsuario unUsuario = new LoginUsuario();
         
-        int i=0;
-        int j=0;
-        String arroba="@";
+        unUsuario.UsuarioValido();
+        unUsuario.CorreoValido();
+        unUsuario.ContraseñaValida();
         
-        System.out.println("Registrarse");
-        
-        while(i==1){
-            Scanner unScaner = new Scanner(System.in);
-          
-        System.out.println("ingrese un correo");
+     
         
         
-        String uncorreo=unScaner.next();
-       
-            j = j+1;
-            String letraPorLetra = uncorreo.substring(j,j);
-            if(letraPorLetra != arroba){
-                i=i+1;
-              
-            }
-            else{
-                System.out.println("El correo o es valido");
-               
-            } 
-        
-        }
         
         
-        System.out.println("El correo es; ");
         
     }
     
