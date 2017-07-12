@@ -9,20 +9,12 @@ package clase29;
  *
  * @author alumno
  */
-public class Vista implements Ivista {
+public interface Ivista {
     
-    public void dibujar(String textoApintar){
-    }
+    public void dibujar();
     
-    public void dibujar(){
-    }
+    public void agregarAdd();
     
-    public void agregarAdd(){
-    }
-    
-    public void limpiar(){
-        
-    }
-  
+    public void limpiar();
     
 }
