@@ -9,6 +9,14 @@ package clase29;
  *
  * @author alumno
  */
-public class Vista {
+public interface IView {
+
+    public void Draw();
+    
+    public void Draw(String textoAPintar);
+    
+    public void Add();
+    
+    public void Clear();
     
 }

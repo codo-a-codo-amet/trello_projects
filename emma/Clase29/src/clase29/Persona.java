@@ -10,37 +10,60 @@ package clase29;
  * @author alumno
  */
 public class Persona {
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private Integer dni;
-    private String sexo;
-    
-    public Persona (String nombre, String apellido){
+
+    protected String nombre;
+
+    protected String apellido;
+
+    protected int edad;
+
+    /**
+     * Get the value of edad
+     *
+     * @return the value of edad
+     */
+    public int getEdad() {
+        return edad;
+    }
+
+    /**
+     * Set the value of edad
+     *
+     * @param edad new value of edad
+     */
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    /**
+     * Set the value of apellido
+     *
+     * @param apellido new value of apellido
+     */
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public Persona(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
     }
     
     public String toString(){
-        return "Nombre: "+nombre+", Apellido: "+apellido;
+        return "nombre: " + nombre + " apellido: " + apellido;
     }
     
-    
-    public Persona (){
-        nombre ="N";
-        apellido="N";
-        edad=0;
-        dni =0;
-        sexo="Indefinido";
+    /**
+     * Set the value of nombre
+     *
+     * @param nombre new value of nombre
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-    
-    
 }
