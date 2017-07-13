@@ -17,7 +17,7 @@ public class Clase29 {
      */
     public static void main(String[] args) {
 
-        Controlador unControlador = new Controlador(new Vista());
+        Controlador unControlador = new Controlador(new VistaDialogo());
         unControlador.run();
     }
 
