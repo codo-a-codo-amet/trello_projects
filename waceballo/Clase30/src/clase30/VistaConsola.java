@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase29;
-
-import clase29.IView;
+package clase30;
 
 /**
  *
