@@ -5,7 +5,7 @@
  */
 package clase29;
 
-import java.util.Scanner;
+
 
 
 /**
@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Clase29 {
 
     public static void main(String[] args) {
-    Controlador unControlador = new Controlador();
+    Controlador unControlador = new Controlador(new VistaDialogo());
         
     unControlador.run();
         

@@ -5,7 +5,6 @@
  */
 package clase29;
 
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,7 +20,7 @@ public class VistaDialogo implements IView{
 
     @Override
     public void Draw(String textoAPintar) {
-        JOptionPane.showInputDialog(null, textoAPintar);
+        JOptionPane.showMessageDialog(null, textoAPintar);
     }
 
     @Override

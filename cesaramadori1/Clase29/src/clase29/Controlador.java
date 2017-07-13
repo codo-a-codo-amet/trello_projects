@@ -10,15 +10,20 @@ import java.util.Scanner;
 
 public class Controlador {
     
-    protected Vista unaVista;
+    protected IVista unaVista;
     protected PerfilDeUsuario elusuario;
     
+    public Controlador(IVista unaVista){
+        this.unaVista = unaVista;
+    }
     public void run(){
     Scanner sc = new Scanner(System.in);
+        unaVista = new VistaConsola();
         elusuario = new PerfilDeUsuario();
-        System.out.println("Bienvenido al sistema de registro de usuario");
+        unaVista.Mostar("Bienvenido al sistema de registro de usuario");
         
-        System.out.println("\nIngrese su email");
+        unaVista.Mostar("\nIngrese su email");
+      
         boolean emailok = false;
         String email =  sc.nextLine();
         
@@ -29,53 +34,53 @@ public class Controlador {
             }else{
                 emailok=false;
                 
-                System.out.println("\n"+email+"no es un email valido!!!");
-                System.out.println("Ingrese nuevamente su email");
+                unaVista.Mostar("\n"+email+"no es un email valido!!!");
+                unaVista.Mostar("Ingrese nuevamente su email");
                 email =  sc.nextLine();
             }
         }
         
-        System.out.println("\nIngrese su usuario");
+        unaVista.Mostar("\nIngrese su usuario");
         elusuario.setUsuario(sc.nextLine());
         
-        System.out.println("\nIngrese su contraseña (Minimo 8 caracteres)");
+        unaVista.Mostar("\nIngrese su contraseña (Minimo 8 caracteres)");
         boolean passok = false;
         String pass1 = sc.nextLine().toLowerCase();
         String pass2;
         while(passok == false){
             
             if (pass1.length()<=7) {
-                    System.out.println("\nLa contraseña no cumple con los requisitos");
+                    unaVista.Mostar("\nLa contraseña no cumple con los requisitos");
                     passok = false;
-                    System.out.println("\nIngrese su contraseña");
+                    unaVista.Mostar("\nIngrese su contraseña");
                     pass1 = sc.nextLine().toLowerCase();
-                    //System.out.println("error menos de 8");
+                    //unaVista.Mostar("error menos de 8");
             }else{
-                    System.out.println("\nVuelva a ingresar su contraseña(Repetir)");
+                    unaVista.Mostar("\nVuelva a ingresar su contraseña(Repetir)");
                     pass2= sc.nextLine().toLowerCase();
                     if (pass1.equals(pass2)) {
                         passok = true;
                         elusuario.setPassword(pass1);
-                        System.out.println("Contraseña verificada!");
+                        unaVista.Mostar("Contraseña verificada!");
                     }
                     pass1="";
             }
                 
         }      
 
-        System.out.println("\nIngrese su Nombre: ");
+        unaVista.Mostar("\nIngrese su Nombre: ");
         elusuario.setNombre(sc.nextLine());
         
-        System.out.println("\nIngrese su apellido");
+        unaVista.Mostar("\nIngrese su apellido");
         elusuario.setApellido(sc.nextLine());
         
-        System.out.println("\nIngrese su edad");
+        unaVista.Mostar("\nIngrese su edad");
         elusuario.setEdad(sc.nextInt());
         
-        System.out.println("\nIngrese su sexo");
+        unaVista.Mostar("\nIngrese su sexo");
         elusuario.setSexo(sc.next().toLowerCase());
         
-        System.out.println("\nIngrese su dni");
+        unaVista.Mostar("\nIngrese su dni");
         elusuario.setDni(sc.nextInt());
         
         

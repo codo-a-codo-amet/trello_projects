@@ -5,6 +5,8 @@
  */
 package clase29;
 
+import clase29.IView;
+
 /**
  *
  * @author alumno

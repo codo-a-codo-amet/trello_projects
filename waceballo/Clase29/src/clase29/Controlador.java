@@ -13,11 +13,10 @@ import java.util.*;
  */
 public class Controlador {
 
-    protected VistaConsola unaVista;
-    protected VistaDialogo unaVistaDialogo;
+    protected IView unaVista;
     protected PerfilUsuario usuario;
    
-    public Controlador(VistaConsola unaVistaConsola) {
+    public Controlador(IView unaVista) {
         this.unaVista = unaVista;
     }
         
