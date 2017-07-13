@@ -11,53 +11,50 @@ import java.util.*;
  *
  * @author alumno
  */
-public class complejo implements IComplejo {
-
+public class Complejo implements IComplejo {
     protected String nombreComplejo;
-    protected List<salas> lista_de_salas;
+    protected List<Sala> lista_de_salas;
 
-    public complejo() {
-        nombreComplejo = "VillageDevoto";
+    public Complejo() {
+        nombreComplejo = "Ahora si le puse una property";
         lista_de_salas = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            lista_de_salas.add(new salas());
+            lista_de_salas.add(new Sala());
         }
     }
 
     public String getComplejoNombre() {
-        return nombreComplejo;
+        return "No le puse una property";
     }
 
-    public List<peliculas> getListaDePeliculas() {
-
+    public List<Pelicula> getListaDePeliculas() {
         List<Pelicula> lista_de_peliculas = new ArrayList<>();
-
-        for (Iterator<sala> iterator = lista_de_salas.iterator(); iterator.hasNext();) {
-            sala unaSala = iterator.next();
+        for (Iterator<Sala> iterator = lista_de_salas.iterator(); iterator.hasNext();) {
+            Sala unaSala = iterator.next();
             lista_de_peliculas.add(unaSala.getPelicula());
         }
-
+        
         return lista_de_peliculas;
     }
 
-    public List<sala> getListaDeSalas() {
+    public List<Sala> getListaDeSalas() {
         return lista_de_salas;
     }
 
-    public List<butacas> getListaButacasLibres(sala paraEstaSala) {
-
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala){
+        
         List<Butaca> lista_de_butacas = paraEstaSala.getListaButacas();
         List<Butaca> lista_de_butacas_libres = new ArrayList<>();
         for (Iterator<Butaca> iterator = lista_de_butacas.iterator(); iterator.hasNext();) {
-            butacas unaButaca = iterator.next();
-            if (unaButaca.estaOcupada) {
+            Butaca unaButaca = iterator.next();
+            if ( unaButaca.estaOcupada ) {
                 System.out.println("EstaOcupada");
             } else {
                 System.out.println("Esta libre");
             }
         }
-
+        
         return lista_de_butacas_libres;
     }
 }

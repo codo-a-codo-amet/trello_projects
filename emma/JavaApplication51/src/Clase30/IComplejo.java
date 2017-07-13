@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase27;
+package Clase30;
 
 import java.util.*;
 
@@ -16,7 +16,7 @@ public interface IComplejo {
     
     public List<Pelicula> getListaDePeliculas();
     
-    public List<Sala> getListaDeSalas();
+    public List<sala> getListaDeSalas();
     
-    public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
+    public List<Butaca> getListaButacasLibres(sala paraEstaSala);
 }
