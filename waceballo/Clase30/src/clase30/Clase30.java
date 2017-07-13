@@ -5,8 +5,6 @@
  */
 package clase30;
 
-import java.util.Scanner;
-
 /**
  *
  * @author alumno
@@ -20,7 +18,7 @@ public class Clase30 {
 
         // TODO code application logic here    
 
-        Controlador unControlador = new Controlador(new VistaConsola());
+        Controlador unControlador = new Controlador(new VistaDialogo());
         unControlador.run();
 
     }
