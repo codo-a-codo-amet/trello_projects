@@ -9,6 +9,12 @@ package clase29;
  *
  * @author alumno
  */
-class Vista {
+public interface IVista {
+    public void Mostrar();
     
+    public void Mostar(String textoAMostrar);
+    
+    public void AgregarMuestra();
+    
+    public void Limpiar();
 }
