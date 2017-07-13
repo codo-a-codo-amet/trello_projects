@@ -34,6 +34,20 @@ public class Clase25 {
         
         };
         Perro otroPerro = new Perro () {
+            @Override
+            public boolean EsIgualA(IAritmetica Objeto) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public String Descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public boolean descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
         
         };
         
@@ -46,8 +60,38 @@ public class Clase25 {
     
     
     
-        IAritmetica primerObjetoAProbar = new Perro();
-        IAritmetica segundoObjetoAProbar = new Perro(3);
+        IAritmetica primerObjetoAProbar = new Perro() {
+            @Override
+            public boolean EsIgualA(IAritmetica Objeto) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public String Descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public boolean descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        IAritmetica segundoObjetoAProbar = new Perro(3) {
+            @Override
+            public boolean EsIgualA(IAritmetica Objeto) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public String Descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public boolean descripcion() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         
         //Pruebas al objeto
         // Prueba de suma

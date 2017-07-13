@@ -5,6 +5,9 @@
  */
 package clase27;
 //import java.util.*;
+
+import java.io.PrintStream;
+
 /**
  *
  * @author alumno
@@ -18,7 +21,8 @@ public class Clase27 {
         // TODO code application logic here
         Complejo ComplejoHoyts = new Complejo();
         
-                System.out.println(ComplejoHoyts.getComplejoNombre());
+        PrintStream println;
+        //println = System.out.println(ComplejoHoyts.getComplejoNombre());
 
         
         Complejo ComplejoDOT = new Complejo();
