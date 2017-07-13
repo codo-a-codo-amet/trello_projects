@@ -5,21 +5,25 @@
  */
 package clase29;
 
-
-
-
 /**
  *
  * @author alumno
  */
-public class Clase29 {
-
-    public static void main(String[] args) {
-    Controlador unControlador = new Controlador(new VistaDialogo());
-        
-    unControlador.run();
-        
+public class VistaConsola implements IView {
+    
+     public void Draw(String textoAPintar){
+         System.out.println(textoAPintar);
+     }
+     
+     public void Draw(){
+         
+     }
+    
+    public void Clear(){
         
     }
-   
+    
+    public void Add(){
+        
+    }
 }
