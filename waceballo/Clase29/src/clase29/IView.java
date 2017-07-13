@@ -5,23 +5,18 @@
  */
 package clase29;
 
-
 /**
  *
  * @author alumno
  */
-public class Clase29 {
+public interface IView {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-        Controlador unControlador = new Controlador(new VistaConsola());
-        unControlador.run();
-    }
-
-
+    public void Draw();
     
+    public void Draw(String textoAPintar);
+    
+    public void Add();
+    
+    public void Clear();
     
 }

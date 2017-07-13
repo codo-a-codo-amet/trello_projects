@@ -3,25 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase29;
-
+package clase21;
 
 /**
  *
  * @author alumno
  */
-public class Clase29 {
+public class Clase21 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
-        Controlador unControlador = new Controlador(new VistaConsola());
-        unControlador.run();
+        // TODO code application logic here
+        Vehiculo unVehiculo = new Vehiculo();
+        
+        System.out.println(unVehiculo.Frenar());
     }
-
-
-    
     
 }

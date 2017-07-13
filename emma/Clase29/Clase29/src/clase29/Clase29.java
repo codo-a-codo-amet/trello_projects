@@ -5,6 +5,8 @@
  */
 package clase29;
 
+import java.util.Scanner;
+
 
 /**
  *
@@ -12,16 +14,12 @@ package clase29;
  */
 public class Clase29 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-
-        Controlador unControlador = new Controlador(new VistaConsola());
-        unControlador.run();
+    Controlador unControlador = new Controlador();
+        
+    unControlador.run();
+        
+        
     }
-
-
-    
-    
+   
 }
