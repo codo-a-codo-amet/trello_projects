@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase29;
+package clase30;
 
 /**
  *
  * @author alumno
  */
-interface IVista {
+public interface IView {
     
-    public void Pintar();
-    public void AgregarMostrar();
+    public void Draw();
+    public void Add();
     public void Clear();
-    
     
 }

@@ -11,6 +11,7 @@ import java.util.*;
  */
 public class LoginUsuario {
     
+    protected IView otraVista;
     private String nombre;
     private String correo;
     private String usuario;
@@ -24,13 +25,13 @@ public class LoginUsuario {
     public LoginUsuario(){
         
     }
-    public LoginUsuario(String correo, String usuario, String contraseña,int buenaContraseña) {
+    public LoginUsuario(String correo, String usuario, String contraseña,int buenaContraseña,IView otraVista) {
     this.correo=correo;
     this.usuario=usuario;
     this.contraseña=contraseña;
     this.buenaContraseña = buenaContraseña;
    
-        
+           this.otraVista = otraVista;
     }
     
     public void UsuarioValido(){
@@ -38,12 +39,16 @@ public class LoginUsuario {
         System.out.println("Ingrese un nombre de usuario;");
         usuario = unScanner.next();
         
+         
+        
             
         
     }
+   
+
         public void ContraseñaValida(){           
             Scanner unScanner = new Scanner(System.in);
-            System.out.println("Ingrese una contraseña");
+            otraVista.Draw("Ingrese una contraseña");
             contraseña = unScanner.next();
             System.out.println("el numero de letras es "+contraseña.length());
             

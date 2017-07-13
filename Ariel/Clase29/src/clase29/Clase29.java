@@ -20,14 +20,19 @@ public class Clase29 {
      */
     public static void main(String[] args) {
       
-        LoginUsuario unUsuario = new LoginUsuario();
+        LoginUsuario unUsuario = new LoginUsuario ();
         
         unUsuario.UsuarioValido();
-        unUsuario.CorreoValido();
-        unUsuario.ContraseñaValida();
+          
+         Controlador unControlador = new Controlador(new Vista());
         
-     
+        unControlador.run();
         
+       
+        
+        
+        
+   
         
         
         
