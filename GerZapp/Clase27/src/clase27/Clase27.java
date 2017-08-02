@@ -19,14 +19,30 @@ public class Clase27 {
         // TODO code application logic here
       
         
-        Complejo VillageCaballito = new Complejo();
-        
-        Complejo VillageRecoleta = new Complejo ();
-        
-        Complejo VillageMerlo = new Complejo ();
+              IComplejo hoytsAbasto = new Complejo();
 
+        System.out.println(hoytsAbasto.getComplejoNombre());
         
+        Iterator<Salas> iteratorSala = hoytsAbasto.getListaDeSalas().iterator();
         
+        while (  iteratorSala.hasNext()) {
+            Sala unaSala = iteratorSala.next();
+            System.out.println("sala: " + unaSala);
+            System.out.println(hoytsAbasto.getListaButacasLibres(unaSala));
+            
+            Iterator<Butacas> iterator = hoytsAbasto.getListaButacasLibres(unaSala).iterator();
+            for (; iterator.hasNext();) {
+                Butacas next = iterator.next();
+                next.estaOcupada = true;
+            }
+            
+            System.out.println(hoytsAbasto.getListaButacasLibres(unaSala));
+            
+        }
+        
+        /*
+    public List<Pelicula> getListaDePeliculas();
+
         
     }
     
