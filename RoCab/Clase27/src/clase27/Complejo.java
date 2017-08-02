@@ -32,5 +32,9 @@ public class Complejo {
         
     }    
 
+    boolean getComplejoNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }
