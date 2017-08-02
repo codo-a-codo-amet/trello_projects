@@ -34,8 +34,8 @@ public class Clase40 {
 
         }
         
-        SingletonGeneric<Parlante> unParlante = SingletonGeneric.getInstance();
-        System.out.println(unParlante);
+        //SingletonGeneric<Parlante> unParlante = SingletonGeneric.getInstance();
+        //System.out.println(unParlante);
         
     }
     
