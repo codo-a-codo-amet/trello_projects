@@ -35,16 +35,23 @@ public class Clase40 {
 //
 //        }
         
-        //SingletonGeneric<Parlante> unParlante = SingletonGeneric.getInstance();
         //System.out.println(unParlante);
         
         ConexionBD con = ConexionBD.getInstance();
         ConexionBD con1 = ConexionBD.getInstance();
-        ConexionBD con2 = ConexionBD.getInstance();
-        
+
         System.out.println(con);
         System.out.println(con1);
-        System.out.println(con2);
+        
+        Vista vistaPrincipal = new Vista();
+        for (int i = 0; i < 5; i++) {
+            Button unBoton = new Button("nombre "+i+" orden ",+i);            
+            vistaPrincipal.add(unBoton);
+        }
+
+        System.out.println(vistaPrincipal.getComponet());
+        
+        
         
     }
     
