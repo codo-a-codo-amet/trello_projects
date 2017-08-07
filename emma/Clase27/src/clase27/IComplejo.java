@@ -14,9 +14,9 @@ import java.util.*;
 public interface IComplejo {
     public String getComplejoNombre();
     
-    public List<peliculas> getListaDePeliculas();
+    public List<Pelicula> getListaDePeliculas();
     
-    public List<sala> getListaDeSalas();
+    public List<Sala> getListaDeSalas();
     
-    public List<butacas> getListaButacasLibres(sala paraEstaSala);
+    public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
 }

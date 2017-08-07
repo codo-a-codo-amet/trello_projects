@@ -5,7 +5,8 @@
  */
 package clase29;
 
-import java.util.Scanner;
+
+
 
 /**
  *
@@ -14,14 +15,11 @@ import java.util.Scanner;
 public class Clase29 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        PerfilDeUsuario elusuario = new PerfilDeUsuario();
-        System.out.println("Bienvenido al sistema de registro de usuario");
-        System.out.println("\nIngrese su Nombre: ");
-        elusuario.setNombre(sc.nextLine());
-        System.out.println("\nIngrese su apellido");
-        elusuario.setApellido(sc.nextLine());
+    Controlador unControlador = new Controlador(new VistaDialogo());
+        
+    unControlador.run();
+        
         
     }
-    
+   
 }
