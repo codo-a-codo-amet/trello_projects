@@ -19,8 +19,8 @@ public class Button extends Composite implements IView{
     }
 
     @Override
-    public void Draw() {
-        System.out.println("funciona?");
+    public void Draw(String text) {
+        
     }
     
 }

@@ -5,10 +5,15 @@
  */
 package clase40;
 
+import java.util.List;
+
 /**
  *
  * @author alumno
+ * @param <Type>
  */
-public interface IView {
-    public void Draw(String texto);
+public interface IComposite <Type extends IComposite> {
+    public void Add(Type newComponent);
+    public void Remove(Type newComponent);
+    public List<Type> getComponentList();
 }
