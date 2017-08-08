@@ -5,19 +5,122 @@
  */
 package ahorcado.Vista;
 
+import java.util.Arrays;
+
 /**
  *
  * @author TheGuru
  */
 public class Vista extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Vista
-     */
+    private int juego = 1; //Variable que indica la cantidad de partes del grafico
+    private String[] palabraejemplo = {"P","A","L","A","B","R","A"};
     public Vista() {
         initComponents();
+        inicioJuego();
+        guiones(palabraejemplo);
         
     }
+    
+    //Metodo para Inicializar los parametros del juego
+    public void inicioJuego(){
+        juego=1;
+        img1.setVisible(true);
+        img2.setVisible(false);
+        img3.setVisible(false);
+        img4.setVisible(false);
+        img5.setVisible(false);
+        img6.setVisible(false);
+        img7.setVisible(false);
+        
+        Jperdiste.setVisible(false);
+        resetearletras();
+        jLabel8.setText(String.valueOf(juego));
+    }
+    
+    //Metodo para resetear los botones de letras
+    public void resetearletras(){
+        botonA.setVisible(true);
+        botonB.setVisible(true);
+        botonC.setVisible(true);
+        botonD.setVisible(true);
+        botonE.setVisible(true);
+        botonF.setVisible(true);
+        botonG.setVisible(true);
+        botonH.setVisible(true);
+        botonI.setVisible(true);
+        botonJ.setVisible(true);
+        botonK.setVisible(true);
+        botonL.setVisible(true);
+        botonM.setVisible(true);
+        botonN.setVisible(true);
+        botonÑ.setVisible(true);
+        botonO.setVisible(true);
+        botonP.setVisible(true);
+        botonQ.setVisible(true);
+        botonR.setVisible(true);
+        botonS.setVisible(true);
+        botonT.setVisible(true);
+        botonU.setVisible(true);
+        botonV.setVisible(true);
+        botonW.setVisible(true);
+        botonX.setVisible(true);
+        botonY.setVisible(true);
+        botonZ.setVisible(true);   
+    }
+    
+    //Metodo para cambiar las letras de la palabra por guiones
+    public void guiones (String[] palabraejemplo){
+        String[] losguiones;
+        losguiones = new String [palabraejemplo.length];
+        for (int i = 0; i< palabraejemplo.length; i++) {
+            losguiones[i]="_ ";
+        }
+        String guiones=Arrays.toString(losguiones).replaceAll("\\[|\\]|,|", "");
+        jPalabra.setText(guiones);
+    }
+    
+    //Metodos para probar el cambio de estado del jugador
+    public void suma(){
+        juego=juego+1;
+        estado(juego);
+        jLabel8.setText(String.valueOf(juego));
+        
+    }
+    public void resta(){
+        juego=juego-1;
+        estado(juego);
+        jLabel8.setText(String.valueOf(juego));
+    }
+    
+    //Metodo que muestra como cambia la imagen del jugador
+    public void estado(int juego){
+        switch(juego){
+            case 1:
+                break;
+            case 2:
+                img2.setVisible(true);
+                break;
+            case 3:
+                img3.setVisible(true);
+                break;
+            case 4:
+                img4.setVisible(true);
+                break;
+            case 5:
+                img5.setVisible(true);
+                break;
+            case 6:
+                img6.setVisible(true);
+                break;
+            case 7:
+                img7.setVisible(true);
+                Jperdiste.setVisible(true);
+                break;    
+        }
+               
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,38 +131,56 @@ public class Vista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        botonC = new javax.swing.JToggleButton();
-        botonA = new javax.swing.JToggleButton();
-        botonB = new javax.swing.JToggleButton();
-        botonD = new javax.swing.JToggleButton();
-        botonE = new javax.swing.JToggleButton();
-        botonF = new javax.swing.JToggleButton();
-        botonI = new javax.swing.JToggleButton();
-        botonG = new javax.swing.JToggleButton();
-        botonH = new javax.swing.JToggleButton();
-        botonJ = new javax.swing.JToggleButton();
-        botonK = new javax.swing.JToggleButton();
-        botonL = new javax.swing.JToggleButton();
-        botonÑ = new javax.swing.JToggleButton();
-        botonM = new javax.swing.JToggleButton();
-        botonN = new javax.swing.JToggleButton();
-        botonO = new javax.swing.JToggleButton();
-        botonP = new javax.swing.JToggleButton();
-        botonQ = new javax.swing.JToggleButton();
-        botonT = new javax.swing.JToggleButton();
-        R = new javax.swing.JToggleButton();
-        botonS = new javax.swing.JToggleButton();
-        botonU = new javax.swing.JToggleButton();
-        botonV = new javax.swing.JToggleButton();
-        botonW = new javax.swing.JToggleButton();
-        botonZ = new javax.swing.JToggleButton();
-        botonX = new javax.swing.JToggleButton();
-        botonY = new javax.swing.JToggleButton();
+        botonC = new javax.swing.JButton();
+        botonA = new javax.swing.JButton();
+        botonB = new javax.swing.JButton();
+        botonD = new javax.swing.JButton();
+        botonE = new javax.swing.JButton();
+        botonF = new javax.swing.JButton();
+        botonI = new javax.swing.JButton();
+        botonG = new javax.swing.JButton();
+        botonH = new javax.swing.JButton();
+        botonJ = new javax.swing.JButton();
+        botonK = new javax.swing.JButton();
+        botonL = new javax.swing.JButton();
+        botonÑ = new javax.swing.JButton();
+        botonM = new javax.swing.JButton();
+        botonN = new javax.swing.JButton();
+        botonO = new javax.swing.JButton();
+        botonP = new javax.swing.JButton();
+        botonQ = new javax.swing.JButton();
+        botonT = new javax.swing.JButton();
+        botonR = new javax.swing.JButton();
+        botonS = new javax.swing.JButton();
+        botonU = new javax.swing.JButton();
+        botonV = new javax.swing.JButton();
+        botonW = new javax.swing.JButton();
+        botonZ = new javax.swing.JButton();
+        botonX = new javax.swing.JButton();
+        botonY = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jLabLetrasBotones = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        img1 = new javax.swing.JLabel();
+        img2 = new javax.swing.JLabel();
+        img3 = new javax.swing.JLabel();
+        img4 = new javax.swing.JLabel();
+        img5 = new javax.swing.JLabel();
+        img6 = new javax.swing.JLabel();
+        img7 = new javax.swing.JLabel();
+        jPalabra = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        Jperdiste = new javax.swing.JLabel();
+        jBtnSalir = new javax.swing.JButton();
+        jBtnReiniciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -273,16 +394,16 @@ public class Vista extends javax.swing.JFrame {
         });
         getContentPane().add(botonT, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 45, 25));
 
-        R.setText("R");
-        R.setMaximumSize(new java.awt.Dimension(45, 25));
-        R.setMinimumSize(new java.awt.Dimension(45, 25));
-        R.setPreferredSize(new java.awt.Dimension(45, 25));
-        R.addActionListener(new java.awt.event.ActionListener() {
+        botonR.setText("R");
+        botonR.setMaximumSize(new java.awt.Dimension(45, 25));
+        botonR.setMinimumSize(new java.awt.Dimension(45, 25));
+        botonR.setPreferredSize(new java.awt.Dimension(45, 25));
+        botonR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RActionPerformed(evt);
+                botonRActionPerformed(evt);
             }
         });
-        getContentPane().add(R, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 45, 25));
+        getContentPane().add(botonR, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 45, 25));
 
         botonS.setText("S");
         botonS.setMaximumSize(new java.awt.Dimension(45, 25));
@@ -362,11 +483,6 @@ public class Vista extends javax.swing.JFrame {
         getContentPane().add(botonY, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 45, 25));
 
         jList1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(jList1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 110, 130, 190));
@@ -382,11 +498,92 @@ public class Vista extends javax.swing.JFrame {
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 330, 190));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("Ahorcado v0.1");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
+
+        img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/1.png"))); // NOI18N
+        getContentPane().add(img1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/2.png"))); // NOI18N
+        getContentPane().add(img2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        img3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/3.png"))); // NOI18N
+        getContentPane().add(img3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        img4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/4.png"))); // NOI18N
+        getContentPane().add(img4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        img5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/5.png"))); // NOI18N
+        getContentPane().add(img5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        img6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/6.png"))); // NOI18N
+        getContentPane().add(img6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        img7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/7.png"))); // NOI18N
+        getContentPane().add(img7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
+
+        jPalabra.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jPalabra.setText("_ _ _ _ _ _ _ _ _ _ _ _");
+        getContentPane().add(jPalabra, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 370, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 1000, 20));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setText("Puntaje:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 20, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 20, 70, 20));
+
+        jButton1.setText("+");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
+
+        jButton2.setText("-");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, -1, -1));
+
+        jLabel8.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jLabel8PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, 70, 30));
+
+        Jperdiste.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        Jperdiste.setForeground(new java.awt.Color(255, 51, 51));
+        Jperdiste.setText("Perdiste");
+        getContentPane().add(Jperdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+
+        jBtnSalir.setText("Salir");
+        jBtnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBtnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 310, -1, -1));
+
+        jBtnReiniciar.setText("Reiniciar");
+        jBtnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReiniciarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBtnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
-        // TODO add your handling code here:
+      botonC.setVisible(false);  // TODO add your handling code here:
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAActionPerformed
@@ -406,127 +603,165 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEActionPerformed
 
     private void botonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFActionPerformed
-        // TODO add your handling code here:
+       botonF.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonFActionPerformed
 
     private void botonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIActionPerformed
-        // TODO add your handling code here:
+      botonI.setVisible(false);  // TODO add your handling code here:
     }//GEN-LAST:event_botonIActionPerformed
 
     private void botonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGActionPerformed
-        // TODO add your handling code here:
+     botonG.setVisible(false);   // TODO add your handling code here:
     }//GEN-LAST:event_botonGActionPerformed
 
     private void botonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHActionPerformed
-        // TODO add your handling code here:
+       botonH.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonHActionPerformed
 
     private void botonJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJActionPerformed
-        // TODO add your handling code here:
+      botonJ.setVisible(false);  // TODO add your handling code here:
     }//GEN-LAST:event_botonJActionPerformed
 
     private void botonKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonKActionPerformed
-        // TODO add your handling code here:
+      botonK.setVisible(false);  // TODO add your handling code here:
     }//GEN-LAST:event_botonKActionPerformed
 
     private void botonLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLActionPerformed
-        // TODO add your handling code here:
+      botonL.setVisible(false);  // TODO add your handling code here:
     }//GEN-LAST:event_botonLActionPerformed
 
     private void botonÑActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonÑActionPerformed
-        // TODO add your handling code here:
+        botonÑ.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_botonÑActionPerformed
 
     private void botonMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMActionPerformed
-        // TODO add your handling code here:
+       botonM.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonMActionPerformed
 
     private void botonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNActionPerformed
-        // TODO add your handling code here:
+        botonN.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_botonNActionPerformed
 
     private void botonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOActionPerformed
-        // TODO add your handling code here:
+       botonO.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonOActionPerformed
 
     private void botonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPActionPerformed
-        // TODO add your handling code here:
+      botonP.setVisible(false);  // TODO add your handling code here:
     }//GEN-LAST:event_botonPActionPerformed
 
     private void botonQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonQActionPerformed
-        // TODO add your handling code here:
+      botonQ.setVisible(false);   // TODO add your handling code here:
     }//GEN-LAST:event_botonQActionPerformed
 
     private void botonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTActionPerformed
-        // TODO add your handling code here:
+       botonT.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonTActionPerformed
 
-    private void RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RActionPerformed
+    private void botonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRActionPerformed
+       botonR.setVisible(false); // TODO add your handling code here:
+    }//GEN-LAST:event_botonRActionPerformed
 
     private void botonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSActionPerformed
-        // TODO add your handling code here:
+       botonS.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonSActionPerformed
 
     private void botonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonUActionPerformed
-        // TODO add your handling code here:
+       botonU.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonUActionPerformed
 
     private void botonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVActionPerformed
-        // TODO add your handling code here:
+      botonV.setVisible(false);   // TODO add your handling code here:
     }//GEN-LAST:event_botonVActionPerformed
 
     private void botonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonWActionPerformed
-        // TODO add your handling code here:
+       botonW.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonWActionPerformed
 
     private void botonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonZActionPerformed
-        // TODO add your handling code here:
+       botonZ.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonZActionPerformed
 
     private void botonXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonXActionPerformed
-        // TODO add your handling code here:
+       botonX.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonXActionPerformed
 
     private void botonYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonYActionPerformed
-        // TODO add your handling code here:
+       botonY.setVisible(false); // TODO add your handling code here:
     }//GEN-LAST:event_botonYActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        suma();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        resta();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel8PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel8PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel8PropertyChange
+
+    private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
+       System.exit(0); // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSalirActionPerformed
+
+    private void jBtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReiniciarActionPerformed
+       inicioJuego(); // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnReiniciarActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton R;
-    private javax.swing.JToggleButton botonA;
-    private javax.swing.JToggleButton botonB;
-    private javax.swing.JToggleButton botonC;
-    private javax.swing.JToggleButton botonD;
-    private javax.swing.JToggleButton botonE;
-    private javax.swing.JToggleButton botonF;
-    private javax.swing.JToggleButton botonG;
-    private javax.swing.JToggleButton botonH;
-    private javax.swing.JToggleButton botonI;
-    private javax.swing.JToggleButton botonJ;
-    private javax.swing.JToggleButton botonK;
-    private javax.swing.JToggleButton botonL;
-    private javax.swing.JToggleButton botonM;
-    private javax.swing.JToggleButton botonN;
-    private javax.swing.JToggleButton botonO;
-    private javax.swing.JToggleButton botonP;
-    private javax.swing.JToggleButton botonQ;
-    private javax.swing.JToggleButton botonS;
-    private javax.swing.JToggleButton botonT;
-    private javax.swing.JToggleButton botonU;
-    private javax.swing.JToggleButton botonV;
-    private javax.swing.JToggleButton botonW;
-    private javax.swing.JToggleButton botonX;
-    private javax.swing.JToggleButton botonY;
-    private javax.swing.JToggleButton botonZ;
-    private javax.swing.JToggleButton botonÑ;
+    private javax.swing.JLabel Jperdiste;
+    private javax.swing.JButton botonA;
+    private javax.swing.JButton botonB;
+    private javax.swing.JButton botonC;
+    private javax.swing.JButton botonD;
+    private javax.swing.JButton botonE;
+    private javax.swing.JButton botonF;
+    private javax.swing.JButton botonG;
+    private javax.swing.JButton botonH;
+    private javax.swing.JButton botonI;
+    private javax.swing.JButton botonJ;
+    private javax.swing.JButton botonK;
+    private javax.swing.JButton botonL;
+    private javax.swing.JButton botonM;
+    private javax.swing.JButton botonN;
+    private javax.swing.JButton botonO;
+    private javax.swing.JButton botonP;
+    private javax.swing.JButton botonQ;
+    private javax.swing.JButton botonR;
+    private javax.swing.JButton botonS;
+    private javax.swing.JButton botonT;
+    private javax.swing.JButton botonU;
+    private javax.swing.JButton botonV;
+    private javax.swing.JButton botonW;
+    private javax.swing.JButton botonX;
+    private javax.swing.JButton botonY;
+    private javax.swing.JButton botonZ;
+    private javax.swing.JButton botonÑ;
+    private javax.swing.JLabel img1;
+    private javax.swing.JLabel img2;
+    private javax.swing.JLabel img3;
+    private javax.swing.JLabel img4;
+    private javax.swing.JLabel img5;
+    private javax.swing.JLabel img6;
+    private javax.swing.JLabel img7;
+    private javax.swing.JButton jBtnReiniciar;
+    private javax.swing.JButton jBtnSalir;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabLetrasBotones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JLabel jPalabra;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
