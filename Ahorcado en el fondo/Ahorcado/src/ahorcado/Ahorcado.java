@@ -5,6 +5,8 @@
  */
 package ahorcado;
 
+import ahorcado.Vista.Vista;
+
 /**
  *
  * @author alumno
@@ -15,7 +17,8 @@ public class Ahorcado {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Vista unicavista = new Vista();
+        unicavista.setVisible(true);
     }
     
 }
