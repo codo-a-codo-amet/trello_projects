@@ -13,6 +13,12 @@ import java.util.Iterator;
  */
 public class Vista extends Composite implements IView{
 
+    public Vista() {
+        VistaPrincipal unaNuevaVista = new VistaPrincipal();
+        unaNuevaVista.setVisible(true);
+    }
+    
+    
     @Override
     public void Draw(String texto) {
         for (Iterator<IView> iterator = component_list.iterator(); iterator.hasNext();) {
