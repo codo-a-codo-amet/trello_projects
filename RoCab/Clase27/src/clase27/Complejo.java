@@ -24,13 +24,17 @@ public class Complejo {
     public Complejo(){
         Complejo unComplejo = new Complejo();
         
-        Salas = new ArrayList<Sala>();
+        Salas = new ArrayList<>();
             
         for (int i = 0; i<10; i++){
             Salas.add(new Sala());
         }
         
+    }    
+
+    boolean getComplejoNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-       
+
     
 }

@@ -44,5 +44,20 @@ public class Numero implements IAritmetica{
       //  return "Esto es un numero de valor" + unNumeroEntero;
     //}
 
+    @Override
+    public boolean EsIgualA(IAritmetica Objeto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String Descripcion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean descripcion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 }

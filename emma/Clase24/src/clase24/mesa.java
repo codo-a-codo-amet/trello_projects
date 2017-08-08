@@ -9,15 +9,14 @@ package clase24;
  *
  * @author alumno
  */
-public class mesa extends Mueble {
-       
-    public mesa () {
-    
-    Material = "madera";
-    tipo = "cocina";
-    tamaño = "2metros";        
-    color = "gris";
-    Forma = "cuadrada";
+public class Mesa extends Mueble {
+
+    public Mesa() {
+        material = "Melamina";
+        forma = "Rectangula";
+        color = "Blanca";
+        tamanio = "Grande";
+        tipo = "Meson";
     }
 
-}            
+}

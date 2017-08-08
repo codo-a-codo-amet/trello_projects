@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+<<<<<<< HEAD
+=======
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/alumno/Documents/trello_projects/Ariel/Clase24/src/clase24/Clase24.java</file>
             <file>file:/C:/Users/alumno/Documents/trello_projects/Ariel/Clase24/src/clase24/Aula.java</file>
-            <file>file:/C:/Users/alumno/Documents/trello_projects/Ariel/Clase24/src/clase24/Persona.java</file>
+            <file>file:/C:/Users/alumno/Documents/trello_projects/Ariel/Clase24/src/clase24/Clase24.java</file>
         </group>
     </open-files>
+>>>>>>> b07f0be704eb3662bc286df95e60a573877cd12e
 </project-private>

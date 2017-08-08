@@ -5,6 +5,8 @@
  */
 package clase24;
 
+
+
 /**
  *
  * @author alumno
@@ -19,6 +21,22 @@ public class Persona {
     private Ropa pantalones;
     private Ropa sombrero;
     private String religion;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
     
     public Persona (String nombre, String apellido){
         this.nombre = nombre;
@@ -45,5 +63,8 @@ public class Persona {
         sombrero.tipo=("Bombin");
         sombrero.talle=("Medium");
         sombrero.marca=("Sin Marca");
+    }
+    public String toString(){
+        return this.nombre +" "+this.apellido;
     }
 }

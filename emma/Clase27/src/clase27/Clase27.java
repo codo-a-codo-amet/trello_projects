@@ -5,6 +5,8 @@
  */
 package clase27;
 
+import java.util.*;
+
 /**
  *
  * @author alumno
@@ -17,9 +19,17 @@ public class Clase27 {
     public static void main(String[] args) {
         // TODO code application logic here    
 
-        IComplejo VillageCaballito = new complejo();
+        IComplejo hoytsAbasto = new Complejo();
 
-        System.out.println(VillageCaballito.getComplejoNombre());
+        System.out.println(hoytsAbasto.getComplejoNombre());
+        
+        Iterator<Sala> iteratorSala = hoytsAbasto.getListaDeSalas().iterator();
+        
+        while (  iteratorSala.hasNext()) {
+            Sala unaSala = iteratorSala.next();
+            System.out.println("sala: " + unaSala);
+        }
+        
 
         /*
     public List<Pelicula> getListaDePeliculas();
@@ -28,7 +38,7 @@ public class Clase27 {
     
     public List<Butaca> getListaButacasLibres(Sala paraEstaSala);
          */
-        IComplejo VillageDevoto = new complejo();
+        IComplejo hoytDot = new Complejo();
 
     }
 

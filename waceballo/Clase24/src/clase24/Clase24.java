@@ -15,16 +15,6 @@ public class Clase24 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-//        Mueble unMueble = new Mueble();
-//        System.out.println(unMueble.material);
-//        
-//        Silla unaSilla = new Silla();
-//        System.out.println(unaSilla.dameTuMaterial());
-//        System.out.println(unaSilla.dameTuColor());
-//        
-//        Laptop unaLaptop =  new Laptop("HP");
-//        System.out.println(unaLaptop.dameTuMarca());
         System.out.println("-----------------------------------------------------");
         Aula unaAula = new Aula();
         System.out.println("Cantidad de sillas "+unaAula.dameCantidadSillas());

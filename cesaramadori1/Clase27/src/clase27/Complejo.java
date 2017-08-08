@@ -18,7 +18,6 @@ public class Complejo implements IComplejo {
     protected String direccion;
     protected int cantida_de_salas = 10;
     List <Sala> salas ;
-    List <Pelicula> peliculas;
     Iterator <Sala> iteradorSala;
     Pelicula laPelicula;
     String listado_de_Peliculas[] = new String[]{"E.T., el extraterrestre (1982)",
@@ -29,15 +28,12 @@ public class Complejo implements IComplejo {
         nombre = "Hoyts Unicenter";
         direccion = "Paraná 3475 Unicenter Shopping";
         salas = new ArrayList();
-        peliculas = new ArrayList();
         for (int i = 0,a=1; i < cantida_de_salas; i++) {
             Pelicula estaPeli = new Pelicula(listado_de_Peliculas[i]);
-            peliculas.add(new Pelicula(listado_de_Peliculas[i]));
             salas.add(new Sala("Sala "+ a, estaPeli ));
             a++;
         }
         
-       
     }
 
     @Override
@@ -47,10 +43,7 @@ public class Complejo implements IComplejo {
 
     @Override
     public List<Pelicula> getListaDePeliculas() {
-        
-        
-        
-        return peliculas;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -69,6 +62,11 @@ public class Complejo implements IComplejo {
                 listaAsientosLibres.add(unaButaca);
             }
         }
+        
+        
+        
+        
+        
         return listaAsientosLibres;
     }
     
