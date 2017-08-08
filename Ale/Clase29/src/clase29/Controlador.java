@@ -16,11 +16,10 @@ public class Controlador {
     protected Vista unaVista;
     
     protected UserProfile profile;
-
+    
     public Controlador(Vista unaVista) {
         this.unaVista = unaVista;
     }
-    
     
     
     public void run(){
