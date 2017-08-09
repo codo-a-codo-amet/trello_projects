@@ -22,21 +22,6 @@ public class Clase40 {
         System.out.println(unMicrofono);
         System.out.println(otroMicrofono);
                
-//        Boolean er = Boolean.FALSE; 
-//        
-//        try {
-//            System.out.println(10/0);
-//        } catch (Exception e) {
-//            er = Boolean.TRUE;
-//            
-//            if (er){
-//                System.out.printl n("No se puede dividir por cero. "+e.getMessage());
-//            }
-//
-//        }
-        
-        //System.out.println(unParlante);
-        
         ConexionBD con = ConexionBD.getInstance();
         ConexionBD con1 = ConexionBD.getInstance();
 
@@ -44,14 +29,19 @@ public class Clase40 {
         System.out.println(con1);
         
         Vista vistaPrincipal = new Vista();
+        
         for (int i = 0; i < 5; i++) {
             Button unBoton = new Button("nombre "+i+" orden ",+i);            
             vistaPrincipal.add(unBoton);
         }
-
-        System.out.println(vistaPrincipal.getComponet());
+        System.out.println(vistaPrincipal.component_list);
         
+        Empleado unEmpleado = new Empleado();
+        vistaPrincipal.add(unEmpleado);
+        System.out.println(vistaPrincipal.component_list);
         
+        vistaPrincipal unaNuevaVista = new vistaPrincipal();
+        unaNuevaVista.setVisible(true);
         
     }
     

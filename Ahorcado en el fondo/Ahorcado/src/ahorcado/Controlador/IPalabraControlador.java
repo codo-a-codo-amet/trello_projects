@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase40;
+package ahorcado.Controlador;
 
 /**
  *
- * @author alumno
+ * @author TheGuru
  */
-public interface IView {
-    public void Draw(String texto);
+public interface IPalabraControlador {
+    public void verificarLetra(String letra);
+    
+    public void entregarGuiones();
 }
