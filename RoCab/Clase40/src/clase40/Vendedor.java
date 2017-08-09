@@ -3,35 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase29;
+package clase40;
 
-//import clase40.IView;
-import javax.swing.JOptionPane;
+import java.util.List;
 
 /**
  *
  * @author alumno
  */
-public class VistaDialogo implements IView{
+public class Vendedor extends Persona implements IComposite{
 
     @Override
-    public void Draw() {
+    public void add(IComposite newComponent) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Draw(String textoAPintar) {
-        JOptionPane.showMessageDialog(null, textoAPintar);
-    }
-
-    @Override
-    public void Add() {
+    public void Remove(IComposite component) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Clear() {
+    public List getComponentList() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     
 }
