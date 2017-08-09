@@ -37,16 +37,21 @@ public class Clase28 {
         
         System.out.println("La lista de personas es: " + una_lista_de_personas);
         System.out.println("Ingrese el nombre de la persona a buscar");
+        System.out.println("Ingrese el apellido de la persona a buscar");
+
         String nombre_a_buscar = unScanner.next();
+        String apellido_a_buscar = unScanner.next();
         
         for(int i = 0; i< cantidad_de_personas; i++){
             
             Persona unaPersona = una_lista_de_personas.get(i);
             String nombre_de_persona = unaPersona.getNombre();
-            
+            String apellido_de_persona = unaPersona.getApellido();    
             //System.out.println("Ingrese el nombre de a persona a buscar");
             if(nombre_de_persona.equalsIgnoreCase(nombre_a_buscar)){
+                //(apellido_de_persona.equalsIgnoreCase(apellido_a_buscar)){
                 System.out.println("Encontre a la persona ");
+                
             }
         }
     }
