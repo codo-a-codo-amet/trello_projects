@@ -17,6 +17,7 @@ public class PalabraControlador implements IPalabraControlador {
     private List<Palabra> listadoPalabras;
     private String[] palabritas= {"Estancia","desarrollo","alquiler","Dueño","Lider","Ingenio","insecto","politica","ajedrez","aprobar"};
     private List<String> letrasUsadas;
+    
     public PalabraControlador (){
         listadoPalabras = new ArrayList();
         letrasUsadas = new ArrayList();
@@ -39,4 +40,21 @@ public class PalabraControlador implements IPalabraControlador {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public String[] verificarEstaPalabra(String[] palabrita){
+        String[] palabraVerificada = new String[palabrita.length];
+        for (int i = 0; i < letrasUsadas.size(); i++) {
+            for (int j = 0; j < palabrita.length; j++) {
+                if (letrasUsadas.get(i).equals(palabrita[j]) ) {
+                    palabraVerificada[j]=letrasUsadas.get(i);
+                    System.out.println("La palabra contiene "+letrasUsadas.get(i) );
+                }else{
+                    palabraVerificada[j]="_ ";
+                    System.out.println("La palabra no contiene "+letrasUsadas.get(i));
+                }
+            }
+        }
+        
+        
+        return palabraVerificada;
+    }
 }
