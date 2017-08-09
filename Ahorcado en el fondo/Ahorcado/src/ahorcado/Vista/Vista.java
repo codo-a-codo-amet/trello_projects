@@ -5,6 +5,7 @@
  */
 package ahorcado.Vista;
 
+import ahorcado.Controlador.PalabraControlador;
 import java.util.Arrays;
 
 /**
@@ -15,10 +16,12 @@ public class Vista extends javax.swing.JFrame {
 
     private int juego = 1; //Variable que indica la cantidad de partes del grafico
     private String[] palabraejemplo = {"P","A","L","A","B","R","A"};
+    PalabraControlador palabraControlador;
     public Vista() {
         initComponents();
         inicioJuego();
         guiones(palabraejemplo);
+        palabraControlador = new PalabraControlador();
         
     }
     
@@ -583,111 +586,138 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
-      botonC.setVisible(false);  // TODO add your handling code here:
+      botonC.setVisible(false);
+      palabraControlador.verificarLetra("C");// TODO add your handling code here:
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAActionPerformed
       botonA.setVisible(false);
+      palabraControlador.verificarLetra("A");
     }//GEN-LAST:event_botonAActionPerformed
 
     private void botonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBActionPerformed
       botonB.setVisible(false);
+      palabraControlador.verificarLetra("B");
     }//GEN-LAST:event_botonBActionPerformed
 
     private void botonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDActionPerformed
       botonD.setVisible(false);
+      palabraControlador.verificarLetra("D");
     }//GEN-LAST:event_botonDActionPerformed
 
     private void botonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEActionPerformed
      botonE.setVisible(false);
+     palabraControlador.verificarLetra("E");
     }//GEN-LAST:event_botonEActionPerformed
 
     private void botonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFActionPerformed
-       botonF.setVisible(false); // TODO add your handling code here:
+       botonF.setVisible(false);
+       palabraControlador.verificarLetra("F");// TODO add your handling code here:
     }//GEN-LAST:event_botonFActionPerformed
 
     private void botonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIActionPerformed
-      botonI.setVisible(false);  // TODO add your handling code here:
+      botonI.setVisible(false);
+      palabraControlador.verificarLetra("I");// TODO add your handling code here:
     }//GEN-LAST:event_botonIActionPerformed
 
     private void botonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGActionPerformed
-     botonG.setVisible(false);   // TODO add your handling code here:
+     botonG.setVisible(false);
+     palabraControlador.verificarLetra("G");// TODO add your handling code here:
     }//GEN-LAST:event_botonGActionPerformed
 
     private void botonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHActionPerformed
-       botonH.setVisible(false); // TODO add your handling code here:
+       botonH.setVisible(false);
+       palabraControlador.verificarLetra("H");// TODO add your handling code here:
     }//GEN-LAST:event_botonHActionPerformed
 
     private void botonJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJActionPerformed
-      botonJ.setVisible(false);  // TODO add your handling code here:
+      botonJ.setVisible(false);
+      palabraControlador.verificarLetra("J");// TODO add your handling code here:
     }//GEN-LAST:event_botonJActionPerformed
 
     private void botonKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonKActionPerformed
-      botonK.setVisible(false);  // TODO add your handling code here:
+      botonK.setVisible(false);
+      palabraControlador.verificarLetra("K");// TODO add your handling code here:
     }//GEN-LAST:event_botonKActionPerformed
 
     private void botonLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLActionPerformed
-      botonL.setVisible(false);  // TODO add your handling code here:
+      botonL.setVisible(false);
+      palabraControlador.verificarLetra("L");// TODO add your handling code here:
     }//GEN-LAST:event_botonLActionPerformed
 
     private void botonÑActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonÑActionPerformed
-        botonÑ.setVisible(false);// TODO add your handling code here:
+        botonÑ.setVisible(false);
+        palabraControlador.verificarLetra("Ñ");// TODO add your handling code here:
     }//GEN-LAST:event_botonÑActionPerformed
 
     private void botonMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMActionPerformed
-       botonM.setVisible(false); // TODO add your handling code here:
+       botonM.setVisible(false);
+       palabraControlador.verificarLetra("M");// TODO add your handling code here:
     }//GEN-LAST:event_botonMActionPerformed
 
     private void botonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNActionPerformed
-        botonN.setVisible(false);// TODO add your handling code here:
+        botonN.setVisible(false);
+        palabraControlador.verificarLetra("N");// TODO add your handling code here:
     }//GEN-LAST:event_botonNActionPerformed
 
     private void botonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOActionPerformed
-       botonO.setVisible(false); // TODO add your handling code here:
+       botonO.setVisible(false);
+       palabraControlador.verificarLetra("O");
     }//GEN-LAST:event_botonOActionPerformed
 
     private void botonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPActionPerformed
-      botonP.setVisible(false);  // TODO add your handling code here:
+      botonP.setVisible(false);
+      palabraControlador.verificarLetra("P");// TODO add your handling code here:
     }//GEN-LAST:event_botonPActionPerformed
 
     private void botonQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonQActionPerformed
-      botonQ.setVisible(false);   // TODO add your handling code here:
+      botonQ.setVisible(false);
+      palabraControlador.verificarLetra("Q");// TODO add your handling code here:
     }//GEN-LAST:event_botonQActionPerformed
 
     private void botonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTActionPerformed
-       botonT.setVisible(false); // TODO add your handling code here:
+       botonT.setVisible(false);
+       palabraControlador.verificarLetra("T");// TODO add your handling code here:
     }//GEN-LAST:event_botonTActionPerformed
 
     private void botonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRActionPerformed
-       botonR.setVisible(false); // TODO add your handling code here:
+       botonR.setVisible(false);
+       palabraControlador.verificarLetra("R");// TODO add your handling code here:
     }//GEN-LAST:event_botonRActionPerformed
 
     private void botonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSActionPerformed
-       botonS.setVisible(false); // TODO add your handling code here:
+       botonS.setVisible(false);
+       palabraControlador.verificarLetra("S");// TODO add your handling code here:
     }//GEN-LAST:event_botonSActionPerformed
 
     private void botonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonUActionPerformed
-       botonU.setVisible(false); // TODO add your handling code here:
+       botonU.setVisible(false);
+       palabraControlador.verificarLetra("U");// TODO add your handling code here:
     }//GEN-LAST:event_botonUActionPerformed
 
     private void botonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVActionPerformed
-      botonV.setVisible(false);   // TODO add your handling code here:
+      botonV.setVisible(false);
+      palabraControlador.verificarLetra("V");// TODO add your handling code here:
     }//GEN-LAST:event_botonVActionPerformed
 
     private void botonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonWActionPerformed
-       botonW.setVisible(false); // TODO add your handling code here:
+       botonW.setVisible(false);
+       palabraControlador.verificarLetra("W");// TODO add your handling code here:
     }//GEN-LAST:event_botonWActionPerformed
 
     private void botonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonZActionPerformed
-       botonZ.setVisible(false); // TODO add your handling code here:
+       botonZ.setVisible(false);
+       palabraControlador.verificarLetra("Z");// TODO add your handling code here:
     }//GEN-LAST:event_botonZActionPerformed
 
     private void botonXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonXActionPerformed
-       botonX.setVisible(false); // TODO add your handling code here:
+       botonX.setVisible(false);
+       palabraControlador.verificarLetra("X");// TODO add your handling code here:
     }//GEN-LAST:event_botonXActionPerformed
 
     private void botonYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonYActionPerformed
-       botonY.setVisible(false); // TODO add your handling code here:
+       botonY.setVisible(false);
+       palabraControlador.verificarLetra("Y");// TODO add your handling code here:
     }//GEN-LAST:event_botonYActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
