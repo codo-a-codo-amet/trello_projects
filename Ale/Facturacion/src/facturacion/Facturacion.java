@@ -4,7 +4,7 @@ package facturacion;
 import javax.swing.JOptionPane;
 
 public class Facturacion {
-
+    
     public static void main(String[] args) {
        rellenar();
 
@@ -47,7 +47,7 @@ public class Facturacion {
     static void imprimir(int[] id, double[] precio, double[] litros, double[] total, int mayor) {
         for (int i = 0; i < 3; i++) {
 
-            JOptionPane.showMessageDialog(null, "La factura nº " + (i + 1) + " \nCodigo: " + id[i] + "        " + " litros vendidos: " + litros[i] + "        " + " importe total: " + total[i], "Factura nº " + (i + 1), -1);
+            JOptionPane.showMessageDialog(null, "La factura nº " + (i + 1) + " \nCodigo: " + id[i] + "        " + " Litros vendidos: " + litros[i] + "        " + " importe total: " + total[i], "Factura nº " + (i + 1), -1);
         }
         JOptionPane.showMessageDialog(null, mayor + " facturas son superiores a 600$");
     }

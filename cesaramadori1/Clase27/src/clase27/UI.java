@@ -273,7 +273,6 @@ public class UI extends javax.swing.JFrame  {
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 780, 20));
 
         fondo.setBackground(new java.awt.Color(255, 255, 255));
-        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\TheGuru\\Documents\\trello_projects\\cesaramadori1\\Clase27\\img\\90070487e785a81382491d4c89b508a1.png")); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 800, 510));
 
         pack();
