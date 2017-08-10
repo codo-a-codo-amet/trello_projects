@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-import ahorcado.Modelo.Palabra;
+import ahorcado.Controlador.PalabraControlador;
+import java.util.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,11 +17,11 @@ import static org.junit.Assert.*;
  *
  * @author alumno
  */
-public class GameJUnitTest {
-    
-    private Palabra OUT ;
-    
-    public GameJUnitTest() {
+public class Test2 {
+    private List<String> letrasUsadas;
+    PalabraControlador palabraControlador;
+
+    public Test2() {
     }
     
     @BeforeClass
@@ -33,12 +34,16 @@ public class GameJUnitTest {
     
     @Before
     public void setUp() {
-        OUT = new Palabra("Under test", true);
+        palabraControlador = new PalabraControlador();
+            palabraControlador.verificarLetra("A");
+            
+            
     }
     
     @After
     public void tearDown() {
-        OUT = null;
+        palabraControlador = null;
+        letrasUsadas = null;
     }
 
     // TODO add test methods here.
@@ -46,10 +51,10 @@ public class GameJUnitTest {
     //
     // @Test
     // public void hello() {}
-    
     @Test
-    public void testPalabra() {
-        assertFalse("Tenia que dar false", false);
+    public void hello(){
+            String[] estaPalabra = {"C","A","S","A"};
+            String[] aVerficaar  = palabraControlador.verificarEstaPalabra(estaPalabra);
+     
     }
-    
 }
