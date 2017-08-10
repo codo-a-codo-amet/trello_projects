@@ -12,7 +12,7 @@ package ahorcado.Controlador;
 public interface IPalabraControlador {
     public void verificarLetra(String letra);
     
-    public void entregarGuiones();
+    public String entregarGuiones();
     
     public String [] caracterPalabra(String palabra);
 }

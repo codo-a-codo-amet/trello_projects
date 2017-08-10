@@ -36,6 +36,7 @@ public class Test2 {
     public void setUp() {
         palabraControlador = new PalabraControlador();
             palabraControlador.verificarLetra("A");
+            palabraControlador.verificarLetra("C");
             
             
     }
@@ -52,9 +53,19 @@ public class Test2 {
     // @Test
     // public void hello() {}
     @Test
-    public void hello(){
+    public void verificarLetrasEnPalabra(){
             String[] estaPalabra = {"C","A","S","A"};
             String[] aVerficaar  = palabraControlador.verificarEstaPalabra(estaPalabra);
      
+    }
+    @Test
+    public void convertirAArray(){
+        String estaPalabra = "casa";
+        String[] aVerificar = palabraControlador.caracterPalabra(estaPalabra);
+    }
+    @Test
+    public void testearArray(){
+        String palabraTest = palabraControlador.entregarGuiones();
+               
     }
 }

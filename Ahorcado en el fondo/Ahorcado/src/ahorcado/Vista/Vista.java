@@ -606,37 +606,44 @@ public class Vista extends javax.swing.JFrame {
 
     private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
       botonC.setVisible(false);
-      palabraControlador.verificarLetra("C");// TODO add your handling code here:
+      palabraControlador.verificarLetra("C");
+      jPalabra.setText(palabraControlador.entregarGuiones());// TODO add your handling code here:
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAActionPerformed
       botonA.setVisible(false);
       palabraControlador.verificarLetra("A");
+      jPalabra.setText(palabraControlador.entregarGuiones());
     }//GEN-LAST:event_botonAActionPerformed
 
     private void botonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBActionPerformed
       botonB.setVisible(false);
       palabraControlador.verificarLetra("B");
+      jPalabra.setText(palabraControlador.entregarGuiones());
     }//GEN-LAST:event_botonBActionPerformed
 
     private void botonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDActionPerformed
       botonD.setVisible(false);
       palabraControlador.verificarLetra("D");
+      jPalabra.setText(palabraControlador.entregarGuiones());
     }//GEN-LAST:event_botonDActionPerformed
 
     private void botonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEActionPerformed
      botonE.setVisible(false);
      palabraControlador.verificarLetra("E");
+     jPalabra.setText(palabraControlador.entregarGuiones());
     }//GEN-LAST:event_botonEActionPerformed
 
     private void botonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFActionPerformed
        botonF.setVisible(false);
-       palabraControlador.verificarLetra("F");// TODO add your handling code here:
+       palabraControlador.verificarLetra("F");
+    jPalabra.setText(palabraControlador.entregarGuiones());// TODO add your handling code here:
     }//GEN-LAST:event_botonFActionPerformed
 
     private void botonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIActionPerformed
       botonI.setVisible(false);
-      palabraControlador.verificarLetra("I");// TODO add your handling code here:
+      palabraControlador.verificarLetra("I");
+      jPalabra.setText(palabraControlador.entregarGuiones());// TODO add your handling code here:
     }//GEN-LAST:event_botonIActionPerformed
 
     private void botonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGActionPerformed
@@ -677,6 +684,7 @@ public class Vista extends javax.swing.JFrame {
     private void botonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNActionPerformed
         botonN.setVisible(false);
         palabraControlador.verificarLetra("N");// TODO add your handling code here:
+        jPalabra.setText(palabraControlador.entregarGuiones());
     }//GEN-LAST:event_botonNActionPerformed
 
     private void botonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOActionPerformed
@@ -696,7 +704,8 @@ public class Vista extends javax.swing.JFrame {
 
     private void botonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTActionPerformed
        botonT.setVisible(false);
-       palabraControlador.verificarLetra("T");// TODO add your handling code here:
+       palabraControlador.verificarLetra("T");
+       jPalabra.setText(palabraControlador.entregarGuiones());
     }//GEN-LAST:event_botonTActionPerformed
 
     private void botonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRActionPerformed
@@ -706,7 +715,8 @@ public class Vista extends javax.swing.JFrame {
 
     private void botonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSActionPerformed
        botonS.setVisible(false);
-       palabraControlador.verificarLetra("S");// TODO add your handling code here:
+       palabraControlador.verificarLetra("S");
+        jPalabra.setText(palabraControlador.entregarGuiones());// TODO add your handling code here:
     }//GEN-LAST:event_botonSActionPerformed
 
     private void botonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonUActionPerformed

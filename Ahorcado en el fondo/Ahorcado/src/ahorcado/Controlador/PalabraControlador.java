@@ -36,8 +36,13 @@ public class PalabraControlador implements IPalabraControlador {
     }
 
     @Override
-    public void entregarGuiones() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String  entregarGuiones() {
+        String laPalabra = listadoPalabras.get(0).getPalabra();
+        String[] laPlabraArray = caracterPalabra(laPalabra);
+        String[] laPalabraArrayGuion = verificarEstaPalabra(laPlabraArray);
+       
+        String guiones=Arrays.toString(laPalabraArrayGuion).replaceAll("\\[|\\]|,|", "");
+        return guiones;
     }
     
     public String[] verificarEstaPalabra(String[] palabrita){
@@ -48,8 +53,10 @@ public class PalabraControlador implements IPalabraControlador {
                     palabraVerificada[j]=letrasUsadas.get(i);
                     System.out.println("La palabra contiene "+letrasUsadas.get(i) );
                 }else{
-                    palabraVerificada[j]="_ ";
-                    System.out.println("La palabra no contiene "+letrasUsadas.get(i));
+                    if ((palabraVerificada[j]==null) || (palabraVerificada[j]=="_ ")) {
+                        palabraVerificada[j]="_ ";
+                        System.out.println("La palabra no contiene "+letrasUsadas.get(i));
+                    }
                 }
             }
         }
