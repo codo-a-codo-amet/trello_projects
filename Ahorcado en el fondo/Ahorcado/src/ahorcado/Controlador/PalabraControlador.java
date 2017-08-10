@@ -39,4 +39,16 @@ public class PalabraControlador implements IPalabraControlador {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+      public String[] caracterPalabra (String palabra){
+        
+       String [] laLetra;
+        laLetra = new String [palabra.length()];
+        for (int i = 0; i < palabra.length(); i++) {
+            String soloLetra = palabra.substring(i, i+1);
+            laLetra[i] = soloLetra.toUpperCase();
+            
+            
+        }
+        return laLetra;
+      }
 }
