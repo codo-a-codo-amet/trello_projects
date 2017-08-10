@@ -43,6 +43,7 @@ public class Clase40 {
         vistaPrincipal unaNuevaVista = new vistaPrincipal();
         unaNuevaVista.setVisible(true);
         
+        
     }
     
 }
