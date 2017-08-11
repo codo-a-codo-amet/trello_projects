@@ -56,12 +56,15 @@ public class Test2 {
     public void verificarLetrasEnPalabra(){
             String[] estaPalabra = {"C","A","S","A"};
             String[] aVerficaar  = palabraControlador.verificarEstaPalabra(estaPalabra);
-     
+            String[] deseable = {"C","A","_ ","A"};
+            assertArrayEquals(deseable, aVerficaar);
     }
     @Test
     public void convertirAArray(){
         String estaPalabra = "casa";
         String[] aVerificar = palabraControlador.caracterPalabra(estaPalabra);
+        String[] Palabra = {"C","A","S","A"};
+        assertArrayEquals(Palabra, aVerificar);
     }
     @Test
     public void testearArray(){
