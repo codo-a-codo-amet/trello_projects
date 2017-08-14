@@ -14,19 +14,11 @@ import java.util.*;
  */
 public class PalabraControlador implements IPalabraControlador {
 
-<<<<<<< HEAD
     private final List<Palabra> listadoPalabras;
     private final String[] palabritas= {"Estancia","desarrollo","alquiler","Dueño","Lider","Ingenio","insecto","politica","ajedrez","aprobar"};
     private final List<String> letrasUsadas;
     
     public PalabraControlador (String string){
-=======
-    private List<Palabra> listadoPalabras;
-    private String[] palabritas= {"Estancia","desarrollo","alquiler","Dueño","Lider","Ingenio","insecto","politica","ajedrez","aprobar"};
-    private List<String> letrasUsadas;
-    
-    public PalabraControlador (){
->>>>>>> 1fe1fa96e2939cf5cdda63fb3203fbc9eac0ea15
         listadoPalabras = new ArrayList();
         letrasUsadas = new ArrayList();
         
@@ -64,7 +56,6 @@ public class PalabraControlador implements IPalabraControlador {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-<<<<<<< HEAD
 
     /* if (lista.indexOf(cadena) != -1){
       for (t=0;t< inicio && t>fin; t++){
@@ -75,25 +66,6 @@ public class PalabraControlador implements IPalabraControlador {
       }
       
      }*/
-=======
-    public String[] verificarEstaPalabra(String[] palabrita){
-        String[] palabraVerificada = new String[palabrita.length];
-        for (int i = 0; i < letrasUsadas.size(); i++) {
-            for (int j = 0; j < palabrita.length; j++) {
-                if (letrasUsadas.get(i).equals(palabrita[j]) ) {
-                    palabraVerificada[j]=letrasUsadas.get(i);
-                    System.out.println("La palabra contiene "+letrasUsadas.get(i) );
-                }else{
-                    palabraVerificada[j]="_ ";
-                    System.out.println("La palabra no contiene "+letrasUsadas.get(i));
-                }
-            }
-        }
-        
-        
-        return palabraVerificada;
-    }
->>>>>>> 1fe1fa96e2939cf5cdda63fb3203fbc9eac0ea15
 }
 
     

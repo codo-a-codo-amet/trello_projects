@@ -35,7 +35,8 @@ public class Vista extends javax.swing.JFrame {
         img5.setVisible(false);
         img6.setVisible(false);
         img7.setVisible(false);
-        
+        Jganaste.setVisible(false);
+        jSiguiente.setVisible(false);
         Jperdiste.setVisible(false);
         resetearletras();
         jLabel8.setText(String.valueOf(juego));
@@ -71,7 +72,10 @@ public class Vista extends javax.swing.JFrame {
         botonY.setVisible(true);
         botonZ.setVisible(true);   
     }
-    
+    //Metodo que lista palabras completas
+    public void palabraCompleta(){
+        //Agrega la palabra a la lista de completadas
+    }
     //Metodo para cambiar las letras de la palabra por guiones
     public void guiones (String[] palabraejemplo){
         String[] losguiones;
@@ -134,33 +138,33 @@ public class Vista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        botonC = new javax.swing.JButton();
-        botonA = new javax.swing.JButton();
-        botonB = new javax.swing.JButton();
-        botonD = new javax.swing.JButton();
-        botonE = new javax.swing.JButton();
-        botonF = new javax.swing.JButton();
-        botonI = new javax.swing.JButton();
-        botonG = new javax.swing.JButton();
-        botonH = new javax.swing.JButton();
-        botonJ = new javax.swing.JButton();
-        botonK = new javax.swing.JButton();
-        botonL = new javax.swing.JButton();
-        botonÑ = new javax.swing.JButton();
-        botonM = new javax.swing.JButton();
-        botonN = new javax.swing.JButton();
-        botonO = new javax.swing.JButton();
-        botonP = new javax.swing.JButton();
-        botonQ = new javax.swing.JButton();
-        botonT = new javax.swing.JButton();
-        botonR = new javax.swing.JButton();
-        botonS = new javax.swing.JButton();
-        botonU = new javax.swing.JButton();
-        botonV = new javax.swing.JButton();
-        botonW = new javax.swing.JButton();
-        botonZ = new javax.swing.JButton();
-        botonX = new javax.swing.JButton();
-        botonY = new javax.swing.JButton();
+        botonC = new javax.swing.JToggleButton();
+        botonA = new javax.swing.JToggleButton();
+        botonB = new javax.swing.JToggleButton();
+        botonD = new javax.swing.JToggleButton();
+        botonE = new javax.swing.JToggleButton();
+        botonF = new javax.swing.JToggleButton();
+        botonI = new javax.swing.JToggleButton();
+        botonG = new javax.swing.JToggleButton();
+        botonH = new javax.swing.JToggleButton();
+        botonJ = new javax.swing.JToggleButton();
+        botonK = new javax.swing.JToggleButton();
+        botonL = new javax.swing.JToggleButton();
+        botonÑ = new javax.swing.JToggleButton();
+        botonM = new javax.swing.JToggleButton();
+        botonN = new javax.swing.JToggleButton();
+        botonO = new javax.swing.JToggleButton();
+        botonP = new javax.swing.JToggleButton();
+        botonQ = new javax.swing.JToggleButton();
+        botonT = new javax.swing.JToggleButton();
+        botonR = new javax.swing.JToggleButton();
+        botonS = new javax.swing.JToggleButton();
+        botonU = new javax.swing.JToggleButton();
+        botonV = new javax.swing.JToggleButton();
+        botonW = new javax.swing.JToggleButton();
+        botonZ = new javax.swing.JToggleButton();
+        botonX = new javax.swing.JToggleButton();
+        botonY = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
@@ -184,6 +188,8 @@ public class Vista extends javax.swing.JFrame {
         Jperdiste = new javax.swing.JLabel();
         jBtnSalir = new javax.swing.JButton();
         jBtnReiniciar = new javax.swing.JButton();
+        Jganaste = new javax.swing.JLabel();
+        jSiguiente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -582,6 +588,19 @@ public class Vista extends javax.swing.JFrame {
         });
         getContentPane().add(jBtnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, -1, -1));
 
+        Jganaste.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        Jganaste.setForeground(new java.awt.Color(255, 51, 51));
+        Jganaste.setText("Ganaste");
+        getContentPane().add(Jganaste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+
+        jSiguiente.setText("Siguiente Palabra");
+        jSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSiguienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -740,37 +759,45 @@ public class Vista extends javax.swing.JFrame {
        inicioJuego(); // TODO add your handling code here:
     }//GEN-LAST:event_jBtnReiniciarActionPerformed
 
+    private void jSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSiguienteActionPerformed
+    palabraCompleta();
+    
+        inicioJuego();
+    // TODO add your handling code here:
+    }//GEN-LAST:event_jSiguienteActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Jganaste;
     private javax.swing.JLabel Jperdiste;
-    private javax.swing.JButton botonA;
-    private javax.swing.JButton botonB;
-    private javax.swing.JButton botonC;
-    private javax.swing.JButton botonD;
-    private javax.swing.JButton botonE;
-    private javax.swing.JButton botonF;
-    private javax.swing.JButton botonG;
-    private javax.swing.JButton botonH;
-    private javax.swing.JButton botonI;
-    private javax.swing.JButton botonJ;
-    private javax.swing.JButton botonK;
-    private javax.swing.JButton botonL;
-    private javax.swing.JButton botonM;
-    private javax.swing.JButton botonN;
-    private javax.swing.JButton botonO;
-    private javax.swing.JButton botonP;
-    private javax.swing.JButton botonQ;
-    private javax.swing.JButton botonR;
-    private javax.swing.JButton botonS;
-    private javax.swing.JButton botonT;
-    private javax.swing.JButton botonU;
-    private javax.swing.JButton botonV;
-    private javax.swing.JButton botonW;
-    private javax.swing.JButton botonX;
-    private javax.swing.JButton botonY;
-    private javax.swing.JButton botonZ;
-    private javax.swing.JButton botonÑ;
+    private javax.swing.JToggleButton botonA;
+    private javax.swing.JToggleButton botonB;
+    private javax.swing.JToggleButton botonC;
+    private javax.swing.JToggleButton botonD;
+    private javax.swing.JToggleButton botonE;
+    private javax.swing.JToggleButton botonF;
+    private javax.swing.JToggleButton botonG;
+    private javax.swing.JToggleButton botonH;
+    private javax.swing.JToggleButton botonI;
+    private javax.swing.JToggleButton botonJ;
+    private javax.swing.JToggleButton botonK;
+    private javax.swing.JToggleButton botonL;
+    private javax.swing.JToggleButton botonM;
+    private javax.swing.JToggleButton botonN;
+    private javax.swing.JToggleButton botonO;
+    private javax.swing.JToggleButton botonP;
+    private javax.swing.JToggleButton botonQ;
+    private javax.swing.JToggleButton botonR;
+    private javax.swing.JToggleButton botonS;
+    private javax.swing.JToggleButton botonT;
+    private javax.swing.JToggleButton botonU;
+    private javax.swing.JToggleButton botonV;
+    private javax.swing.JToggleButton botonW;
+    private javax.swing.JToggleButton botonX;
+    private javax.swing.JToggleButton botonY;
+    private javax.swing.JToggleButton botonZ;
+    private javax.swing.JToggleButton botonÑ;
     private javax.swing.JLabel img1;
     private javax.swing.JLabel img2;
     private javax.swing.JLabel img3;
@@ -793,5 +820,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jPalabra;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton jSiguiente;
     // End of variables declaration//GEN-END:variables
 }
