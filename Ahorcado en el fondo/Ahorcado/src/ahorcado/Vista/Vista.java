@@ -6,6 +6,7 @@
 package ahorcado.Vista;
 
 import ahorcado.Controlador.PalabraControlador;
+import java.awt.event.ActionEvent;
 import java.util.Arrays;
 
 /**
@@ -15,19 +16,20 @@ import java.util.Arrays;
 public class Vista extends javax.swing.JFrame {
 
     private int juego = 1; //Variable que indica la cantidad de partes del grafico
-    private String[] palabraejemplo = {"P","A","L","A","B","R","A"};
+    
     PalabraControlador palabraControlador;
+
     public Vista() {
         initComponents();
-        inicioJuego();
-        guiones(palabraejemplo);
-        palabraControlador = new PalabraControlador();
         
+        palabraControlador = new PalabraControlador();
+        jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());
+        inicioJuego();
     }
-    
+
     //Metodo para Inicializar los parametros del juego
-    public void inicioJuego(){
-        juego=1;
+    public void inicioJuego() {
+        juego = 1;
         img1.setVisible(true);
         img2.setVisible(false);
         img3.setVisible(false);
@@ -39,70 +41,119 @@ public class Vista extends javax.swing.JFrame {
         jSiguiente.setVisible(false);
         Jperdiste.setVisible(false);
         resetearletras();
+        jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());
         jLabel8.setText(String.valueOf(juego));
+        palabraControlador.resetearJuego();
     }
-    
+
     //Metodo para resetear los botones de letras
-    public void resetearletras(){
+    public void resetearletras() {
         botonA.setVisible(true);
+        botonA.setSelected(false);
         botonB.setVisible(true);
+        botonB.setSelected(false);
         botonC.setVisible(true);
+        botonC.setSelected(false);
         botonD.setVisible(true);
+        botonD.setSelected(false);
         botonE.setVisible(true);
+        botonE.setSelected(false);
         botonF.setVisible(true);
+        botonF.setSelected(false);
         botonG.setVisible(true);
+        botonG.setSelected(false);
         botonH.setVisible(true);
+        botonH.setSelected(false);
         botonI.setVisible(true);
+        botonI.setSelected(false);
         botonJ.setVisible(true);
+        botonJ.setSelected(false);
         botonK.setVisible(true);
+        botonK.setSelected(false);
         botonL.setVisible(true);
+        botonL.setSelected(false);
         botonM.setVisible(true);
+        botonM.setSelected(false);
         botonN.setVisible(true);
+        botonN.setSelected(false);
         botonÑ.setVisible(true);
+        botonÑ.setSelected(false);
         botonO.setVisible(true);
+        botonO.setSelected(false);
         botonP.setVisible(true);
+        botonP.setSelected(false);
         botonQ.setVisible(true);
+        botonQ.setSelected(false);
         botonR.setVisible(true);
+        botonR.setSelected(false);
         botonS.setVisible(true);
+        botonS.setSelected(false);
         botonT.setVisible(true);
+        botonT.setSelected(false);
         botonU.setVisible(true);
+        botonU.setSelected(false);
         botonV.setVisible(true);
+        botonV.setSelected(false);
         botonW.setVisible(true);
+        botonW.setSelected(false);
         botonX.setVisible(true);
+        botonX.setSelected(false);
         botonY.setVisible(true);
-        botonZ.setVisible(true);   
+        botonY.setSelected(false);
+        botonZ.setVisible(true);
+        botonZ.setSelected(false);
+    }
+     //Metodo para quitar los botones de letras
+    public void quitarletras() {
+        botonA.setVisible(false);
+        botonB.setVisible(false);
+        botonC.setVisible(false);
+        botonD.setVisible(false);
+        botonE.setVisible(false);
+        botonF.setVisible(false);
+        botonG.setVisible(false);
+        botonH.setVisible(false);
+        botonI.setVisible(false);
+        botonJ.setVisible(false);
+        botonK.setVisible(false);
+        botonL.setVisible(false);
+        botonM.setVisible(false);
+        botonN.setVisible(false);
+        botonÑ.setVisible(false);
+        botonO.setVisible(false);
+        botonP.setVisible(false);
+        botonQ.setVisible(false);
+        botonR.setVisible(false);
+        botonS.setVisible(false);
+        botonT.setVisible(false);
+        botonU.setVisible(false);
+        botonV.setVisible(false);
+        botonW.setVisible(false);
+        botonX.setVisible(false);
+        botonY.setVisible(false);
+        botonZ.setVisible(false);
     }
     //Metodo que lista palabras completas
-    public void palabraCompleta(){
+    public void palabraCompleta() {
         //Agrega la palabra a la lista de completadas
     }
-    //Metodo para cambiar las letras de la palabra por guiones
-    public void guiones (String[] palabraejemplo){
-        String[] losguiones;
-        losguiones = new String [palabraejemplo.length];
-        for (int i = 0; i< palabraejemplo.length; i++) {
-            losguiones[i]="_ ";
+   
+    public void metodoBoton (String letra){
+        palabraControlador.verificarLetra(letra);
+        jPalabra.setText(palabraControlador.entregarGuiones());
+        estado(palabraControlador.getJuego());
+        ganaste();
+    }
+    public void ganaste(){
+        if (palabraControlador.ganaste()) {
+            Jganaste.setVisible(true);
+            jSiguiente.setVisible(true);
+            quitarletras();
         }
-        String guiones=Arrays.toString(losguiones).replaceAll("\\[|\\]|,|", "");
-        jPalabra.setText(guiones);
     }
-    
-    //Metodos para probar el cambio de estado del jugador
-    public void suma(){
-        juego=juego+1;
-        estado(juego);
-        jLabel8.setText(String.valueOf(juego));
-        
-    }
-    public void resta(){
-        juego=juego-1;
-        estado(juego);
-        jLabel8.setText(String.valueOf(juego));
-    }
-    
     //Metodo que muestra como cambia la imagen del jugador
-    public void estado(int juego){
-        switch(juego){
+    public void estado(int juego) {
+        switch (juego) {
             case 1:
                 break;
             case 2:
@@ -123,11 +174,11 @@ public class Vista extends javax.swing.JFrame {
             case 7:
                 img7.setVisible(true);
                 Jperdiste.setVisible(true);
-                break;    
+                quitarletras();
+                break;
         }
-               
+
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -182,8 +233,6 @@ public class Vista extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         Jperdiste = new javax.swing.JLabel();
         jBtnSalir = new javax.swing.JButton();
@@ -532,9 +581,9 @@ public class Vista extends javax.swing.JFrame {
         img7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/7.png"))); // NOI18N
         getContentPane().add(img7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
 
-        jPalabra.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jPalabra.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         jPalabra.setText("_ _ _ _ _ _ _ _ _ _ _ _");
-        getContentPane().add(jPalabra, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 370, -1));
+        getContentPane().add(jPalabra, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 350, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 1000, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -543,22 +592,6 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 20, 70, 20));
-
-        jButton1.setText("+");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
-
-        jButton2.setText("-");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, -1, -1));
 
         jLabel8.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -589,7 +622,7 @@ public class Vista extends javax.swing.JFrame {
         getContentPane().add(jBtnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, -1, -1));
 
         Jganaste.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        Jganaste.setForeground(new java.awt.Color(255, 51, 51));
+        Jganaste.setForeground(new java.awt.Color(0, 204, 0));
         Jganaste.setText("Ganaste");
         getContentPane().add(Jganaste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
 
@@ -605,168 +638,158 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
-      botonC.setVisible(false);
-      palabraControlador.verificarLetra("C");// TODO add your handling code here:
+        botonC.setVisible(false);
+        metodoBoton("C");
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAActionPerformed
-      botonA.setVisible(false);
-      palabraControlador.verificarLetra("A");
+        botonA.setVisible(false);
+        metodoBoton("A");
     }//GEN-LAST:event_botonAActionPerformed
 
     private void botonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBActionPerformed
-      botonB.setVisible(false);
-      palabraControlador.verificarLetra("B");
+        botonB.setVisible(false);
+        metodoBoton("B");
     }//GEN-LAST:event_botonBActionPerformed
 
     private void botonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDActionPerformed
-      botonD.setVisible(false);
-      palabraControlador.verificarLetra("D");
+        botonD.setVisible(false);
+        metodoBoton("D");
     }//GEN-LAST:event_botonDActionPerformed
 
     private void botonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEActionPerformed
-     botonE.setVisible(false);
-     palabraControlador.verificarLetra("E");
+        botonE.setVisible(false);
+        metodoBoton("E");
     }//GEN-LAST:event_botonEActionPerformed
 
     private void botonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFActionPerformed
-       botonF.setVisible(false);
-       palabraControlador.verificarLetra("F");// TODO add your handling code here:
+        botonF.setVisible(false);
+         metodoBoton("F");
     }//GEN-LAST:event_botonFActionPerformed
 
     private void botonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIActionPerformed
-      botonI.setVisible(false);
-      palabraControlador.verificarLetra("I");// TODO add your handling code here:
+        botonI.setVisible(false);
+         metodoBoton("I");
     }//GEN-LAST:event_botonIActionPerformed
 
     private void botonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGActionPerformed
-     botonG.setVisible(false);
-     palabraControlador.verificarLetra("G");// TODO add your handling code here:
+        botonG.setVisible(false);
+         metodoBoton("G");
     }//GEN-LAST:event_botonGActionPerformed
 
     private void botonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHActionPerformed
-       botonH.setVisible(false);
-       palabraControlador.verificarLetra("H");// TODO add your handling code here:
+        botonH.setVisible(false);
+         metodoBoton("H");
     }//GEN-LAST:event_botonHActionPerformed
 
     private void botonJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJActionPerformed
-      botonJ.setVisible(false);
-      palabraControlador.verificarLetra("J");// TODO add your handling code here:
+        botonJ.setVisible(false);
+         metodoBoton("J");
     }//GEN-LAST:event_botonJActionPerformed
 
     private void botonKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonKActionPerformed
-      botonK.setVisible(false);
-      palabraControlador.verificarLetra("K");// TODO add your handling code here:
+        botonK.setVisible(false);
+         metodoBoton("K");
     }//GEN-LAST:event_botonKActionPerformed
 
     private void botonLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLActionPerformed
-      botonL.setVisible(false);
-      palabraControlador.verificarLetra("L");// TODO add your handling code here:
+        botonL.setVisible(false);
+         metodoBoton("L");
     }//GEN-LAST:event_botonLActionPerformed
 
     private void botonÑActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonÑActionPerformed
         botonÑ.setVisible(false);
-        palabraControlador.verificarLetra("Ñ");// TODO add your handling code here:
+        metodoBoton("Ñ");
     }//GEN-LAST:event_botonÑActionPerformed
 
     private void botonMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMActionPerformed
-       botonM.setVisible(false);
-       palabraControlador.verificarLetra("M");// TODO add your handling code here:
+        botonM.setVisible(false);
+        metodoBoton("M");
     }//GEN-LAST:event_botonMActionPerformed
 
     private void botonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNActionPerformed
         botonN.setVisible(false);
-        palabraControlador.verificarLetra("N");// TODO add your handling code here:
+        metodoBoton("N");
     }//GEN-LAST:event_botonNActionPerformed
 
     private void botonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOActionPerformed
-       botonO.setVisible(false);
-       palabraControlador.verificarLetra("O");
+        botonO.setVisible(false);
+        metodoBoton("O");
     }//GEN-LAST:event_botonOActionPerformed
 
     private void botonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPActionPerformed
-      botonP.setVisible(false);
-      palabraControlador.verificarLetra("P");// TODO add your handling code here:
+        botonP.setVisible(false);
+        metodoBoton("P");
     }//GEN-LAST:event_botonPActionPerformed
 
     private void botonQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonQActionPerformed
-      botonQ.setVisible(false);
-      palabraControlador.verificarLetra("Q");// TODO add your handling code here:
+        botonQ.setVisible(false);
+        metodoBoton("Q");
     }//GEN-LAST:event_botonQActionPerformed
 
     private void botonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTActionPerformed
-       botonT.setVisible(false);
-       palabraControlador.verificarLetra("T");// TODO add your handling code here:
+        botonT.setVisible(false);
+        metodoBoton("T");
     }//GEN-LAST:event_botonTActionPerformed
 
     private void botonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRActionPerformed
-       botonR.setVisible(false);
-       palabraControlador.verificarLetra("R");// TODO add your handling code here:
+        botonR.setVisible(false);
+        metodoBoton("R");
     }//GEN-LAST:event_botonRActionPerformed
 
     private void botonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSActionPerformed
-       botonS.setVisible(false);
-       palabraControlador.verificarLetra("S");// TODO add your handling code here:
+        botonS.setVisible(false);
+        metodoBoton("S");
     }//GEN-LAST:event_botonSActionPerformed
 
     private void botonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonUActionPerformed
-       botonU.setVisible(false);
-       palabraControlador.verificarLetra("U");// TODO add your handling code here:
+        botonU.setVisible(false);
+        metodoBoton("U");
     }//GEN-LAST:event_botonUActionPerformed
 
     private void botonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVActionPerformed
-      botonV.setVisible(false);
-      palabraControlador.verificarLetra("V");// TODO add your handling code here:
+        botonV.setVisible(false);
+        metodoBoton("V");
     }//GEN-LAST:event_botonVActionPerformed
 
     private void botonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonWActionPerformed
-       botonW.setVisible(false);
-       palabraControlador.verificarLetra("W");// TODO add your handling code here:
+        botonW.setVisible(false);
+        metodoBoton("W");
     }//GEN-LAST:event_botonWActionPerformed
 
     private void botonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonZActionPerformed
-       botonZ.setVisible(false);
-       palabraControlador.verificarLetra("Z");// TODO add your handling code here:
+        botonZ.setVisible(false);
+        metodoBoton("Z");
     }//GEN-LAST:event_botonZActionPerformed
 
     private void botonXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonXActionPerformed
-       botonX.setVisible(false);
-       palabraControlador.verificarLetra("X");// TODO add your handling code here:
+        botonX.setVisible(false);
+        metodoBoton("X");
     }//GEN-LAST:event_botonXActionPerformed
 
     private void botonYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonYActionPerformed
-       botonY.setVisible(false);
-       palabraControlador.verificarLetra("Y");// TODO add your handling code here:
+        botonY.setVisible(false);
+        metodoBoton("Y");
     }//GEN-LAST:event_botonYActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        suma();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        resta();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jLabel8PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel8PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel8PropertyChange
 
     private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
-       System.exit(0); // TODO add your handling code here:
+        System.exit(0); // TODO add your handling code here:
     }//GEN-LAST:event_jBtnSalirActionPerformed
 
     private void jBtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReiniciarActionPerformed
-       inicioJuego(); // TODO add your handling code here:
+        inicioJuego(); // TODO add your handling code here:
     }//GEN-LAST:event_jBtnReiniciarActionPerformed
 
     private void jSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSiguienteActionPerformed
-    palabraCompleta();
-    
+        palabraCompleta();
         inicioJuego();
-    // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jSiguienteActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Jganaste;
@@ -807,8 +830,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel img7;
     private javax.swing.JButton jBtnReiniciar;
     private javax.swing.JButton jBtnSalir;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabLetrasBotones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

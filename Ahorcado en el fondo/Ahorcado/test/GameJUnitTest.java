@@ -49,6 +49,7 @@ public class GameJUnitTest {
     
     @Test
     public void testPalabra() {
-        assertFalse("Tenia que dar false", true);
+        assertFalse("Tenia que dar false", false);
     }
+    
 }

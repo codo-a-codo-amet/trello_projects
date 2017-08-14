@@ -22,8 +22,9 @@ public class PalabraControlador implements IPalabraControlador {
     public PalabraControlador (String string){
 =======
     private List<Palabra> listadoPalabras;
-    private String[] palabritas= {"Estancia","desarrollo","alquiler","Dueño","Lider","Ingenio","insecto","politica","ajedrez","aprobar"};
+    private String[] palabritas = {"Estancia", "desarrollo", "alquiler", "Dueño", "Lider", "Ingenio", "insecto", "politica", "ajedrez", "aprobar"};
     private List<String> letrasUsadas;
+<<<<<<< HEAD
     
     public PalabraControlador (){
 >>>>>>> 1fe1fa96e2939cf5cdda63fb3203fbc9eac0ea15
@@ -44,8 +45,41 @@ public class PalabraControlador implements IPalabraControlador {
         string = palabrita.substring(inicio + dato1, fin);
         System.out.println(string);
 
+=======
+    private int juego = 1;
+    private boolean estaLaLetra = false;
+    private int totalLetras = 0;
+    private String palabrajuego;
+    String[] laPalabraArray;
+    private int contadorLetras = 0;
+
+    public PalabraControlador() {
+        listadoPalabras = new ArrayList();
+        letrasUsadas = new ArrayList();
+        for (int i = 0; i < palabritas.length; i++) {
+            listadoPalabras.add(new Palabra(palabritas[i], false));
         }
+        palabrajuego = listadoPalabras.get(1).getPalabra();
+        laPalabraArray = caracterPalabra(palabrajuego);
     }
+
+    public void resetearJuego() {
+        juego = 1;
+        estaLaLetra = false;
+        totalLetras = 0;
+        contadorLetras = 0;
+    }
+
+    public boolean ganaste() {
+        boolean ganaste = false;
+        if (contadorLetras == laPalabraArray.length) {
+            ganaste = true;
+            System.out.println("GANASTE!!!!");
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
+        }
+        return ganaste;
+    }
+<<<<<<< HEAD
         
     
 
@@ -53,16 +87,42 @@ public class PalabraControlador implements IPalabraControlador {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+=======
+
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
     @Override
     public void verificarLetra(String letra) {
         letrasUsadas.add(letra);
-        System.out.println("Verificando la letra "+ letra);
+        for (int i = 0; i < laPalabraArray.length; i++) {
+            if (laPalabraArray[i].equals(letra)) {
+                estaLaLetra = true;
+                System.out.println("Esta la letra " + letra);
+                contadorLetras++;
+            }
+        }
+        if (estaLaLetra == false) {
+            juego++;
+            System.out.println("Juego " + juego);
+        }
+        estaLaLetra = false;
+    }
+
+    public String entregarGuionesPrimeraVez() {
+        String[] palabraVerificada = new String[laPalabraArray.length];
+        for (int j = 0; j < laPalabraArray.length; j++) {
+            palabraVerificada[j] = "_ ";
+        }
+        String guiones = Arrays.toString(palabraVerificada).replaceAll("\\[|\\]|,|", "");
+        return guiones;
     }
 
     @Override
-    public void entregarGuiones() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String entregarGuiones() {
+        String[] laPalabraArrayGuion = verificarEstaPalabra(laPalabraArray);
+        String guiones = Arrays.toString(laPalabraArrayGuion).replaceAll("\\[|\\]|,|", "");
+        return guiones;
     }
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 
@@ -77,23 +137,46 @@ public class PalabraControlador implements IPalabraControlador {
      }*/
 =======
     public String[] verificarEstaPalabra(String[] palabrita){
+=======
+
+    public String[] verificarEstaPalabra(String[] palabrita) {
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
         String[] palabraVerificada = new String[palabrita.length];
         for (int i = 0; i < letrasUsadas.size(); i++) {
+            totalLetras = letrasUsadas.size() * palabrita.length;
             for (int j = 0; j < palabrita.length; j++) {
-                if (letrasUsadas.get(i).equals(palabrita[j]) ) {
-                    palabraVerificada[j]=letrasUsadas.get(i);
-                    System.out.println("La palabra contiene "+letrasUsadas.get(i) );
-                }else{
-                    palabraVerificada[j]="_ ";
-                    System.out.println("La palabra no contiene "+letrasUsadas.get(i));
+                if (letrasUsadas.get(i).equals(palabrita[j])) {
+                    palabraVerificada[j] = letrasUsadas.get(i);
+                } else {
+                    if ((palabraVerificada[j] == null) || (palabraVerificada[j] == "_ ")) {
+                        palabraVerificada[j] = "_ ";
+                    }
                 }
             }
         }
-        
-        
         return palabraVerificada;
     }
+<<<<<<< HEAD
 >>>>>>> 1fe1fa96e2939cf5cdda63fb3203fbc9eac0ea15
+=======
+
+    @Override
+    public String[] caracterPalabra(String palabra) {
+        String[] laLetra;
+        laLetra = new String[palabra.length()];
+        for (int i = 0; i < palabra.length(); i++) {
+            String soloLetra = palabra.substring(i, i + 1);
+            laLetra[i] = soloLetra.toUpperCase();
+
+        }
+        return laLetra;
+    }
+
+    public int getJuego() {
+        return juego;
+    }
+
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
 }
 
     
