@@ -5,6 +5,8 @@
  */
 package clase40;
 
+import java.util.Iterator;
+
 
 /**
  *
@@ -13,8 +15,12 @@ package clase40;
 public class Vista extends Composite implements IView{
 
     @Override
-    public void Draw() {
-        System.out.println("y ");
+    public void Draw(String texto) {
+        for (Iterator<IView> iterator = component_list.iterator(); iterator.hasNext();) {
+            IView next = iterator.next();
+            next.Draw(texto);
+        }
+        System.out.println(texto);
     }
 
 

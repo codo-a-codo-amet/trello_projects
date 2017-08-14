@@ -10,5 +10,5 @@ package clase40;
  * @author alumno
  */
 public interface IView {
-    public void Draw();
+    public void Draw(String texto);
 }

@@ -13,28 +13,14 @@ import java.util.*;
  */
 public class Composite {
     
-    private List<IView> component_list;
-    
-    public Composite(){
+    protected List<IView> component_list;
+
+    public Composite() {
         component_list = new ArrayList<>();
     }
-    
-    public void add(IView component){
+        
+    final public void add(IView component){
         component_list.add(component);
-    
     }
-    
-    public void remove(IView component){
-        component_list.remove(component);
-    }
-    
-    public  List<IView> getComponet(){
-        /*for (Iterator<IView> iterator = component_list.iterator(); iterator.hasNext();) {
-            IView next = iterator.next();
-        }
-        System.out.println(component_list);*/
-        return component_list;
-    }
-   
     
 }

@@ -1,16 +1,18 @@
-
 package empresa;
 
 import javax.swing.JOptionPane;
 
 public class Empleado {
-     private String nombre;
+
+    //Atributos
+    private String nombre;
     private String apellido;
     private int edad;
     private int dni;
     private int numeroEmpleado;
     private static int contadorEmpleado = 0;
 
+    //Constructor
     public Empleado(String nombre, String apellido, int edad, int dni) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,9 +23,7 @@ public class Empleado {
         Empleado.contadorEmpleado++;
     }
 
-    public void imprimir(){
-    JOptionPane.showMessageDialog(null,toString() + "\nCantidad total de empleados: "+getContadorEmpleado(),"Informacion",-1);
-    }
+    // Metodos
     public String getNombre() {
         return nombre;
     }
@@ -64,8 +64,12 @@ public class Empleado {
         return contadorEmpleado;
     }
 
-
+    @Override
     public String toString() {
         return "Nombre: " + nombre + ", apellido: " + apellido + ", edad: " + edad + ", D.N.I: " + dni + ", numero de empleado: " + numeroEmpleado;
+    }
+
+    public void imprimir() {
+        JOptionPane.showMessageDialog(null, toString() + "\nCantidad total de empleados: " + getContadorEmpleado(), "Informacion", -1);
     }
 }
