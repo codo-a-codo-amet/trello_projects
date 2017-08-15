@@ -3,23 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase29;
+package clase.pkg29;
 
-
-
-
+import java.util.*;
 /**
  *
  * @author alumno
  */
-public class Clase29 {
-
-    public static void main(String[] args) {
-    Controlador unControlador = new Controlador(new VistaDialogo());
-        
+public class Clase29{
+public static void main(String[]args){
+    
+    Controlador unControlador = new Controlador(new VistaConsola());
     unControlador.run();
-        
-        
-    }
-   
+
+}
 }

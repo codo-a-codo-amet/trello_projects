@@ -3,12 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase29;
+package clase.pkg29;
+import java.util.*;
 
 /**
  *
  * @author alumno
  */
-public class Persona {
+public interface IView {
     
+    public void Draw(String texto);
+     
+    public void Draw();
+    
+    public void Clear();
+    
+    public void Add();
 }

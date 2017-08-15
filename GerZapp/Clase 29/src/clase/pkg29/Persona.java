@@ -1,15 +1,23 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package clase.pkg29;
+import java.util.*;
 
-package clase29;
-
-
+/**
+ *
+ * @author alumno
+ */
 public class Persona {
     private String nombre;
     private String apellido;
-    private int edad;
-    private String sexo;
+    private String edad;
+    private char sexo;
     private int dni;
 
-    public Persona(String nombre, String apellido, int edad, String sexo, int dni) {
+    public Persona(String nombre, String apellido, String edad, char sexo, int dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -18,6 +26,11 @@ public class Persona {
     }
     
     public Persona(){
+    }
+
+    public Persona(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
     
 
@@ -37,19 +50,19 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
-    public String getSexo() {
+    public char getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(char sexo) {
         this.sexo = sexo;
     }
 
