@@ -5,41 +5,21 @@
  */
 package ahorcado;
 
+import java.awt.Event;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 /**
  *
  * @author alejandro.medici
  */
-public class Game implements ActionListener, KeyListener {
+public class Game implements IKeyGameListener {
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        String actionCommand = e.getActionCommand();
-        System.out.println(actionCommand);
+    public void listen(Event event) {
+        ActionEvent ae = (ActionEvent)event.target;
+        System.out.println("Llego a Game: " + ae.getActionCommand());
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-        char actionCommand = e.getKeyChar();
-        System.out.println("Key character type " + actionCommand);
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        char actionCommand = e.getKeyChar();
-        System.out.println("Key character Pressed " + actionCommand);
-
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        char actionCommand = e.getKeyChar();
-        System.out.println("Key character Released " + actionCommand);
-
-    }
+   
 
 }
