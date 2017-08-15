@@ -26,6 +26,7 @@ public class PalabraControlador implements IPalabraControlador {
     String[] laPalabraArray;
     private int contadorLetras = 0;
     DefaultListModel palabrasCorrectas;
+    Palabra estaPalabra;
 
     public PalabraControlador() {
         listadoPalabras = new ArrayList();
@@ -33,9 +34,18 @@ public class PalabraControlador implements IPalabraControlador {
         for (int i = 0; i < palabritas.length; i++) {
             listadoPalabras.add(new Palabra(palabritas[i], false));
         }
-        palabrajuego = listadoPalabras.get(1).getPalabra();
+        estaPalabra = listadoPalabras.get(1);
+        palabrajuego = estaPalabra.getPalabra();
         laPalabraArray = caracterPalabra(palabrajuego);
         palabrasCorrectas = new DefaultListModel();
+    }
+
+    public Palabra getEstaPalabra() {
+        return estaPalabra;
+    }
+
+    public String getPalabrajuego() {
+        return palabrajuego;
     }
 
     public void resetearJuego() {
@@ -127,9 +137,11 @@ public class PalabraControlador implements IPalabraControlador {
     }
      
     public void llenarPalabrasCorrectas(Palabra palabra,JList list){
-        
         this.palabrasCorrectas.addElement(palabra);
         list.setModel(palabrasCorrectas);
         
-    } 
+    }
+    public void limpiarPalabrasCorrectas(){
+        palabrasCorrectas.removeAllElements();
+    }
 }
