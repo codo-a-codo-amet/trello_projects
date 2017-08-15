@@ -149,6 +149,7 @@ public class Vista extends javax.swing.JFrame {
             Jganaste.setVisible(true);
             jSiguiente.setVisible(true);
             quitarletras();
+            palabraControlador.llenarPalabrasCorrectas(palabraControlador, jList1);
         }
     }
     //Metodo que muestra como cambia la imagen del jugador
@@ -175,6 +176,7 @@ public class Vista extends javax.swing.JFrame {
                 img7.setVisible(true);
                 Jperdiste.setVisible(true);
                 quitarletras();
+                jPalabra.setText(palabraControlador.entregarPalabraAlPerder());        
                 break;
         }
 

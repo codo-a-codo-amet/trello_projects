@@ -7,6 +7,8 @@ package ahorcado.Controlador;
 
 import ahorcado.Modelo.Palabra;
 import java.util.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 /**
  *
@@ -23,6 +25,7 @@ public class PalabraControlador implements IPalabraControlador {
     private String palabrajuego;
     String[] laPalabraArray;
     private int contadorLetras = 0;
+    DefaultListModel palabrasCorrectas;
 
     public PalabraControlador() {
         listadoPalabras = new ArrayList();
@@ -32,6 +35,7 @@ public class PalabraControlador implements IPalabraControlador {
         }
         palabrajuego = listadoPalabras.get(1).getPalabra();
         laPalabraArray = caracterPalabra(palabrajuego);
+        palabrasCorrectas = new DefaultListModel();
     }
 
     public void resetearJuego() {
@@ -39,6 +43,7 @@ public class PalabraControlador implements IPalabraControlador {
         estaLaLetra = false;
         totalLetras = 0;
         contadorLetras = 0;
+        letrasUsadas.clear();
     }
 
     public boolean ganaste() {
@@ -115,5 +120,16 @@ public class PalabraControlador implements IPalabraControlador {
     public int getJuego() {
         return juego;
     }
-
+    public String entregarPalabraAlPerder() {
+        
+        String laPalabra = Arrays.toString(laPalabraArray).replaceAll("\\[|\\]|,|", "");
+        return laPalabra;
+    }
+     
+    public void llenarPalabrasCorrectas(Palabra palabra,JList list){
+        
+        this.palabrasCorrectas.addElement(palabra);
+        list.setModel(palabrasCorrectas);
+        
+    } 
 }
