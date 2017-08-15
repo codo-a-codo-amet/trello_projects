@@ -14,9 +14,38 @@ import java.util.*;
  */
 public class PalabraControlador implements IPalabraControlador {
 
+<<<<<<< HEAD
+    private final List<Palabra> listadoPalabras;
+    private final String[] palabritas= {"Estancia","desarrollo","alquiler","Dueño","Lider","Ingenio","insecto","politica","ajedrez","aprobar"};
+    private final List<String> letrasUsadas;
+    
+    public PalabraControlador (String string){
+=======
     private List<Palabra> listadoPalabras;
     private String[] palabritas = {"Estancia", "desarrollo", "alquiler", "Dueño", "Lider", "Ingenio", "insecto", "politica", "ajedrez", "aprobar"};
     private List<String> letrasUsadas;
+<<<<<<< HEAD
+    
+    public PalabraControlador (){
+>>>>>>> 1fe1fa96e2939cf5cdda63fb3203fbc9eac0ea15
+        listadoPalabras = new ArrayList();
+        letrasUsadas = new ArrayList();
+        
+        
+        for (String palabrita : palabritas) {
+            listadoPalabras.add(new Palabra(palabrita, false));
+    
+         //   public void PalabraSeleccionada;{
+        
+         Random azar = new Random();
+        int dato1;
+        dato1 = azar.nextInt(palabrita.length());
+        int inicio = palabrita.indexOf(" ");
+        int fin = palabrita.indexOf(" ",inicio + dato1);
+        string = palabrita.substring(inicio + dato1, fin);
+        System.out.println(string);
+
+=======
     private int juego = 1;
     private boolean estaLaLetra = false;
     private int totalLetras = 0;
@@ -46,10 +75,21 @@ public class PalabraControlador implements IPalabraControlador {
         if (contadorLetras == laPalabraArray.length) {
             ganaste = true;
             System.out.println("GANASTE!!!!");
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
         }
         return ganaste;
     }
+<<<<<<< HEAD
+        
+    
 
+    public PalabraControlador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+=======
+
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
     @Override
     public void verificarLetra(String letra) {
         letrasUsadas.add(letra);
@@ -82,8 +122,25 @@ public class PalabraControlador implements IPalabraControlador {
         String guiones = Arrays.toString(laPalabraArrayGuion).replaceAll("\\[|\\]|,|", "");
         return guiones;
     }
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+
+    /* if (lista.indexOf(cadena) != -1){
+      for (t=0;t< inicio && t>fin; t++){
+       l=lista.indexOf(cadena.charAt(t));
+       y=lista.charAt(l);
+       System.out.println(l);
+       System.out.println(y);
+      }
+      
+     }*/
+=======
+    public String[] verificarEstaPalabra(String[] palabrita){
+=======
 
     public String[] verificarEstaPalabra(String[] palabrita) {
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
         String[] palabraVerificada = new String[palabrita.length];
         for (int i = 0; i < letrasUsadas.size(); i++) {
             totalLetras = letrasUsadas.size() * palabrita.length;
@@ -99,6 +156,9 @@ public class PalabraControlador implements IPalabraControlador {
         }
         return palabraVerificada;
     }
+<<<<<<< HEAD
+>>>>>>> 1fe1fa96e2939cf5cdda63fb3203fbc9eac0ea15
+=======
 
     @Override
     public String[] caracterPalabra(String palabra) {
@@ -116,4 +176,7 @@ public class PalabraControlador implements IPalabraControlador {
         return juego;
     }
 
+>>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
 }
+
+    
