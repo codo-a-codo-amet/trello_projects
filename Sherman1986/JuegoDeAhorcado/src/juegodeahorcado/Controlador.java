@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ahorcado;
+package juegodeahorcado;
 
 /**
  *
  * @author alumno
  */
-public class Ahorcado {
+public class Controlador {
+    
+    private Juego unJuego;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public Controlador() {
+        this.unJuego = new Juego();
     }
     
+    public void Run() {
+        unJuego.EjecutarJuego();
+    }
 }
