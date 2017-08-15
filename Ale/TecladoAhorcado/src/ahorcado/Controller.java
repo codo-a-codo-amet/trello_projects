@@ -27,7 +27,7 @@ public class Controller {
         main_view.add(keybaord);
         main_view.setVisible(true);   
         
-        //keybaord.setActionListener(game);
+        keybaord.AddListener(game);
       
     }
     
