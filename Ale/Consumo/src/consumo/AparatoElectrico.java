@@ -11,13 +11,13 @@ public class AparatoElectrico {
 //Constructor
     public AparatoElectrico(double potencia) {
         this.potencia = potencia;
-        encendido = false;
+        this.encendido = false;
     }
-//Metodos
+
     public static double getConsumo() {
         return consumoTotal;
     }
-    
+
     public void enciende() {
         if (encendido==false) {
             encendido = true;
@@ -31,8 +31,7 @@ public class AparatoElectrico {
             consumoTotal -= potencia;
         }
     }
-    public static void imprimir(){
-    JOptionPane.showMessageDialog(null, "El consumo electrico es " + AparatoElectrico.getConsumo(),"Consumo electrico",-1);
-    
-    }   
+    public static void imprimirConsumo(){
+    JOptionPane.showMessageDialog(null, "El consumo electrico es " + AparatoElectrico.consumoTotal,"Consumo electrico",-1);
+    }    
 }
