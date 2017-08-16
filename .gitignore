@@ -176,11 +176,6 @@ Ezequiel Ramirez/Clase27/nbproject/private/private.xml
 /emma/Clase30/nbproject/private/
 /emma/Clase30/build/
 /emma/JavaApplication51/nbproject/private/
-<<<<<<< HEAD
-/emma/JavaApplication52/nbproject/private/
-/emma/JavaApplication52/build/
-/emma/LongitudPromedio/nbproject/private/
-=======
 >>>>>>> dd4c95f63d8ff7532b6efb06922730e981f39245
 /waceballo/Clase40/nbproject/private/
 /waceballo/Clase40/build/
@@ -205,17 +200,9 @@ Ezequiel Ramirez/Clase27/nbproject/private/private.xml
 /Los del diome/ahorcado/nbproject/private/
 /Ivan ramis/ahorcadoDescargado/nbproject/private/
 /Ahorcado en el fondo/Ahorcado/build/
-<<<<<<< HEAD
->>>>>>> dbc1f57dfbe0154a20a8cb267651002d2d7e9c63
-/Ahorcado en el fondo/Ahorcado/nbproject/private/
-/Los del diome/ahorcado/build/
-=======
 /Ale/Loader/nbproject/private/
 /Ale/Loader/build/
 /Ahorcado en el fondo/Ahorcado/dist/
-<<<<<<< HEAD
->>>>>>> 299e3479ed648515d06c9e8a9e34e9b217fcec5d
-=======
 <<<<<<< HEAD
 /Ahorcado en el fondo/Backup/Ahorcado/build/
 /Ahorcado en el fondo/Backup/Ahorcado/nbproject/private/
@@ -223,4 +210,5 @@ Ezequiel Ramirez/Clase27/nbproject/private/private.xml
 /Ale/TecladoAhorcado/build/
 /Ale/TecladoAhorcado/nbproject/private/
 >>>>>>> e365af6e587aaf0d81f870f1cbef2f21ffbd5e2b
->>>>>>> 0c2baa613933191e950a83cb0d22559a96a048af
+/waceballo/ahorcado/build/
+/waceballo/ahorcado/nbproject/private/
