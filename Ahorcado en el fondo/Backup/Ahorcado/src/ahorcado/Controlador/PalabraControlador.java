@@ -7,6 +7,8 @@ package ahorcado.Controlador;
 
 import ahorcado.Modelo.Palabra;
 import java.util.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 /**
  *
@@ -23,6 +25,8 @@ public class PalabraControlador implements IPalabraControlador {
     private String palabrajuego;
     String[] laPalabraArray;
     private int contadorLetras = 0;
+    DefaultListModel palabrasCorrectas;
+    Palabra estaPalabra;
 
     public PalabraControlador() {
         listadoPalabras = new ArrayList();
@@ -30,8 +34,18 @@ public class PalabraControlador implements IPalabraControlador {
         for (int i = 0; i < palabritas.length; i++) {
             listadoPalabras.add(new Palabra(palabritas[i], false));
         }
-        palabrajuego = listadoPalabras.get(1).getPalabra();
+        estaPalabra = listadoPalabras.get(1);
+        palabrajuego = estaPalabra.getPalabra();
         laPalabraArray = caracterPalabra(palabrajuego);
+        palabrasCorrectas = new DefaultListModel();
+    }
+
+    public Palabra getEstaPalabra() {
+        return estaPalabra;
+    }
+
+    public String getPalabrajuego() {
+        return palabrajuego;
     }
 
     public void resetearJuego() {
@@ -39,6 +53,7 @@ public class PalabraControlador implements IPalabraControlador {
         estaLaLetra = false;
         totalLetras = 0;
         contadorLetras = 0;
+        letrasUsadas.clear();
     }
 
     public boolean ganaste() {
@@ -115,5 +130,18 @@ public class PalabraControlador implements IPalabraControlador {
     public int getJuego() {
         return juego;
     }
-
+    public String entregarPalabraAlPerder() {
+        
+        String laPalabra = Arrays.toString(laPalabraArray).replaceAll("\\[|\\]|,|", "");
+        return laPalabra;
+    }
+     
+    public void llenarPalabrasCorrectas(Palabra palabra,JList list){
+        this.palabrasCorrectas.addElement(palabra);
+        list.setModel(palabrasCorrectas);
+        
+    }
+    public void limpiarPalabrasCorrectas(){
+        palabrasCorrectas.removeAllElements();
+    }
 }
