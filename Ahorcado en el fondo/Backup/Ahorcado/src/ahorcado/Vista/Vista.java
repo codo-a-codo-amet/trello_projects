@@ -42,7 +42,7 @@ public class Vista extends javax.swing.JFrame {
         Jperdiste.setVisible(false);
         resetearletras();
         jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());
-        jLabel8.setText(String.valueOf(juego));
+       
         palabraControlador.resetearJuego();
         
     }
