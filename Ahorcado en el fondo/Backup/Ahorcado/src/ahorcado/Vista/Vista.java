@@ -42,8 +42,9 @@ public class Vista extends javax.swing.JFrame {
         Jperdiste.setVisible(false);
         resetearletras();
         jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());
-        jLabel8.setText(String.valueOf(juego));
+       
         palabraControlador.resetearJuego();
+        
     }
 
     //Metodo para resetear los botones de letras
@@ -149,6 +150,7 @@ public class Vista extends javax.swing.JFrame {
             Jganaste.setVisible(true);
             jSiguiente.setVisible(true);
             quitarletras();
+            palabraControlador.llenarPalabrasCorrectas(palabraControlador.getEstaPalabra(), jList1);
         }
     }
     //Metodo que muestra como cambia la imagen del jugador
@@ -175,6 +177,7 @@ public class Vista extends javax.swing.JFrame {
                 img7.setVisible(true);
                 Jperdiste.setVisible(true);
                 quitarletras();
+                jPalabra.setText(palabraControlador.entregarPalabraAlPerder());        
                 break;
         }
 
@@ -233,7 +236,6 @@ public class Vista extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         Jperdiste = new javax.swing.JLabel();
         jBtnSalir = new javax.swing.JButton();
         jBtnReiniciar = new javax.swing.JButton();
@@ -557,7 +559,7 @@ public class Vista extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 330, 190));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Ahorcado v0.1");
+        jLabel3.setText("Ahorcado v0.2");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
 
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/1.png"))); // NOI18N
@@ -592,13 +594,6 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 20, 70, 20));
-
-        jLabel8.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jLabel8PropertyChange(evt);
-            }
-        });
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, 70, 30));
 
         Jperdiste.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Jperdiste.setForeground(new java.awt.Color(255, 51, 51));
@@ -772,16 +767,13 @@ public class Vista extends javax.swing.JFrame {
         metodoBoton("Y");
     }//GEN-LAST:event_botonYActionPerformed
 
-    private void jLabel8PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel8PropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8PropertyChange
-
     private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
         System.exit(0); // TODO add your handling code here:
     }//GEN-LAST:event_jBtnSalirActionPerformed
 
     private void jBtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReiniciarActionPerformed
-        inicioJuego(); // TODO add your handling code here:
+        inicioJuego();
+        palabraControlador.limpiarPalabrasCorrectas();// TODO add your handling code here:
     }//GEN-LAST:event_jBtnReiniciarActionPerformed
 
     private void jSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSiguienteActionPerformed
@@ -836,7 +828,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JList<String> jList1;
     private javax.swing.JLabel jPalabra;
     private javax.swing.JScrollPane jScrollPane1;

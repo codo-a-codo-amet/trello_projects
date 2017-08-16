@@ -17,7 +17,9 @@ public class Palabra {
         this.palabra = palabra;
         this.usada = usada;
     }
-
+public String toString (){
+    return palabra.toUpperCase();
+}
         
         
         
