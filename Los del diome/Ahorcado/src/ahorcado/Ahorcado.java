@@ -1,25 +1,21 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package juegodeahorcado;
-
-import java.util.*;
+package ahorcado;
 
 /**
  *
- * @author power
+ * @author alumno
  */
-public class JuegoDeAhorcado {
+public class Ahorcado {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Controlador unControlador  = new Controlador();
-        
-        unControlador.Run();
+        // TODO code application logic here
     }
+    
 }
-
-                
-                
