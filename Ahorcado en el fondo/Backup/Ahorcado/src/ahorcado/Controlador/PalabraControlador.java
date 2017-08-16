@@ -34,7 +34,9 @@ public class PalabraControlador implements IPalabraControlador {
         for (int i = 0; i < palabritas.length; i++) {
             listadoPalabras.add(new Palabra(palabritas[i], false));
         }
-        estaPalabra = listadoPalabras.get(1);
+        //estaPalabra = listadoPalabras.get(RandomPalabra());
+        estaPalabra = getComprobarRandomPalabra();
+        
         palabrajuego = estaPalabra.getPalabra();
         laPalabraArray = caracterPalabra(palabrajuego);
         palabrasCorrectas = new DefaultListModel();
@@ -125,6 +127,31 @@ public class PalabraControlador implements IPalabraControlador {
 
         }
         return laLetra;
+    }
+    
+    public Palabra getComprobarRandomPalabra(){
+        Palabra laPalabra;
+                  
+        int salida = 0;    
+        do { 
+        laPalabra = listadoPalabras.get(RandomPalabra());
+        
+            
+        
+        
+           
+            
+        } while (salida > 0);
+        
+     return null;  
+    }
+    
+    private int RandomPalabra(){
+       
+        int d = 1;
+        int h = listadoPalabras.size();
+                               
+        return (int)(Math.random()*(h - d))+d;
     }
 
     public int getJuego() {
