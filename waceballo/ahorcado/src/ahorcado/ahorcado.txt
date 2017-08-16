@@ -1,0 +1,10 @@
+Vaca
+Caballo
+Cerdo
+Burro
+Mula
+Hipopotamo
+Jirafa
+Leon
+Tigre
+Yena

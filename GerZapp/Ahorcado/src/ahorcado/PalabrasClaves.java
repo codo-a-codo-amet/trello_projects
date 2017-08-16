@@ -5,13 +5,13 @@
  */
 package ahorcado;
 
-import java.awt.Event;
-
-
 /**
  *
  * @author alumno
  */
-public interface IKeyGameListener {
-    public void listen(Event event);
+public class PalabrasClaves {
+   
+    
+    
+    
 }

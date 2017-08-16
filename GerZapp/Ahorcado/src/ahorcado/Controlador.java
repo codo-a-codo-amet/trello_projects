@@ -5,13 +5,17 @@
  */
 package ahorcado;
 
-import java.awt.Event;
-
-
 /**
  *
  * @author alumno
  */
-public interface IKeyGameListener {
-    public void listen(Event event);
+public class Controlador {
+
+    public Controlador() {
+        AhorcadoVista unaVista  = new AhorcadoVista();
+        unaVista.setVisible(true);
+    }
+    
+    
+    
 }
