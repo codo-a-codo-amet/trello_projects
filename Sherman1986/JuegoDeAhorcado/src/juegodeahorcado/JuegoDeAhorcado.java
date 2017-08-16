@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Los del diome/ahorcado/src/ahorcado/Ahorcado.java
 package ahorcado;
 
 public class Ahorcado {
@@ -25,6 +26,28 @@ public class Ahorcado {
         }
     }
 
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package juegodeahorcado;
+
+import java.util.*;
+
+/**
+ *
+ * @author power
+ */
+public class JuegoDeAhorcado {
+
+    public static void main(String[] args) {
+        Controlador unControlador  = new Controlador();
+        
+        unControlador.Run();
+    }
+>>>>>>> ff007b05e4b94fe28bfb74dd0e787a1ca4cfbe4a:Sherman1986/JuegoDeAhorcado/src/juegodeahorcado/JuegoDeAhorcado.java
 }
 
                 
