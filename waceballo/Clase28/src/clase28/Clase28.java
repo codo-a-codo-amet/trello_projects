@@ -5,7 +5,6 @@
  */
 package clase28;
 
-import clase29.Persona;
 import java.util.*;
 
 /**
