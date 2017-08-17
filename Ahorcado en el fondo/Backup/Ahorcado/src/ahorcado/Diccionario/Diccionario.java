@@ -20,7 +20,8 @@ import java.util.List;
  * @author alumno
  */
 public class Diccionario implements IDiccionario<Palabra>{
-    final String fullPath = "ahorcado.txt";
+    //final String fullPath = "ahorcado.txt";
+    final String fullPath = "listadoGeneral.txt";
         boolean loadInternatl = true;
         BufferedReader buffer = null;
         List <Palabra> listadoPalabras;
@@ -29,7 +30,8 @@ public class Diccionario implements IDiccionario<Palabra>{
             listadoPalabras = new ArrayList<>();
         try{
             if (loadInternatl) {
-                InputStream is = Diccionario.class.getResourceAsStream("ahorcado.txt");
+                //InputStream is = Diccionario.class.getResourceAsStream("ahorcado.txt");
+                InputStream is = Diccionario.class.getResourceAsStream("listadoGeneral.txt");
                 buffer = new BufferedReader(new InputStreamReader(is));
             } else {
                 FileReader reader = new FileReader(fullPath);
@@ -40,7 +42,7 @@ public class Diccionario implements IDiccionario<Palabra>{
             while ((linea = buffer.readLine()) != null) {
                 
                 listadoPalabras.add(new Palabra(linea, false));
-                System.out.println(linea);
+                //System.out.println(linea);
                 
             }
         } catch (FileNotFoundException e) {

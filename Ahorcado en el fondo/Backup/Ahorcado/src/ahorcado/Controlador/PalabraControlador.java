@@ -17,8 +17,6 @@ import javax.swing.JList;
  */
 public class PalabraControlador implements IPalabraControlador {
 
-    //private List<Palabra> listadoPalabras;
-    private String[] palabritas = {"Estancia", "desarrollo", "alquiler", "Dueño", "Lider", "Ingenio", "insecto", "politica", "ajedrez", "aprobar"};
     private List<String> letrasUsadas;
     private int juego = 1;
     private boolean estaLaLetra = false;
@@ -30,28 +28,15 @@ public class PalabraControlador implements IPalabraControlador {
     Palabra estaPalabra;
     Diccionario diccionario;
 
-    public PalabraControlador() {
+    public PalabraControlador() { //Constructor
         diccionario = new Diccionario();
-    //    listadoPalabras = new ArrayList();
         letrasUsadas = new ArrayList();
-    //    for (int i = 0; i < palabritas.length; i++) {
-    //        listadoPalabras.add(new Palabra(palabritas[i], false));
-    //    }
-        estaPalabra = getComprobarRandomPalabra();
-        palabrajuego = estaPalabra.getPalabra();
-        laPalabraArray = caracterPalabra(palabrajuego);
         palabrasCorrectas = new DefaultListModel();
+        preparaJuego();
     }
+    
 
-    public Palabra getEstaPalabra() {
-        return estaPalabra;
-    }
-
-    public String getPalabrajuego() {
-        return palabrajuego;
-    }
-
-    public void resetearJuego() {
+    public void resetearJuego() { //Lleva los parametros al valor default
         juego = 1;
         estaLaLetra = false;
         totalLetras = 0;
@@ -59,17 +44,18 @@ public class PalabraControlador implements IPalabraControlador {
         letrasUsadas.clear();
     }
 
-    public boolean ganaste() {
+    public boolean ganaste() { //Verifica si hay ganador
         boolean ganaste = false;
         if (contadorLetras == laPalabraArray.length) {
             ganaste = true;
             System.out.println("GANASTE!!!!");
         }
+        estaPalabra.setUsada(true);
         return ganaste;
     }
 
     @Override
-    public void verificarLetra(String letra) {
+    public void verificarLetra(String letra) {//Verifica si las letras estan en las palabras
         letrasUsadas.add(letra);
         for (int i = 0; i < laPalabraArray.length; i++) {
             if (laPalabraArray[i].equals(letra)) {
@@ -85,7 +71,7 @@ public class PalabraControlador implements IPalabraControlador {
         estaLaLetra = false;
     }
 
-    public String entregarGuionesPrimeraVez() {
+    public String entregarGuionesPrimeraVez() {//Pasa la cadena con guiones para el inicio del juego
         String[] palabraVerificada = new String[laPalabraArray.length];
         for (int j = 0; j < laPalabraArray.length; j++) {
             palabraVerificada[j] = "_ ";
@@ -95,13 +81,13 @@ public class PalabraControlador implements IPalabraControlador {
     }
 
     @Override
-    public String entregarGuiones() {
+    public String entregarGuiones() {//Pasa la cadena con guiones de la palabra
         String[] laPalabraArrayGuion = verificarEstaPalabra(laPalabraArray);
         String guiones = Arrays.toString(laPalabraArrayGuion).replaceAll("\\[|\\]|,|", "");
         return guiones;
     }
 
-    public String[] verificarEstaPalabra(String[] palabrita) {
+    public String[] verificarEstaPalabra(String[] palabrita) { //Reemplaza los guiones por las letras correctas
         String[] palabraVerificada = new String[palabrita.length];
         for (int i = 0; i < letrasUsadas.size(); i++) {
             totalLetras = letrasUsadas.size() * palabrita.length;
@@ -119,19 +105,51 @@ public class PalabraControlador implements IPalabraControlador {
     }
 
     @Override
-    public String[] caracterPalabra(String palabra) {
+    public String[] caracterPalabra(String palabra) {//convierte una cadena en un array y le quita acentos
         String[] laLetra;
         laLetra = new String[palabra.length()];
         for (int i = 0; i < palabra.length(); i++) {
             String soloLetra = palabra.substring(i, i + 1);
+            switch(soloLetra){
+                case "Á":
+                    soloLetra = "A";
+                    break;
+                case "á":
+                    soloLetra = "a";
+                    break;
+                case "É":
+                    soloLetra = "E";
+                    break;
+                case "é":
+                    soloLetra = "e";
+                    break;    
+                case "Í":
+                    soloLetra = "I";
+                    break;
+                case "í":
+                    soloLetra = "i";
+                    break;    
+                case "Ó":
+                    soloLetra = "O";
+                    break;
+                case "ó":
+                    soloLetra = "o";
+                    break;    
+                case "Ú":
+                    soloLetra = "U";
+                    break;
+                case "ú":
+                    soloLetra = "u";
+                    break;    
+            }
             laLetra[i] = soloLetra.toUpperCase();
 
         }
         return laLetra;
     }
     
-    public Palabra getComprobarRandomPalabra(){
-        Palabra laPalabra;
+    public Palabra getComprobarRandomPalabra(){//elije la palabra para jugar y verifica si ya esta usada
+        Palabra laPalabra=null;
                   
         int salida = 0;    
         do { 
@@ -140,38 +158,49 @@ public class PalabraControlador implements IPalabraControlador {
             if (laPalabra.isUsada()) {
               salida++;  
             }
-        
-        
-           
             
         } while (salida > 0);
-        
+        System.out.println("Palabra elegida " + laPalabra);
      return laPalabra;  
     }
     
-    private int RandomPalabra(){
+    public int RandomPalabra(){//elije un numero al azar para tomar la palabra a usar
        
         int d = 1;
         int h = diccionario.EntregarDiccionario().size();
                                
-        return (int)(Math.random()*(h - d))+d;
+        return (int)(Math.random()*(h - d)+d);
     }
 
-    public int getJuego() {
-        return juego;
-    }
-    public String entregarPalabraAlPerder() {
+    
+    public String entregarPalabraAlPerder() {//cuando pierde muestra en la vista la palabra
         
         String laPalabra = Arrays.toString(laPalabraArray).replaceAll("\\[|\\]|,|", "");
         return laPalabra;
     }
      
-    public void llenarPalabrasCorrectas(Palabra palabra,JList list){
+    public void llenarPalabrasCorrectas(Palabra palabra,JList list){//carga en una lista la palabra completada
         this.palabrasCorrectas.addElement(palabra);
         list.setModel(palabrasCorrectas);
         
     }
-    public void limpiarPalabrasCorrectas(){
+    public void limpiarPalabrasCorrectas(){//borra la lista de palabras completadas
         palabrasCorrectas.removeAllElements();
+    }
+
+    public void preparaJuego() {//selecciona la palabra a usar para el juego
+        estaPalabra = getComprobarRandomPalabra();
+        palabrajuego = estaPalabra.getPalabra();
+        laPalabraArray = caracterPalabra(palabrajuego);
+    }
+    public Palabra getEstaPalabra() {//devuelve palabra del juego
+        return estaPalabra;
+    }
+
+    public String getPalabrajuego() {//devuelve la cadena del objeto Palabra
+        return palabrajuego;
+    }
+    public int getJuego() {// devuelve la cantidad de letras utilizadas-- inicializado en 1
+        return juego;
     }
 }
