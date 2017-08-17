@@ -18,12 +18,16 @@ public class Ahorcado {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Vista VentanaPrincipal = new Vista();
-//        VentanaPrincipal.setVisible(true);
         
         Principal ven = new Principal();
         ven.setVisible(true);         
 
+//        Palabras p = new Palabras();
+//        p.setGuardarLetra("Hola", "a");
+//
+//        Palabras p1 = new Palabras();
+//        p1.setGuardarLetra("Mundo", "m");
+//        
     }
     
 }
