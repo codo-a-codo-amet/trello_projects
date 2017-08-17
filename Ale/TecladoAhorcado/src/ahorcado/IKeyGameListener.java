@@ -7,6 +7,7 @@ package ahorcado;
 
 import java.awt.Event;
 
+
 /**
  *
  * @author alumno
