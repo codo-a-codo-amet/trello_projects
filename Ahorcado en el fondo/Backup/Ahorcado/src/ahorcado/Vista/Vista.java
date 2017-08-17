@@ -41,8 +41,7 @@ public class Vista extends javax.swing.JFrame {
         jSiguiente.setVisible(false);
         Jperdiste.setVisible(false);
         resetearletras();
-        jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());
-       
+        jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());     
         palabraControlador.resetearJuego();
         
     }
@@ -772,12 +771,15 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnSalirActionPerformed
 
     private void jBtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReiniciarActionPerformed
+       palabraControlador.getComprobarRandomPalabra();
         inicioJuego();
+        
         palabraControlador.limpiarPalabrasCorrectas();// TODO add your handling code here:
     }//GEN-LAST:event_jBtnReiniciarActionPerformed
 
     private void jSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSiguienteActionPerformed
         palabraCompleta();
+        palabraControlador.getComprobarRandomPalabra();
         inicioJuego();
         // TODO add your handling code here:
     }//GEN-LAST:event_jSiguienteActionPerformed
