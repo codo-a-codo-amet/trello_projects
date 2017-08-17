@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ahorcado;
+package ahorcado.Diccionario;
 
-import java.awt.Event;
 
+import java.util.List;
 
 /**
  *
  * @author alumno
  */
-public interface IKeyGameListener {
-    public void listen(Event event);
+public interface IDiccionario <T> {
+    public List<T> EntregarDiccionario();
 }

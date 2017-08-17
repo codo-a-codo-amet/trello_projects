@@ -10,19 +10,19 @@ package ahorcado.Modelo;
  * @author TheGuru
  */
 public class Palabra {
-        private String palabra;
-        private boolean usada;
+
+    private String palabra;
+    private boolean usada;
 
     public Palabra(String palabra, boolean usada) {
         this.palabra = palabra;
         this.usada = usada;
     }
-public String toString (){
-    return palabra.toUpperCase();
-}
-        
-        
-        
+
+    public String toString() {
+        return palabra.toUpperCase();
+    }
+
     public String getPalabra() {
         return palabra;
     }
@@ -38,5 +38,5 @@ public String toString (){
     public void setUsada(boolean usada) {
         this.usada = usada;
     }
-                
+
 }

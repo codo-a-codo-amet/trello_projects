@@ -1,13 +1,14 @@
-
 package consumo;
 
 import javax.swing.JOptionPane;
 
 public class AparatoElectrico {
  //Atributos
-    private static double consumoTotal = 0;
+    private static double consumoTotal = 0; //medidor
     private final double potencia;
     private boolean encendido;
+    
+    
 //Constructor
     public AparatoElectrico(double potencia) {
         this.potencia = potencia;
@@ -23,6 +24,8 @@ public class AparatoElectrico {
             encendido = true;
             consumoTotal += potencia;
         }
+        
+      
     }
 
     public void apaga() {

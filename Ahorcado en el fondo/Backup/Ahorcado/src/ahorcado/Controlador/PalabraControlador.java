@@ -5,6 +5,7 @@
  */
 package ahorcado.Controlador;
 
+import ahorcado.Diccionario.Diccionario;
 import ahorcado.Modelo.Palabra;
 import java.util.*;
 import javax.swing.DefaultListModel;
@@ -16,7 +17,7 @@ import javax.swing.JList;
  */
 public class PalabraControlador implements IPalabraControlador {
 
-    private List<Palabra> listadoPalabras;
+    //private List<Palabra> listadoPalabras;
     private String[] palabritas = {"Estancia", "desarrollo", "alquiler", "Dueño", "Lider", "Ingenio", "insecto", "politica", "ajedrez", "aprobar"};
     private List<String> letrasUsadas;
     private int juego = 1;
@@ -27,14 +28,16 @@ public class PalabraControlador implements IPalabraControlador {
     private int contadorLetras = 0;
     DefaultListModel palabrasCorrectas;
     Palabra estaPalabra;
+    Diccionario diccionario;
 
     public PalabraControlador() {
-        listadoPalabras = new ArrayList();
+        diccionario = new Diccionario();
+    //    listadoPalabras = new ArrayList();
         letrasUsadas = new ArrayList();
-        for (int i = 0; i < palabritas.length; i++) {
-            listadoPalabras.add(new Palabra(palabritas[i], false));
-        }
-        estaPalabra = listadoPalabras.get(1);
+    //    for (int i = 0; i < palabritas.length; i++) {
+    //        listadoPalabras.add(new Palabra(palabritas[i], false));
+    //    }
+        estaPalabra = diccionario.EntregarDiccionario().get(1);
         palabrajuego = estaPalabra.getPalabra();
         laPalabraArray = caracterPalabra(palabrajuego);
         palabrasCorrectas = new DefaultListModel();
