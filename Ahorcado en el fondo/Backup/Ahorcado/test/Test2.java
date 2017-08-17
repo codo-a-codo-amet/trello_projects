@@ -71,4 +71,20 @@ public class Test2 {
         String palabraTest = palabraControlador.entregarGuiones();
                
     }
+    @Test
+    public void testRandom(){
+        for (int i = 0; i < 10; i++) {
+            int valor = palabraControlador.RandomPalabra();
+            System.out.println("El valor es " + valor);
+        }
+    }
+    
+    @Test
+    public void testearPalabritas(){
+        System.out.println("Prueba de palabritas");
+        for (int i = 0; i < 10; i++) {
+            String palabra= palabraControlador.getComprobarRandomPalabra().getPalabra();
+            System.out.println("Esta palabra es " + palabra);
+        }
+    }
 }

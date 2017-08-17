@@ -15,13 +15,13 @@ import java.util.Arrays;
  */
 public class Vista extends javax.swing.JFrame {
 
-    private int juego = 1; //Variable que indica la cantidad de partes del grafico
-    
+    //private int juego = 1; //Variable que indica la cantidad de partes del grafico
+    private int puntaje;
     PalabraControlador palabraControlador;
 
     public Vista() {
         initComponents();
-        
+        puntaje=0;
         palabraControlador = new PalabraControlador();
         jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());
         inicioJuego();
@@ -29,7 +29,7 @@ public class Vista extends javax.swing.JFrame {
 
     //Metodo para Inicializar los parametros del juego
     public void inicioJuego() {
-        juego = 1;
+        //juego = 1;
         img1.setVisible(true);
         img2.setVisible(false);
         img3.setVisible(false);
@@ -41,6 +41,7 @@ public class Vista extends javax.swing.JFrame {
         jSiguiente.setVisible(false);
         Jperdiste.setVisible(false);
         resetearletras();
+        jLabel7.setText(String.valueOf(puntaje));
         jPalabra.setText(palabraControlador.entregarGuionesPrimeraVez());     
         palabraControlador.resetearJuego();
         
@@ -149,8 +150,12 @@ public class Vista extends javax.swing.JFrame {
             Jganaste.setVisible(true);
             jSiguiente.setVisible(true);
             quitarletras();
+
             palabraControlador.llenarPalabrasCorrectas(palabraControlador.getEstaPalabra(), jList1);
+            sumarPuntaje();
+            jLabel7.setText(String.valueOf(puntaje));
         }
+        
     }
     //Metodo que muestra como cambia la imagen del jugador
     public void estado(int juego) {
@@ -180,6 +185,9 @@ public class Vista extends javax.swing.JFrame {
                 break;
         }
 
+    }
+    private void sumarPuntaje() {
+        puntaje = puntaje+11-palabraControlador.getJuego();
     }
 
     /**
@@ -498,9 +506,6 @@ public class Vista extends javax.swing.JFrame {
         getContentPane().add(botonV, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 45, 25));
 
         botonW.setText("W");
-        botonW.setMaximumSize(new java.awt.Dimension(45, 25));
-        botonW.setMinimumSize(new java.awt.Dimension(45, 25));
-        botonW.setPreferredSize(new java.awt.Dimension(45, 25));
         botonW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonWActionPerformed(evt);
@@ -558,7 +563,7 @@ public class Vista extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 330, 190));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Ahorcado v0.2");
+        jLabel3.setText("Ahorcado v1.0");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
 
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/1.png"))); // NOI18N
@@ -582,9 +587,10 @@ public class Vista extends javax.swing.JFrame {
         img7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ahorcado/Imagenes/7.png"))); // NOI18N
         getContentPane().add(img7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 320));
 
-        jPalabra.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        jPalabra.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jPalabra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPalabra.setText("_ _ _ _ _ _ _ _ _ _ _ _");
-        getContentPane().add(jPalabra, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 350, -1));
+        getContentPane().add(jPalabra, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 420, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 1000, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -597,7 +603,7 @@ public class Vista extends javax.swing.JFrame {
         Jperdiste.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Jperdiste.setForeground(new java.awt.Color(255, 51, 51));
         Jperdiste.setText("Perdiste");
-        getContentPane().add(Jperdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+        getContentPane().add(Jperdiste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
 
         jBtnSalir.setText("Salir");
         jBtnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -618,7 +624,7 @@ public class Vista extends javax.swing.JFrame {
         Jganaste.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Jganaste.setForeground(new java.awt.Color(0, 204, 0));
         Jganaste.setText("Ganaste");
-        getContentPane().add(Jganaste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+        getContentPane().add(Jganaste, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
 
         jSiguiente.setText("Siguiente Palabra");
         jSiguiente.addActionListener(new java.awt.event.ActionListener() {
@@ -626,7 +632,7 @@ public class Vista extends javax.swing.JFrame {
                 jSiguienteActionPerformed(evt);
             }
         });
-        getContentPane().add(jSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
+        getContentPane().add(jSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -639,6 +645,7 @@ public class Vista extends javax.swing.JFrame {
     private void botonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAActionPerformed
         botonA.setVisible(false);
         metodoBoton("A");
+        
     }//GEN-LAST:event_botonAActionPerformed
 
     private void botonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBActionPerformed
@@ -772,14 +779,16 @@ public class Vista extends javax.swing.JFrame {
 
     private void jBtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReiniciarActionPerformed
        palabraControlador.getComprobarRandomPalabra();
+       puntaje=0;
         inicioJuego();
         
         palabraControlador.limpiarPalabrasCorrectas();// TODO add your handling code here:
     }//GEN-LAST:event_jBtnReiniciarActionPerformed
 
     private void jSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSiguienteActionPerformed
+        palabraControlador.preparaJuego();
         palabraCompleta();
-        palabraControlador.getComprobarRandomPalabra();
+        
         inicioJuego();
         // TODO add your handling code here:
     }//GEN-LAST:event_jSiguienteActionPerformed
@@ -836,4 +845,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton jSiguiente;
     // End of variables declaration//GEN-END:variables
+
+    
 }
