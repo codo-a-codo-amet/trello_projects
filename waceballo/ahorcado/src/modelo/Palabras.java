@@ -27,6 +27,17 @@ public class Palabras {
         return PalabraArmar;
     }
     
+//    public void setGuardarLetra(String palabra, String letra){
+//        int contador = palabra.length();
+//        char[] AlgunaLetra = new char[contador];
+//        
+//        for (int i = 0; i < contador; i++) {
+//            AlgunaLetra[i]=letra;
+//            System.out.println("letras "+AlgunaLetra[i]);
+//        }
+//       
+//    }
+    
     public String ArmarPalabra(List<String> lista){
         String pa = "";
         

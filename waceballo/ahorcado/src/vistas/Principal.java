@@ -27,15 +27,12 @@ public class Principal extends javax.swing.JFrame {
         //Cabeza(Boolean.FALSE);
         initComponents();
         palabra = juego.MostrarPalabra();
-        lblPalabraOculta.setText(palabra);
+        lblPalabraOculta.setText(palabra.toUpperCase());
 
 
     }
 
-    public Boolean Cabeza(Boolean valor){
-        Boolean mostrar = valor;
-        return mostrar;
-    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,8 +62,6 @@ public class Principal extends javax.swing.JFrame {
         lblTituloJuego.setText("Juego del Ahorcado");
 
         jLabel1.setText("Adivine la Palabra:");
-
-        lblPalabraAAdivinar.setText("_ _ _ _ _ _");
 
         jLabel3.setText("Ingrese una Letra:");
 
@@ -101,8 +96,8 @@ public class Principal extends javax.swing.JFrame {
                                 .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblPalabraAAdivinar)
-                                .addGap(88, 88, 88)
+                                .addComponent(lblPalabraAAdivinar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
                                 .addComponent(lblPalabraOculta, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(97, 97, 97)
@@ -125,9 +120,9 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(jLabel1)
                         .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblPalabraAAdivinar)
-                            .addComponent(lblPalabraOculta, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblPalabraOculta, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                            .addComponent(lblPalabraAAdivinar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
@@ -148,8 +143,17 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtLetraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLetraActionPerformed
-        letra = txtLetra.getText();
         Palabras PalabraArmada = new Palabras();
+        
+        String guion = "";
+        
+        for (int i = 0; i < PalabraArmada.getMostrarPalabra().length(); i++) {
+            guion += "_";
+        }
+        System.out.println("guion "+guion);
+        lblPalabraAAdivinar.setText(guion);
+                
+        letra = txtLetra.getText();
         PalabraArmada.GuardarLetra(letra);
         jLabel5.setText(palabra+'-'+letra);
         System.out.println("letra: "+letra);
