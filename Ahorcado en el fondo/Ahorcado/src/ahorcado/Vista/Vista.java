@@ -643,6 +643,7 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAActionPerformed
+
         botonA.setVisible(false);
         metodoBoton("A");
     }//GEN-LAST:event_botonAActionPerformed
@@ -749,7 +750,7 @@ public class Vista extends javax.swing.JFrame {
 
     private void botonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVActionPerformed
         botonV.setVisible(false);
-        metodoBoton("V");
+        metodoBoton("V"); 
     }//GEN-LAST:event_botonVActionPerformed
 
     private void botonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonWActionPerformed
