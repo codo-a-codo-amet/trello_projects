@@ -10,13 +10,13 @@ package juegodeahorcado;
  * @author alumno
  */
 public class Controlador {
-    
+
     private Juego unJuego;
 
     public Controlador() {
         this.unJuego = new Juego();
     }
-    
+
     public void Run() {
         unJuego.EjecutarJuego();
     }

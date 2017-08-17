@@ -15,11 +15,8 @@ import java.util.*;
 public class JuegoDeAhorcado {
 
     public static void main(String[] args) {
-        Controlador unControlador  = new Controlador();
-        
+        Controlador unControlador = new Controlador();
+
         unControlador.Run();
     }
 }
-
-                
-                

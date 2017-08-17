@@ -13,31 +13,32 @@ import java.util.List;
  * @author wceba
  */
 public class Palabras {
+
     private String letra;
     private String palabra;
     private List<String> PalabraArmar;
-    
-    public Palabras(){
+
+    public Palabras() {
         PalabraArmar = new ArrayList<>();
     }
-    
-    public List<String> GuardarLetra(String letra){
+
+    public List<String> GuardarLetra(String letra) {
         PalabraArmar.add(letra);
-        
+
         return PalabraArmar;
     }
-    
-    public String ArmarPalabra(List<String> lista){
+
+    public String ArmarPalabra(List<String> lista) {
         String pa = "";
-        
+
         for (int i = 0; i < lista.size(); i++) {
             pa = lista.get(i);
         }
-        
+
         return pa;
     }
-    
-    public String getMostrarPalabra(){
+
+    public String getMostrarPalabra() {
         for (int i = 0; i < PalabraArmar.size(); i++) {
             palabra = PalabraArmar.get(i);
         }
