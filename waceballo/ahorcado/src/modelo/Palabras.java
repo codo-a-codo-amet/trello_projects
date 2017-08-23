@@ -27,11 +27,8 @@ public class Palabras {
 
         return PalabraArmar;
     }
-<<<<<<< HEAD
 
-    public String ArmarPalabra(List<String> lista) {
-=======
-    
+//    public String ArmarPalabra(List<String> lista) {  
 //    public void setGuardarLetra(String palabra, String letra){
 //        int contador = palabra.length();
 //        char[] AlgunaLetra = new char[contador];
@@ -40,11 +37,10 @@ public class Palabras {
 //            AlgunaLetra[i]=letra;
 //            System.out.println("letras "+AlgunaLetra[i]);
 //        }
-//       
+//     return null;
 //    }
     
     public String ArmarPalabra(List<String> lista){
->>>>>>> 67d113708a61221c4eb414c748b648d08c5c9e28
         String pa = "";
 
         for (int i = 0; i < lista.size(); i++) {
