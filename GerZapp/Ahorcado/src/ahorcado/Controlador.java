@@ -5,6 +5,8 @@
  */
 package ahorcado;
 
+import juegodeahorcado.AhorcadoVista;
+
 /**
  *
  * @author alumno

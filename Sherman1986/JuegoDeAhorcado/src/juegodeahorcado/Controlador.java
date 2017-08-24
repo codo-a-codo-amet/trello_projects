@@ -10,11 +10,14 @@ package juegodeahorcado;
  * @author alumno
  */
 public class Controlador {
-
+    
+    protected AhorcadoVista unaVista;
     private Juego unJuego;
 
     public Controlador() {
         this.unJuego = new Juego();
+        this.unaVista = new AhorcadoVista();
+        unaVista.setVisible(true);
     }
 
     public void Run() {
