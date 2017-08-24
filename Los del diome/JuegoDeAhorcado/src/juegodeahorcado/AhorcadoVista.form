@@ -355,9 +355,9 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="36" style="3"/>
+          <Font name="Constantia" size="36" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Ahorcado Wacho Pistola"/>
+        <Property name="text" type="java.lang.String" value="Ahorcado Los del diome"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton27">

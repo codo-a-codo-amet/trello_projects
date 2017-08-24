@@ -136,8 +136,8 @@ public class AhorcadoVista extends javax.swing.JFrame {
 
         jButton26.setText("Z");
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 3, 36)); // NOI18N
-        jLabel1.setText("Ahorcado Wacho Pistola");
+        jLabel1.setFont(new java.awt.Font("Constantia", 3, 36)); // NOI18N
+        jLabel1.setText("Ahorcado Los del diome");
 
         jButton27.setText("Empezar");
 
