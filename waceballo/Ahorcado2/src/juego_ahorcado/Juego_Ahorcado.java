@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ahorcado;
+package Juego_Ahorcado;
 
 /**
  *
- * @author alumno
+ * @author power
  */
-public class Ahorcado {
+public class Juego_Ahorcado {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Controlador unControlador  = new Controlador();
+        
+        unControlador.Run();
     }
-    
 }

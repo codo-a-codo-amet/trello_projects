@@ -17,29 +17,33 @@ public class Palabras {
     private String letra;
     private String palabra;
     private List<String> PalabraArmar;
+    private String Palabra;
+
+    private Archivo archivo = new Archivo();
+        
 
     public Palabras() {
         PalabraArmar = new ArrayList<>();
     }
 
+    private int getIdPalabra(int min, int max){
+        return min + ( ( max - min) * (int)(Math.random()*1000)) / 1000;
+    }
+    
+    public String MostrarPalabra(){
+        int idPalabra = getIdPalabra(0, archivo.LeerArchivo().size());
+    
+        Palabra = archivo.LeerArchivo().get(idPalabra);
+        
+        return Palabra;
+    }
+    
     public List<String> GuardarLetra(String letra) {
         PalabraArmar.add(letra);
 
         return PalabraArmar;
     }
 
-//    public String ArmarPalabra(List<String> lista) {  
-//    public void setGuardarLetra(String palabra, String letra){
-//        int contador = palabra.length();
-//        char[] AlgunaLetra = new char[contador];
-//        
-//        for (int i = 0; i < contador; i++) {
-//            AlgunaLetra[i]=letra;
-//            System.out.println("letras "+AlgunaLetra[i]);
-//        }
-//     return null;
-//    }
-    
     public String ArmarPalabra(List<String> lista){
         String pa = "";
 

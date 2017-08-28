@@ -3,11 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Juego_Ahorcado;
 
 /**
  *
  * @author alumno
  */
-public class ejemplo {
+public class Controlador {
     
+    private Juego unJuego;
+
+    public Controlador() {
+        this.unJuego = new Juego();
+    }
+    
+    public void Run() {
+        unJuego.EjecutarJuego();
+    }
 }
