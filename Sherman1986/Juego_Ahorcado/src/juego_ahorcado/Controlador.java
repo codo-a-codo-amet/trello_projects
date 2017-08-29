@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ahorcado;
-
-import juegodeahorcado.AhorcadoVista;
+package Juego_Ahorcado;
 
 /**
  *
  * @author alumno
  */
 public class Controlador {
+    
+    private Juego unJuego;
 
     public Controlador() {
-        AhorcadoVista unaVista  = new AhorcadoVista();
-        unaVista.setVisible(true);
+        this.unJuego = new Juego();
     }
     
-    
-    
+    public void Run() {
+        unJuego.EjecutarJuego();
+    }
 }
