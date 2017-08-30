@@ -23,16 +23,21 @@ public class Controlador implements IKeyGameListener{
         this.unaVista = new AhorcadoVista();
         unaVista.setVisible(true);
         
-        unaVista.AddGameListener(this);
+        unaVista.AddGameListeners(this);
     }
 
     public void Run() {
-        unJuego.EjecutarJuego();
+        while(! unJuego.TerminoElJuego()) {
+            unaVista.getjLabel3().setText(unJuego.getMensaje());
+        }
     }
 
     @Override
     public void listen(Event event) {
-        System.out.println("Controlador" + event);
+        ActionEvent ae = (ActionEvent) event.target;
+        String tecla = ae.getActionCommand();
+        System.out.println("Tecla presionada" + tecla);
+        unJuego.IngresarLetra(tecla);
     }
 
  
