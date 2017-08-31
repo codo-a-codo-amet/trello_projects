@@ -57,6 +57,7 @@ public class Grados extends javax.swing.JFrame {
         jLabel3.setText("°C");
 
         jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(0, 0, 204));
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jTextField1.setText("SUPER CONVERSOR DE TEMPERATURAS");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
