@@ -5,7 +5,6 @@
  */
 package ahorcado;
 
-import juegodeahorcado.AhorcadoVista;
 
 /**
  *

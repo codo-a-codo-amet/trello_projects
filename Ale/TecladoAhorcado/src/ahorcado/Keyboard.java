@@ -5,7 +5,6 @@
  */
 package ahorcado;
 
-import juegodeahorcado.IKeyGameListener;
 import java.awt.Event;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
