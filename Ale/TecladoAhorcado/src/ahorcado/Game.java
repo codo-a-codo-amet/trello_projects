@@ -5,9 +5,9 @@
  */
 package ahorcado;
 
-import juegodeahorcado.IKeyGameListener;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 
 /**
  *
@@ -17,8 +17,16 @@ public class Game implements IKeyGameListener {
 
     @Override
     public void listen(Event event) {
-        ActionEvent ae = (ActionEvent)event.target;
-        System.out.println("Llego a Game: " + ae.getActionCommand());
+        if (event.arg == "boton") {
+            System.out.println("Soy un boton");
+            ActionEvent ae = (ActionEvent)event.target;
+            System.out.println("Llego a Game: " + ae.getActionCommand());
+        }else if (event.arg=="Tecla"){
+            System.out.println("Soy una tecla");
+            KeyEvent e =(KeyEvent)event.target;
+            System.out.println("Llego a Game: " + e.getKeyChar());
+        }
+        
     }
 
    

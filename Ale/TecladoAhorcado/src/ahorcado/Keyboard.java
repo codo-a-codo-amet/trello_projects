@@ -5,11 +5,12 @@
  */
 package ahorcado;
 
-import juegodeahorcado.IKeyGameListener;
 import java.awt.Event;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -21,7 +22,7 @@ import javax.swing.JPanel;
  *
  * @author alejandro.medici
  */
-public class Keyboard extends JInternalFrame implements ActionListener{
+public class Keyboard extends JInternalFrame implements ActionListener, KeyListener{
     
     
     private List<IKeyGameListener> listeners;
@@ -54,14 +55,17 @@ public class Keyboard extends JInternalFrame implements ActionListener{
         for (int row = 0; row < key.length; row++) {
             panel[row] = new JPanel();
             button = new JButton[20][20];
+               
             for (int column = 0; column < key[row].length; column++) {
                 button[row][column] = new JButton(key[row][column]);
                 button[row][column].putClientProperty("column", column);
                 button[row][column].putClientProperty("row", row);
                 button[row][column].putClientProperty("key", key[row][column]);
                 button[row][column].addActionListener(this);
+                button[row][column].addKeyListener(this);
                 panel[row].add(button[row][column]);
             }
+           
             parent.add(panel[row]);
         }
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,11 +87,33 @@ public class Keyboard extends JInternalFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         System.out.println(ae.getActionCommand());
-        Event event = new Event(ae, 0, ae);
+        String boton = "boton";
+        Event event = new Event(ae, 0, boton);
         for (IKeyGameListener listener : listeners) {
             listener.listen(event);
         }
         
     }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        System.out.println(e.getKeyChar());
+        String tecla = "Tecla";
+        Event event = new Event(e,0,tecla);
+        for (IKeyGameListener listener : listeners) {
+            listener.listen(event);
+        }
+    }
+    
     
 }

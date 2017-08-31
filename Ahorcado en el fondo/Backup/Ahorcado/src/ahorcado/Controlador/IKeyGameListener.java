@@ -3,20 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ahorcado;
+package ahorcado.Controlador;
+
+import java.awt.Event;
 
 
 /**
  *
  * @author alumno
  */
-public class Controlador {
-
-    public Controlador() {
-        AhorcadoVista unaVista  = new AhorcadoVista();
-        unaVista.setVisible(true);
-    }
-    
-    
-    
+public interface IKeyGameListener {
+    public void listen(Event event);
 }
