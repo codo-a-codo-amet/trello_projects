@@ -49,21 +49,46 @@ public class Conversor {
 
     //constructor de la clase
     public Conversor(){
-        
+        setTemperaturaConvertida(0);
     }
     
     public int ConvertirTemperatura(){
+if(!setTipoUnidad("C")){
+    
+}
+        switch (setTipoUnidad(tipoUnidad)) {
+
+                case valor1:
+                instrucciones;
+                break;
+
+                case valor2:
+                instrucciones;
+                break;
+                .
+                .
+                .
+                default:
+                sentencias;
+                break;
+                
+            } 
+return getTemperaturaConvertida();
+
+
+ } 
+    
+
         
-        if (getTipoUnidadDestino().equals("F")){
-            if (getTipoUnidad().equals("C")){
-                setTemperaturaConvertida((getTemperaturaAConvertir() * 9 / 5) + 32);
-            }
-            
-            
-        }
+//        if (getTipoUnidadDestino().equals("F")){
+//            if (getTipoUnidad().equals("C")){
+//                setTemperaturaConvertida((getTemperaturaAConvertir() * 9 / 5) + 32);
+//            }
+//            
+//            
+//        }
         
-        return getTemperaturaConvertida();
-    }
+
     
 
 
