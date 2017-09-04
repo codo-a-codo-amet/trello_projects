@@ -25,10 +25,7 @@ public class Controller {
         
         float conversion = conversor.convertToUnit("K");
         
-        System.out.println("Valor convertido: " + conversion);
-        
-        
-        
+        System.out.println("Valor convertido: " + conversion);        
     }
     
 }
