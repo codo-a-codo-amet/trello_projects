@@ -12,14 +12,16 @@ package conversortemperatura;
  */
 public class Controller {
     Principal unaVista;
+    Conversor con;
     
     public Controller (){
         unaVista = new Principal();
-        
+        con = new Conversor();
     }
     
     public void Run(){
         unaVista.setVisible(true);
+        System.out.println("temperatura convetira "+con.ConvertirTemperatura(2,10));
     }
     
     

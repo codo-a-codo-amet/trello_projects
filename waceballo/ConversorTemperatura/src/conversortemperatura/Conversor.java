@@ -10,11 +10,12 @@ package conversortemperatura;
  * @author alumno
  */
 public class Conversor {
+
     private Integer temperaturaAConvertir;
     private Integer temperaturaConvertida;
     private String tipoUnidadDestino;
     private String tipoUnidad;
-    
+
     public Integer getTemperaturaAConvertir() {
         return temperaturaAConvertir;
     }
@@ -48,50 +49,45 @@ public class Conversor {
     }
 
     //constructor de la clase
-    public Conversor(){
-        setTemperaturaConvertida(0);
+    public Conversor() {
+        //setTemperaturaConvertida(0);
     }
-    
-    public int ConvertirTemperatura(){
-if(!setTipoUnidad("C")){
-    
-}
-        switch (setTipoUnidad(tipoUnidad)) {
 
-                case valor1:
-                instrucciones;
-                break;
-
-                case valor2:
-                instrucciones;
-                break;
-                .
-                .
-                .
-                default:
-                sentencias;
-                break;
-                
-            } 
-return getTemperaturaConvertida();
-
-
- } 
-    
-
+    /**
+     * Metodo para convetir temperatura
+     * recibe dos parametros
+     * @param opcion es a se va a convetir
+     * @param valor es el valor a convertir
+     * y devuelve la temperatura convertida
+     */    
+    public float ConvertirTemperatura(int opcion, int valor) {
+        float temp;
         
-//        if (getTipoUnidadDestino().equals("F")){
-//            if (getTipoUnidad().equals("C")){
-//                setTemperaturaConvertida((getTemperaturaAConvertir() * 9 / 5) + 32);
-//            }
-//            
-//            
-//        }
-        
-
-    
-
-
+        switch (opcion) {
+            case 1:
+                temp = (valor * 9 / 5) + 32;
+                break;
+            case 2:
+                temp = 2;
+                break;
+            case 3:
+                temp = 3;
+                break;
+            case 4:
+                temp = 4;
+                break;
+            case 5:
+                temp = 5;
+                break;
+            case 6:
+                temp = 6;
+                break;
+            default:
+                temp = 0;
+                break;
+        }
+        return temp;
+    }
 
    
 }
