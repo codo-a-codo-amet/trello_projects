@@ -7,6 +7,8 @@ package ahorcado.Controlador;
 
 import ahorcado.Diccionario.Diccionario;
 import ahorcado.Modelo.Palabra;
+import java.awt.Event;
+import java.awt.event.KeyEvent;
 import java.util.*;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
@@ -15,7 +17,7 @@ import javax.swing.JList;
  *
  * @author TheGuru
  */
-public class PalabraControlador implements IPalabraControlador {
+public class PalabraControlador implements IPalabraControlador, IKeyGameListener{
 
     private List<String> letrasUsadas;
     private int juego = 1;
@@ -27,11 +29,13 @@ public class PalabraControlador implements IPalabraControlador {
     DefaultListModel palabrasCorrectas;
     Palabra estaPalabra;
     Diccionario diccionario;
+   
 
     public PalabraControlador() { //Constructor
         diccionario = new Diccionario();
         letrasUsadas = new ArrayList();
         palabrasCorrectas = new DefaultListModel();
+        
         preparaJuego();
     }
     
@@ -202,5 +206,11 @@ public class PalabraControlador implements IPalabraControlador {
     }
     public int getJuego() {// devuelve la cantidad de letras utilizadas-- inicializado en 1
         return juego;
+    }
+
+    @Override
+    public void listen(Event event) {
+        KeyEvent e =(KeyEvent)event.target;
+            System.out.println("Llego a Game: " + e.getKeyChar());
     }
 }

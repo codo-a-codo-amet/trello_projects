@@ -5,11 +5,15 @@
  */
 package juegodeahorcado;
 
+import java.awt.Event;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author alumno
  */
-public class Controlador {
+public class Controlador implements IKeyGameListener{
     
     protected AhorcadoVista unaVista;
     private Juego unJuego;
@@ -19,15 +23,22 @@ public class Controlador {
         this.unaVista = new AhorcadoVista();
         unaVista.setVisible(true);
         
-        this.unaVista.AddGameListener(this);
+        unaVista.AddGameListeners(this);
     }
 
     public void Run() {
-        unJuego.EjecutarJuego();
+        while(! unJuego.TerminoElJuego()) {
+            unaVista.getjLabel3().setText(unJuego.getMensaje());
+        }
     }
-    
+
     @Override
-            public void listen(Event even){
-                System.out.println()
-            }
+    public void listen(Event event) {
+        ActionEvent ae = (ActionEvent) event.target;
+        String tecla = ae.getActionCommand();
+        System.out.println("Tecla presionada" + tecla);
+        unJuego.IngresarLetra(tecla);
+    }
+
+ 
 }
