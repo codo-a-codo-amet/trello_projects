@@ -5,10 +5,12 @@
  */
 package conversortemperatura;
 
+import java.awt.Event;
+
 /**
  *
  * @author alumno
  */
 public interface IViewEventListener {
-    
+    public void listen(Event event);   
 }
