@@ -39,6 +39,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Conversor de Temperatura");
+        setLocation(new java.awt.Point(400, 100));
 
         jLabel1.setText("Seleccione desde que unidad");
 
