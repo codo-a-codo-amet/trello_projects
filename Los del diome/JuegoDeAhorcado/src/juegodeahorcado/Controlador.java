@@ -18,9 +18,16 @@ public class Controlador {
         this.unJuego = new Juego();
         this.unaVista = new AhorcadoVista();
         unaVista.setVisible(true);
+        
+        this.unaVista.AddGameListener(this);
     }
 
     public void Run() {
         unJuego.EjecutarJuego();
     }
+    
+    @Override
+            public void listen(Event even){
+                System.out.println()
+            }
 }

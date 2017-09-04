@@ -4,21 +4,29 @@
  * and open the template in the editor.
  */
 package juegodeahorcado;
-
+import java.util.*;
 /**
  *
  * @author alumno
  */
 public class AhorcadoVista extends javax.swing.JFrame {
-
+    protected List<IKeyGameListener> lista_listeners;
     /**
      * Creates new form AhorcadoVista
      */
     public AhorcadoVista() {
+        lista_listeners= new ArrayList<>();
         initComponents();
         
     }
 
+    public void AddGameListener(IKeyGameListener listener){
+        lista_listeners.add(listener);
+    }
+    
+    public void RemoveGameListener(IKeyGameListener listener){
+        lista_listeners.remove(listener);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -334,6 +342,12 @@ public class AhorcadoVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void botonPresionado(java.awt.event.ActionEvent evt){
+        for(IKeyGameListener listener: lista_listeners){
+            Event nuevoEvento = new Event (evt, 0, evt);
+            listener.listen(nuevoEvento):
+        }
+    }
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
            // TODO add your handling code here:
     }//GEN-LAST:event_jButton29ActionPerformed
