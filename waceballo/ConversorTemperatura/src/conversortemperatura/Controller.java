@@ -20,8 +20,8 @@ public class Controller {
     }
     
     public void Run(){
-        unaVista.setVisible(false);
-        System.out.println("temperatura convetira "+con.ConvertirTemperatura(6,10));
+        unaVista.setVisible(true);
+        System.out.println("Temperatura Convetira "+con.ConvertirTemperatura(6,35));
     }
     
     
