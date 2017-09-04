@@ -5,15 +5,19 @@
  */
 package ahorcado.Vista;
 
+import ahorcado.Controlador.IKeyGameListener;
 import ahorcado.Controlador.PalabraControlador;
+import java.awt.Event;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Arrays;
 
 /**
  *
  * @author TheGuru
  */
-public class Vista extends javax.swing.JFrame {
+public class Vista extends javax.swing.JFrame implements KeyListener{
 
     //private int juego = 1; //Variable que indica la cantidad de partes del grafico
     private int puntaje;
@@ -845,6 +849,27 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton jSiguiente;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        System.out.println(e.getKeyChar());
+        String tecla = "Tecla";
+        Event event = new Event(e,0,tecla);
+        
+        //for (IKeyGameListener listener : listeners) {
+        //    listener.listen(event);
+        //}
+    }
 
     
 }
