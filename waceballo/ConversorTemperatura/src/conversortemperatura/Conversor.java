@@ -79,8 +79,8 @@ public class Conversor {
             case 5://de kelvin a fahrenheit
                 temp = 9 * (valor - 273.15) / 5 + 32;
                 break;
-            case 6://de fahrenheit a celsius
-                temp = 5 * (valor - 32) / 9 + 273.15;;
+            case 6://de fahrenheit a kelvin
+                temp = 5 * (valor - 32) / 9 + 273.15;
                 break;
             default:
                 temp = 0.00;
