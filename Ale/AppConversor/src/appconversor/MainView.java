@@ -5,17 +5,34 @@
  */
 package appconversor;
 
+import java.awt.Event;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  *
  * @author alumno
  */
 public class MainView extends javax.swing.JFrame {
-
+    
+    
+    protected List<IViewEventListener> list_listener;
+    
     /**
      * Creates new form MainView
      */
     public MainView() {
         initComponents();
+        list_listener = new ArrayList<>();
+    }
+    
+    public void AddEventListener(IViewEventListener listener) {
+        list_listener.add(listener);
+    }
+    
+    public void RemoveEventListener(IViewEventListener listener){
+        list_listener.remove(listener);
     }
 
     /**
@@ -32,6 +49,7 @@ public class MainView extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jComboBox2 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -53,23 +71,38 @@ public class MainView extends javax.swing.JFrame {
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[C] Celcius", "[K] Kelvin", "[F] Farenheit" }));
 
         jButton1.setText("Convertir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPresionado(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPresionado(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jButton1)
+                .addContainerGap(69, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextField1)
                     .addComponent(jTextField2)
-                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton2)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jButton1)
-                .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,7 +117,9 @@ public class MainView extends javax.swing.JFrame {
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jButton2)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,9 +129,25 @@ public class MainView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
+    private void botonPresionado(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPresionado
+        // TODO add your handling code here:
+        for (int i = 0; i < list_listener.size(); i++) {
+            IViewEventListener listener = list_listener.get(i);
+            
+            // Creamos un objeto Event con la informacion de lo que le sucedde 
+            // a la vista, por ejemplo. Se presiono un boton
+            Event event = new Event(evt, 0, evt);
+            
+            // El objeto event viaja hacia los que estan escuchando a la vista
+            listener.listen(event);
+            
+        }
+    }//GEN-LAST:event_botonPresionado
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JTextField jTextField1;

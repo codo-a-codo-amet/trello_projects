@@ -26,11 +26,11 @@ public class Conversor {
         grados1 = Double.parseDouble(sringgrados1); 
         System.out.println("Ingrese a la unidad de temperatura que desea convertir (Celsius, Farenheit, Kelvin)");
         unidad_temperatura2 = unScanner.nextLine();;
-        if(unidad_temperatura1 == "Celsius"){
-            if(unidad_temperatura2 == "Farenheit"){
+        if(unidad_temperatura1.equalsIgnoreCase("Celsius")){
+            if(unidad_temperatura2.equalsIgnoreCase("Farenheit")){
                 grados2= ((9/5)*grados1)+32;
-            }
-            if(unidad_temperatura2 == "Kelvin"){
+            } 
+            if(unidad_temperatura2.equalsIgnoreCase("Kelvin")){
                 grados2= (grados1+273.15);
             }
         }
