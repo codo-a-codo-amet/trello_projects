@@ -35,7 +35,13 @@ public class Controller implements IViewEventListener {
         ActionEvent ae = (ActionEvent) event.target;
 
         System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
-
+        
+        String valorAconvertir = unaVista.getTxtValorAConvertir().getText();
+        String unidadAConvertir =(String) unaVista.getCbDesdeUnidad().getModel().getSelectedItem();
+        
+        System.out.println(" - "+ valorAconvertir + " "+unidadAConvertir);
+        
+        
     }
 
 }
