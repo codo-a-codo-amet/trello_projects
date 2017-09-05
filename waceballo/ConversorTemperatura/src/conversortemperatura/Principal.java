@@ -81,11 +81,6 @@ public class Principal extends javax.swing.JFrame {
         jTextField2.setText("0.00");
 
         cbAqueUnidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\"C\", Celsius", "\"F\", Fahrenheit", "\"K\", Kelvin" }));
-        cbAqueUnidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbAqueUnidadActionPerformed(evt);
-            }
-        });
 
         jLabel4.setText("Seleccione a que unidad");
 
@@ -165,10 +160,6 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cbAqueUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAqueUnidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbAqueUnidadActionPerformed
 
     private void PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PresionoBoton
         // TODO add your handling code here:
