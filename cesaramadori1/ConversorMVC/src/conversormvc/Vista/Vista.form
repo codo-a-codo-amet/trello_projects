@@ -4,6 +4,8 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -31,7 +33,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jRadioCelciusI" min="-2" max="-2" attributes="0"/>
+                          <Component id="CelciusI" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jRadioKelvinI" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -80,7 +82,7 @@
               <Component id="jTextInicial" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRadioCelciusI" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CelciusI" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jRadioKelvinI" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jRadioFarenheitI" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -121,10 +123,13 @@
         <Property name="text" type="java.lang.String" value="Temperatura Original"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioCelciusI">
+    <Component class="javax.swing.JRadioButton" name="CelciusI">
       <Properties>
         <Property name="text" type="java.lang.String" value=" (C)Celcius"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CelciusIActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioKelvinI">
       <Properties>
@@ -149,13 +154,16 @@
       <Properties>
         <Property name="text" type="java.lang.String" value=" (C)Celcius"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EscucharVista"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioKelvinO">
       <Properties>
         <Property name="text" type="java.lang.String" value="(K) Kelvin"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioKelvinOActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EscucharVista"/>
       </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioFaenheitO">
@@ -168,7 +176,7 @@
         <Property name="text" type="java.lang.String" value="Calcular"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EscucharVista"/>
       </Events>
     </Component>
   </SubComponents>
