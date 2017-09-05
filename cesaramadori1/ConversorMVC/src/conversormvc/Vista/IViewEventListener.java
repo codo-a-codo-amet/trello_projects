@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conversortemperatura;
+package conversormvc.Vista;
 
 import java.awt.Event;
 
-/**
- *
- * @author alumno
- */
+
 public interface IViewEventListener {
-    public void listen(Event event);   
+    
+    public void listen(Event event);
+
 }
