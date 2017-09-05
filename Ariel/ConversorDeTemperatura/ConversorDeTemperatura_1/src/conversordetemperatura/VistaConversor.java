@@ -5,6 +5,9 @@
  */
 package conversordetemperatura;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -17,11 +20,21 @@ public class VistaConversor extends javax.swing.JFrame {
     
     public String valorSeleccionado;
     public String valorPantalla;
+    protected List<IViewEventListener> list_listener;
+    
     public VistaConversor() {
         initComponents();
         this.setLocationRelativeTo(null);
+        list_listener = new ArrayList<>();
         
         
+    }
+       public void AddEventListener(IViewEventListener listener) {
+        list_listener.add(listener);
+    }
+    
+    public void RemoveEventListener(IViewEventListener listener){
+        list_listener.remove(listener);
     }
 
     /**
@@ -179,4 +192,6 @@ public class VistaConversor extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jSelecBox2;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
+
+    
 }
