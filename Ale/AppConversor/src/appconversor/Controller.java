@@ -39,8 +39,17 @@ public class Controller implements IViewEventListener{
         
         ActionEvent ae = (ActionEvent) event.target;
         
-          System.out.println("Se apreto boton desde controller" +  ae.getActionCommand());
-          
+        System.out.println("Se apreto boton desde controller" +  ae.getActionCommand());
+        
+        
+        String valorAConvertirString = main_view.getjTextField2().getText();
+        Double valorAConvertir = Double.parseDouble(valorAConvertirString);
+        
+        String unidadSeleccionada = (String) main_view.getjComboBox2().getModel().getSelectedItem();
+        
+        System.out.println("Tengo el valor: " + valorAConvertir + " en la siguiente unidad: " + unidadSeleccionada);
+        
+        main_view.getjTextField1().setText("" + 2323.0f);
           
      }
     
