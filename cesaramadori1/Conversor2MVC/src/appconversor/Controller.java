@@ -12,13 +12,13 @@ import java.awt.event.ActionEvent;
  *
  * @author alumno
  */
-public class Controller implements IViewEventListener {
-
-    protected ConversorTemperatura conversor;
+public class Controller /*implements IViewEventListener*/ {
+/*
+    protected Conversor conversor;
     protected MainView main_view;
 
     public Controller() {
-        conversor = new ConversorTemperatura();
+        conversor = new Conversor();
         main_view = new MainView();
         main_view.setVisible(true);
     }
@@ -33,7 +33,7 @@ public class Controller implements IViewEventListener {
         float conversion = conversor.convertToUnit("K");
 
         System.out.println("Valor convertido: " + conversion);    
-         */
+         
     }
 
     @Override
@@ -58,5 +58,5 @@ public class Controller implements IViewEventListener {
 
         main_view.getjTextField1().setText("" + valorConvertido);
     }
-
+*/
 }
