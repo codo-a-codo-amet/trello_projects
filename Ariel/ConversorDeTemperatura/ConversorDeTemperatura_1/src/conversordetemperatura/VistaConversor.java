@@ -5,8 +5,11 @@
  */
 package conversordetemperatura;
 
+import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 
 /**
  *
@@ -134,42 +137,52 @@ public class VistaConversor extends javax.swing.JFrame {
 
     private void jBtConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtConvertirActionPerformed
        
-        Conversor temperatura = new Conversor();
-        int seleccionado1;
-        int seleccionado2;
-        seleccionado1 = jSelecBox1.getSelectedIndex();
-        seleccionado2 = jSelecBox2.getSelectedIndex();
-        if(seleccionado1 == 0){
-           
-                if (seleccionado2 == 0) {
-                JpantallaB.setText(JpantallaA.getText());
-                }else if (seleccionado2 == 1) {
-                    JpantallaB.setText(temperatura.getCelsiusConvertir(JpantallaA.getText(), 1));
-                }else if (seleccionado2 == 2) {
-                    JpantallaB.setText(temperatura.getCelsiusConvertir(JpantallaA.getText(), 2));
-                }
-                
-        }else if(seleccionado1 ==1){
-                if (seleccionado2 == 0){
-                    JpantallaB.setText(temperatura.getKelvinconvertir(JpantallaA.getText(), 1));
-                }else if (seleccionado2 == 1){
-                    JpantallaB.setText(JpantallaA.getText());
-                }else if(seleccionado2 == 2){
-                    JpantallaB.setText(temperatura.getKelvinconvertir(JpantallaA.getText(), 2));
-                }
-                
-        }else if(seleccionado1 ==2){
-                if (seleccionado2 == 0) {
-                    JpantallaB.setText(temperatura.getFarengeiConvertir(JpantallaA.getText(), 1));
-                }else if (seleccionado2 == 1) {
-                     JpantallaB.setText(temperatura.getFarengeiConvertir(JpantallaA.getText(), 2));
-                }else if (seleccionado2 == 2) {
-                    JpantallaB.setText(JpantallaA.getText());
-                }
-    }
+          for (int i = 0; i < list_listener.size(); i++) {
+            IViewEventListener listener = list_listener.get(i);
+            
+            // Creamos un objeto Event con la informacion de lo que le sucedde 
+            // a la vista, por ejemplo. Se presiono un boton
+            Event event = new Event(evt, 0, evt);
+            
+            // El objeto event viaja hacia los que estan escuchando a la vista
+            listener.listen(event);
+          }
+      
         
         
     }//GEN-LAST:event_jBtConvertirActionPerformed
+
+    public JTextField getJpantallaA() {
+        return JpantallaA;
+    }
+
+    public void setJpantallaA(JTextField JpantallaA) {
+        this.JpantallaA = JpantallaA;
+    }
+
+    public JTextField getJpantallaB() {
+        return JpantallaB;
+    }
+
+    public void setJpantallaB(JTextField JpantallaB) {
+        this.JpantallaB = JpantallaB;
+    }
+
+    public JComboBox<String> getjSelecBox1() {
+        return jSelecBox1;
+    }
+
+    public void setjSelecBox1(JComboBox<String> jSelecBox1) {
+        this.jSelecBox1 = jSelecBox1;
+    }
+
+    public JComboBox<String> getjSelecBox2() {
+        return jSelecBox2;
+    }
+
+    public void setjSelecBox2(JComboBox<String> jSelecBox2) {
+        this.jSelecBox2 = jSelecBox2;
+    }
 
     private void jSelecBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSelecBox1ActionPerformed
         // TODO add your handling code here:

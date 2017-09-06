@@ -6,6 +6,7 @@
 package conversordetemperatura;
 
 import java.awt.Event;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -24,11 +25,50 @@ public class Controlador implements IViewEventListener{
     public  void Run() {
         vistaConversor.AddEventListener(this);
         
+        System.out.println("Arranco el programa");
     }
       
     @Override
     public void listen(Event event) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         ActionEvent ae = (ActionEvent) event.target;
+        
+        System.out.println("Se apreto boton desde controller" +  ae.getActionCommand());
+        
+          Conversor temperatura = new Conversor();
+        int seleccionado1;
+        int seleccionado2;
+        seleccionado1 =  vistaConversor.getjSelecBox1().getSelectedIndex();
+       
+        seleccionado2 = vistaConversor.getjSelecBox2().getSelectedIndex();
+        if(seleccionado1 == 0){
+           
+                if (seleccionado2 == 0) {
+                    vistaConversor.getJpantallaB().setText(vistaConversor.getJpantallaA().getText());
+               
+                }else if (seleccionado2 == 1) {
+                    vistaConversor.getJpantallaB().setText(temperatura.getCelsiusConvertir(vistaConversor.getJpantallaA().getText(), 1));
+                }else if (seleccionado2 == 2) {
+                    vistaConversor.getJpantallaB().setText(temperatura.getCelsiusConvertir(vistaConversor.getJpantallaA().getText(), 2));
+                }
+                
+        }else if(seleccionado1 ==1){
+                if (seleccionado2 == 0){
+                    vistaConversor.getJpantallaB().setText(temperatura.getKelvinconvertir(vistaConversor.getJpantallaA().getText(), 1));
+                }else if (seleccionado2 == 1){
+                    vistaConversor.getJpantallaB().setText(vistaConversor.getJpantallaA().getText());
+                }else if(seleccionado2 == 2){
+                    vistaConversor.getJpantallaB().setText(temperatura.getKelvinconvertir(vistaConversor.getJpantallaA().getText(), 2));
+                }
+                
+        }else if(seleccionado1 ==2){
+                if (seleccionado2 == 0) {
+                    vistaConversor.getJpantallaB().setText(temperatura.getFarengeiConvertir(vistaConversor.getJpantallaA().getText(), 1));
+                }else if (seleccionado2 == 1) {
+                     vistaConversor.getJpantallaB().setText(temperatura.getFarengeiConvertir(vistaConversor.getJpantallaA().getText(), 2));
+                }else if (seleccionado2 == 2) {
+                    vistaConversor.getJpantallaB().setText(vistaConversor.getJpantallaA().getText());
+                }
+    }
     }
 
     
