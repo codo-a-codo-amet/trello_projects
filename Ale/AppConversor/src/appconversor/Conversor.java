@@ -10,8 +10,10 @@ package appconversor;
  * @author alumno
  */
 public class Conversor {
+
     protected float value;
     protected String unit;
+
     public Conversor() {
         value = 0.0f;
         unit = "";
@@ -24,13 +26,19 @@ public class Conversor {
     public void setUnit(String newUnit) {
         unit = newUnit;
     }
-    
-    public void setValeUnit(float newValue, String newUnit){
+
+    public void setValeUnit(float newValue, String newUnit) {
         value = newValue;
         unit = newUnit;
     }
-    
-    public float convertToUnit(String newUnit){
-        return 0.0f;
+
+    public float convertToUnit(String newUnit) {
+        float tempValue = 0.0f;
+        if (unit.equalsIgnoreCase("C")) {
+            if (newUnit.equalsIgnoreCase("K")) {
+                tempValue = value + 273.15f;
+            }
+        }
+        return tempValue;
     }
 }
