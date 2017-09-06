@@ -5,11 +5,12 @@
  */
 package conversortemperatura;
 
+import java.awt.Button;
 import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 
 /**
@@ -49,6 +50,9 @@ public class Principal extends javax.swing.JFrame {
         return txtValorConvertido;
     }
     
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
     
     
     /**

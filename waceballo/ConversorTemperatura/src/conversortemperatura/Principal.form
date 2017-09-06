@@ -99,7 +99,6 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                                           <Component id="txtValorAConvertir" min="-2" pref="59" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="cbDesdeUnidad" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
