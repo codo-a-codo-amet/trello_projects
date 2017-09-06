@@ -9,12 +9,12 @@ package appconversor;
  *
  * @author alumno
  */
-public class Conversor {
+public class ConversorTemperatura {
 
     protected float value;
     protected String unit;
 
-    public Conversor() {
+    public ConversorTemperatura() {
         value = 0.0f;
         unit = "";
     }
