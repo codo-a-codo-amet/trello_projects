@@ -12,11 +12,11 @@ public class Controlador implements IViewEventListener {
     protected Vista calculadora;
     protected MainView main_view;
             
-    protected Conversor conversor;
+    protected ConversorDistancia conversor;
     protected Temperatura inicial;
 
     public Controlador() {
-        conversor = new Conversor();
+        conversor = new ConversorDistancia();
         //calculadora = new Vista();
         //calculadora.setVisible(true);
         main_view = new MainView();
@@ -40,26 +40,26 @@ public class Controlador implements IViewEventListener {
         String unidadSeleccionada = (String) main_view.getjComboBox2().getModel().getSelectedItem();
         int unidadInicial=1;
         switch(unidadSeleccionada){
-            case "C":
+            case "K":
                 unidadInicial=1;
                 break;
-            case "K":
+            case "M":
                 unidadInicial=2;
                 break;
-            case "F":
+            case "Y":
                 unidadInicial=3;
                 break;
         }
         String unidadDestino = (String) main_view.getjComboBox1().getModel().getSelectedItem();
         int unidadSalida=1;
         switch(unidadDestino){
-            case "C":
+            case "K":
                 unidadSalida=1;
                 break;
-            case "K":
+            case "M":
                 unidadSalida=2;
                 break;
-            case "F":
+            case "Y":
                 unidadSalida=3;
                 break;
         }
