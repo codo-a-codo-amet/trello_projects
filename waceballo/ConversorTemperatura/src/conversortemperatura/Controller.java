@@ -2,6 +2,7 @@ package conversortemperatura;
 
 import java.awt.Event;
 import java.awt.event.ActionEvent;
+import java.text.DecimalFormat;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,20 +28,24 @@ public class Controller implements IViewEventListener {
         unaVista.AddEventListener(this);
 
         unaVista.setVisible(true);
-        System.out.println("Temperatura Convetira " + con.ConvertirTemperatura(6, 35));
     }
 
     @Override
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent) event.target;
 
-        System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
+        //System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
         
-        String valorAconvertir = unaVista.getTxtValorAConvertir().getText();
-        String unidadAConvertir =(String) unaVista.getCbDesdeUnidad().getModel().getSelectedItem();
+        Integer valorAconvertir = Integer.parseInt(unaVista.getTxtValorAConvertir().getText());
+        Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
+
+        //System.out.println("Temperatura Convetira " + con.ConvertirTemperatura(unidadAConvertir, valorAconvertir));
         
-        System.out.println(" - "+ valorAconvertir + " "+unidadAConvertir);
-        
+        Double v = con.ConvertirTemperatura(unidadAConvertir, valorAconvertir);
+        DecimalFormat df = new DecimalFormat("#.00");
+                
+        unaVista.getTxtValorConvertido().setText(df.format(v));
+        //System.out.println(valorAconvertir + " - "+unidadAConvertir);
         
     }
 

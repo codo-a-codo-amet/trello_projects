@@ -62,7 +62,7 @@ public class Conversor {
      */    
     public double ConvertirTemperatura(int opcion, int valor) {
         double temp;
-        
+
         switch (opcion) {
             case 1://de fahrenheit a celsius
                 temp = (valor * 9 / 5) + 32;

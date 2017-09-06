@@ -16,9 +16,8 @@ public class ConversorDeTemperatura {
      */
     public static void main(String[] args) {
         
-        Conversor miTemperatura = new Conversor();
-        VistaConversor vista = new VistaConversor();
-        vista.setVisible(true);
+        Controlador arrancarControlador = new Controlador();
+        arrancarControlador.Run();
         
       
         
