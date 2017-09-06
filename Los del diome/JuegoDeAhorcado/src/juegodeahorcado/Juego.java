@@ -17,7 +17,7 @@ public class Juego {
 
     Scanner unScanner = new Scanner(System.in);
     String[] listado_de_palabras = {"JAVA", "CASA", "LLAVE", "AUTO", "PERRO"};
-    int numero_al_azar = 1 + new Random().nextInt(5);
+    int numero_al_azar = 1 + new Random().nextInt(4);
     private List<String> palabra;
     int posibilidades = 6;
     int letra_contador = 0;

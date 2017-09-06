@@ -9,7 +9,7 @@ package juegodeahorcado;
  *
  * @author alumno
  */
-public class Controlador {
+public class Controlador implements IKeyGameListener {
     
     protected AhorcadoVista unaVista;
     private Juego unJuego;
@@ -18,6 +18,7 @@ public class Controlador {
         this.unJuego = new Juego();
         this.unaVista = new AhorcadoVista();
         unaVista.setVisible(true);
+ 
     }
 
     public void Run() {
