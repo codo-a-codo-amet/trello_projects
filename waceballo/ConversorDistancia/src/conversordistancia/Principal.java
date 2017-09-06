@@ -76,7 +76,7 @@ public class Principal extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Conversor de Temperatura");
+        setTitle("Conversor de Distancia");
         setBackground(new java.awt.Color(102, 255, 204));
         setLocation(new java.awt.Point(400, 100));
         setName("Conversor Temperatura"); // NOI18N
