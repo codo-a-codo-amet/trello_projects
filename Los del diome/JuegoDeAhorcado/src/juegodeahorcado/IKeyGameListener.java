@@ -5,10 +5,21 @@
  */
 package juegodeahorcado;
 
+<<<<<<< HEAD
+=======
+import java.awt.Event;
+
+
+>>>>>>> 2b34c2b5c87565731ffbf713f5b0be44dea818ce
 /**
  *
  * @author alumno
  */
+<<<<<<< HEAD
 public class IKeyGameListener {
     public void listen (Event event);
+=======
+public interface IKeyGameListener {
+    public void listen(Event event);
+>>>>>>> 2b34c2b5c87565731ffbf713f5b0be44dea818ce
 }
