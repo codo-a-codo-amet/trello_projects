@@ -60,7 +60,7 @@ public class Conversor {
      * @param valor es el valor a convertir
      * y devuelve la temperatura convertida
      */    
-    public double ConvertirTemperatura(int opcion, int valor) {
+    public double ConvertirTemperatura(int opcion, Double valor) {
         double temp;
 
         switch (opcion) {
