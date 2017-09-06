@@ -15,7 +15,6 @@ import javax.swing.JOptionPane;
  * @author alumno
  */
 public class Controller implements IViewEventListener {
-
     Principal unaVista;
     Conversor con;
 
@@ -47,13 +46,13 @@ public class Controller implements IViewEventListener {
             //System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
             JOptionPane.showMessageDialog(unaVista, "Debe seleccionar una opcion");
         } else {
-            Double valorAconvertir = Double.parseDouble(unaVista.getTxtValorAConvertir().getText());
+            
+            Double valorAconvertir = Double.parseDouble(unaVista.getTxtValorAConvertir().getText().replace(",", "."));
             Double v = con.ConvertirTemperatura(unidadAConvertir, valorAconvertir);
             DecimalFormat df = new DecimalFormat("#.00");
 
             unaVista.getTxtValorConvertido().setText(df.format(v));
             //System.out.println(valorAconvertir + " - "+unidadAConvertir);
-
             //System.out.println("Temperatura Convetira " + con.ConvertirTemperatura(unidadAConvertir, valorAconvertir));         
         }
 
