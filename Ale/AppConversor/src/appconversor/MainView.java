@@ -74,7 +74,7 @@ public class MainView extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[C] Celcius", "[K] Kelvin", "[F] Farenheit" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K", "F" }));
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField1.setText("0.0");
@@ -82,7 +82,7 @@ public class MainView extends javax.swing.JFrame {
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setText("0.0");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[C] Celcius", "[K] Kelvin", "[F] Farenheit" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K", "F" }));
 
         jButton1.setText("Convertir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

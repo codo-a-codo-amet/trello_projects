@@ -67,9 +67,9 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
-            <StringItem index="0" value="[C] Celcius"/>
-            <StringItem index="1" value="[K] Kelvin"/>
-            <StringItem index="2" value="[F] Farenheit"/>
+            <StringItem index="0" value="C"/>
+            <StringItem index="1" value="K"/>
+            <StringItem index="2" value="F"/>
           </StringArray>
         </Property>
       </Properties>
@@ -93,9 +93,9 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
-            <StringItem index="0" value="[C] Celcius"/>
-            <StringItem index="1" value="[K] Kelvin"/>
-            <StringItem index="2" value="[F] Farenheit"/>
+            <StringItem index="0" value="C"/>
+            <StringItem index="1" value="K"/>
+            <StringItem index="2" value="F"/>
           </StringArray>
         </Property>
       </Properties>
