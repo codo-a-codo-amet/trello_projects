@@ -60,6 +60,7 @@ public class Conversor {
      * @param valor es el valor a convertir
      * y devuelve la temperatura convertida
      */    
+<<<<<<< HEAD
     public float ConvertirTemperatura(int opcion, int valor) {
         float temp;
         
@@ -84,6 +85,32 @@ public class Conversor {
                 break;
             default:
                 temp = 0;
+=======
+    public double ConvertirTemperatura(int opcion, Double valor) {
+        double temp;
+
+        switch (opcion) {
+            case 1://de fahrenheit a celsius
+                temp = (valor * 9 / 5) + 32;
+                break;
+            case 2://de celsius a fahrenheit
+                temp = (valor - 32) * 5 / 9;
+                break;
+            case 3://de celsius a kelvin
+                temp = valor + 273.15;
+                break;
+            case 4://de kelvin a celsius
+                temp = valor - 273.15;
+                break;
+            case 5://de kelvin a fahrenheit
+                temp = 9 * (valor - 273.15) / 5 + 32;
+                break;
+            case 6://de fahrenheit a kelvin
+                temp = 5 * (valor - 32) / 9 + 273.15;
+                break;
+            default:
+                temp = 0.00;
+>>>>>>> 5b7939faa19cf1c45670772961056ea69a525aaa
                 break;
         }
         return temp;
