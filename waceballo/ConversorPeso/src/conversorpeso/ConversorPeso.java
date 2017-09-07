@@ -60,29 +60,27 @@ public class ConversorPeso {
      * @param valor es el valor a convertir
      * y devuelve la unidaderatura convertida
      */    
-    public double ConvertirDistancia(int opcion, Double valor) {
+    public double ConvertirPeso(int opcion, Double valor) {
         double unidad;
 
         switch (opcion) {
-            case 1://de yardas a km
-                //1 yarda = 0.0009144 km
-                unidad = (0.0009144 * valor);
+            case 1://de kilogramos a libras
+                unidad = (2.20462 * valor);
                 break;
-            case 2://de yardas a millas
-                //1 yarda = 0,000568182 milla
-                unidad = (0.000568182 * valor);
+            case 2://de kilogramos a onzas
+                unidad = (35.274 * valor);
                 break;
-            case 3://de km a yardas
-                unidad = (1093.61 * valor);
+            case 3://de libras a kilogramos
+                unidad = (0.453592 * valor);
                 break;
-            case 4://de km a millas
-                unidad = (0.621371 * valor);
+            case 4://de libras a onzas
+                unidad = (16 * valor);
                 break;
-            case 5://de milla a yardas
-                unidad = (1760 * valor);
+            case 5://de onzas a kilogramos
+                unidad = (0.0283495 * valor);
                 break;
-            case 6://de milla a km
-                unidad = (1.60934 * valor);
+            case 6://de onzas a libras
+                unidad = (0.0625 * valor);
                 break;
             default:
                 unidad = 0.00;

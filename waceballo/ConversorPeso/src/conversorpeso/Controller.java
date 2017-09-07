@@ -45,7 +45,7 @@ public class Controller implements IViewEventListener {
         } else {
             
             Double valorAconvertir = Double.parseDouble(unaVista.getTxtValorAConvertir().getText().replace(",", "."));
-            Double v = con.ConvertirDistancia(unidadAConvertir, valorAconvertir);
+            Double v = con.ConvertirPeso(unidadAConvertir, valorAconvertir);
             //System.out.println("valor convertido "+v);
             DecimalFormat df = new DecimalFormat("######.#####");
 
