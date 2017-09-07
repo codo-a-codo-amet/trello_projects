@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conversordistancia;
+package conversorpeso;
 
 import java.awt.Button;
 import java.awt.Event;
@@ -76,21 +76,21 @@ public class Principal extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Conversor de Distancia");
+        setTitle("Conversor de Peso");
         setBackground(new java.awt.Color(102, 255, 204));
         setLocation(new java.awt.Point(400, 100));
         setName("Conversor Temperatura"); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel5.setText("Conversor de Distancia");
+        jLabel5.setText("Conversor de Peso");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(51, 51, 255)));
         jPanel1.setForeground(new java.awt.Color(255, 0, 0));
 
         jLabel1.setText("Seleccione una opcion");
 
-        cbDesdeUnidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------------------------------", "De Yardas a Kilometros", "De Yardas a Millas", "De Kilometros a Yardas ", "De Kilometros a Millas", "De Millas a Yardas", "De Millas a Kilometros" }));
+        cbDesdeUnidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------------------------------", "De Kilogramos a Libras", "De Kilogramos a Onzas", "De Libras a Kilogramos ", "De Libras a Onzas", "De Onzas a Kilogramos", "De Onzas a Libras" }));
 
         jLabel2.setText("Ingrese un valor a convertir");
 
