@@ -14,11 +14,11 @@ import java.awt.event.ActionEvent;
  */
 public class Controller implements IViewEventListener {
 
-    protected Conversor conversor;
+    protected ConversorTemperatura conversor;
     protected MainView main_view;
 
     public Controller() {
-        conversor = new Conversor();
+        conversor = new ConversorTemperatura();
         main_view = new MainView();
         main_view.setVisible(true);
     }
