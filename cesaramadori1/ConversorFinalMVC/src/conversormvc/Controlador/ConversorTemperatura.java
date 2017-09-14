@@ -10,24 +10,18 @@ package conversormvc.Controlador;
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class ConversorPeso {
+public class ConversorTemperatura implements IConversor {
 
-    public ConversorPeso() {
+    public ConversorTemperatura() {
         
     }
     /* Tabla de valores 
-    1 Kg
-    2 Libra
-    3 Onz
+    1 Celcius
+    2 Kelvin
+    3 Farenheit
     */
-    final Double poundk = 0.4536;
-    final Double Kgpound = 2.204622;
-    final Double puonOnz= 16.00;
-    final Double OnzPound= 0.0625;
-    final Double Onzkg = 0.0283;
-    final Double kgOnz = 35.273961;
     public Double convertir (Double valor, int ti , int to ){
-    
+    Double valorKelvin = 273.00;
     Double valorConvertido=null;
         if(ti==1){
             switch(to){
@@ -35,33 +29,33 @@ public class ConversorPeso {
                     valorConvertido = valor;
                     break;
                 case 2:
-                    valorConvertido = valor * Kgpound;
+                    valorConvertido = valor + valorKelvin;
                     break;
                 case 3:
-                    valorConvertido = valor * kgOnz;
+                    valorConvertido = (valor*(9/5))+32;
                     break;
             }
         }    
         if(ti==2){
             switch(to){
                 case 1:
-                    valorConvertido = valor*poundk ;
+                    valorConvertido = valor-valorKelvin ;
                     break;
                 case 2:
                     valorConvertido = valor;
                     break;
                 case 3:
-                    valorConvertido = valor * puonOnz;
+                    valorConvertido = ((valor-273)*(9/5))+32;
                     break;
             }    
         }
         if(ti==3){
             switch(to){
                 case 1:
-                    valorConvertido = valor *Onzkg;
+                    valorConvertido = (valor-32)*5/9;
                     break;
                 case 2:
-                    valorConvertido = valor* OnzPound;
+                    valorConvertido = valorKelvin+(valor-32)*5/9;
                     break;
                 case 3:
                     valorConvertido = valor;
