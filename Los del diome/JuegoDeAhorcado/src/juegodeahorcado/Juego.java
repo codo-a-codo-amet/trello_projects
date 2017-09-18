@@ -16,6 +16,16 @@ import java.util.Scanner;
 public class Juego {
 
     Scanner unScanner = new Scanner(System.in);
+<<<<<<< HEAD
+    String[] listado_de_palabras = {"JAVA", "CASA", "LLAVE", "AUTO", "PERRO"};
+    int numero_al_azar = 1 + new Random().nextInt(4);
+    private List<String> palabra;
+    int posibilidades = 6;
+    int letra_contador = 0;
+    int contador_letra_elejida=0;
+    String palabra_elejida = listado_de_palabras[numero_al_azar];
+    int acerto_letra = 0;
+=======
     final static String[] LISTADO_DE_PALABRAS = {"JAVA", "CASA", "LLAVE", "AUTO", "PERRO"};
     private final String palabra_elejida;
     private final int numero_al_azar;
@@ -23,6 +33,7 @@ public class Juego {
     private int posibilidades;
     private int contador_letra_elejida;
     private int acerto_letra;
+>>>>>>> 2b34c2b5c87565731ffbf713f5b0be44dea818ce
 
     //private List<String> palabra;
     //private final int letra_contador;

@@ -10,18 +10,24 @@ package conversormvc.Controlador;
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class Conversor {
+public class ConversorPeso implements IConversor{
 
-    public Conversor() {
+    public ConversorPeso() {
         
     }
     /* Tabla de valores 
-    1 Celcius
-    2 Kelvin
-    3 Farenheit
+    1 Kg
+    2 Libra
+    3 Onz
     */
+    final Double poundk = 0.4536;
+    final Double Kgpound = 2.204622;
+    final Double puonOnz= 16.00;
+    final Double OnzPound= 0.0625;
+    final Double Onzkg = 0.0283;
+    final Double kgOnz = 35.273961;
     public Double convertir (Double valor, int ti , int to ){
-    Double valorKelvin = 273.00;
+    
     Double valorConvertido=null;
         if(ti==1){
             switch(to){
@@ -29,33 +35,33 @@ public class Conversor {
                     valorConvertido = valor;
                     break;
                 case 2:
-                    valorConvertido = valor + valorKelvin;
+                    valorConvertido = valor * Kgpound;
                     break;
                 case 3:
-                    valorConvertido = (valor*(9/5))+32;
+                    valorConvertido = valor * kgOnz;
                     break;
             }
         }    
         if(ti==2){
             switch(to){
                 case 1:
-                    valorConvertido = valor-valorKelvin ;
+                    valorConvertido = valor*poundk ;
                     break;
                 case 2:
                     valorConvertido = valor;
                     break;
                 case 3:
-                    valorConvertido = ((valor-273)*(9/5))+32;
+                    valorConvertido = valor * puonOnz;
                     break;
             }    
         }
         if(ti==3){
             switch(to){
                 case 1:
-                    valorConvertido = (valor-32)*5/9;
+                    valorConvertido = valor *Onzkg;
                     break;
                 case 2:
-                    valorConvertido = valorKelvin+(valor-32)*5/9;
+                    valorConvertido = valor* OnzPound;
                     break;
                 case 3:
                     valorConvertido = valor;
