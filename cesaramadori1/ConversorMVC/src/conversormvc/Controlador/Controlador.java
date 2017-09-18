@@ -12,11 +12,11 @@ public class Controlador implements IViewEventListener {
     protected Vista calculadora;
     protected MainView main_view;
             
-    protected Conversor conversor;
+    protected ConversorTemperatura conversor;
     protected Temperatura inicial;
 
     public Controlador() {
-        conversor = new Conversor();
+        conversor = new ConversorTemperatura();
         //calculadora = new Vista();
         //calculadora.setVisible(true);
         main_view = new MainView();
