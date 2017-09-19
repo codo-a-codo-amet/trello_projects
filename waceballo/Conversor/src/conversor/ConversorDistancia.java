@@ -5,6 +5,10 @@
  */
 package conversor;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -54,6 +58,21 @@ public class ConversorDistancia implements IConversor{
                 break;
         }
         return unidad;
+    }
+
+    @Override
+    public List<String> getOpciones() {
+        List<String> lista_de_unidades = new ArrayList<>();
+        
+        lista_de_unidades.add("------------------------------");
+        lista_de_unidades.add("De Yardas a Kilometros");
+        lista_de_unidades.add("De Yardas a Millas");
+        lista_de_unidades.add("De Kilometros a Yardas ");
+        lista_de_unidades.add("De Kilometros a Millas");
+        lista_de_unidades.add("De Millas a Yardas");
+        lista_de_unidades.add("De Millas a Kilometros");
+        
+        return lista_de_unidades;
     }
 
    

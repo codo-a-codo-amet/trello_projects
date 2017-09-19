@@ -5,6 +5,9 @@
  */
 package conversor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -54,6 +57,21 @@ public class ConversorTemperatura implements IConversor{
                 break;
         }
         return temp;
+    }
+
+    @Override
+    public List<String> getOpciones() {
+        List<String> lista_de_unidades = new ArrayList<>();
+        
+        lista_de_unidades.add("---------------------");
+        lista_de_unidades.add("De kWh a Calorias");
+        lista_de_unidades.add("De kWh a Jullio");
+        lista_de_unidades.add("De Calorias a kWh");
+        lista_de_unidades.add("De Calorias Julio");
+        lista_de_unidades.add("De Julio a kWh");
+        lista_de_unidades.add("De Julio a Calorias");
+
+        return lista_de_unidades;
     }
 
    
