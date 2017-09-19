@@ -27,6 +27,12 @@ public class Controller implements IViewEventListener {
         
         System.out.println("Lista de conversores "+ConversorFactory.getListaConversores());
         
+        ConversorComboBoxModel cb = new ConversorComboBoxModel(ConversorFactory.getListaConversores());
+        unaVista.getCbConversores().setModel(cb);
+        
+        
+        System.out.println();
+        
         //1 - conversor Distancia
         con = ConversorFactory.CrearConversor("Distancia");
         System.out.println("Distancia "+con.Convertir(1, 10.0));
