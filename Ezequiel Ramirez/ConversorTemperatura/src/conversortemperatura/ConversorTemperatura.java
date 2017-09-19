@@ -29,7 +29,7 @@ public class ConversorTemperatura {
             cadena = JOptionPane.showInputDialog("\n [1] Convertir Fahrenheit - Celsius \n [2] Convertir Celsius - Fahrenheit");
             opcion = Integer.parseInt(cadena);
         } while (opcion < 1 || opcion > 2);
-        cadena = JOptionPane.showInputDialog("Ingrese la temperatura: ");
+        cadena = JOptionPane.showInputDialog("Ingrese la temperatura puto de mierda: ");
         grado = Double.parseDouble(cadena);
 
         switch (opcion) {
