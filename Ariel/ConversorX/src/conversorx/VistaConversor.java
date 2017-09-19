@@ -49,6 +49,11 @@ public class VistaConversor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jRBmasa = new javax.swing.JRadioButton();
+        jRBdistancia = new javax.swing.JRadioButton();
+        jRBtemperatura = new javax.swing.JRadioButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jBtConvertir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jSelecBox2 = new javax.swing.JComboBox<>();
@@ -63,6 +68,27 @@ public class VistaConversor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jRBmasa.setText("Masa");
+        getContentPane().add(jRBmasa, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
+
+        jRBdistancia.setText("Distancia");
+        getContentPane().add(jRBdistancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
+
+        jRBtemperatura.setText("Temperatura");
+        getContentPane().add(jRBtemperatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+                comboBoxEvento(evt);
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
 
         jBtConvertir.setText("Convertir");
         jBtConvertir.addActionListener(new java.awt.event.ActionListener() {
@@ -108,8 +134,8 @@ public class VistaConversor extends javax.swing.JFrame {
 
         titulo.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
         titulo.setForeground(new java.awt.Color(255, 255, 255));
-        titulo.setText("Conversor de distancias");
-        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 500, 60));
+        titulo.setText("Conversor multiple");
+        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 350, 60));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,6 +214,19 @@ public class VistaConversor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jSelecBox1ActionPerformed
 
+    private void comboBoxEvento(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_comboBoxEvento
+         for (int i = 0; i < list_listener.size(); i++) {
+            IViewEventListener listener = list_listener.get(i);
+            
+            // Creamos un objeto Event con la informacion de lo que le sucedde 
+            // a la vista, por ejemplo. Se presiono un boton
+            Event event = new Event(evt, 0, evt);
+            
+            // El objeto event viaja hacia los que estan escuchando a la vista
+            listener.listen(event);
+          }
+    }//GEN-LAST:event_comboBoxEvento
+
     /**
      * @param args the command line arguments
      */
@@ -196,11 +235,16 @@ public class VistaConversor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JpantallaA;
     private javax.swing.JTextField JpantallaB;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel fondo;
     private javax.swing.JButton jBtConvertir;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JRadioButton jRBdistancia;
+    private javax.swing.JRadioButton jRBmasa;
+    private javax.swing.JRadioButton jRBtemperatura;
     private javax.swing.JComboBox<String> jSelecBox1;
     private javax.swing.JComboBox<String> jSelecBox2;
     private javax.swing.JLabel titulo;
