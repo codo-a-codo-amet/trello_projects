@@ -5,6 +5,8 @@
  */
 package conversor;
 
+import java.util.List;
+
 /**
  *
  * @author wceba
@@ -20,5 +22,8 @@ public interface IConversor {
      * @return 
      */
     double Convertir(int opcion, Double valor);
+    
+    public List<String> getOpciones();
+    
     
 }

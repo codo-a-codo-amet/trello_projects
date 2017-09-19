@@ -16,14 +16,38 @@ import javax.swing.JOptionPane;
  */
 public class Controller implements IViewEventListener {
     Principal unaVista;
-    ConversorEnergia con;
+    IConversor con;
 
     public Controller() {
         unaVista = new Principal();
-        con = new ConversorEnergia();
+        //con = new ConversorEnergia();
     }
 
     public void Run() {
+        
+        System.out.println("Lista de conversores "+ConversorFactory.getListaConversores());
+        
+        //1 - conversor Distancia
+        con = ConversorFactory.CrearConversor("Distancia");
+        System.out.println("Distancia "+con.Convertir(1, 10.0));
+        System.out.println("Lista de opciones "+con.getOpciones());
+
+        //2 - conversor Temperatura
+        con = ConversorFactory.CrearConversor("Temperatura");
+        System.out.println("Temperatura "+con.Convertir(1, 10.0));
+        System.out.println("Lista de opciones "+con.getOpciones());
+
+        //3 - conversor Peso
+        con = ConversorFactory.CrearConversor("Peso");
+        System.out.println("Peso "+con.Convertir(1, 10.0));
+        System.out.println("Lista de opciones "+con.getOpciones());
+
+        //4 - conversor Energia
+        con = ConversorFactory.CrearConversor("Energia");
+        System.out.println("Energia "+con.Convertir(1, 10.0));
+        System.out.println("Lista de opciones "+con.getOpciones());
+
+        
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
 

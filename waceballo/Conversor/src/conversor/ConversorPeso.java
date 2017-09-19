@@ -5,6 +5,9 @@
  */
 package conversor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -54,6 +57,21 @@ public class ConversorPeso implements IConversor{
                 break;
         }
         return unidad;
+    }
+
+    @Override
+    public List<String> getOpciones() {
+        List<String> lista_de_unidades = new ArrayList<>();
+        
+        lista_de_unidades.add("-----------------------");
+        lista_de_unidades.add("De Kilogramos a Libras");
+        lista_de_unidades.add("De Kilogramos a Onzas");
+        lista_de_unidades.add("De Libras a Kilogramos");
+        lista_de_unidades.add("De Libras a Onzas");
+        lista_de_unidades.add("De Onzas a Kilogramos");
+        lista_de_unidades.add("De Onzas a Libras");
+        
+        return lista_de_unidades;  
     }
 
    
