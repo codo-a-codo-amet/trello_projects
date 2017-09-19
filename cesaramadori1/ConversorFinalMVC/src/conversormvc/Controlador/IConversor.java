@@ -5,10 +5,14 @@
  */
 package conversormvc.Controlador;
 
+import java.util.List;
+
 /**
  *
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
 public interface IConversor {
     public Double convertir (Double valor, int ti , int to);
+    
+    public List<String> getUnitList();
 }

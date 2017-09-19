@@ -6,6 +6,9 @@
 
 package conversormvc.Controlador;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
@@ -71,4 +74,12 @@ public class ConversorPeso implements IConversor{
     return valorConvertido;
 
 }
+    @Override
+    public List<String> getUnitList() {
+        List<String> unitList = new ArrayList<>();
+        unitList.add("Kg");
+        unitList.add("Libra");
+        unitList.add("Onzas");
+        return unitList ;
+    }
 }

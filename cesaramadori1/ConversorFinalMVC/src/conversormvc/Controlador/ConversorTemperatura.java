@@ -6,6 +6,9 @@
 
 package conversormvc.Controlador;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
@@ -65,4 +68,13 @@ public class ConversorTemperatura implements IConversor {
     return valorConvertido;
 
 }
+    @Override
+    public List<String> getUnitList() {
+        List<String> unitList = new ArrayList<>();
+        unitList.add("Celcius");
+        unitList.add("Kelvin");
+        unitList.add("Farenheit");
+        return unitList ;
+    
+    }
 }
