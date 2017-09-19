@@ -5,6 +5,8 @@
  */
 package conversorx;
 
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -18,5 +20,7 @@ public interface IConversor {
     public String getKelvinconvertir(String temA, int select);
 
     public double getLimitarDecimales(double temperatura);
+    
+    public List <String> getUnitList();
     
 }

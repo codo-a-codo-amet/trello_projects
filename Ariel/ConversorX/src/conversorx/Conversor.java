@@ -5,6 +5,9 @@
  */
 package conversorx;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -84,6 +87,13 @@ public class Conversor implements IConversor  {
         decimalesReducidos = (double)valorEntero / 100;
         
         return decimalesReducidos;
+    }
+
+   
+    public List<String> getUnitList() {
+        List<String> lista_de_unidades = new ArrayList();
+        
+        return lista_de_unidades;
     }
     
    

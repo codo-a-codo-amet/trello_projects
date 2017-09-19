@@ -26,6 +26,17 @@ public class Controlador implements IViewEventListener{
         vistaConversor.AddEventListener(this);
         
         System.out.println("Arranco el programa");
+        
+        System.out.println("Lista de conversor");
+        
+        //1 - Conversor de Distancia
+        conversor = ConversonFactory.CreateConversor ("Distancia");
+        conversor.setValeUnit(23.4F, "km");
+        float conversion = Conversor.converToUnit("millas");
+        System.out.println("Valor convertido: " + conversion);
+        
+        // 2 - Conversor de masa
+        conversor = ConversorFactory.CreateConversor ("Masa ");
     }
       
     @Override
