@@ -64,12 +64,12 @@ public class ConversorTemperatura implements IConversor{
         List<String> lista_de_unidades = new ArrayList<>();
         
         lista_de_unidades.add("---------------------");
-        lista_de_unidades.add("De kWh a Calorias");
-        lista_de_unidades.add("De kWh a Jullio");
-        lista_de_unidades.add("De Calorias a kWh");
-        lista_de_unidades.add("De Calorias Julio");
-        lista_de_unidades.add("De Julio a kWh");
-        lista_de_unidades.add("De Julio a Calorias");
+        lista_de_unidades.add("De Fahrenheit a Celsius");
+        lista_de_unidades.add("De Celsius a Fahrenheit");
+        lista_de_unidades.add("De Celsius a Kelvin");
+        lista_de_unidades.add("De Kelvin a Celsius");
+        lista_de_unidades.add("De Kelvin a Fahrenheit");
+        lista_de_unidades.add("De Fahrenheit a Kelvin");
 
         return lista_de_unidades;
     }

@@ -33,6 +33,7 @@ public class ConversorFactory {
     public static List<String> getListaConversores() {
         List<String> lista_de_conversores = new ArrayList<>();
 
+        lista_de_conversores.add("------------");
         lista_de_conversores.add("Temperatura");
         lista_de_conversores.add("Distancia");
         lista_de_conversores.add("Energia");
