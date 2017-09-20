@@ -25,8 +25,10 @@ public class Controller implements IViewEventListener {
 
     public void Run() {
         
+
         System.out.println("Lista de conversores "+ConversorFactory.getListaConversores());
-        
+
+        if (){
         ConversorComboBoxModel cb = new ConversorComboBoxModel(ConversorFactory.getListaConversores());
         unaVista.getCbConversores().setModel(cb);
         
@@ -52,6 +54,10 @@ public class Controller implements IViewEventListener {
         con = ConversorFactory.CrearConversor("Energia");
         System.out.println("Energia "+con.Convertir(1, 10.0));
         System.out.println("Lista de opciones "+con.getOpciones());
+            
+        }else{
+            
+        }
 
         
         //A partir de ahora, escucha lo que le sucede a la vista.
