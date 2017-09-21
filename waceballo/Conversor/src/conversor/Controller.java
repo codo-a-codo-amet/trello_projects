@@ -59,7 +59,7 @@ public class Controller implements IViewEventListener {
     @Override
     public void listen(Event event) {
         System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
-        
+
         if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
 
             ActionEvent ae = (ActionEvent) event.target;
@@ -68,29 +68,31 @@ public class Controller implements IViewEventListener {
                 System.exit(0);
             }
 
-            System.out.println();
-
             Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
 
             if (unidadAConvertir == 0) {
                 JOptionPane.showMessageDialog(unaVista, "Debe seleccionar una opcion");
             } else {
-
                 Double valorAconvertir = Double.parseDouble(unaVista.getTxtValorAConvertir().getText().replace(",", "."));
                 Double v = con.Convertir(unidadAConvertir, valorAconvertir);
                 DecimalFormat df = new DecimalFormat("######.#####");
 
                 unaVista.getTxtValorConvertido().setText(df.format(v));
-
             }
 
         } else {
             String nuevoConversor = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = ConversorFactory.CrearConversor(nuevoConversor);
 
-            //configurar combobox1
-            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
-            unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
+            
+            if (con == null) {
+                JOptionPane.showMessageDialog(unaVista, "Debe seleccionar un Conversor");
+            } else {
+                //configurar combobox1
+                ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
+
+                unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
+            }
         }
 
     }
