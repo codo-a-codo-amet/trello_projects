@@ -5,6 +5,9 @@
  */
 package appconversor;
 
+import appconversor.conversores.ConversorFactory;
+import appconversor.conversores.IConversor;
+import appconversor.conversores.ConversorComboBoxModel;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 
