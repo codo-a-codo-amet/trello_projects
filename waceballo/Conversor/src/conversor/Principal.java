@@ -92,8 +92,6 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setText("Seleccione una opcion");
 
-        cbDesdeUnidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------------------------------", "De kWh a Calorias", "De kWh a Jullio", "De Calorias a kWh", "De Calorias Julio", "De Julio a kWh", "De Julio a Calorias" }));
-
         jLabel2.setText("Ingrese un valor a convertir");
 
         txtValorAConvertir.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -199,7 +197,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

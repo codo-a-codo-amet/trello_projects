@@ -42,7 +42,7 @@
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="92" max="32767" attributes="0"/>
+              <EmptySpace pref="96" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -165,15 +165,7 @@
         <Component class="javax.swing.JComboBox" name="cbDesdeUnidad">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="7">
-                <StringItem index="0" value="------------------------------"/>
-                <StringItem index="1" value="De kWh a Calorias"/>
-                <StringItem index="2" value="De kWh a Jullio"/>
-                <StringItem index="3" value="De Calorias a kWh"/>
-                <StringItem index="4" value="De Calorias Julio"/>
-                <StringItem index="5" value="De Julio a kWh"/>
-                <StringItem index="6" value="De Julio a Calorias"/>
-              </StringArray>
+              <StringArray count="0"/>
             </Property>
           </Properties>
           <AuxValues>
