@@ -3,50 +3,18 @@
  * To change this unidadlate file, choose Tools | Templates
  * and open the unidadlate in the editor.
  */
-package conversornumerico;
+package conversor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author alumno
  */
-public class ConversorNumerico {
+public class ConversorNumerico implements IConversor{
 
-    private Integer unidaderaturaAConvertir;
-    private Integer unidaderaturaConvertida;
-    private String tipoUnidadDestino;
-    private String tipoUnidad;
 
-    public Integer getTemperaturaAConvertir() {
-        return unidaderaturaAConvertir;
-    }
-
-    public void setTemperaturaAConvertir(Integer unidaderaturaAConvertir) {
-        this.unidaderaturaAConvertir = unidaderaturaAConvertir;
-    }
-
-    public Integer getTemperaturaConvertida() {
-        return unidaderaturaConvertida;
-    }
-
-    public void setTemperaturaConvertida(Integer unidaderaturaConvertida) {
-        this.unidaderaturaConvertida = unidaderaturaConvertida;
-    }
-
-    public String getTipoUnidadDestino() {
-        return tipoUnidadDestino;
-    }
-
-    public void setTipoUnidadDestino(String tipoUnidadDestino) {
-        this.tipoUnidadDestino = tipoUnidadDestino;
-    }
-
-    public String getTipoUnidad() {
-        return tipoUnidad;
-    }
-
-    public void setTipoUnidad(String tipoUnidad) {
-        this.tipoUnidad = tipoUnidad;
-    }
 
     //constructor de la clase
     public ConversorNumerico() {
@@ -60,21 +28,33 @@ public class ConversorNumerico {
      * @param valor es el valor a convertir
      * y devuelve la unidaderatura convertida
      */    
-    public double ConvertirEnergia(int opcion, Double valor) {
+    
+    @Override
+    public double Convertir(int opcion, Double valor) {
         double unidad;
 
         switch (opcion) {
-            case 1://de kWh a Calorias
+            case 1://de Decimal a Hexadecimal
                 unidad = (860.421 * valor);
                 break;
-            case 2://de kWh a Julio
+            case 2://de Hexadecimal a Decimal
                 unidad = (3.6e+6 * valor);
                 break;
             default:
                 unidad = 0.00;
                 break;
         }
-        return unidad;
+        return unidad;    }
+
+    @Override
+    public List<String> getOpciones() {
+        List<String> lista_de_unidades = new ArrayList<>();
+        
+        lista_de_unidades.add("-------------------------");
+        lista_de_unidades.add("De Decimal a Hexadecimal");
+        lista_de_unidades.add("De Hexadecimal a Decimal");
+        
+        return lista_de_unidades;   
     }
 
    
