@@ -21,7 +21,6 @@ public class Controller implements IViewEventListener {
     protected MainView main_view;
 
     public Controller() {
-
         main_view = new MainView();
         main_view.setVisible(true);
     }
@@ -32,11 +31,6 @@ public class Controller implements IViewEventListener {
 
         // Lista de conversores
         System.out.println("Lista de converors: " + ConversorFactory.GetConversorList());
-        
-        ConversorComboBoxModel cbm = new ConversorComboBoxModel(ConversorFactory.GetConversorList());
-        
-        main_view.getjComboBox3().setModel(cbm);
-        
 
         // 1- Conversor de Distancia
         conversor = ConversorFactory.CreateConversor("Distancia");
@@ -59,6 +53,21 @@ public class Controller implements IViewEventListener {
 
         System.out.println("Valor convertido: " + conversion);    
          */
+        ConversorComboBoxModel cbm = new ConversorComboBoxModel(ConversorFactory.GetConversorList());
+
+        main_view.getjComboBox3().setModel(cbm);
+
+        String nuevoConversor = (String) main_view.getjComboBox3().getModel().getSelectedItem();
+        conversor = ConversorFactory.CreateConversor(nuevoConversor);
+        
+             //configurar combobox1
+            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(conversor.getUnitList());
+            main_view.getjComboBox1().setModel(comboBox1Model);
+
+            //configurar combobox2
+            ConversorComboBoxModel comboBox2Model = new ConversorComboBoxModel(conversor.getUnitList());
+            main_view.getjComboBox2().setModel(comboBox2Model);
+
     }
 
     @Override
@@ -70,15 +79,14 @@ public class Controller implements IViewEventListener {
             ActionEvent ae = (ActionEvent) event.target;
 
             System.out.println("Se apreto boton desde controller" + ae.getActionCommand());
-            
+
             /*
                 if ae.getActionCommand equals "Converitr)
                    => aplicar la logica de conversion
                 else
                     conversor = ConersorFactor.CrearConversor(ae.getActionCommand());
 
-            */
-            
+             */
             String valorAConvertirString = main_view.getjTextField2().getText();
             Double valorAConvertir = Double.parseDouble(valorAConvertirString);
 
@@ -96,17 +104,15 @@ public class Controller implements IViewEventListener {
         } else {
             String nuevoConversor = (String) main_view.getjComboBox3().getModel().getSelectedItem();
             conversor = ConversorFactory.CreateConversor(nuevoConversor);
-            
+
             //configurar combobox1
             ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(conversor.getUnitList());
             main_view.getjComboBox1().setModel(comboBox1Model);
-            
-             //configurar combobox2
+
+            //configurar combobox2
             ConversorComboBoxModel comboBox2Model = new ConversorComboBoxModel(conversor.getUnitList());
             main_view.getjComboBox2().setModel(comboBox2Model);
-            
-            
-            
+
         }
 
     }

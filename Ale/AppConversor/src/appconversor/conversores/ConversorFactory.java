@@ -27,7 +27,8 @@ public class ConversorFactory {
 
     public static List<String> GetConversorList() {
         List<String> lista_de_conversores = new ArrayList<>();
-
+        
+        lista_de_conversores.add("------");
         lista_de_conversores.add("Distancia");  // 1 celius a fehrr
         lista_de_conversores.add("Masa");
         lista_de_conversores.add("ada");
