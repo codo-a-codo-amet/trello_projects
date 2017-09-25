@@ -86,7 +86,7 @@ public class Controller implements IViewEventListener {
 
             
             if (con == null) {
-                JOptionPane.showMessageDialog(unaVista, "Debe seleccionar un Conversor");
+                unaVista.getCbDesdeUnidad().setEnabled(false);
             } else {
                 //configurar combobox1
                 ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
