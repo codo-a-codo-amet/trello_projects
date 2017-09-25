@@ -17,7 +17,9 @@ public class ConversorFactory {
     public static IConversor CrearConversor(String tipo) {
         IConversor conversor = null;
 
-        if (tipo.equalsIgnoreCase("Temperatura")) {
+        if (tipo.equalsIgnoreCase("Seleccione")) {
+            conversor = new ConversorNULL();
+        }else if (tipo.equalsIgnoreCase("Temperatura")) {
             conversor = new ConversorTemperatura();
         } else if (tipo.equalsIgnoreCase("Distancia")) {
             conversor = new ConversorDistancia();
@@ -37,7 +39,7 @@ public class ConversorFactory {
     public static List<String> getListaConversores() {
         List<String> lista_de_conversores = new ArrayList<>();
 
-        lista_de_conversores.add("------------");
+        lista_de_conversores.add("Seleccione");
         lista_de_conversores.add("Distancia");
         lista_de_conversores.add("Energia");
         lista_de_conversores.add("Peso");

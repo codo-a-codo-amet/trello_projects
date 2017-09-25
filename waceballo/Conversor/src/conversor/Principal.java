@@ -5,7 +5,6 @@
  */
 package conversor;
 
-import java.awt.Button;
 import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
@@ -245,6 +244,10 @@ public class Principal extends javax.swing.JFrame {
             
         }        
     }//GEN-LAST:event_ComboBoxSeleccionado
+
+    public JButton getbtnConvertir() {
+        return btnConvertir;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConvertir;

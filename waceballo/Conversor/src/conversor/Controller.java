@@ -3,6 +3,7 @@ package conversor;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /*
@@ -29,27 +30,28 @@ public class Controller implements IViewEventListener {
         ConversorComboBoxModel cb = new ConversorComboBoxModel(ConversorFactory.getListaConversores());
         unaVista.getCbConversores().setModel(cb);
 
-        System.out.println("Lista de conversores " + ConversorFactory.getListaConversores());
-
-        //1 - conversor Distancia
-        con = ConversorFactory.CrearConversor("Distancia");
-        System.out.println("Distancia " + con.Convertir(1, 10.0));
-        System.out.println("Lista de opciones " + con.getOpciones());
-
-        //2 - conversor Temperatura
-        con = ConversorFactory.CrearConversor("Temperatura");
-        System.out.println("Temperatura " + con.Convertir(1, 10.0));
-        System.out.println("Lista de opciones " + con.getOpciones());
-
-        //3 - conversor Peso
-        con = ConversorFactory.CrearConversor("Peso");
-        System.out.println("Peso " + con.Convertir(1, 10.0));
-        System.out.println("Lista de opciones " + con.getOpciones());
-
-        //4 - conversor Energia
-        con = ConversorFactory.CrearConversor("Energia");
-        System.out.println("Energia " + con.Convertir(1, 10.0));
-        System.out.println("Lista de opciones " + con.getOpciones());
+        unaVista.getbtnConvertir().setEnabled(false);
+//        System.out.println("Lista de conversores " + ConversorFactory.getListaConversores());
+//
+//        //1 - conversor Distancia
+//        con = ConversorFactory.CrearConversor("Distancia");
+//        System.out.println("Distancia " + con.Convertir(1, 10.0));
+//        System.out.println("Lista de opciones " + con.getOpciones());
+//
+//        //2 - conversor Temperatura
+//        con = ConversorFactory.CrearConversor("Temperatura");
+//        System.out.println("Temperatura " + con.Convertir(1, 10.0));
+//        System.out.println("Lista de opciones " + con.getOpciones());
+//
+//        //3 - conversor Peso
+//        con = ConversorFactory.CrearConversor("Peso");
+//        System.out.println("Peso " + con.Convertir(1, 10.0));
+//        System.out.println("Lista de opciones " + con.getOpciones());
+//
+//        //4 - conversor Energia
+//        con = ConversorFactory.CrearConversor("Energia");
+//        System.out.println("Energia " + con.Convertir(1, 10.0));
+//        System.out.println("Lista de opciones " + con.getOpciones());
 
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
@@ -67,7 +69,7 @@ public class Controller implements IViewEventListener {
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
-
+            
             Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
 
             if (unidadAConvertir == 0) {
@@ -87,6 +89,13 @@ public class Controller implements IViewEventListener {
             //configurar combobox1
             ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
             unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
+            
+            if (nuevoConversor.equalsIgnoreCase("Seleccione")){
+                unaVista.getbtnConvertir().setEnabled(false);
+            }else{
+                unaVista.getbtnConvertir().setEnabled(true);
+            }
+            
 
         }
 
