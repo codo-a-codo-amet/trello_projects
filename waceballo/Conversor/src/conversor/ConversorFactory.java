@@ -23,6 +23,8 @@ public class ConversorFactory {
             conversor = new ConversorDistancia();
         } else if (tipo.equalsIgnoreCase("Energia")) {
             conversor = new ConversorEnergia();
+        } else if (tipo.equalsIgnoreCase("Numerico")) {
+            conversor = new ConversorNumerico();
         } else if (tipo.equalsIgnoreCase("Peso")) {
             conversor = new ConversorPeso();
         } else if (tipo.equalsIgnoreCase("Velocidad")) {
@@ -39,6 +41,7 @@ public class ConversorFactory {
         lista_de_conversores.add("Distancia");
         lista_de_conversores.add("Energia");
         lista_de_conversores.add("Peso");
+        lista_de_conversores.add("Numerico");
         lista_de_conversores.add("Temperatura");        
         lista_de_conversores.add("Velocidad");
         

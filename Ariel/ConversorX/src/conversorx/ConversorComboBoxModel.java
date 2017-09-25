@@ -38,17 +38,17 @@ public class ConversorComboBoxModel implements ListModel, ComboBoxModel{
 
     @Override // por ahi n o lo usamos
     public Object getElementAt(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return combo_list.get(i);
     }
 
     @Override //por ahi no lo usamos
     public void addListDataListener(ListDataListener ll) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    System.out.print("Aca no hay nada"); 
     }
 
     @Override
     public void removeListDataListener(ListDataListener ll) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("Aca tampoco");
     }
 
     @Override

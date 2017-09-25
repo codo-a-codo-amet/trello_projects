@@ -6,7 +6,7 @@ import conversormvc.Vista.IViewEventListener;
 import conversormvc.Vista.Vista;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
-import javax.swing.ComboBoxModel;
+
 
 public class Controlador implements IViewEventListener {
 
@@ -37,12 +37,12 @@ public class Controlador implements IViewEventListener {
     2 Millas
     3 Yardas
          */
-        conversor = ConversorFactory.CrearConvesor("Distancia");
+    /*    conversor = ConversorFactory.CrearConvesor("Distancia");
         valorInicial(23.4, 1);
         Double resultado = dameElValorConvertido(2);
         System.out.println("23,4 Km son "+ resultado+ " millas.");
         System.out.println("Lista de Unidades " + conversor.getUnitList());
-        
+      */  
         //B) Conversor de Temperatura
         
         /* Tabla de valores 
@@ -50,24 +50,25 @@ public class Controlador implements IViewEventListener {
     2 Kelvin
     3 Farenheit
     */
-        conversor = ConversorFactory.CrearConvesor("Temperatura");
+    /*    conversor = ConversorFactory.CrearConvesor("Temperatura");
         valorInicial(39.00, 3);
         resultado = dameElValorConvertido(1);
         System.out.println("39.00 grados Farenheit son "+ resultado+ " grados Celcius.");
         System.out.println("Lista de Unidades " + conversor.getUnitList());
-    }
+    */}
 
     public void listen(Event event) {
 
+    if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
         ActionEvent ae = (ActionEvent) event.target;
 
         System.out.println("Se apreto boton desde controller" + ae.getActionCommand());
         String valorAConvertirString = main_view.getjTextField2().getText();
         Double valorAConvertir = Double.parseDouble(valorAConvertirString);
-
-        String unidadSeleccionada = (String) main_view.getjComboBox2().getModel().getSelectedItem();
-        int unidadInicial = 1;
-        switch (unidadSeleccionada) {
+        ConversorComboBoxModel model = (ConversorComboBoxModel) main_view.getjComboBox2().getModel().getSelectedItem();
+         
+        int unidadInicial = model.getElementoSeleccionado();
+   /*     switch (unidadSeleccionada) {
             case "K":
                 unidadInicial = 1;
                 break;
@@ -77,9 +78,10 @@ public class Controlador implements IViewEventListener {
             case "J":
                 unidadInicial = 3;
                 break;
-        }
-        String unidadDestino = (String) main_view.getjComboBox1().getModel().getSelectedItem();
-        int unidadSalida = 1;
+        }*/
+        ConversorComboBoxModel model2 = (ConversorComboBoxModel) main_view.getjComboBox1().getModel();
+        int unidadSalida = model.getElementoSeleccionado();
+     /*   int unidadSalida = 1;
         switch (unidadDestino) {
             case "K":
                 unidadSalida = 1;
@@ -91,8 +93,9 @@ public class Controlador implements IViewEventListener {
                 unidadSalida = 3;
                 break;
         }
-        double valorConvertido = 0.0;
-        System.out.println("Tengo el valor: " + valorAConvertir + " en la siguiente unidad: " + unidadSeleccionada);
+*/        
+                double valorConvertido = 0.0;
+        //System.out.println("Tengo el valor: " + valorAConvertir + " en la siguiente unidad: " + unidadSeleccionada);
 
         //conversor.setValeUnit(valorAConvertir.floatValue(), unidadSeleccionada);
         valorInicial(valorAConvertir, unidadInicial);
@@ -100,7 +103,18 @@ public class Controlador implements IViewEventListener {
         valorConvertido = dameElValorConvertido(unidadSalida);
 
         main_view.getjTextField1().setText("" + valorConvertido);
-
+    } else{
+        String nuevoConversor = (String) main_view.getjComboBox3().getModel().getSelectedItem();
+        conversor = ConversorFactory.CrearConvesor(nuevoConversor);
+        
+        //configurar combobox1
+            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(conversor.getUnitList());
+            main_view.getjComboBox1().setModel(comboBox1Model);
+            
+             //configurar combobox2
+            ConversorComboBoxModel comboBox2Model = new ConversorComboBoxModel(conversor.getUnitList());
+            main_view.getjComboBox2().setModel(comboBox2Model);
+    }    
     }
 
     public void valorInicial(Double valor, int tipo) {

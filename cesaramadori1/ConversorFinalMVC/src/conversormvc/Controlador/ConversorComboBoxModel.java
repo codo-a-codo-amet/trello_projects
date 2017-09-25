@@ -20,6 +20,10 @@ public class ConversorComboBoxModel implements ComboBoxModel<String>,ListModel<S
 
     protected List<String> combo_list;
     protected Integer elementoSeleccionado;
+
+    public Integer getElementoSeleccionado() {
+        return elementoSeleccionado;
+    }
     
     public ConversorComboBoxModel() {
         combo_list = new ArrayList<>();
@@ -50,7 +54,7 @@ public class ConversorComboBoxModel implements ComboBoxModel<String>,ListModel<S
 
     @Override
     public String getElementAt(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return combo_list.get(index);
     }
 
     @Override
