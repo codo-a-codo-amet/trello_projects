@@ -84,15 +84,10 @@ public class Controller implements IViewEventListener {
             String nuevoConversor = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = ConversorFactory.CrearConversor(nuevoConversor);
 
-            
-            if (con == null) {
-                JOptionPane.showMessageDialog(unaVista, "Debe seleccionar un Conversor");
-            } else {
-                //configurar combobox1
-                ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
+            //configurar combobox1
+            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
+            unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
 
-                unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
-            }
         }
 
     }
