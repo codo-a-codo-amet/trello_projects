@@ -13,11 +13,11 @@ import java.awt.event.ActionEvent;
  * @author alumno
  */
 public class Controlador implements IViewEventListener{
-     protected Conversor conversor;
+    protected IConversor conversor;
     protected VistaConversor vistaConversor;
     
     public Controlador(){
-        conversor = new Conversor();
+        conversor = new ConversorTemperatura();
         vistaConversor = new VistaConversor();
         vistaConversor.setVisible(true);
         
@@ -29,14 +29,22 @@ public class Controlador implements IViewEventListener{
         
         System.out.println("Lista de conversor");
         
+          // Lista de conversores
+        System.out.println("Lista de converors: " + ConversorFactory.GetConversorList());
+        
+        ConversorComboBoxModel cbm = new ConversorComboBoxModel(ConversorFactory.GetConversorList());
+        
+        vistaConversor.getjComboBox1().setModel(cbm);
+        
         //1 - Conversor de Distancia
-        conversor = ConversonFactory.CreateConversor ("Distancia");
-        conversor.setValeUnit(23.4F, "km");
-        float conversion = Conversor.converToUnit("millas");
-        System.out.println("Valor convertido: " + conversion);
+        
+        conversor = ConversorFactory.CrearConversor("Temperatura");
+        //conversor.setValeUnit(23.4F, "km");
+        //float conversion = ConversorTemperatura.converToUnit("millas");
+        System.out.println("Valor convertido: " );// + conversion);
         
         // 2 - Conversor de masa
-        conversor = ConversorFactory.CreateConversor ("Masa ");
+        conversor = ConversorFactory.CrearConversor("Masa ");
     }
       
     @Override
@@ -45,7 +53,7 @@ public class Controlador implements IViewEventListener{
         
         System.out.println("Se apreto boton desde controller" +  ae.getActionCommand());
         
-          Conversor temperatura = new Conversor();
+          ConversorTemperatura temperatura = new ConversorTemperatura();
         int seleccionado1;
         int seleccionado2;
         seleccionado1 =  vistaConversor.getjSelecBox1().getSelectedIndex();
