@@ -25,6 +25,8 @@ public class ConversorFactory {
             conversor = new ConversorPeso();
         }else if (tipo.equalsIgnoreCase("Distancia")){
             conversor = new ConversorDistancia();
+        }else if (tipo.equalsIgnoreCase("Velocidad")){
+            conversor = new ConversorVelocidad();
         }
         return conversor;
     }
@@ -35,6 +37,7 @@ public class ConversorFactory {
         conversorList.add("Energia");
         conversorList.add("Peso");
         conversorList.add("Distancia");
+        conversorList.add("Velocidad");
         return conversorList ;
     }
 }

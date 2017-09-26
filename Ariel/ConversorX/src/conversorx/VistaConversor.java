@@ -50,9 +50,6 @@ public class VistaConversor extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jRBmasa = new javax.swing.JRadioButton();
-        jRBdistancia = new javax.swing.JRadioButton();
-        jRBtemperatura = new javax.swing.JRadioButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jBtConvertir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -69,16 +66,6 @@ public class VistaConversor extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jRBmasa.setText("Masa");
-        getContentPane().add(jRBmasa, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
-
-        jRBdistancia.setText("Distancia");
-        getContentPane().add(jRBdistancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
-
-        jRBtemperatura.setText("Temperatura");
-        getContentPane().add(jRBtemperatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
                 comboBoxEvento(evt);
@@ -88,7 +75,7 @@ public class VistaConversor extends javax.swing.JFrame {
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 110, -1));
 
         jBtConvertir.setText("Convertir");
         jBtConvertir.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +134,7 @@ public class VistaConversor extends javax.swing.JFrame {
         jLabel2.setText("De");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 50, 50));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conversorDistancia/img 2.jpg"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conversorx/img 2.jpg"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 380));
 
         pack();
@@ -213,7 +200,9 @@ public class VistaConversor extends javax.swing.JFrame {
     private void jSelecBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSelecBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jSelecBox1ActionPerformed
-
+ public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+ }
     private void comboBoxEvento(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_comboBoxEvento
          for (int i = 0; i < list_listener.size(); i++) {
             IViewEventListener listener = list_listener.get(i);
@@ -242,9 +231,6 @@ public class VistaConversor extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRBdistancia;
-    private javax.swing.JRadioButton jRBmasa;
-    private javax.swing.JRadioButton jRBtemperatura;
     private javax.swing.JComboBox<String> jSelecBox1;
     private javax.swing.JComboBox<String> jSelecBox2;
     private javax.swing.JLabel titulo;
