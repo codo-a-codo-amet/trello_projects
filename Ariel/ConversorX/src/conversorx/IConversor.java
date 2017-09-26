@@ -23,4 +23,16 @@ public interface IConversor {
     
     public List <String> getUnitList();
     
+        public void setUnit(String newUnit);
+
+    public void setValeUnit(float newValue, String newUnit);
+
+    public void setValue(float newValue);
+    
+     public float convertToUnit(String newUnit);
+
+
+    
+    
+    
 }

@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author alumno
  */
-public class Conversor implements IConversor  {
+public class ConversorMasa implements IConversor  {
     //convertir de KWh, Caloria, j
     private double celcius;
     private double kelvin;
@@ -20,12 +20,12 @@ public class Conversor implements IConversor  {
     private double temperaturaConvertida;
     private String laTemperatura;
 
-    public Conversor() {
+    public ConversorMasa() {
         
     }
     
 
-    public Conversor(double celcius, double kelvin, double farengei, double temperaturaConvertida) {
+    public ConversorMasa(double celcius, double kelvin, double farengei, double temperaturaConvertida) {
         this.celcius = celcius;
         this.kelvin = kelvin;
         this.farengei = farengei;
@@ -94,6 +94,27 @@ public class Conversor implements IConversor  {
         List<String> lista_de_unidades = new ArrayList();
         
         return lista_de_unidades;
+    }
+
+    @Override
+    public void setUnit(String newUnit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setValeUnit(float newValue, String newUnit) {
+      //value = newValue;
+        //unit = newUnit;
+    }
+
+    @Override
+    public void setValue(float newValue) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public float convertToUnit(String newUnit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
    
