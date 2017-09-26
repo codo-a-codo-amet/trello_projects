@@ -39,7 +39,7 @@ public class Controlador implements IViewEventListener{
         //1 - Conversor de Distancia
         
         conversor = ConversorFactory.CrearConversor("Temperatura");
-        //conversor.setValeUnit(23.4F, "km");
+        conversor.setValeUnit(23.4F, "km");
         //float conversion = ConversorTemperatura.converToUnit("millas");
         System.out.println("Valor convertido: " );// + conversion);
         

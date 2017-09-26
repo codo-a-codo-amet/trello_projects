@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appconversor;
+package appcalculadora;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TooManyListenersException;
 import javax.swing.ComboBoxModel;
 import javax.swing.ListModel;
 import javax.swing.event.ListDataListener;
@@ -15,24 +16,24 @@ import javax.swing.event.ListDataListener;
  *
  * @author alumno
  */
-public class ConversorComboBoxModel implements ComboBoxModel<String>, ListModel<String> {
-    
+public class CustomComboBoxModel implements ComboBoxModel<String>, ListModel<String> {
+
     protected List<String> combo_list;
     protected Integer elemento_seleccionado;
 
-    public ConversorComboBoxModel() {
+    public CustomComboBoxModel() {
         combo_list = new ArrayList<>();
         elemento_seleccionado = 0;
     }
-    
-    public ConversorComboBoxModel(List<String> combo_list) {
+
+    public CustomComboBoxModel(List<String> combo_list) {
         this.combo_list = combo_list;
-         elemento_seleccionado = 0;
+        elemento_seleccionado = 0;
     }
-    
+
     @Override
     public void setSelectedItem(Object o) {
-          elemento_seleccionado =  combo_list.indexOf(o);
+        elemento_seleccionado = combo_list.indexOf(o);
     }
 
     @Override

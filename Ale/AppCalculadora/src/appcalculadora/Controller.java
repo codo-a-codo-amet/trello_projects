@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appconversor;
+package appcalculadora;
 
-import appconversor.conversores.ConversorFactory;
-import appconversor.conversores.IConversor;
-import appconversor.conversores.ConversorComboBoxModel;
+import appcalculadora.calculadoras.ICalculadora;
+import appcalculadora.calculadoras.CalculadoraFactory;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 
@@ -17,7 +16,7 @@ import java.awt.event.ActionEvent;
  */
 public class Controller implements IViewEventListener {
 
-    protected IConversor conversor;
+    protected ICalculadora conversor;
     protected MainView main_view;
 
     public Controller() {
@@ -30,21 +29,10 @@ public class Controller implements IViewEventListener {
         main_view.AddEventListener(this);
 
         // Lista de conversores
-        System.out.println("Lista de converors: " + ConversorFactory.GetConversorList());
+        System.out.println("Lista de converors: " + CalculadoraFactory.GetConversorList());
 
         // 1- Conversor de Distancia
-        conversor = ConversorFactory.CreateConversor("Distancia");
-        conversor.setValeUnit(23.4f, "km");
-        float conversion = conversor.convertToUnit("millas");
-        System.out.println("Valor convertido: " + conversion);
-        System.out.println("Lista de unidades: " + conversor.getUnitList());
-
-        // 2- Conversor de Masa
-        conversor = ConversorFactory.CreateConversor("Masa");
-        conversor.setValeUnit(83.4f, "kg");
-        conversion = conversor.convertToUnit("pounds");
-        System.out.println("Valor convertido: " + conversion);
-        System.out.println("Lista de unidades: " + conversor.getUnitList());
+   
 
         /*
         conversor.setValeUnit(23.4f, "C");
@@ -53,20 +41,12 @@ public class Controller implements IViewEventListener {
 
         System.out.println("Valor convertido: " + conversion);    
          */
-        ConversorComboBoxModel cbm = new ConversorComboBoxModel(ConversorFactory.GetConversorList());
+        CustomComboBoxModel cbm = new CustomComboBoxModel(CalculadoraFactory.GetConversorList());
 
         main_view.getjComboBox3().setModel(cbm);
 
         String nuevoConversor = (String) main_view.getjComboBox3().getModel().getSelectedItem();
-        conversor = ConversorFactory.CreateConversor(nuevoConversor);
-        
-             //configurar combobox1
-            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(conversor.getUnitList());
-            main_view.getjComboBox1().setModel(comboBox1Model);
-
-            //configurar combobox2
-            ConversorComboBoxModel comboBox2Model = new ConversorComboBoxModel(conversor.getUnitList());
-            main_view.getjComboBox2().setModel(comboBox2Model);
+        conversor = CalculadoraFactory.CreateConversor(nuevoConversor);
 
     }
 
@@ -96,22 +76,13 @@ public class Controller implements IViewEventListener {
             float valorConvertido = 0.0f;
             System.out.println("Tengo el valor: " + valorAConvertir + " en la siguiente unidad: " + unidadSeleccionada);
 
-            conversor.setValeUnit(valorAConvertir.floatValue(), unidadSeleccionada);
 
-            valorConvertido = conversor.convertToUnit(unidadDestino);
 
             main_view.getjTextField1().setText("" + valorConvertido);
         } else {
             String nuevoConversor = (String) main_view.getjComboBox3().getModel().getSelectedItem();
-            conversor = ConversorFactory.CreateConversor(nuevoConversor);
+            conversor = CalculadoraFactory.CreateConversor(nuevoConversor);
 
-            //configurar combobox1
-            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(conversor.getUnitList());
-            main_view.getjComboBox1().setModel(comboBox1Model);
-
-            //configurar combobox2
-            ConversorComboBoxModel comboBox2Model = new ConversorComboBoxModel(conversor.getUnitList());
-            main_view.getjComboBox2().setModel(comboBox2Model);
 
         }
 

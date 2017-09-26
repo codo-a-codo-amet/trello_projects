@@ -28,8 +28,18 @@ public class Controlador implements IViewEventListener {
         //calculadora.AddEventListener(this);
         main_view.AddEventListener(this);
         
+        
+        conversor = ConversorFactory.CrearConvesor("Seleccione Conversor");
+        
         ConversorComboBoxModel conversorCombo = new ConversorComboBoxModel(ConversorFactory.getConversorList());
         main_view.getjComboBox3().setModel(conversorCombo);
+        
+        ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(conversor.getUnitList());
+            main_view.getjComboBox1().setModel(comboBox1Model);
+            
+             //configurar combobox2
+            ConversorComboBoxModel comboBox2Model = new ConversorComboBoxModel(conversor.getUnitList());
+            main_view.getjComboBox2().setModel(comboBox2Model);
       
         // A) Conversor de Distancia
         /* Tabla de valores 
