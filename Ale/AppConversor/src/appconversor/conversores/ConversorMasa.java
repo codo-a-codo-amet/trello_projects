@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appconversor;
+package appconversor.conversores;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +12,12 @@ import java.util.List;
  *
  * @author alumno
  */
-public class ConversorDistancia implements IConversor {
+public class ConversorMasa implements IConversor {
 
     protected float value;
     protected String unit;
 
-    public ConversorDistancia() {
+    public ConversorMasa() {
         value = 0.0f;
         unit = "";
     }
@@ -41,15 +41,15 @@ public class ConversorDistancia implements IConversor {
     @Override
     public float convertToUnit(String newUnit) {
         float tempValue = 0.0f;
-        if (unit.equalsIgnoreCase("Km")) {
-            if (newUnit.equalsIgnoreCase("millas")) {
+        if (unit.equalsIgnoreCase("C")) {
+            if (newUnit.equalsIgnoreCase("K")) {
                 tempValue = value + 273.15f;
             }
         }
         return tempValue;
     }
-
-    @Override
+    
+     @Override
     public List<String> getUnitList() {
         List<String> lista_de_unidades = new ArrayList<>();
         

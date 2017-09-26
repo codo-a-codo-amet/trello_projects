@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conversorx;
+package appcalculadora;
 
 /**
  *
  * @author alumno
  */
-public class Main {
+public class Application {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         Controlador arrancarControlador = new Controlador();
-        arrancarControlador.Run();
+        Controller root_controller = new Controller();
+        
+        root_controller.Run();
     }
     
 }
