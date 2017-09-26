@@ -16,9 +16,11 @@ public class ConversorFactory {
     
     public static IConversor CrearConversor (String tipo){
         IConversor conversor = null;
-       if (tipo.equalsIgnoreCase("Distancia")) {
+       if (tipo.equalsIgnoreCase("Temperatura")) {
             conversor = new ConversorTemperatura();
         } else if (tipo.equalsIgnoreCase("Masa")) {
+            conversor = new ConversorMasa();
+        } else if (tipo.equalsIgnoreCase("Distacia")){
             conversor = new ConversorDis();
         }
         return conversor;
