@@ -10,7 +10,7 @@ package Controller;
  * 
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public static class CalculatorFactory {
+public class CalculatorFactory {
 
     public static ICalculator CrearCalculadora (String tipo){
         ICalculator calculator = null;
