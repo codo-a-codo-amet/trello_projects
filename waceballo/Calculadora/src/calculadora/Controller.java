@@ -17,21 +17,20 @@ import javax.swing.JOptionPane;
 public class Controller implements IViewEventListener {
 
     Vista unaVista;
-    ICalculadora con;
+    ICalculadora unacalculadora;
 
     public Controller() {
         unaVista = new Vista();
-        //con = new ConversorEnergia();
     }
 
     public void Run() {
 
         ConversorComboBoxModel cb = new ConversorComboBoxModel(CalculadoraFactory.getListaCalculadora());
         unaVista.getCbConversores().setModel(cb);
+        CalculadoraSimple calc = new CalculadoraSimple();
 
-        unaVista.getbtnConvertir().setEnabled(false);
-        unaVista.AddEventListener(this);
-        unaVista.setVisible(true);
+        System.out.println("resultado "+calc.Operaciones(2.0, 2.0, "+"));
+        
     }
 
     @Override
@@ -56,10 +55,10 @@ public class Controller implements IViewEventListener {
 
         } else {
             String nuevoConversor = (String) unaVista.getCbConversores().getModel().getSelectedItem();
-            con = CalculadoraFactory.CrearCalculadora(nuevoConversor);
+            unacalculadora = CalculadoraFactory.CrearCalculadora(nuevoConversor);
 
             //configurar combobox1
-            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
+            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(unacalculadora.getOpciones());
             unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
             
             if (nuevoConversor.equalsIgnoreCase("Seleccione")){

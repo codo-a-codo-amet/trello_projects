@@ -66,8 +66,8 @@ public class CalculadoraSimple implements ICalculadora {
         setOperando2(num2);
         setOperacion(signo);
         
-        setResultado(getOperando1()+getOpciones()+getOperando2());
-        
+        //setResultado = setResultado(getOperando1()+getOpciones()+getOperando2());
+        setResultado(num1+num2);
         return getResultado();
     }
 
