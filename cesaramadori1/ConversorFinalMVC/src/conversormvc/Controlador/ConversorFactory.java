@@ -27,12 +27,15 @@ public class ConversorFactory {
             conversor = new ConversorDistancia();
         }else if (tipo.equalsIgnoreCase("Velocidad")){
             conversor = new ConversorVelocidad();
+        }else if (tipo.equalsIgnoreCase("Seleccione Conversor")){
+            conversor = new ConversorNull();
         }
         return conversor;
     }
     
     public static List<String> getConversorList() {
         List<String> conversorList = new ArrayList<>();
+        conversorList.add("Seleccione Conversor");
         conversorList.add("Temperatura");
         conversorList.add("Energia");
         conversorList.add("Peso");
