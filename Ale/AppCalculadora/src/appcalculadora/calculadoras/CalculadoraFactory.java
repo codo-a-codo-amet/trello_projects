@@ -15,25 +15,22 @@ import java.util.List;
 public class CalculadoraFactory {
 
     public static ICalculadora CreateConversor(String type) {
-        Object conversor = null;
+        ICalculadora calcuadora = null;
 
-        if (type.equalsIgnoreCase("Distancia")) {
-            conversor = new Object();
-        } else if (type.equalsIgnoreCase("Masa")) {
-            conversor = new Object();
+        if (type.equalsIgnoreCase("Simple")) {
+            calcuadora = new CalculadoraSimple();
+        } else if (type.equalsIgnoreCase("---")) {
+            calcuadora = null;
         }
-        return (ICalculadora)conversor;
+        return calcuadora;
     }
 
     public static List<String> GetConversorList() {
         List<String> lista_de_conversores = new ArrayList<>();
         
         lista_de_conversores.add("------");
-        lista_de_conversores.add("Distancia");  // 1 celius a fehrr
-        lista_de_conversores.add("Masa");
-        lista_de_conversores.add("ada");
-        lista_de_conversores.add("dasd");
-        lista_de_conversores.add("dad");
+        lista_de_conversores.add("Simple");  // 1 celius a fehrr
+
 
         return lista_de_conversores;
 
