@@ -2,8 +2,6 @@ package calculadora;
 
 import java.awt.Event;
 import java.awt.event.ActionEvent;
-import java.text.DecimalFormat;
-import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,9 +25,11 @@ public class Controller implements IViewEventListener {
 
         ConversorComboBoxModel cb = new ConversorComboBoxModel(CalculadoraFactory.getListaCalculadora());
         unaVista.getCbConversores().setModel(cb);
+        unaVista.setVisible(true);
+        
         CalculadoraSimple calc = new CalculadoraSimple();
 
-        calc.setOperacion("+");
+        calc.setOperacion("*");
         calc.setOperando1(10.0);
         calc.setOperando2(5.0);
 
@@ -39,39 +39,17 @@ public class Controller implements IViewEventListener {
 
     @Override
     public void listen(Event event) {
-        if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
 
+        
             ActionEvent ae = (ActionEvent) event.target;
 
+            System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
+
+            System.out.println("Presione el boton: "+ae.getActionCommand());
+            
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
-
-            Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
-
-            if (unidadAConvertir == 0) {
-                JOptionPane.showMessageDialog(unaVista, "Debe seleccionar una opcion");
-            } else {
-                Double valorAconvertir = Double.parseDouble(unaVista.getTxtValorAConvertir().getText().replace(",", "."));
-                DecimalFormat df = new DecimalFormat("######.#####");
-
-            }
-
-        } else {
-            String nuevoConversor = (String) unaVista.getCbConversores().getModel().getSelectedItem();
-            unacalculadora = CalculadoraFactory.CrearCalculadora(nuevoConversor);
-
-            //configurar combobox1
-            //ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(unacalculadora.getOpciones());
-            //unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
-            if (nuevoConversor.equalsIgnoreCase("Seleccione")) {
-                unaVista.getbtnConvertir().setEnabled(false);
-            } else {
-                unaVista.getbtnConvertir().setEnabled(true);
-            }
-
-        }
-
     }
-
+    
 }
