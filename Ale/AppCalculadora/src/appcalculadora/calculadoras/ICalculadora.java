@@ -10,5 +10,5 @@ package appcalculadora.calculadoras;
  * @author alumno
  */
 public interface ICalculadora {
-    
+    public float binaryOperation(float element1, String operation, float element2);
 }
