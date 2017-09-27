@@ -18,6 +18,15 @@ public class CalculadoraSimple implements ICalculadora{
         if ( operation.equals("+")) {
             result = element1 +  element2;
         }
+        if ( operation.equals("-")) {
+            result = element1 -  element2;
+        }
+        if ( operation.equals("*")) {
+            result = element1 *  element2;
+        }
+        if ( operation.equals("/")) {
+            result = element1 /  element2;
+        }
         
         return result;
     }
