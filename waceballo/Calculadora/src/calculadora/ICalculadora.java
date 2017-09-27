@@ -5,17 +5,14 @@
  */
 package calculadora;
 
-import java.util.List;
-
 /**
  *
  * @author wceba
  */
 public interface ICalculadora {
     
-    public Double Operaciones(Double num1, Double num2, String signo);
+    public Double Operaciones(Double num1, String signo, Double num2);
     
-    public List<String> getOpciones();
     
     
 }

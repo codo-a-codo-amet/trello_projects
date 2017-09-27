@@ -29,8 +29,12 @@ public class Controller implements IViewEventListener {
         unaVista.getCbConversores().setModel(cb);
         CalculadoraSimple calc = new CalculadoraSimple();
 
-        System.out.println("resultado "+calc.Operaciones(2.0, 2.0, "+"));
-        
+        calc.setOperacion("+");
+        calc.setOperando1(10.0);
+        calc.setOperando2(5.0);
+
+        System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
+
     }
 
     @Override
@@ -42,7 +46,7 @@ public class Controller implements IViewEventListener {
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
-            
+
             Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
 
             if (unidadAConvertir == 0) {
@@ -58,15 +62,13 @@ public class Controller implements IViewEventListener {
             unacalculadora = CalculadoraFactory.CrearCalculadora(nuevoConversor);
 
             //configurar combobox1
-            ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(unacalculadora.getOpciones());
-            unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
-            
-            if (nuevoConversor.equalsIgnoreCase("Seleccione")){
+            //ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(unacalculadora.getOpciones());
+            //unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
+            if (nuevoConversor.equalsIgnoreCase("Seleccione")) {
                 unaVista.getbtnConvertir().setEnabled(false);
-            }else{
+            } else {
                 unaVista.getbtnConvertir().setEnabled(true);
             }
-            
 
         }
 

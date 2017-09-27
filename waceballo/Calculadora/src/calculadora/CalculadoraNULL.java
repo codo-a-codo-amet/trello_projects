@@ -15,18 +15,9 @@ import java.util.List;
 public class CalculadoraNULL implements ICalculadora{
 
     @Override
-    public Double Operaciones(Double num1, Double num2, String signo) {
+    public Double Operaciones(Double num1, String signo, Double num2) {
         return 0.00;
     }
         
-    @Override
-    public List<String> getOpciones() {
-                List<String> lista_de_unidades = new ArrayList<>();
-        
-        lista_de_unidades.add("---------------------");
-        
-        return lista_de_unidades;
-
-    }
 
 }
