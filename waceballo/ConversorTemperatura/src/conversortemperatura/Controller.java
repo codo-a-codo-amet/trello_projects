@@ -18,9 +18,6 @@ public class Controller implements IViewEventListener {
     Principal unaVista;
     Conversor con;
 
-    
-    public Controller (){
-
     public Controller() {
 
         unaVista = new Principal();
@@ -40,7 +37,7 @@ public class Controller implements IViewEventListener {
         ActionEvent ae = (ActionEvent) event.target;
 
         if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
-            //System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
+            System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
             //unaVista.setVisible(false);
             System.exit(0);
         }
