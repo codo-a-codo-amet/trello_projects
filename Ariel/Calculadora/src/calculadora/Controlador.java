@@ -12,11 +12,12 @@ import java.awt.event.ActionEvent;
  *
  * @author alumno
  */
-public class Controlador {
+public class Controlador implements IViewEventListener{
     
     private String valorA;
     private String valorB;
     private String signo;
+    private String laPantalla;
     protected ICalculadora conversor;
     protected VistaCalculadora vistaCalculadora;
 
@@ -33,63 +34,30 @@ public class Controlador {
         // Lista de conversores
        // System.out.println("Lista de converors: " + ConversorFactory.GetConversorList());
         
-       // ConversorComboBoxModel cbm = new ConversorComboBoxModel(ConversorFactory.GetConversorList());
-        
-        vistaCalculadora.getjComboBox3().setModel(cbm);
-        
-
-  
-
-        /*
-        conversor.setValeUnit(23.4f, "C");
-
-        float conversion = conversor.convertToUnit("K");
-
-        System.out.println("Valor convertido: " + conversion);    
-         */
+     
     }
 
-    @Override
+   
     public void listen(Event event) {
-
+        
         System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
-
+        ActionEvent ae = (ActionEvent) event.target;
+        laPantalla = vistaCalculadora.getjPantalla().getText();
+        if(laPantalla.equals("")){
+            vistaCalculadora.getjPantalla().setText(ae.getActionCommand().toString());
+        }else{
+            vistaCalculadora.getjPantalla().setText(vistaCalculadora.getjPantalla().getText()+ae.getActionCommand().toString());
+        }
+        
         if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
-            ActionEvent ae = (ActionEvent) event.target;
+           
 
             System.out.println("Se apreto boton desde controller" + ae.getActionCommand());
-            
-            /*
-                if ae.getActionCommand equals "Converitr)
-                   => aplicar la logica de conversion
-                else
-                    conversor = ConersorFactor.CrearConversor(ae.getActionCommand());
-
-            */
-            
-            String valorAConvertirString = main_view.getjTextField2().getText();
-            Double valorAConvertir = Double.parseDouble(valorAConvertirString);
-
-            String unidadSeleccionada = (String) main_view.getjComboBox2().getModel().getSelectedItem();
-
-            String unidadDestino = (String) main_view.getjComboBox1().getModel().getSelectedItem();
-            float valorConvertido = 0.0f;
-            System.out.println("Tengo el valor: " + valorAConvertir + " en la siguiente unidad: " + unidadSeleccionada);
-
-            conversor.setValeUnit(valorAConvertir.floatValue(), unidadSeleccionada);
-
-            valorConvertido = conversor.convertToUnit(unidadDestino);
-
-            main_view.getjTextField1().setText("" + valorConvertido);
-        } else {
-            String nuevoConversor = (String) main_view.getjComboBox3().getModel().getSelectedItem();
-            conversor = CalcuFactory.CreateCalculadora(nuevoConversor);
-            
-          
-            
-            
-        }
-
-    }
+         }
+        CalcuSimple operacion = new CalcuSimple();
+        laPantalla= operacion.getOperaciones("12", "10", "+","");
+        
+        System.out.println("El resultado es "+laPantalla);
     
+}
 }

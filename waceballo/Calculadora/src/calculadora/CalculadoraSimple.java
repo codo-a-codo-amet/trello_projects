@@ -5,9 +5,6 @@
  */
 package calculadora;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author alumno
@@ -51,8 +48,6 @@ public class CalculadoraSimple implements ICalculadora {
         this.operacion = operacion;
     }
 
-    
-    
     //constructor de la clase
     public CalculadoraSimple() {
         setOperando1(0.00);
@@ -61,24 +56,24 @@ public class CalculadoraSimple implements ICalculadora {
     }
 
     @Override
-    public Double Operaciones(Double num1, Double num2, String signo) {
+    public Double Operaciones(Double num1, String signo, Double num2) {
         setOperando1(num1);
         setOperando2(num2);
         setOperacion(signo);
-        
-        setResultado(getOperando1()+getOpciones()+getOperando2());
-        
+
+        if (signo.equalsIgnoreCase("+")) {
+            setResultado(num1 + num2);
+        } else if (signo.equalsIgnoreCase("-")) {
+            setResultado(num1 - num2);
+        } else if (signo.equalsIgnoreCase("*")) {
+            setResultado(num1 * num2);
+        } else if (signo.equalsIgnoreCase("/")) {
+            setResultado(num1 / num2);
+        } else {
+            setResultado(0.00);
+        }
+
         return getResultado();
-    }
-
-    @Override
-    public List<String> getOpciones() {
-        List<String> lista_de_unidades = new ArrayList<>();
-
-        lista_de_unidades.add("------------------------------");
-        lista_de_unidades.add("Simple");
-
-        return lista_de_unidades;
     }
 
 }

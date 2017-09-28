@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package calculadora;
+package appcalculadora.calculadoras;
 
 /**
  *
  * @author alumno
  */
 public interface ICalculadora {
-    
-    public String getOperaciones(String valorA, String valorB, String signo,String pantalla);
-    
+    public float binaryOperation(float element1, String operation, float element2);
 }

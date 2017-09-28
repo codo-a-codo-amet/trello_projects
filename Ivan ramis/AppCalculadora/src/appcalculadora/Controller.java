@@ -41,10 +41,30 @@ public class Controller implements IViewEventListener {
                 " (2) " + element2 + 
                 " resultado: " +  result);
        
-        //2- Suma
+        //2- Resta
         element1 = (float)Math.random() * 10.0f;
         element2 = (float)Math.random() * 10.0f;
         operation = "-";
+        result = calculadora.binaryOperation(element1, operation, element2);
+        
+        System.out.println("Calcladora probando operacion: " + operation +
+                " Elementos(1) "+ element1 + 
+                " (2) " + element2 + 
+                " resultado: " +  result);
+        //2- Multiplicacion
+        element1 = (float)Math.random() * 10.0f;
+        element2 = (float)Math.random() * 10.0f;
+        operation = "*";
+        result = calculadora.binaryOperation(element1, operation, element2);
+        
+        System.out.println("Calcladora probando operacion: " + operation +
+                " Elementos(1) "+ element1 + 
+                " (2) " + element2 + 
+                " resultado: " +  result);
+        //2- division
+        element1 = (float)Math.random() * 10.0f;
+        element2 = (float)Math.random() * 10.0f;
+        operation = "/";
         result = calculadora.binaryOperation(element1, operation, element2);
         
         System.out.println("Calcladora probando operacion: " + operation +

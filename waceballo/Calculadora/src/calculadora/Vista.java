@@ -8,28 +8,25 @@ package calculadora;
 import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JTextField;
 
 /**
  *
  * @author alumno
  */
 public class Vista extends javax.swing.JFrame {
-
+    
     protected List<IViewEventListener> list_listener;
-
+    
     /**
-     * Creates new form Principal
+     * Creates new form Vista1
      */
     public Vista() {
         initComponents();
         list_listener = new ArrayList<>();
-
     }
 
-    public void AddEventListener(IViewEventListener listener) {
+        public void AddEventListener(IViewEventListener listener) {
         list_listener.add(listener);
     }
     
@@ -37,23 +34,6 @@ public class Vista extends javax.swing.JFrame {
         list_listener.remove(listener);
     }
 
-    public JComboBox<String> getCbDesdeUnidad() {
-        return cbDesdeUnidad;
-    }
-
-    public JTextField getTxtValorAConvertir() {
-        return txtValorAConvertir;
-    }
-
-    public JTextField getTxtValorConvertido() {
-        return txtValorConvertido;
-    }
-    
-    public JButton getBtnSalir() {
-        return btnSalir;
-    }
-    
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,142 +43,237 @@ public class Vista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        cbDesdeUnidad = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        txtValorAConvertir = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtValorConvertido = new javax.swing.JTextField();
-        btnConvertir = new javax.swing.JButton();
-        btnSalir = new javax.swing.JButton();
+        btnBoton1 = new javax.swing.JButton();
+        btnBoton2 = new javax.swing.JButton();
+        btnBoton3 = new javax.swing.JButton();
+        btnBoton4 = new javax.swing.JButton();
+        btnBoton5 = new javax.swing.JButton();
+        btnBoton6 = new javax.swing.JButton();
+        btnBoton7 = new javax.swing.JButton();
+        btnBoton8 = new javax.swing.JButton();
+        btnBoton9 = new javax.swing.JButton();
+        btnBoton10 = new javax.swing.JButton();
+        btnBoton11 = new javax.swing.JButton();
+        btnBoton12 = new javax.swing.JButton();
+        btnBoton13 = new javax.swing.JButton();
+        btnBoton14 = new javax.swing.JButton();
+        btnBoton15 = new javax.swing.JButton();
+        btnBoton16 = new javax.swing.JButton();
+        txtPantalla = new javax.swing.JTextField();
         cbConversores = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Calculadora");
-        setBackground(new java.awt.Color(102, 255, 204));
-        setLocation(new java.awt.Point(400, 100));
-        setName("Conversor Temperatura"); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel5.setText("Calculadora");
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(51, 51, 255)));
-        jPanel1.setForeground(new java.awt.Color(255, 0, 0));
-
-        jLabel1.setText("Seleccione una opcion");
-
-        jLabel2.setText("Ingrese un valor a convertir");
-
-        txtValorAConvertir.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtValorAConvertir.setText("0.00");
-
-        jLabel3.setText("Valor convertido");
-
-        txtValorConvertido.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtValorConvertido.setText("0.00");
-        txtValorConvertido.setEnabled(false);
-
-        btnConvertir.setText("Convertir");
-        btnConvertir.addActionListener(new java.awt.event.ActionListener() {
+        btnBoton1.setText("1");
+        btnBoton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PresionoBoton(evt);
             }
         });
 
-        btnSalir.setText("Salir");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+        btnBoton2.setText("4");
+        btnBoton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PresionoBoton(evt);
             }
         });
+
+        btnBoton3.setText("7");
+        btnBoton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton4.setText(".");
+        btnBoton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton5.setText("2");
+        btnBoton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton6.setText("5");
+        btnBoton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton7.setText("8");
+        btnBoton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton8.setText("0");
+        btnBoton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton9.setText("6");
+        btnBoton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton10.setText("3");
+        btnBoton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton11.setText("9");
+        btnBoton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton12.setText("=");
+        btnBoton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton13.setText("*");
+        btnBoton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton14.setText("+");
+        btnBoton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton15.setText("-");
+        btnBoton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        btnBoton16.setText("/");
+        btnBoton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PresionoBoton(evt);
+            }
+        });
+
+        txtPantalla.setText("0.00");
 
         cbConversores.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
             public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
-                ComboBoxSeleccionado(evt);
+                cbConversoresComboBoxSeleccionado(evt);
             }
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
             }
         });
 
-        jLabel4.setText("Seleccione que convertir");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cbDesdeUnidad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtValorAConvertir, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtValorConvertido, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cbConversores, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(36, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnConvertir, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                            .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbConversores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbDesdeUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtValorAConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtValorConvertido, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnConvertir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSalir)
-                .addGap(5, 5, 5))
-        );
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 0, 255));
+        jLabel1.setText("Calculadora");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(89, 89, 89)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cbConversores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPantalla)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBoton1)
+                            .addComponent(btnBoton2)
+                            .addComponent(btnBoton3)
+                            .addComponent(btnBoton4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBoton5)
+                            .addComponent(btnBoton6)
+                            .addComponent(btnBoton7)
+                            .addComponent(btnBoton8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBoton9)
+                            .addComponent(btnBoton10)
+                            .addComponent(btnBoton11)
+                            .addComponent(btnBoton12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnBoton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnBoton15, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(btnBoton16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnBoton13, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel5)
+                .addGap(68, 68, 68)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addComponent(cbConversores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtPantalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBoton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBoton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBoton10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton12))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBoton14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBoton16)))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
@@ -216,45 +291,85 @@ public class Vista extends javax.swing.JFrame {
             // El objeto event viaja hacia los que estan escuchando a la vista
             listener.listen(event);
             
-        }
-        
+        }        
     }//GEN-LAST:event_PresionoBoton
+
+    
+    
+    private void cbConversoresComboBoxSeleccionado(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_cbConversoresComboBoxSeleccionado
+        // TODO add your handling code here:
+        for (int i = 0; i < list_listener.size(); i++) {
+            IViewEventListener listener = list_listener.get(i);
+
+            // Creamos un objeto Event con la informacion de lo que le sucedde
+            // a la vista, por ejemplo. Se presiono un boton
+            Event event = new Event(evt, 0, evt);
+
+            // El objeto event viaja hacia los que estan escuchando a la vista
+            listener.listen(event);
+
+        }
+    }//GEN-LAST:event_cbConversoresComboBoxSeleccionado
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Vista().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBoton1;
+    private javax.swing.JButton btnBoton10;
+    private javax.swing.JButton btnBoton11;
+    private javax.swing.JButton btnBoton12;
+    private javax.swing.JButton btnBoton13;
+    private javax.swing.JButton btnBoton14;
+    private javax.swing.JButton btnBoton15;
+    private javax.swing.JButton btnBoton16;
+    private javax.swing.JButton btnBoton2;
+    private javax.swing.JButton btnBoton3;
+    private javax.swing.JButton btnBoton4;
+    private javax.swing.JButton btnBoton5;
+    private javax.swing.JButton btnBoton6;
+    private javax.swing.JButton btnBoton7;
+    private javax.swing.JButton btnBoton8;
+    private javax.swing.JButton btnBoton9;
+    private javax.swing.JComboBox<String> cbConversores;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField txtPantalla;
+    // End of variables declaration//GEN-END:variables
 
     public JComboBox<String> getCbConversores() {
         return cbConversores;
     }
-
-    private void ComboBoxSeleccionado(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_ComboBoxSeleccionado
-        // TODO add your handling code here:
-        for (int i = 0; i < list_listener.size(); i++) {
-            IViewEventListener listener = list_listener.get(i);
-            
-            // Creamos un objeto Event con la informacion de lo que le sucedde 
-            // a la vista, por ejemplo. Se presiono un boton
-            Event event = new Event(evt, 0, evt);
-            
-            // El objeto event viaja hacia los que estan escuchando a la vista
-            listener.listen(event);
-            
-        }        
-    }//GEN-LAST:event_ComboBoxSeleccionado
-
-    public JButton getbtnConvertir() {
-        return btnConvertir;
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConvertir;
-    private javax.swing.JButton btnSalir;
-    private javax.swing.JComboBox<String> cbConversores;
-    private javax.swing.JComboBox<String> cbDesdeUnidad;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtValorAConvertir;
-    private javax.swing.JTextField txtValorConvertido;
-    // End of variables declaration//GEN-END:variables
 }

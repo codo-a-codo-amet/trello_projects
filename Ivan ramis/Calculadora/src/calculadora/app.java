@@ -9,8 +9,14 @@ package calculadora;
  *
  * @author alumno
  */
-public interface ICalculadora {
-    
-    public String getOperaciones(String valorA, String valorB, String signo,String pantalla);
+public class app {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Controller unControlador = new Controller();
+        unControlador.Run();
+    }
     
 }

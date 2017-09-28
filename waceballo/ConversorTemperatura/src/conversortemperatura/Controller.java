@@ -17,13 +17,12 @@ import javax.swing.JOptionPane;
 public class Controller implements IViewEventListener {
     Principal unaVista;
     Conversor con;
-<<<<<<< HEAD
+
     
     public Controller (){
-=======
 
     public Controller() {
->>>>>>> 5b7939faa19cf1c45670772961056ea69a525aaa
+
         unaVista = new Principal();
         con = new Conversor();
     }
