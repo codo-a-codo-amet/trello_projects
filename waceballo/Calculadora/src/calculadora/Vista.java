@@ -75,21 +75,21 @@ public class Vista extends javax.swing.JFrame {
         btnBoton2.setText("4");
         btnBoton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton2PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton3.setText("7");
         btnBoton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton3PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton4.setText(".");
         btnBoton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton4PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
@@ -103,28 +103,28 @@ public class Vista extends javax.swing.JFrame {
         btnBoton6.setText("5");
         btnBoton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton6PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton7.setText("8");
         btnBoton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton7PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton8.setText("0");
         btnBoton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton8PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton9.setText("6");
         btnBoton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton9PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
@@ -138,21 +138,21 @@ public class Vista extends javax.swing.JFrame {
         btnBoton11.setText("9");
         btnBoton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton11PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton12.setText("=");
         btnBoton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton12PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton13.setText("*");
         btnBoton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton13PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
@@ -166,14 +166,14 @@ public class Vista extends javax.swing.JFrame {
         btnBoton15.setText("-");
         btnBoton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton15PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
         btnBoton16.setText("/");
         btnBoton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoton16PresionoBoton(evt);
+                PresionoBoton(evt);
             }
         });
 
@@ -293,54 +293,6 @@ public class Vista extends javax.swing.JFrame {
             
         }        
     }//GEN-LAST:event_PresionoBoton
-
-    private void btnBoton2PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton2PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton2PresionoBoton
-
-    private void btnBoton3PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton3PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton3PresionoBoton
-
-    private void btnBoton4PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton4PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton4PresionoBoton
-
-    private void btnBoton6PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton6PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton6PresionoBoton
-
-    private void btnBoton7PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton7PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton7PresionoBoton
-
-    private void btnBoton8PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton8PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton8PresionoBoton
-
-    private void btnBoton9PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton9PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton9PresionoBoton
-
-    private void btnBoton11PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton11PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton11PresionoBoton
-
-    private void btnBoton12PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton12PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton12PresionoBoton
-
-    private void btnBoton13PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton13PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton13PresionoBoton
-
-    private void btnBoton15PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton15PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton15PresionoBoton
-
-    private void btnBoton16PresionoBoton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoton16PresionoBoton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBoton16PresionoBoton
 
     
     
