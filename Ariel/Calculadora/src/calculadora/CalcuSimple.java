@@ -13,6 +13,7 @@ public class CalcuSimple implements ICalculadora {
     private String numeroA;
     private String numeroB;
     private String resultado;
+    private String miPantalla;
     private String signo;
 
     public CalcuSimple() {
@@ -24,9 +25,12 @@ public class CalcuSimple implements ICalculadora {
         this.resultado = resultado;
         this.signo = signo;
     }
-    public String getOperaciones(String valorA,String valorB, String signo){
+    public String getOperaciones(String valorA,String valorB, String signo,String pantalla){
         numeroA=valorA;
         numeroB=valorB;
+        miPantalla = pantalla;
+        
+        if (miPantalla.equals("")){
         if (signo.equals("+")) {
             double r= Double.parseDouble(numeroA)+Double.parseDouble(numeroB);
             resultado= Double.toString(r);
@@ -40,7 +44,21 @@ public class CalcuSimple implements ICalculadora {
              double r= Double.parseDouble(numeroA)/Double.parseDouble(numeroB);
             resultado= Double.toString(r);
         }
-        
+        }else {
+             if (signo.equals("+")) {
+            double r= Double.parseDouble(numeroA)+Double.parseDouble(numeroB);
+            resultado= Double.toString(r);
+        } else if(signo.equals("-")) {
+             double r= Double.parseDouble(numeroA)-Double.parseDouble(numeroB);
+            resultado= Double.toString(r);
+        }else if(signo.equals("*")) {
+             double r= Double.parseDouble(numeroA)*Double.parseDouble(numeroB);
+            resultado= Double.toString(r);
+        }else if(signo.equals("-")) {
+             double r= Double.parseDouble(numeroA)/Double.parseDouble(numeroB);
+            resultado= Double.toString(r);
+        }
+        }
         
         
         

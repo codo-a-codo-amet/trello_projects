@@ -5,12 +5,12 @@
  */
 package calculadora;
 
+import java.awt.Event;
+
 /**
  *
  * @author alumno
  */
-public interface ICalculadora {
-    
-    public String getOperaciones(String valorA, String valorB, String signo,String pantalla);
-    
+public interface IViewEventListener {
+    public void listen(Event event);
 }
