@@ -11,6 +11,6 @@ package calculadora;
  */
 public interface ICalculadora {
     
-    public String getOperaciones(String valorA, String valorB, String signo,String pantalla);
+    public String getOperaciones(String valorA, String valorB, String signo);
     
 }

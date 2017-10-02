@@ -19,18 +19,26 @@ public class CalcuSimple implements ICalculadora {
     public CalcuSimple() {
         
     }
-    public CalcuSimple(String numeroA, String numeroB, String resultado, String signo) {
+  public CalcuSimple(String numeroA, String numeroB, String resultado, String signo) {
         this.numeroA = numeroA;
         this.numeroB = numeroB;
         this.resultado = resultado;
         this.signo = signo;
     }
-    public String getOperaciones(String valorA,String valorB, String signo,String pantalla){
+    
+    public String CalculadoraSimple(String evento){
+        String boton=evento;
+        
+        return null;
+        
+    }
+    
+    public String getOperaciones(String valorA,String valorB, String signo){
         numeroA=valorA;
         numeroB=valorB;
-        miPantalla = pantalla;
+     
         
-        if (miPantalla.equals("")){
+      
         if (signo.equals("+")) {
             double r= Double.parseDouble(numeroA)+Double.parseDouble(numeroB);
             resultado= Double.toString(r);
@@ -40,25 +48,11 @@ public class CalcuSimple implements ICalculadora {
         }else if(signo.equals("*")) {
              double r= Double.parseDouble(numeroA)*Double.parseDouble(numeroB);
             resultado= Double.toString(r);
-        }else if(signo.equals("-")) {
+        }else if(signo.equals("/")) {
              double r= Double.parseDouble(numeroA)/Double.parseDouble(numeroB);
             resultado= Double.toString(r);
         }
-        }else {
-             if (signo.equals("+")) {
-            double r= Double.parseDouble(numeroA)+Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
-        } else if(signo.equals("-")) {
-             double r= Double.parseDouble(numeroA)-Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
-        }else if(signo.equals("*")) {
-             double r= Double.parseDouble(numeroA)*Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
-        }else if(signo.equals("-")) {
-             double r= Double.parseDouble(numeroA)/Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
-        }
-        }
+      
         
         
         
