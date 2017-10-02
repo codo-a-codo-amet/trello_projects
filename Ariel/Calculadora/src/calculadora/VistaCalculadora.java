@@ -243,6 +243,11 @@ public class VistaCalculadora extends javax.swing.JFrame {
         jButtonIgualPorsentaje = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 51, 102));
+
+        jPantalla.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jPantalla.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jButtonIgualIgual.setText("=");
         jButtonIgualIgual.addActionListener(new java.awt.event.ActionListener() {

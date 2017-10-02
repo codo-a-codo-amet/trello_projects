@@ -17,12 +17,13 @@ public class Controlador implements IViewEventListener{
     private String valorA;
     private String valorB;
     private String signo;
+    private String boton;
     private String laPantalla;
-    protected ICalculadora conversor;
+    private String memoria;
+    protected ICalculadora calculadora;
     protected VistaCalculadora vistaCalculadora;
-
     public Controlador() {
-
+       
         vistaCalculadora = new VistaCalculadora();
         vistaCalculadora.setVisible(true);
     }
@@ -43,21 +44,107 @@ public class Controlador implements IViewEventListener{
         System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
         ActionEvent ae = (ActionEvent) event.target;
         laPantalla = vistaCalculadora.getjPantalla().getText();
-        if(laPantalla.equals("")){
+        boton = ae.getActionCommand();
+        //Calculadora Simple
+        //Números
+        
+        calculadora = CalcuFactory.CreateCalculadora("CalcuSimple");
+        if(boton.equals("1")||boton.equals("2")||boton.equals("3")||boton.equals("4")
+        ||boton.equals("5")||boton.equals("6")||boton.equals("7")||boton.equals("8")
+        ||boton.equals("9")||boton.equals("0")){
+            if(laPantalla.equals("")){
             vistaCalculadora.getjPantalla().setText(ae.getActionCommand().toString());
-        }else{
+            }else{
             vistaCalculadora.getjPantalla().setText(vistaCalculadora.getjPantalla().getText()+ae.getActionCommand().toString());
+            }
+        //Punto y condicional para que no se pueda poner mas de un punto  
+        }else if(boton.equals(".")){
+            if(laPantalla.equals("")){
+            vistaCalculadora.getjPantalla().setText("0.");
+            }else {
+                if (!HayPunto(vistaCalculadora.getjPantalla().getText())){
+                vistaCalculadora.getjPantalla().setText(vistaCalculadora.getjPantalla().getText()+ae.getActionCommand().toString());
+                }
+            }
+        //Reconociendo botones de Operaciones    
+        }else if (boton.equals("+")||boton.equals("-")||boton.equals("*")||boton.equals("/")){
+            if(boton.equals("+")){
+                if(!laPantalla.equals("")){
+                 valorA = laPantalla;
+                 signo="+";
+                 vistaCalculadora.getjPantalla().setText("");
+                 memoria=valorA;
+                }
+            }else if (boton.equals("-")){
+                if(!laPantalla.equals("")){
+                 valorA = laPantalla;
+                 signo="-";
+                 vistaCalculadora.getjPantalla().setText("");
+                }
+            }else if (boton.equals("*")){
+                if(!laPantalla.equals("")){
+                 valorA = laPantalla;
+                 signo="*";
+                 vistaCalculadora.getjPantalla().setText("");
+                }
+            }else if (boton.equals("/")){
+                if(!laPantalla.equals("")){
+                 valorA = laPantalla;
+                 signo="/";
+                 vistaCalculadora.getjPantalla().setText("");
+                }
+            }
+        //Para borrar la pantalla    
+        } else if(boton.equals("C")||boton.equals("CE")){
+            if(boton.equals ("C")){
+                vistaCalculadora.getjPantalla().setText("");
+            }else{
+                 String cadena;
+                 cadena = laPantalla;
+                 if (cadena.length()>0) {
+                cadena=cadena.substring(0, cadena.length()-1);
+                vistaCalculadora.getjPantalla().setText(cadena);
+            }
+            }
+        // Llamando a la calculadora simple
+        } else if(boton.equals("=")){
+            String resultado;
+            valorB = vistaCalculadora.getjPantalla().getText();
+               
+                if (!valorB.equals("")) {
+                resultado= calculadora.getOperaciones(valorA,valorB,signo);
+               
+                vistaCalculadora.getjPantalla().setText(resultado);
+                
+                }
         }
         
+
+        
+        
+        //Probando los botones
         if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
            
 
             System.out.println("Se apreto boton desde controller" + ae.getActionCommand());
          }
         CalcuSimple operacion = new CalcuSimple();
-        laPantalla= operacion.getOperaciones("12", "10", "+","");
+        laPantalla= operacion.getOperaciones("12", "10", "+");
         
         System.out.println("El resultado es "+laPantalla);
     
 }
+    //metodo para buscar punto
+    public  boolean HayPunto(String cadena){
+        boolean resultado=false;
+         for (int i = 0; i < cadena.length(); i++) {
+            if (cadena.substring(i, i+1).equals(".")) {
+                resultado = true;
+                break;
+                
+            }
+        
+    }
+       return resultado;  
+    }
 }

@@ -16,9 +16,9 @@ public class CalcuFactory {
      public static ICalculadora CreateCalculadora(String type) {
         ICalculadora calculadora = null;
 
-        if (type.equalsIgnoreCase("Distancia")) {
+      if (type.equalsIgnoreCase("CalcuSimple")) {
             calculadora = new CalcuSimple();
-        } else if (type.equalsIgnoreCase("Masa")) {
+        } else if (type.equalsIgnoreCase("CalcuCientífica")) {
             calculadora = new CalcuSimple();
         }
         return calculadora;
