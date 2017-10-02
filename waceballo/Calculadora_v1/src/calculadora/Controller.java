@@ -25,6 +25,7 @@ public class Controller implements IViewEventListener {
 
         ConversorComboBoxModel cb = new ConversorComboBoxModel(CalculadoraFactory.getListaCalculadora());
         unaVista.getCbConversores().setModel(cb);
+        
         unaVista.setVisible(true);
         
         CalculadoraSimple calc = new CalculadoraSimple();
@@ -39,8 +40,8 @@ public class Controller implements IViewEventListener {
 
     @Override
     public void listen(Event event) {
-
-        
+            System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
+            
             ActionEvent ae = (ActionEvent) event.target;
 
             System.out.println("Se apreto boton desde controller " + ae.getActionCommand());

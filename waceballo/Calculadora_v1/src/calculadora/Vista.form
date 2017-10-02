@@ -53,10 +53,8 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnBoton14" max="32767" attributes="0"/>
                           <Component id="btnBoton15" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="btnBoton16" alignment="0" max="32767" attributes="0"/>
-                              <Component id="btnBoton13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="btnBoton16" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnBoton13" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="jLabel1" min="-2" pref="186" max="-2" attributes="0"/>
