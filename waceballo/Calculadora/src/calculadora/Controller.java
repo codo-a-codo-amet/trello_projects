@@ -60,11 +60,10 @@ public class Controller implements IViewEventListener {
             String n;
 
             n = unaVista.getTxtCalculo().getText();
-            n = "";
+            //n = "";
             numero = n;
             numero = numero + tecla;
             System.out.println("numero " + numero);
-            //unaVista.getTxtCalculo().setText(numero);
 
             if (numero.length() > 12) {
                 unaVista.getLblMensaje().setVisible(true);

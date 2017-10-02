@@ -207,6 +207,7 @@ public class Pantalla extends javax.swing.JFrame {
         });
 
         txtCalculo.setForeground(new java.awt.Color(51, 51, 255));
+        txtCalculo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtCalculo.setText("0.00");
 
         btnSalir.setText("Salir");
@@ -216,6 +217,9 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
 
+        lblMensaje.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblMensaje.setForeground(new java.awt.Color(255, 0, 51));
+        lblMensaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMensaje.setText("No puede Ingresar mas de 12 digitos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
