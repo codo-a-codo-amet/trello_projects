@@ -60,6 +60,48 @@ public class CalculadoraSimple implements ICalculator{
         return resultado;
     }
 
+    public double getPrimerElemento() {
+        return primerElemento;
+    }
+
+    public void setPrimerElemento(double primerElemento) {
+        this.primerElemento = primerElemento;
+    }
+
+    public double getSegundoElemento() {
+        return segundoElemento;
+    }
+
+    public void setSegundoElemento(double segundoElemento) {
+        this.segundoElemento = segundoElemento;
+    }
+
+    public double getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
+
+    public String getOperador() {
+        return operador;
+    }
+
+    public void setOperador(String operador) {
+        this.operador = operador;
+    }
+
+    @Override
+    public double entregarElemento1() {
+       return primerElemento;
+    }
+
+    @Override
+    public double entregarElemento2() {
+        return segundoElemento;
+    }
+
     
    
 

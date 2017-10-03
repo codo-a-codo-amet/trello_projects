@@ -39,17 +39,22 @@ public class Controller implements IViewEventListener {
     }
 
     @Override
-    public void listen(Event event) {
-            System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
-            
+    public void listen(Event event) {            
             ActionEvent ae = (ActionEvent) event.target;
 
-            System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
-
             System.out.println("Presione el boton: "+ae.getActionCommand());
+            String tecla = ae.getActionCommand();
             
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
+            }
+            
+            if (tecla.matches("\\d")){
+                System.out.println("Es un numero");
+            } else{
+                if (tecla.equalsIgnoreCase("C")){
+                    
+                }
             }
     }
     

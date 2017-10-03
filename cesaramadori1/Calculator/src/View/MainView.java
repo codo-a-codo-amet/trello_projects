@@ -40,11 +40,11 @@ public class MainView extends javax.swing.JFrame {
         list_listener.remove(listener);
     }
 
-    
-
     public JTextField getjTextField2() {
         return jTextField2;
     }
+
+    
 
     public JComboBox<String> getjComboBox3() {
         return jComboBox3;
@@ -218,7 +218,7 @@ public class MainView extends javax.swing.JFrame {
         jButton16.setText(".");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16botonPresionado(evt);
+                botonPresionado(evt);
             }
         });
 
@@ -341,10 +341,6 @@ public class MainView extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jButton16botonPresionado(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16botonPresionado
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16botonPresionado
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
