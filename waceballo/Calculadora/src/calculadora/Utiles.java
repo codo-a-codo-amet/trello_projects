@@ -11,14 +11,21 @@ package calculadora;
  */
 public class Utiles {
 
-public String FormatoDecimal(String valor){
-    String formato = "";
-    
-    for (int i = 0; i < valor.length(); i++) {
-        
-    }
-    
-    return formato;
-}    
-}
+    public String FormatoDecimal(String valor) {
+        String formato = "";
 
+        for (int i = 0; i < valor.length(); i++) {
+            formato = valor.substring(i, i + 1);
+            System.out.println("ver " + formato);
+            if (formato.length() == 3) {
+
+                formato = formato + ".";
+            System.out.println("ver " + formato);
+//} else {
+            //    formato = valor.substring(i, i);
+            }
+        }
+
+        return formato;
+    }
+}

@@ -40,6 +40,9 @@ public class Controller implements IViewEventListener {
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);
+
+        Utiles u = new Utiles();
+        System.out.println("formato "+u.FormatoDecimal("1000"));
     }
 
     @Override
