@@ -60,7 +60,7 @@ public class Conversor {
      * @param valor es el valor a convertir
      * y devuelve la temperatura convertida
      */    
-<<<<<<< HEAD
+
     public float ConvertirTemperatura(int opcion, int valor) {
         float temp;
         
@@ -85,7 +85,12 @@ public class Conversor {
                 break;
             default:
                 temp = 0;
-=======
+                break;
+        }
+
+        return temp;
+    }
+    
     public double ConvertirTemperatura(int opcion, Double valor) {
         double temp;
 
@@ -110,9 +115,10 @@ public class Conversor {
                 break;
             default:
                 temp = 0.00;
->>>>>>> 5b7939faa19cf1c45670772961056ea69a525aaa
+
                 break;
         }
+
         return temp;
     }
 

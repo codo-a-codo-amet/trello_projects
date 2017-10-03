@@ -3,7 +3,6 @@ package conversor;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /*
@@ -61,11 +60,12 @@ public class Controller implements IViewEventListener {
     @Override
     public void listen(Event event) {
         System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
-
+        
         if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
 
             ActionEvent ae = (ActionEvent) event.target;
-
+            System.out.println("print "+ae.getActionCommand());
+            
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }

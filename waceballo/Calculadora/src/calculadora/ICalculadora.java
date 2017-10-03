@@ -10,8 +10,8 @@ package calculadora;
  * @author wceba
  */
 public interface ICalculadora {
-    
-    public Double Operaciones(Double num1, String signo, Double num2);
+
+    public float Operaciones(float num1, String signo, float num2);
     
     
     

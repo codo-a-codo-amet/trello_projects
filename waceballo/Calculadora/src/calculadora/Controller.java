@@ -14,42 +14,71 @@ import java.awt.event.ActionEvent;
  */
 public class Controller implements IViewEventListener {
 
-    Vista unaVista;
-    ICalculadora unacalculadora;
+    private Pantalla unaVista;
+    private ICalculadora con;
+    private CalculadoraSimple calc;
 
     public Controller() {
-        unaVista = new Vista();
+        unaVista = new Pantalla();
+        calc = new CalculadoraSimple();
     }
 
     public void Run() {
 
-        ConversorComboBoxModel cb = new ConversorComboBoxModel(CalculadoraFactory.getListaCalculadora());
+        CalculadoraComboBoxModel cb = new CalculadoraComboBoxModel(ConversorFactory.getListaConversores());
         unaVista.getCbConversores().setModel(cb);
-        unaVista.setVisible(true);
-        
-        CalculadoraSimple calc = new CalculadoraSimple();
+
+        unaVista.getLblMensaje().setVisible(false);
+        //unaVista.getTxtCalculo().setEnabled(false);
 
         calc.setOperacion("*");
-        calc.setOperando1(10.0);
-        calc.setOperando2(5.0);
+        calc.setOperando1(10.0f);
+        calc.setOperando2(5.0f);
 
         System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
 
+        //A partir de ahora, escucha lo que le sucede a la vista.
+        unaVista.AddEventListener(this);
+        unaVista.setVisible(true);
     }
 
     @Override
     public void listen(Event event) {
 
-        
-            ActionEvent ae = (ActionEvent) event.target;
+        ActionEvent ae = (ActionEvent) event.target;
+        String tecla = ae.getActionCommand();
 
-            System.out.println("Se apreto boton desde controller " + ae.getActionCommand());
+        System.out.println("Tecla " + ae.getActionCommand());
 
-            System.out.println("Presione el boton: "+ae.getActionCommand());
-            
-            if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
-                System.exit(0);
+        if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
+            System.exit(0);
+        }
+
+        if (tecla.matches("\\d")) {
+
+            String numero;
+            String n;
+
+            n = unaVista.getTxtCalculo().getText();
+            //n = "";
+            numero = n;
+            numero = numero + tecla;
+            System.out.println("numero " + numero);
+
+            if (numero.length() > 12) {
+                unaVista.getLblMensaje().setVisible(true);
+            } else {
+                unaVista.getTxtCalculo().setText(numero);
             }
+
+            System.out.println("tamaño " + numero.length());
+            System.out.println("Es un numero");
+        } else {
+            if (tecla.equals("C")) {
+                unaVista.getTxtCalculo().setText("0.00");
+            }
+        }
+
     }
-    
+
 }

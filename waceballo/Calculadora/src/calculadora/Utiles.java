@@ -9,12 +9,16 @@ package calculadora;
  *
  * @author alumno
  */
-public class CalculadoraNULL implements ICalculadora{
+public class Utiles {
 
-
-    @Override
-    public float Operaciones(float num1, String signo, float num2) {
-        return 0.0f;
+public String FormatoDecimal(String valor){
+    String formato = "";
+    
+    for (int i = 0; i < valor.length(); i++) {
+        
     }
     
+    return formato;
+}    
 }
+

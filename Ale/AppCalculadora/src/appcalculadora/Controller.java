@@ -56,7 +56,8 @@ public class Controller implements IViewEventListener {
 
     @Override
     public void listen(Event event) {
-
+        ActionEvent ae = (ActionEvent) event.target;
+        System.out.println("Tecla "+ ae.getActionCommand());
       
     }
 
