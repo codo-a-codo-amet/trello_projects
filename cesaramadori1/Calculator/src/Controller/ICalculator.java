@@ -17,4 +17,8 @@ interface ICalculator {
      public void definirOperacion(String operador);
      
      public double entregarResultado ();
+     
+     public double entregarElemento1 ();
+     
+     public double entregarElemento2 ();
 }
