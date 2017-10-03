@@ -49,17 +49,18 @@ public class Controlador implements IViewEventListener{
         //Números
         
         calculadora = CalcuFactory.CreateCalculadora("CalcuSimple");
-        if(boton.equals("1")||boton.equals("2")||boton.equals("3")||boton.equals("4")
-        ||boton.equals("5")||boton.equals("6")||boton.equals("7")||boton.equals("8")
-        ||boton.equals("9")||boton.equals("0")){
-            if(laPantalla.equals("")){
+        // \d -> Es una Regular expression que indica todo aquello que sea un string numerico.
+        if(boton.matches("\\d")){
+            if (laPantalla.length() <21){
+            if(laPantalla.equals("0")){
             vistaCalculadora.getjPantalla().setText(ae.getActionCommand().toString());
             }else{
             vistaCalculadora.getjPantalla().setText(vistaCalculadora.getjPantalla().getText()+ae.getActionCommand().toString());
             }
+            }
         //Punto y condicional para que no se pueda poner mas de un punto  
         }else if(boton.equals(".")){
-            if(laPantalla.equals("")){
+            if(laPantalla.equals("0")){
             vistaCalculadora.getjPantalla().setText("0.");
             }else {
                 if (!HayPunto(vistaCalculadora.getjPantalla().getText())){
@@ -69,41 +70,47 @@ public class Controlador implements IViewEventListener{
         //Reconociendo botones de Operaciones    
         }else if (boton.equals("+")||boton.equals("-")||boton.equals("*")||boton.equals("/")){
             if(boton.equals("+")){
-                if(!laPantalla.equals("")){
+                if(!laPantalla.equals("0")){
                  valorA = laPantalla;
                  signo="+";
-                 vistaCalculadora.getjPantalla().setText("");
+                 vistaCalculadora.getjPantalla().setText("0");
                  memoria=valorA;
                 }
             }else if (boton.equals("-")){
-                if(!laPantalla.equals("")){
+                if(!laPantalla.equals("0")){
                  valorA = laPantalla;
                  signo="-";
-                 vistaCalculadora.getjPantalla().setText("");
+                 vistaCalculadora.getjPantalla().setText("0");
                 }
             }else if (boton.equals("*")){
-                if(!laPantalla.equals("")){
+                if(!laPantalla.equals("0")){
                  valorA = laPantalla;
                  signo="*";
-                 vistaCalculadora.getjPantalla().setText("");
+                 vistaCalculadora.getjPantalla().setText("0");
                 }
             }else if (boton.equals("/")){
-                if(!laPantalla.equals("")){
+                if(!laPantalla.equals("0")){
                  valorA = laPantalla;
                  signo="/";
-                 vistaCalculadora.getjPantalla().setText("");
+                 vistaCalculadora.getjPantalla().setText("0");
                 }
             }
         //Para borrar la pantalla    
         } else if(boton.equals("C")||boton.equals("CE")){
             if(boton.equals ("C")){
-                vistaCalculadora.getjPantalla().setText("");
+                vistaCalculadora.getjPantalla().setText("0");
+                valorA="0";
+                valorB="0";
             }else{
+                if (laPantalla.equals("0")){
+                   vistaCalculadora.getjPantalla().setText("0"); 
+                }else{
                  String cadena;
                  cadena = laPantalla;
                  if (cadena.length()>0) {
                 cadena=cadena.substring(0, cadena.length()-1);
                 vistaCalculadora.getjPantalla().setText(cadena);
+            }
             }
             }
         // Llamando a la calculadora simple

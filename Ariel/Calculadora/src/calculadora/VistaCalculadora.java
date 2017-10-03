@@ -245,8 +245,9 @@ public class VistaCalculadora extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 51, 102));
 
-        jPantalla.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPantalla.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jPantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jPantalla.setText("0");
         jPantalla.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jButtonIgualIgual.setText("=");
@@ -445,9 +446,9 @@ public class VistaCalculadora extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(32, 32, 32)
                 .addComponent(jPantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonIgual1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonIgual2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
