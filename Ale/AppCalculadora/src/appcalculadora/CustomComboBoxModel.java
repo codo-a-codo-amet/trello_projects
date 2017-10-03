@@ -7,7 +7,6 @@ package appcalculadora;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TooManyListenersException;
 import javax.swing.ComboBoxModel;
 import javax.swing.ListModel;
 import javax.swing.event.ListDataListener;
