@@ -29,7 +29,7 @@ public class Controller implements IViewEventListener {
         unaVista.getCbConversores().setModel(cb);
 
         unaVista.getLblMensaje().setVisible(false);
-        //unaVista.getTxtCalculo().setEnabled(false);
+        unaVista.getTxtCalculo().setEnabled(false);
 
         calc.setOperacion("*");
         calc.setOperando1(10.0f);
@@ -41,8 +41,6 @@ public class Controller implements IViewEventListener {
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);
 
-        Utiles u = new Utiles();
-        System.out.println("formato " + u.FormatoDecimal("1000"));
     }
 
     @Override
@@ -72,24 +70,51 @@ public class Controller implements IViewEventListener {
                 
                 numero = n;
                 numero = numero + tecla;
-//                System.out.println("numero " + numero);
 
                 if (numero.length() > 12) {
+                    unaVista.getLblMensaje().setText("No puede Ingresar mas de 12 digitos");
                     unaVista.getLblMensaje().setVisible(true);
                 } else {
                     unaVista.getTxtCalculo().setText(numero);
                 }
-
-                System.out.println("tamaño " + numero.length());
-                System.out.println("Es un numero");
             } else {
                 signo = tecla;
+                String n1 = "";
+                
                 if (signo.equals("C")) {
                     unaVista.getTxtCalculo().setText("0.00");
                     unaVista.getLblMensaje().setVisible(false);
+                }else if (signo.equals(".")){
+                    n1 = n;
+
+                    if (!n1.contains(".")){
+                        n1 = n + signo;
+                    }
+                }else if (signo.equals("<-")){
+                    n1 = n.substring(0, n.length()-1);
+                    
+                    if (n1.equals("")){
+                        n1 = "0.00";
+                    }
+                }else if (signo.equals("+")){
+                    n1 = n+tecla;
+                }else if (signo.equals("-")){
+                    n1 = n+tecla;
+                }else if (signo.equals("*")){
+                    n1 = n+tecla;
+                }else if (signo.equals("/")){
+                    n1 = n+tecla;
+                }else if (signo.equals("%")){
+                    n1 = n+tecla;
+                }else if (signo.equals("=")){
+                    n1 = calc.getOperacion();
                 }
+                
+                unaVista.getTxtCalculo().setText(n1);
+
+
+
             }
-            System.out.println("valor de n "+n + " signo "+signo);
             
         } else {
             String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
