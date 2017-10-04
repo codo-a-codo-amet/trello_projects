@@ -60,18 +60,23 @@ public class Controller implements IViewEventListener {
         System.out.println("Tecla "+ ae.getActionCommand());
         
         String tecla = ae.getActionCommand();
+        String displayNumber = main_view.getjTextField2().getText();
+        Integer number_length = displayNumber.length();
+        
+        
         // 
         // \d -> Reg expression que indica todo aquello que sea un string numerico
         if ( tecla.matches("\\d") ) {
             System.out.println("Es un numero");
-            String displayNumber = main_view.getjTextField2().getText();
             displayNumber = displayNumber + tecla;
             main_view.getjTextField2().setText(displayNumber);
             // get textfield y sumar string
         } else {
             if ( tecla.equals("C")){
-                
-            }
+                main_view.getjTextField2().setText("");
+            } else if (tecla.equalsIgnoreCase("<X")  ) {
+                main_view.getjTextField2().setText(displayNumber.substring(0, Integer.max(0, number_length-1) ));
+            } 
         }
         
     }
