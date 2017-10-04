@@ -5,16 +5,17 @@
  */
 package calculadora;
 
+import java.util.List;
+
 /**
  *
- * @author alumno
+ * @author wceba
  */
-public class CalculadoraNULL implements ICalculadora{
-
-
-    @Override
-    public float Operaciones(float num1, String signo, float num2) {
-        return 0.0f;
-    }
+public interface ICalculadora {
+    
+    public Double Operaciones(Double num1, Double num2, String signo);
+    
+    public List<String> getOpciones();
+    
     
 }

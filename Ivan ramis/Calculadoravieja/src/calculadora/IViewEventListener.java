@@ -5,16 +5,12 @@
  */
 package calculadora;
 
+import java.awt.Event;
+
 /**
  *
  * @author alumno
  */
-public class CalculadoraNULL implements ICalculadora{
-
-
-    @Override
-    public float Operaciones(float num1, String signo, float num2) {
-        return 0.0f;
-    }
-    
+public interface IViewEventListener {
+    public void listen(Event event);   
 }

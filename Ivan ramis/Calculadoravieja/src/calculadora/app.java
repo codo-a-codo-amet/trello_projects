@@ -9,12 +9,14 @@ package calculadora;
  *
  * @author alumno
  */
-public class CalculadoraNULL implements ICalculadora{
+public class app {
 
-
-    @Override
-    public float Operaciones(float num1, String signo, float num2) {
-        return 0.0f;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Controller unControlador = new Controller();
+        unControlador.Run();
     }
     
 }
