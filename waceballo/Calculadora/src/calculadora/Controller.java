@@ -25,7 +25,7 @@ public class Controller implements IViewEventListener {
 
     public void Run() {
 
-        CalculadoraComboBoxModel cb = new CalculadoraComboBoxModel(ConversorFactory.getListaConversores());
+        CalculadoraComboBoxModel cb = new CalculadoraComboBoxModel(CalculadoraFactory.getListaConversores());
         unaVista.getCbConversores().setModel(cb);
 
         unaVista.getLblMensaje().setVisible(false);
@@ -42,44 +42,59 @@ public class Controller implements IViewEventListener {
         unaVista.setVisible(true);
 
         Utiles u = new Utiles();
-        System.out.println("formato "+u.FormatoDecimal("1000"));
+        System.out.println("formato " + u.FormatoDecimal("1000"));
     }
 
     @Override
     public void listen(Event event) {
 
-        ActionEvent ae = (ActionEvent) event.target;
-        String tecla = ae.getActionCommand();
+        if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
 
-        System.out.println("Tecla " + ae.getActionCommand());
+            ActionEvent ae = (ActionEvent) event.target;
+            String tecla = ae.getActionCommand();
 
-        if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
-            System.exit(0);
-        }
+            System.out.println("Tecla " + ae.getActionCommand());
 
-        if (tecla.matches("\\d")) {
+            if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
+                System.exit(0);
+            }
 
             String numero;
             String n;
+            String signo = "";
 
             n = unaVista.getTxtCalculo().getText();
-            //n = "";
-            numero = n;
-            numero = numero + tecla;
-            System.out.println("numero " + numero);
 
-            if (numero.length() > 12) {
-                unaVista.getLblMensaje().setVisible(true);
+            if (tecla.matches("\\d")) {
+                if (n.equals("0.00")){
+                    n="";
+                }
+                
+                numero = n;
+                numero = numero + tecla;
+//                System.out.println("numero " + numero);
+
+                if (numero.length() > 12) {
+                    unaVista.getLblMensaje().setVisible(true);
+                } else {
+                    unaVista.getTxtCalculo().setText(numero);
+                }
+
+                System.out.println("tamaño " + numero.length());
+                System.out.println("Es un numero");
             } else {
-                unaVista.getTxtCalculo().setText(numero);
+                signo = tecla;
+                if (signo.equals("C")) {
+                    unaVista.getTxtCalculo().setText("0.00");
+                    unaVista.getLblMensaje().setVisible(false);
+                }
             }
-
-            System.out.println("tamaño " + numero.length());
-            System.out.println("Es un numero");
+            System.out.println("valor de n "+n + " signo "+signo);
+            
         } else {
-            if (tecla.equals("C")) {
-                unaVista.getTxtCalculo().setText("0.00");
-            }
+            String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
+            con = CalculadoraFactory.CrearCalculadora(nuevaCalculadora);
+
         }
 
     }
