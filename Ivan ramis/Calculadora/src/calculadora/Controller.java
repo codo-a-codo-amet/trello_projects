@@ -85,7 +85,7 @@ public class Controller implements IViewEventListener {
             } else {
                 signo = tecla;
                 if (signo.equals("C")) {
-                    unaVista.getTxtCalculo().setText("0.00");
+                    unaVista.getTxtCalculo().setText(" ");
                     unaVista.getLblMensaje().setVisible(false);
                 }
             }

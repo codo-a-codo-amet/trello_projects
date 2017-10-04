@@ -78,14 +78,17 @@ public class Pantalla extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Calculadora");
+        setTitle("Calculadorita");
         setBackground(new java.awt.Color(102, 255, 204));
+        setForeground(java.awt.Color.darkGray);
         setLocation(new java.awt.Point(400, 100));
-        setName("Conversor Temperatura"); // NOI18N
+        setName("Calculadora"); // NOI18N
+        setResizable(false);
+        setSize(new java.awt.Dimension(200, 300));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel5.setText("Calculadora");
+        jLabel5.setText("Calculadorita");
 
         cbConversores.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
@@ -113,7 +116,6 @@ public class Pantalla extends javax.swing.JFrame {
 
         txtCalculo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCalculo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtCalculo.setText("0.00");
 
         jButton3.setText("%");
         jButton3.setPreferredSize(new java.awt.Dimension(45, 25));
@@ -362,7 +364,7 @@ public class Pantalla extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(cbConversores, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,6 +381,8 @@ public class Pantalla extends javax.swing.JFrame {
                 .addComponent(btnSalir)
                 .addContainerGap())
         );
+
+        getAccessibleContext().setAccessibleName("Calculadora");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
