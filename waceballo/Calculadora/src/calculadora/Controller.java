@@ -111,7 +111,7 @@ public class Controller implements IViewEventListener {
                 }else if (signo.equals("%")){
                     n1 = n+tecla;
                 }else if (signo.equals("=")){
-                    opera[2] = n;
+                    opera[2] = tecla;
                     float res = calc.Operaciones(Float.parseFloat(opera[0]), opera[1], Float.parseFloat(opera[2]));
                     n1 = Float.toString(res);
                 }
