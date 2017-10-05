@@ -63,7 +63,6 @@ public class Controller implements IViewEventListener {
         String displayNumber = main_view.getjTextField2().getText();
         Integer number_length = displayNumber.length();
         
-        
         // 
         // \d -> Reg expression que indica todo aquello que sea un string numerico
         if ( tecla.matches("\\d") ) {
@@ -76,7 +75,17 @@ public class Controller implements IViewEventListener {
                 main_view.getjTextField2().setText("");
             } else if (tecla.equalsIgnoreCase("<X")  ) {
                 main_view.getjTextField2().setText(displayNumber.substring(0, Integer.max(0, number_length-1) ));
-            } 
+            } else if (tecla.equals("+")) {
+                
+            } else if (tecla.equals("-")) {
+                
+            } else if (tecla.equals("x")) {
+                
+            } else if (tecla.equals("/")) {
+                
+            } else if (tecla.equals("=")) {
+                
+            }
         }
         
     }
