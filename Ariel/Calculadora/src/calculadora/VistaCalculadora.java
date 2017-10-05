@@ -271,7 +271,7 @@ public class VistaCalculadora extends javax.swing.JFrame {
             }
         });
 
-        jButtonIgual3.setText("3");
+        jButtonIgual3.setText("4");
         jButtonIgual3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonIgualIgualActionPerformed(evt);
