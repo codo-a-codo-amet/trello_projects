@@ -1,45 +1,42 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this unidadlate file, choose Tools | Templates
- * and open the unidadlate in the editor.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package calculadora;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author alumno
  */
-public class CalculadoraSimple implements ICalculadora {
+public class CalculadoraSimple implements ICalculadora{
 
-    private Double operando1;
-    private Double operando2;
-    private Double resultado;
+    private float operando1;
+    private float operando2;
+    private float resultado;
     private String operacion;
 
-    public Double getOperando1() {
+    public float getOperando1() {
         return operando1;
     }
 
-    public void setOperando1(Double operando1) {
+    public void setOperando1(float operando1) {
         this.operando1 = operando1;
     }
 
-    public Double getOperando2() {
+    public float getOperando2() {
         return operando2;
     }
 
-    public void setOperando2(Double operando2) {
+    public void setOperando2(float operando2) {
         this.operando2 = operando2;
     }
 
-    public Double getResultado() {
+    public float getResultado() {
         return resultado;
     }
 
-    public void setResultado(Double resultado) {
+    public void setResultado(float resultado) {
         this.resultado = resultado;
     }
 
@@ -51,34 +48,34 @@ public class CalculadoraSimple implements ICalculadora {
         this.operacion = operacion;
     }
 
-    
-    
     //constructor de la clase
     public CalculadoraSimple() {
-        setOperando1(0.00);
-        setOperando2(0.00);
-        setResultado(0.00);
+        setOperando1(0.0f);
+        setOperando2(0.0f);
+        setResultado(0.0f);
     }
 
     @Override
-    public Double Operaciones(Double num1, Double num2, String signo) {
+    public float Operaciones(float num1, String signo, float num2) {
         setOperando1(num1);
         setOperando2(num2);
         setOperacion(signo);
-        
-        //setResultado = setResultado(getOperando1()+getOpciones()+getOperando2());
-        setResultado(num1+num2);
+
+        if (signo.equalsIgnoreCase("+")) {
+            setResultado(num1 + num2);
+        } else if (signo.equalsIgnoreCase("-")) {
+            setResultado(num1 - num2);
+        } else if (signo.equalsIgnoreCase("*")) {
+            setResultado(num1 * num2);
+        } else if (signo.equalsIgnoreCase("/")) {
+            setResultado(num1 / num2);
+        } else {
+            setResultado(0.0f);
+        }
+
         return getResultado();
     }
 
-    @Override
-    public List<String> getOpciones() {
-        List<String> lista_de_unidades = new ArrayList<>();
 
-        lista_de_unidades.add("------------------------------");
-        lista_de_unidades.add("Simple");
-
-        return lista_de_unidades;
-    }
-
+   
 }
