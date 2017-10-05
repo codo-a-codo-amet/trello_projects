@@ -80,6 +80,7 @@ public class Controller implements IViewEventListener {
             } else {
                 signo = tecla;
                 String n1 = "";
+                String [] opera = new String[2]; 
                 
                 if (signo.equals("C")) {
                     unaVista.getTxtCalculo().setText("0.00");
@@ -97,6 +98,9 @@ public class Controller implements IViewEventListener {
                         n1 = "0.00";
                     }
                 }else if (signo.equals("+")){
+                    opera[0] = n;
+                    opera[1] = tecla;
+                    
                     n1 = n+tecla;
                 }else if (signo.equals("-")){
                     n1 = n+tecla;
@@ -107,7 +111,9 @@ public class Controller implements IViewEventListener {
                 }else if (signo.equals("%")){
                     n1 = n+tecla;
                 }else if (signo.equals("=")){
-                    n1 = calc.getOperacion();
+                    opera[2] = n;
+                    float res = calc.Operaciones(Float.parseFloat(opera[0]), opera[1], Float.parseFloat(opera[2]));
+                    n1 = Float.toString(res);
                 }
                 
                 unaVista.getTxtCalculo().setText(n1);
