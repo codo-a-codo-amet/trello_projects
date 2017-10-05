@@ -58,7 +58,22 @@ public class Controller implements IViewEventListener {
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent) event.target;
         System.out.println("Tecla "+ ae.getActionCommand());
-      
+        
+        String tecla = ae.getActionCommand();
+        // 
+        // \d -> Reg expression que indica todo aquello que sea un string numerico
+        if ( tecla.matches("\\d") ) {
+            System.out.println("Es un numero");
+            String displayNumber = main_view.getjTextField2().getText();
+            displayNumber = displayNumber + tecla;
+            main_view.getjTextField2().setText(displayNumber);
+            // get textfield y sumar string
+        } else {
+            if ( tecla.equals("C")){
+                
+            }
+        }
+        
     }
 
 }
