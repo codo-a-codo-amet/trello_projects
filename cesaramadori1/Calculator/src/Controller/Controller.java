@@ -26,7 +26,8 @@ public class Controller implements IViewEventListener {
         ActionEvent ae = (ActionEvent) event.target;
         
         System.out.println("Tecla " + ae.getActionCommand());
-        
+        String numberOnDisplay = main_view.getjTextField2().getText();
+        String numberOnLabel = main_view.getJLabel2().getText();
         String tecla = ae.getActionCommand();
         
         
@@ -38,25 +39,36 @@ public class Controller implements IViewEventListener {
             elnumero =  elnumero + ae.getActionCommand();
             System.out.println(elnumero);
             main_view.getjTextField2().setText(elnumero);
-        }else{
-            if(tecla == "C"){
+        }else if(tecla.equals("C")){
                 main_view.getjTextField2().setText("0.0");
                 elnumero= "";
-            }
-            if(tecla == "+")
+        }else if(tecla.equals("+")){
                 calculadora.definirOperacion("+");
-            if (calculadora.entregarElemento1()== 0) {
-                System.out.println("Es cero");
-            }
-                System.out.println("El primer elemento al estar vacio es "+calculadora.entregarElemento1());
-            if(tecla == "*")
-                calculadora.definirOperacion("*");
-            if(tecla == "-")
-                calculadora.definirOperacion("-");
-            if(tecla == "/")
-                calculadora.definirOperacion("/");
-            if(tecla == "=")
-                main_view.getjTextField2().setText(String.valueOf(calculadora.entregarResultado()));
+                if (calculadora.entregarElemento1()== 0) {
+                    main_view.getJLabel2().setText(numberOnDisplay+" + ");
+                    calculadora.definirElemento1(Double.parseDouble(numberOnDisplay));
+                    main_view.getjTextField2().setText("");
+                    elnumero="";
+                }else{
+                   main_view.getJLabel2().setText(numberOnLabel + numberOnDisplay);
+                    calculadora.definirElemento2(Double.parseDouble(numberOnDisplay));
+                    main_view.getjTextField2().setText("");
+                    elnumero="";
+                }
+                
+        }else if(tecla.equals("-")){
+            calculadora.definirOperacion("-");
+        }else if(tecla.equals("*")){
+            calculadora.definirOperacion("*");
+        }else if(tecla.equals("/")){ 
+            calculadora.definirOperacion("/");
+        }else if(tecla.equals("<|")){     
+            main_view.getjTextField2().setText(numberOnDisplay.substring(0,Integer.max(0, numberOnDisplay.length()-1)));
+        }else if(tecla.equals("=")){  
+            main_view.getjTextField2().setText(String.valueOf(calculadora.entregarResultado()));
+        }else if(tecla.equals("CE")){      
+           
+                
         }
         
         
@@ -70,7 +82,7 @@ public class Controller implements IViewEventListener {
     }
     public void Run(){
         main_view.AddEventListener(this);
-        
+        calculadora = CalculatorFactory.CrearCalculadora("Simple");
         
         
         
