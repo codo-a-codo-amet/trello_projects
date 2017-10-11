@@ -17,9 +17,6 @@ public class Controller implements IViewEventListener {
     private Pantalla unaVista;
     private ICalculadora con;
     private CalculadoraSimple calc;
-    private float aux = 0;
-    private float aux1 = 0;
-    private float aux2 = 0;
 
     public Controller() {
         unaVista = new Pantalla();
@@ -34,11 +31,6 @@ public class Controller implements IViewEventListener {
         unaVista.getLblMensaje().setVisible(false);
         unaVista.getTxtCalculo().setEnabled(false);
 
-        calc.setOperacion("*");
-        calc.setOperando1(10.0f);
-        calc.setOperando2(5.0f);
-
-//        System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);
@@ -97,16 +89,6 @@ public class Controller implements IViewEventListener {
                     if (n1.equals("")) {
                         n1 = "0.00";
                     }
-                    /*} else if (signo.equals("+")) {
-                    n1 = n + tecla;
-                } else if (signo.equals("-")) {
-                    n1 = n + tecla;
-                } else if (signo.equals("*")) {
-                    n1 = n + tecla;
-                } else if (signo.equals("/")) {
-                    n1 = n + tecla;
-                } else if (signo.equals("%")) {
-                     */
                 } else if (signo.equals("=")) {
                     n1 = unaVista.getTxtCalculo().getText();
 
@@ -122,55 +104,21 @@ public class Controller implements IViewEventListener {
                         sig = "/";
                     }
 
-                    String[] valores = n1.split("[-,+,/,*]");
+                    String[] valores = n1.split("[-,+,/,*,%]");
 
                     float n2 = calc.Operaciones(Float.parseFloat(valores[0]), sig, Float.parseFloat(valores[1]));
                     System.out.println("resultado " + n2);
                     String resultado = "" + n2;
 
                     unaVista.getTxtCalculo().setText(resultado);
-
-//                    int contador = 0;
-//                    String sig = "";
-//                    
-//                    for (int i = 0; i < n1.length(); i++) {
-//                        System.out.println("pasada n°" + i);
-//                        System.out.println("salida " + n1.substring(i, i + 1));
-//
-//
-//                        if (n1.substring(i, i + 1).equals("+")) {
-//                            sig = n1.substring(i, i + 1);
-//                            System.out.println("tiene signo " + sig);
-//                        } else {
-//                            if (contador == i) {
-//                                System.out.println("else if pasada n°" + i);
-//                                aux = Float.parseFloat(n1.substring(i, i + 1));
-//                            } else {
-//                                System.out.println("if else pasada n°" + i);
-//                                //aux = Float.parseFloat(n1.substring(i, i + 1));
-//                                aux2 = Float.parseFloat(n1.substring(i, i + 1));
-//                            }
-//                            aux1 = aux;
-//                            contador += i;
-//                            System.out.println("numero " + aux1 + sig + aux2);
-//                            float n2 = calc.Operaciones(aux1, sig, aux2);
-//                            System.out.println("resultado " + n2);
-//                            unaVista.getTxtCalculo().setText(String.valueOf(n2));
-//                            //n1 = calc.Operaciones(String.valueOf(aux1), signo, String.valueOf(aux2)));
-//                        }
-//                        //System.out.println("salida "+n1.substring(i, i+1));
-//                    }
                 } else {
                     n1 = n + tecla;
                     unaVista.getTxtCalculo().setText(n1);
                 }
-
             }
-
         } else {
             String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = CalculadoraFactory.CrearCalculadora(nuevaCalculadora);
-
         }
 
     }
