@@ -35,7 +35,7 @@ public class Controller implements IViewEventListener {
         calc.setOperando1(10.0f);
         calc.setOperando2(5.0f);
 
-        System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
+//        System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
 
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
@@ -80,7 +80,7 @@ public class Controller implements IViewEventListener {
             } else {
                 signo = tecla;
                 String n1 = "";
-                String [] opera = new String[2]; 
+                String [] opera = new String[3]; 
                 
                 if (signo.equals("C")) {
                     unaVista.getTxtCalculo().setText("0.00");
@@ -98,10 +98,11 @@ public class Controller implements IViewEventListener {
                         n1 = "0.00";
                     }
                 }else if (signo.equals("+")){
-                    opera[0] = n;
+                    opera[0] = n1;
                     opera[1] = tecla;
                     
                     n1 = n+tecla;
+                    System.out.println("techas "+opera[0]+opera[1]);
                 }else if (signo.equals("-")){
                     n1 = n+tecla;
                 }else if (signo.equals("*")){
@@ -116,6 +117,7 @@ public class Controller implements IViewEventListener {
                     n1 = Float.toString(res);
                 }
                 
+                System.out.println("operaciion "+opera[0]+opera[1]+opera[2]);
                 unaVista.getTxtCalculo().setText(n1);
 
 

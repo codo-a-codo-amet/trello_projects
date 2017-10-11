@@ -83,6 +83,8 @@ public class Pantalla extends javax.swing.JFrame {
         setBackground(new java.awt.Color(102, 255, 204));
         setLocation(new java.awt.Point(400, 100));
         setName("Conversor Temperatura"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(300, 450));
+        setResizable(false);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 255));
