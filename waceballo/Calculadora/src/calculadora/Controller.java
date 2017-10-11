@@ -54,7 +54,6 @@ public class Controller implements IViewEventListener {
             String tecla = ae.getActionCommand();
 
             //System.out.println("Tecla " + ae.getActionCommand());
-
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
@@ -98,7 +97,7 @@ public class Controller implements IViewEventListener {
                     if (n1.equals("")) {
                         n1 = "0.00";
                     }
-                } else if (signo.equals("+")) {
+                    /*} else if (signo.equals("+")) {
                     n1 = n + tecla;
                 } else if (signo.equals("-")) {
                     n1 = n + tecla;
@@ -107,62 +106,64 @@ public class Controller implements IViewEventListener {
                 } else if (signo.equals("/")) {
                     n1 = n + tecla;
                 } else if (signo.equals("%")) {
-                    n1 = n + tecla;
+                     */
                 } else if (signo.equals("=")) {
                     n1 = unaVista.getTxtCalculo().getText();
-                    
-<<<<<<< HEAD
-                    n1 = n+tecla;
-                }else if (signo.equals("-")){
-                    n1 = n+tecla;
-                }else if (signo.equals("*")){
-                    n1 = n+tecla;
-                }else if (signo.equals("/")){
-                    n1 = n+tecla;
-                }else if (signo.equals("%")){
-                    n1 = n+tecla;
-                }else if (signo.equals("=")){
-                    opera[2] = tecla;
-                    float res = calc.Operaciones(Float.parseFloat(opera[0]), opera[1], Float.parseFloat(opera[2]));
-                    n1 = Float.toString(res);
-                }
-                
-                unaVista.getTxtCalculo().setText(n1);
-=======
-                    int contador = 0;
-                    
-                    for (int i = 0; i < n1.length(); i++) {
-                        System.out.println("pasada n°" + i);
-                        System.out.println("salida "+n1.substring(i, i + 1));
-                        String sig = "";
-                        
-                        if (n1.substring(i, i + 1).equals("+")) {
-                            sig = n1.substring(i, i + 1);
-                            System.out.println("tiene signo "+sig);
-                        } else {
-                            if (contador<i) {
-                                System.out.println("else pasada n°" + i);
-                                aux = Float.parseFloat(n1.substring(i, i+1));
-                            } else {
-                                System.out.println("if pasada n°" + i);
-                                aux = Float.parseFloat(n1.substring(i, i+1));
-                                aux2 = Float.parseFloat(n1.substring(i, i+1));
-                            }
-                            aux1 = aux;
-                            contador += i;
-                            System.out.println("numero " + aux1 + " + " + aux2);
-                            float n2 = calc.Operaciones(aux1, sig, aux2);
-                            System.out.println("resultado "+n2);
-                            unaVista.getTxtCalculo().setText(String.valueOf(n2));
-                            //n1 = calc.Operaciones(String.valueOf(aux1), signo, String.valueOf(aux2)));
-                        }
-                        //System.out.println("salida "+n1.substring(i, i+1));
+
+                    unaVista.getTxtCalculo().setText(n1);
+                    String sig = "";
+                    if (n1.indexOf("+") != -1) {
+                        sig = "+";
+                    } else if (n1.indexOf("-") != -1) {
+                        sig = "-";
+                    } else if (n1.indexOf("*") != -1) {
+                        sig = "*";
+                    } else if (n1.indexOf("/") != -1) {
+                        sig = "/";
                     }
->>>>>>> 8911fd7e8f1ee0c63722be7877500dee95312700
 
+                    String[] valores = n1.split("[-,+,/,*]");
+
+                    float n2 = calc.Operaciones(Float.parseFloat(valores[0]), sig, Float.parseFloat(valores[1]));
+                    System.out.println("resultado " + n2);
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+//                    int contador = 0;
+//                    String sig = "";
+//                    
+//                    for (int i = 0; i < n1.length(); i++) {
+//                        System.out.println("pasada n°" + i);
+//                        System.out.println("salida " + n1.substring(i, i + 1));
+//
+//
+//                        if (n1.substring(i, i + 1).equals("+")) {
+//                            sig = n1.substring(i, i + 1);
+//                            System.out.println("tiene signo " + sig);
+//                        } else {
+//                            if (contador == i) {
+//                                System.out.println("else if pasada n°" + i);
+//                                aux = Float.parseFloat(n1.substring(i, i + 1));
+//                            } else {
+//                                System.out.println("if else pasada n°" + i);
+//                                //aux = Float.parseFloat(n1.substring(i, i + 1));
+//                                aux2 = Float.parseFloat(n1.substring(i, i + 1));
+//                            }
+//                            aux1 = aux;
+//                            contador += i;
+//                            System.out.println("numero " + aux1 + sig + aux2);
+//                            float n2 = calc.Operaciones(aux1, sig, aux2);
+//                            System.out.println("resultado " + n2);
+//                            unaVista.getTxtCalculo().setText(String.valueOf(n2));
+//                            //n1 = calc.Operaciones(String.valueOf(aux1), signo, String.valueOf(aux2)));
+//                        }
+//                        //System.out.println("salida "+n1.substring(i, i+1));
+//                    }
+                } else {
+                    n1 = n + tecla;
+                    unaVista.getTxtCalculo().setText(n1);
                 }
-
-                unaVista.getTxtCalculo().setText(n1);
 
             }
 

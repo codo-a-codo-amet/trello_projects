@@ -60,7 +60,7 @@ public class CalculadoraSimple implements ICalculadora{
         setOperando1(num1);
         setOperando2(num2);
         setOperacion(signo);
-
+        System.out.println("que signo vino "+signo);
         if (signo.equalsIgnoreCase("+")) {
             setResultado(num1 + num2);
         } else if (signo.equalsIgnoreCase("-")) {
