@@ -31,10 +31,15 @@ public class Controller implements IViewEventListener {
         calculadora = CalculadoraFactory.CreateConversor("Simple");
         
         //1- Suma
-        float element1 = (float)Math.random() * 10.0f;
+       /* float element1 = (float)Math.random() * 10.0f;
         float element2 = (float)Math.random() * 10.0f;
         String operation = "+";
-        float result = calculadora.binaryOperation(element1, operation, element2);
+        
+        calculadora.setElement(0, element1);
+        calculadora.setElement(1, element2);
+        calculadora.setOperation(operation);
+        
+        float result = calculadora.executeBinaryOpertion();
         
         System.out.println("Calcladora probando operacion: " + operation +
                 " Elementos(1) "+ element1 + 
@@ -45,12 +50,17 @@ public class Controller implements IViewEventListener {
         element1 = (float)Math.random() * 10.0f;
         element2 = (float)Math.random() * 10.0f;
         operation = "-";
-        result = calculadora.binaryOperation(element1, operation, element2);
+        
+        calculadora.setElement(0, element1);
+        calculadora.setElement(1, element2);
+        calculadora.setOperation(operation);
+        
+        result = calculadora.executeBinaryOpertion();
         
         System.out.println("Calcladora probando operacion: " + operation +
                 " Elementos(1) "+ element1 + 
                 " (2) " + element2 + 
-                " resultado: " +  result);
+                " resultado: " +  result);*/
 
     }
 
@@ -76,6 +86,15 @@ public class Controller implements IViewEventListener {
             } else if (tecla.equalsIgnoreCase("<X")  ) {
                 main_view.getjTextField2().setText(displayNumber.substring(0, Integer.max(0, number_length-1) ));
             } else if (tecla.equals("+")) {
+                Double elementDouble = Double.parseDouble(displayNumber);
+                Integer position = 0;
+                if ( !calculadora.getOperation().equals("")) {
+                    position = 1;
+                }
+                calculadora.setElement(position, elementDouble.floatValue());
+                
+                main_view.getjTextField2().setText("");
+                calculadora.setOperation("+");
                 
             } else if (tecla.equals("-")) {
                 
@@ -84,10 +103,19 @@ public class Controller implements IViewEventListener {
             } else if (tecla.equals("/")) {
                 
             } else if (tecla.equals("=")) {
+                Double elementDouble = Double.parseDouble(displayNumber);
+                if (calculadora.getElement(1) == 0.0f) {
+                       calculadora.setElement(1, elementDouble.floatValue());
+                }
                 
+                float resultado = calculadora.executeBinaryOpertion();
+                main_view.getjTextField2().setText(""+resultado);
+                
+                calculadora.setElement(0, 0.0f);
+                calculadora.setElement(1, 0.0f);
+                calculadora.setOperation("");
             }
         }
-        
     }
 
 }

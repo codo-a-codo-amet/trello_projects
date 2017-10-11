@@ -10,5 +10,14 @@ package appcalculadora.calculadoras;
  * @author alumno
  */
 public interface ICalculadora {
-    public float binaryOperation(float element1, String operation, float element2);
+    
+    public String getOperation();
+    public void setOperation(String operation);
+    
+    public float getElement(int position);
+    public void setElement(int position, float element);
+    
+    public float executeBinaryOpertion();
+    
+//    public float binaryOperation(float element1, String operation, float element2);
 }
