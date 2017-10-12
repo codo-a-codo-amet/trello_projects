@@ -50,16 +50,11 @@ public class CalculadoraSimple implements ICalculadora{
 
     //constructor de la clase
     public CalculadoraSimple() {
-        setOperando1(0.0f);
-        setOperando2(0.0f);
-        setResultado(0.0f);
+
     }
 
     @Override
     public float Operaciones(float num1, String signo, float num2) {
-        setOperando1(num1);
-        setOperando2(num2);
-        setOperacion(signo);
 
         if (signo.equalsIgnoreCase("+")) {
             setResultado(num1 + num2);
@@ -69,12 +64,21 @@ public class CalculadoraSimple implements ICalculadora{
             setResultado(num1 * num2);
         } else if (signo.equalsIgnoreCase("/")) {
             setResultado(num1 / num2);
+        } else if (signo.equalsIgnoreCase("%")) {
+            setResultado(num1 * num2/100);
         } else {
             setResultado(0.0f);
         }
 
         return getResultado();
     }
+
+    @Override
+    public float Operacion(float num1, String funcion) {
+        return 0.0f;
+    }
+
+
 
 
    

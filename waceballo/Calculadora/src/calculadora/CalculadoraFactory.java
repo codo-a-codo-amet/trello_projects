@@ -29,8 +29,9 @@ public class CalculadoraFactory {
     public static List<String> getListaConversores() {
         List<String> lista_de_calculadoras = new ArrayList<>();
 
-        lista_de_calculadoras.add("Seleccione");
+        //lista_de_calculadoras.add("Seleccione");
         lista_de_calculadoras.add("Simple");
+        lista_de_calculadoras.add("Cientifica");
         
         return lista_de_calculadoras;
     }
