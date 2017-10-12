@@ -17,6 +17,9 @@ public class Controller implements IViewEventListener {
     private Pantalla unaVista;
     private ICalculadora con;
     private CalculadoraSimple calc;
+    private float aux = 0;
+    private float aux1 = 0;
+    private float aux2 = 0;
 
     public Controller() {
         unaVista = new Pantalla();
@@ -50,7 +53,7 @@ public class Controller implements IViewEventListener {
             ActionEvent ae = (ActionEvent) event.target;
             String tecla = ae.getActionCommand();
 
-            System.out.println("Tecla " + ae.getActionCommand());
+            //System.out.println("Tecla " + ae.getActionCommand());
 
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
@@ -106,11 +109,36 @@ public class Controller implements IViewEventListener {
                 } else if (signo.equals("%")) {
                     n1 = n + tecla;
                 } else if (signo.equals("=")) {
+                    n1 = unaVista.getTxtCalculo().getText();
                     
-                    System.out.println("hola "+ n1.length());
+                    int contador = 0;
                     
                     for (int i = 0; i < n1.length(); i++) {
-                        System.out.println("salida "+n1.substring(i, i+1));
+                        System.out.println("pasada n°" + i);
+                        System.out.println("salida "+n1.substring(i, i + 1));
+                        String sig = "";
+                        
+                        if (n1.substring(i, i + 1).equals("+")) {
+                            sig = n1.substring(i, i + 1);
+                            System.out.println("tiene signo "+sig);
+                        } else {
+                            if (contador<i) {
+                                System.out.println("else pasada n°" + i);
+                                aux = Float.parseFloat(n1.substring(i, i+1));
+                            } else {
+                                System.out.println("if pasada n°" + i);
+                                aux = Float.parseFloat(n1.substring(i, i+1));
+                                aux2 = Float.parseFloat(n1.substring(i, i+1));
+                            }
+                            aux1 = aux;
+                            contador += i;
+                            System.out.println("numero " + aux1 + " + " + aux2);
+                            float n2 = calc.Operaciones(aux1, sig, aux2);
+                            System.out.println("resultado "+n2);
+                            unaVista.getTxtCalculo().setText(String.valueOf(n2));
+                            //n1 = calc.Operaciones(String.valueOf(aux1), signo, String.valueOf(aux2)));
+                        }
+                        //System.out.println("salida "+n1.substring(i, i+1));
                     }
 
                 }
