@@ -5,7 +5,8 @@
  */
 package appcalculadora.calculadoras;
 
-import java.util.ArrayList;
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  *
@@ -14,14 +15,11 @@ import java.util.ArrayList;
 public class CalculadoraSimple implements ICalculadora{
     
     protected String operation;
-    protected ArrayList<Double> elements;
+    protected TreeNode<String> elements;
 
     public CalculadoraSimple() {
         operation = "";
-        elements = new ArrayList<>(2);
-        Double doubleDefault = 0.0;
-        elements.add(doubleDefault);
-        elements.add(doubleDefault);
+        elements = new TreeNode<>("Resultado");
     }
     
     
@@ -33,7 +31,7 @@ public class CalculadoraSimple implements ICalculadora{
     @Override
     public void setElement(int position, float element) {
         Double elementoDouble = new Double(element);
-        elements.set(position, elementoDouble);
+      //  elements.set(position, elementoDouble);
     }
 
     @Override
@@ -41,7 +39,7 @@ public class CalculadoraSimple implements ICalculadora{
      float result = 0.0f;
         
         if ( operation.equals("+")) {
-            result = elements.get(0).floatValue() + elements.get(1).floatValue();
+            result = 0.0f;//elements.get(0).floatValue() + elements.get(1).floatValue();
         }
         
         return result;
@@ -54,7 +52,12 @@ public class CalculadoraSimple implements ICalculadora{
 
     @Override
     public float getElement(int position) {
-        return elements.get(position).floatValue();
+        return Float.parseFloat(elements.iterator().next().toString());
      }
+
+    @Override
+    public float executeUnaryOperation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

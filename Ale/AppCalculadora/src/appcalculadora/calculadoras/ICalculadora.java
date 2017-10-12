@@ -19,5 +19,9 @@ public interface ICalculadora {
     
     public float executeBinaryOpertion();
     
+    public float executeUnaryOperation();
+    
+    
+    
 //    public float binaryOperation(float element1, String operation, float element2);
 }
