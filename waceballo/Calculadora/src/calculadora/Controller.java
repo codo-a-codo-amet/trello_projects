@@ -31,6 +31,7 @@ public class Controller implements IViewEventListener {
         unaVista.getLblMensaje().setVisible(false);
         unaVista.getTxtCalculo().setEnabled(false);
 
+        System.out.println("Calculadora Cientifica "+calc.Operacion(1, "tan"));
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);

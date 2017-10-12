@@ -9,17 +9,20 @@ package calculadora;
  *
  * @author alumno
  */
-public class CalculadoraNULL implements ICalculadora{
-
-
-    @Override
-    public float Operaciones(float num1, String signo, float num2) {
-        return 0.0f;
-    }
+public class CalculadoraCientifica extends CalculadoraSimple{
 
     @Override
     public float Operacion(float num1, String funcion) {
-         return 0.0f;
+        Double resultado = 0.00;
+        
+        if (funcion.equals("tan")) {
+            resultado = Math.tan(num1);
+        }
+
+        return Float.parseFloat(resultado.toString());
     }
+
+
+
     
 }

@@ -73,6 +73,13 @@ public class CalculadoraSimple implements ICalculadora{
         return getResultado();
     }
 
+    @Override
+    public float Operacion(float num1, String funcion) {
+        return 0.0f;
+    }
+
+
+
 
    
 }

@@ -31,6 +31,7 @@ public class CalculadoraFactory {
 
         //lista_de_calculadoras.add("Seleccione");
         lista_de_calculadoras.add("Simple");
+        lista_de_calculadoras.add("Cientifica");
         
         return lista_de_calculadoras;
     }
