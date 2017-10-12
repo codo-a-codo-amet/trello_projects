@@ -36,7 +36,6 @@ public class Controller implements IViewEventListener {
         calc.setOperando2(5.0f);
 
 //        System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
-
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);
@@ -64,10 +63,10 @@ public class Controller implements IViewEventListener {
             n = unaVista.getTxtCalculo().getText();
 
             if (tecla.matches("\\d")) {
-                if (n.equals("0.00")){
-                    n="";
+                if (n.equals("0.00")) {
+                    n = "";
                 }
-                
+
                 numero = n;
                 numero = numero + tecla;
 
@@ -80,50 +79,46 @@ public class Controller implements IViewEventListener {
             } else {
                 signo = tecla;
                 String n1 = "";
-                String [] opera = new String[3]; 
-                
+
                 if (signo.equals("C")) {
                     unaVista.getTxtCalculo().setText("0.00");
                     unaVista.getLblMensaje().setVisible(false);
-                }else if (signo.equals(".")){
+                } else if (signo.equals(".")) {
                     n1 = n;
 
-                    if (!n1.contains(".")){
+                    if (!n1.contains(".")) {
                         n1 = n + signo;
                     }
-                }else if (signo.equals("<-")){
-                    n1 = n.substring(0, n.length()-1);
-                    
-                    if (n1.equals("")){
+                } else if (signo.equals("<-")) {
+                    n1 = n.substring(0, n.length() - 1);
+
+                    if (n1.equals("")) {
                         n1 = "0.00";
                     }
-                }else if (signo.equals("+")){
-                    opera[0] = n1;
-                    opera[1] = tecla;
+                } else if (signo.equals("+")) {
+                    n1 = n + tecla;
+                } else if (signo.equals("-")) {
+                    n1 = n + tecla;
+                } else if (signo.equals("*")) {
+                    n1 = n + tecla;
+                } else if (signo.equals("/")) {
+                    n1 = n + tecla;
+                } else if (signo.equals("%")) {
+                    n1 = n + tecla;
+                } else if (signo.equals("=")) {
                     
-                    n1 = n+tecla;
-                    System.out.println("techas "+opera[0]+opera[1]);
-                }else if (signo.equals("-")){
-                    n1 = n+tecla;
-                }else if (signo.equals("*")){
-                    n1 = n+tecla;
-                }else if (signo.equals("/")){
-                    n1 = n+tecla;
-                }else if (signo.equals("%")){
-                    n1 = n+tecla;
-                }else if (signo.equals("=")){
-                    opera[2] = n;
-                    float res = calc.Operaciones(Float.parseFloat(opera[0]), opera[1], Float.parseFloat(opera[2]));
-                    n1 = Float.toString(res);
+                    System.out.println("hola "+ n1.length());
+                    
+                    for (int i = 0; i < n1.length(); i++) {
+                        System.out.println("salida "+n1.substring(i, i+1));
+                    }
+
                 }
-                
-                System.out.println("operaciion "+opera[0]+opera[1]+opera[2]);
+
                 unaVista.getTxtCalculo().setText(n1);
 
-
-
             }
-            
+
         } else {
             String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = CalculadoraFactory.CrearCalculadora(nuevaCalculadora);
