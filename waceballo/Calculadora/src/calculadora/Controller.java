@@ -17,10 +17,12 @@ public class Controller implements IViewEventListener {
     private Pantalla unaVista;
     private ICalculadora con;
     private CalculadoraSimple calc;
+    private CalculadoraCientifica cc;
 
     public Controller() {
         unaVista = new Pantalla();
         calc = new CalculadoraSimple();
+        cc = new CalculadoraCientifica();
     }
 
     public void Run() {
@@ -30,8 +32,10 @@ public class Controller implements IViewEventListener {
 
         unaVista.getLblMensaje().setVisible(false);
         unaVista.getTxtCalculo().setEnabled(false);
+        unaVista.getJpCientifica().setVisible(false);
 
-        System.out.println("Calculadora Cientifica "+calc.Operacion(1, "tan"));
+        System.out.println("Calculadora Cientifica "+cc.Operacion(0, "sen"));
+        
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);
@@ -120,6 +124,12 @@ public class Controller implements IViewEventListener {
         } else {
             String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = CalculadoraFactory.CrearCalculadora(nuevaCalculadora);
+            if (nuevaCalculadora.equals("Simple")){
+                unaVista.getJpCientifica().setVisible(false);
+            }else{
+                unaVista.getJpCientifica().setVisible(true);
+            }
+            
         }
 
     }

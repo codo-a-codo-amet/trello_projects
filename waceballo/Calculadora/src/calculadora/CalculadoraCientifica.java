@@ -13,13 +13,19 @@ public class CalculadoraCientifica extends CalculadoraSimple{
 
     @Override
     public float Operacion(float num1, String funcion) {
-        Double resultado = 0.00;
-        
-        if (funcion.equals("tan")) {
-            resultado = Math.tan(num1);
-        }
+        float resultado = 0.0f;
+        System.out.println("llego "+num1+ " "+ funcion);
+        if (funcion.equals("sen")) {
+            resultado = (float) Math.sin(num1);
+        }else if (funcion.equals("cos")){
+            resultado = (float) Math.cos(num1);
+        }else if (funcion.equals("tan")){
+            resultado = (float) Math.tan(num1);
+        }else if (funcion.equals("log")){
+            resultado = (float) Math.log(num1);
+        }  
 
-        return Float.parseFloat(resultado.toString());
+        return resultado;
     }
 
 
