@@ -42,18 +42,30 @@ public class Controller implements IViewEventListener {
         }else if(tecla.equals("C")){
                 main_view.getjTextField2().setText("0.0");
                 elnumero= "";
+                calculadora.definirElemento1(0.0);
+                calculadora.definirElemento2(0.0);
+                main_view.getjTextField2().setText("");
         }else if(tecla.equals("+")){
                 calculadora.definirOperacion("+");
                 if (calculadora.entregarElemento1()== 0) {
                     main_view.getJLabel2().setText(numberOnDisplay+" + ");
                     calculadora.definirElemento1(Double.parseDouble(numberOnDisplay));
-                    main_view.getjTextField2().setText("");
+                    main_view.getjTextField2().setText("0.0");
                     elnumero="";
                 }else{
                    main_view.getJLabel2().setText(numberOnLabel + numberOnDisplay);
-                    calculadora.definirElemento2(Double.parseDouble(numberOnDisplay));
-                    main_view.getjTextField2().setText("");
-                    elnumero="";
+                   if(calculadora.entregarElemento2() ==0.0){
+                       calculadora.definirElemento2(Double.parseDouble(numberOnDisplay));
+                       main_view.getjTextField2().setText(calculadora.entregarResultado()+"");
+                       calculadora.definirElemento1(calculadora.entregarResultado());
+                       main_view.getjTextField2().setText("0.0");
+                      elnumero="";
+                        
+                   }else{
+                       main_view.getjTextField2().setText(calculadora.entregarResultado()+"");
+                   }
+                    
+                    
                 }
                 
         }else if(tecla.equals("-")){
@@ -65,7 +77,12 @@ public class Controller implements IViewEventListener {
         }else if(tecla.equals("<|")){     
             main_view.getjTextField2().setText(numberOnDisplay.substring(0,Integer.max(0, numberOnDisplay.length()-1)));
         }else if(tecla.equals("=")){  
+            if(calculadora.entregarElemento2() ==0.0){
+                       calculadora.definirElemento2(Double.parseDouble(numberOnDisplay));
+                       main_view.getJLabel2().setText(numberOnLabel + numberOnDisplay);
             main_view.getjTextField2().setText(String.valueOf(calculadora.entregarResultado()));
+            elnumero="";
+            }
         }else if(tecla.equals("CE")){      
            
                 
