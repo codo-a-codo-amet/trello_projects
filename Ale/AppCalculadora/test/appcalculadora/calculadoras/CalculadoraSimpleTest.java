@@ -50,7 +50,10 @@ public class CalculadoraSimpleTest {
         float element2 = ran.nextFloat() *  10;
         CalculadoraSimple instance = new CalculadoraSimple();
         float expResult = element1 + element2;
-        float result = instance.binaryOperation(element1, operation, element2);
+        instance.setElement(0, element1);
+        instance.setElement(1, element2);
+        instance.setOperation(operation);
+        float result = instance.executeBinaryOpertion();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
