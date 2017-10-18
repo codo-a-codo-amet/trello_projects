@@ -34,8 +34,6 @@ public class Controller implements IViewEventListener {
         unaVista.getTxtCalculo().setEnabled(false);
         unaVista.getJpCientifica().setVisible(false);
 
-        System.out.println("Calculadora Cientifica "+cc.Operacion(0, "sen"));
-        
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
         unaVista.setVisible(true);
@@ -112,10 +110,63 @@ public class Controller implements IViewEventListener {
                     String[] valores = n1.split("[-,+,/,*,%]");
 
                     float n2 = calc.Operaciones(Float.parseFloat(valores[0]), sig, Float.parseFloat(valores[1]));
-                    System.out.println("resultado " + n2);
                     String resultado = "" + n2;
 
                     unaVista.getTxtCalculo().setText(resultado);
+                } else if (signo.equals("sen")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "sen");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("cos")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "cos");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("tan")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "tan");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+                } else if (signo.equals("ln")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "ln");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("log")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "log");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("1/x")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "1/x");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                    
                 } else {
                     n1 = n + tecla;
                     unaVista.getTxtCalculo().setText(n1);
@@ -124,12 +175,12 @@ public class Controller implements IViewEventListener {
         } else {
             String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = CalculadoraFactory.CrearCalculadora(nuevaCalculadora);
-            if (nuevaCalculadora.equals("Simple")){
+            if (nuevaCalculadora.equals("Simple")) {
                 unaVista.getJpCientifica().setVisible(false);
-            }else{
+            } else {
                 unaVista.getJpCientifica().setVisible(true);
             }
-            
+
         }
 
     }
