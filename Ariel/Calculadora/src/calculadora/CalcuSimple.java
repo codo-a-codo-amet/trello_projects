@@ -15,9 +15,10 @@ public class CalcuSimple implements ICalculadora {
     private String resultado;
     private String miPantalla;
     private String signo;
+    private String resultadoSignoUsado;
 
     public CalcuSimple() {
-        
+        resultadoSignoUsado="";
     }
   public CalcuSimple(String numeroA, String numeroB, String resultado, String signo) {
         this.numeroA = numeroA;
@@ -58,6 +59,15 @@ public class CalcuSimple implements ICalculadora {
         
         return resultado;
        }
+    
+    public String getSignoUsado(String boton,String signo, String valorA,String valorB){
+        if (boton.equals("+")){
+            if (signo.equals("+")){
+                
+            }
+         }
+    return resultadoSignoUsado;
+    }
     
     public String getNumeroA() {
         return numeroA;
