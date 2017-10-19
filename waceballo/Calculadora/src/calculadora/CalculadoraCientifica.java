@@ -21,9 +21,13 @@ public class CalculadoraCientifica extends CalculadoraSimple{
             resultado = (float) Math.cos(num1);
         }else if (funcion.equals("tan")){
             resultado = (float) Math.tan(num1);
-        }else if (funcion.equals("log")){
+        }else if (funcion.equals("ln")){
             resultado = (float) Math.log(num1);
-        }  
+        }else if (funcion.equals("log")){
+            resultado = (float) Math.log10(num1);
+        }else if (funcion.equals("1/x")){
+            resultado = (float) Math.log1p(num1);
+        }
 
         return resultado;
     }
