@@ -81,47 +81,28 @@ public class Controlador implements IViewEventListener{
                  vistaCalculadora.getjPantalla().setText(memoria);
                 }
                 }else{
+                    String resul = calculadora.getSignoUsado(boton,memoria,vistaCalculadora.getjPantalla().getText(),signo);
                     
-                    String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
                     vistaCalculadora.getjPantalla().setText(resul);
+                     signo="+";
                     memoria = resul;
                     valorA = resul;
                 }
                 
             }else if (boton.equals("-")){
                 if(!signoUsado){
-                if(!laPantalla.equals("0")){
-                 valorA = laPantalla;
+                    if(!laPantalla.equals("0")){
+                    valorA = laPantalla;
+                   signo="+";
+                 signoUsado = true;
                  memoria=valorA;
-                 signo="-";
                  vistaCalculadora.getjPantalla().setText(memoria);
-                }
-                 }else if (signo.equals("+")){
+                    }
+                }else{
+                    String resul = calculadora.getSignoUsado(boton,memoria,vistaCalculadora.getjPantalla().getText(),signo);
                     
-                    String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
                     vistaCalculadora.getjPantalla().setText(resul);
-                    signo="-";
-                    memoria = resul;
-                    valorA = resul;
-                }else if (signo.equals("-")){
-                    
-                    String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
-                    vistaCalculadora.getjPantalla().setText(resul);
-                    signo="-";
-                    memoria = resul;
-                    valorA = resul;
-                }else if (signo.equals("*")){
-                    
-                    String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
-                    vistaCalculadora.getjPantalla().setText(resul);
-                    signo="-";
-                    memoria = resul;
-                    valorA = resul;
-                }else if (signo.equals("/")){
-                    
-                    String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
-                    vistaCalculadora.getjPantalla().setText(resul);
-                    signo="-";
+                     signo="-";
                     memoria = resul;
                     valorA = resul;
                 }

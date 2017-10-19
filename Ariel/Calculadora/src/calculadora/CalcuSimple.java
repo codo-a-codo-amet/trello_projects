@@ -60,11 +60,15 @@ public class CalcuSimple implements ICalculadora {
         return resultado;
        }
     
-    public String getSignoUsado(String boton,String signo, String valorA,String valorB){
+    public String getSignoUsado(String boton,String valorA, String valorB,String signo){
         if (boton.equals("+")){
-            if (signo.equals("+")){
-                
-            }
+           resultadoSignoUsado=getOperaciones(valorA,valorB,signo);
+         }else if (boton.equals("-")){
+            resultadoSignoUsado=getOperaciones(valorA,valorB,signo); 
+         }else if (boton.equals("*")){
+            resultadoSignoUsado=getOperaciones(valorA,valorB,signo); 
+         }else if (boton.equals("/")){
+            resultadoSignoUsado=getOperaciones(valorA,valorB,signo); 
          }
     return resultadoSignoUsado;
     }
