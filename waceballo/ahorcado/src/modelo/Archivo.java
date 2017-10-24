@@ -43,8 +43,8 @@ public class Archivo {
 
         try {
             //ruta de tu archivo
-            String ruta = "C:\\Users\\alumno\\Desktop\\ahorcado.txt";
-            //String ruta = "C:\\Users\\wceba\\Desktop\\ahorcado.txt";
+            //String ruta = "C:\\Users\\alumno\\Desktop\\ahorcado.txt";
+            String ruta = "C:\\Users\\wceba\\Desktop\\ahorcado.txt";
 
             BufferedReader br = getArchivo(ruta);
 
