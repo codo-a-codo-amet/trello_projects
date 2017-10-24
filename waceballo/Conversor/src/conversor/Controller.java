@@ -3,7 +3,6 @@ package conversor;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /*
@@ -65,11 +64,12 @@ public class Controller implements IViewEventListener {
         if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
 
             ActionEvent ae = (ActionEvent) event.target;
+            System.out.println("print " + ae.getActionCommand());
 
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
-            
+
             Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
 
             if (unidadAConvertir == 0) {
@@ -89,13 +89,12 @@ public class Controller implements IViewEventListener {
             //configurar combobox1
             ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
             unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
-            
-            if (nuevoConversor.equalsIgnoreCase("Seleccione")){
+
+            if (nuevoConversor.equalsIgnoreCase("Seleccione")) {
                 unaVista.getbtnConvertir().setEnabled(false);
-            }else{
+            } else {
                 unaVista.getbtnConvertir().setEnabled(true);
             }
-            
 
         }
 

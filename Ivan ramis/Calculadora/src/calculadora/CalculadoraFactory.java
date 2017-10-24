@@ -19,20 +19,20 @@ public class CalculadoraFactory {
 
         if (tipo.equalsIgnoreCase("Seleccione")) {
             calculadora = new CalculadoraNULL();
-        } else if (tipo.equalsIgnoreCase("Simple")) {
+        }else if (tipo.equalsIgnoreCase("Simple")) {
             calculadora = new CalculadoraSimple();
         }
 
         return calculadora;
     }
 
-    public static List<String> getListaCalculadora() {
-        List<String> lista_de_calculadora = new ArrayList<>();
+    public static List<String> getListaConversores() {
+        List<String> lista_de_calculadoras = new ArrayList<>();
 
-        lista_de_calculadora.add("Seleccione");
-        lista_de_calculadora.add("Simple");
+        lista_de_calculadoras.add("Seleccione");
+        lista_de_calculadoras.add("Simple");
         
-        return lista_de_calculadora;
+        return lista_de_calculadoras;
     }
 
 }
