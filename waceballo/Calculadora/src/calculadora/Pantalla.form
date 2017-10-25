@@ -491,7 +491,7 @@
                           <Group type="102" attributes="0">
                               <Component id="btnTan" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnTan1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnTan1" min="-2" pref="49" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnTan2" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -500,19 +500,15 @@
                                   <Component id="btnTan3" max="32767" attributes="0"/>
                                   <Component id="btnTan6" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="btnTan7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                      <Component id="btnTan8" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Component id="btnTan4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="btnTan5" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnTan4" pref="51" max="32767" attributes="0"/>
+                                  <Component id="btnTan7" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="btnTan5" max="32767" attributes="0"/>
+                                  <Component id="btnTan8" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
