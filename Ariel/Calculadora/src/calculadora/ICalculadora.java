@@ -12,5 +12,7 @@ package calculadora;
 public interface ICalculadora {
     
     public String getOperaciones(String valorA, String valorB, String signo);
+    public String getSignoUsado(String boton,String valorA,String valorB,String signo);
+    
     
 }

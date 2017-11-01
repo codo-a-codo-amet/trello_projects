@@ -13,6 +13,8 @@ public interface ICalculadora {
 
     public float Operaciones(float num1, String signo, float num2);
     
+    public float Operacion(float num1, String funcion);
+    
     
     
 }
