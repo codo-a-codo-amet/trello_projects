@@ -36,7 +36,7 @@ public class Controller implements IViewEventListener {
         String operation = "+";
         float result = calculadora.binaryOperation(element1, operation, element2);
         
-        System.out.println("Calcladora probando operacion: " + operation +
+        System.out.println("Calculadora probando operacion: " + operation +
                 " Elementos(1) "+ element1 + 
                 " (2) " + element2 + 
                 " resultado: " +  result);
@@ -47,27 +47,7 @@ public class Controller implements IViewEventListener {
         operation = "-";
         result = calculadora.binaryOperation(element1, operation, element2);
         
-        System.out.println("Calcladora probando operacion: " + operation +
-                " Elementos(1) "+ element1 + 
-                " (2) " + element2 + 
-                " resultado: " +  result);
-        //2- Multiplicacion
-        element1 = (float)Math.random() * 10.0f;
-        element2 = (float)Math.random() * 10.0f;
-        operation = "*";
-        result = calculadora.binaryOperation(element1, operation, element2);
-        
-        System.out.println("Calcladora probando operacion: " + operation +
-                " Elementos(1) "+ element1 + 
-                " (2) " + element2 + 
-                " resultado: " +  result);
-        //2- division
-        element1 = (float)Math.random() * 10.0f;
-        element2 = (float)Math.random() * 10.0f;
-        operation = "/";
-        result = calculadora.binaryOperation(element1, operation, element2);
-        
-        System.out.println("Calcladora probando operacion: " + operation +
+        System.out.println("Calculadora probando operacion: " + operation +
                 " Elementos(1) "+ element1 + 
                 " (2) " + element2 + 
                 " resultado: " +  result);
@@ -76,8 +56,38 @@ public class Controller implements IViewEventListener {
 
     @Override
     public void listen(Event event) {
-
-      
+        ActionEvent ae = (ActionEvent) event.target;
+        System.out.println("Tecla "+ ae.getActionCommand());
+        
+        String tecla = ae.getActionCommand();
+        String displayNumber = main_view.getjTextField2().getText();
+        Integer number_length = displayNumber.length();
+        
+        // 
+        // \d -> Reg expression que indica todo aquello que sea un string numerico
+        if ( tecla.matches("\\d") ) {
+            System.out.println("Es un numero");
+            displayNumber = displayNumber + tecla;
+            main_view.getjTextField2().setText(displayNumber);
+            // get textfield y sumar string
+        } else {
+            if ( tecla.equals("C")){
+                main_view.getjTextField2().setText("");
+            } else if (tecla.equalsIgnoreCase("<X")  ) {
+                main_view.getjTextField2().setText(displayNumber.substring(0, Integer.max(0, number_length-1) ));
+            } else if (tecla.equals("+")) {
+                
+            } else if (tecla.equals("-")) {
+                
+            } else if (tecla.equals("x")) {
+                
+            } else if (tecla.equals("/")) {
+                
+            } else if (tecla.equals("=")) {
+                
+            }
+        }
+        
     }
 
 }
