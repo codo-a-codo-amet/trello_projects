@@ -60,16 +60,16 @@ public class Controller implements IViewEventListener {
     @Override
     public void listen(Event event) {
         System.out.println("Objecto dentro del evento: " + event.target.getClass().getCanonicalName());
-        
+
         if (event.target.getClass().getCanonicalName().equalsIgnoreCase("java.awt.event.ActionEvent")) {
 
             ActionEvent ae = (ActionEvent) event.target;
-            System.out.println("print "+ae.getActionCommand());
-            
+            System.out.println("print " + ae.getActionCommand());
+
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
-            
+
             Integer unidadAConvertir = unaVista.getCbDesdeUnidad().getSelectedIndex();
 
             if (unidadAConvertir == 0) {
@@ -89,13 +89,12 @@ public class Controller implements IViewEventListener {
             //configurar combobox1
             ConversorComboBoxModel comboBox1Model = new ConversorComboBoxModel(con.getOpciones());
             unaVista.getCbDesdeUnidad().setModel(comboBox1Model);
-            
-            if (nuevoConversor.equalsIgnoreCase("Seleccione")){
+
+            if (nuevoConversor.equalsIgnoreCase("Seleccione")) {
                 unaVista.getbtnConvertir().setEnabled(false);
-            }else{
+            } else {
                 unaVista.getbtnConvertir().setEnabled(true);
             }
-            
 
         }
 

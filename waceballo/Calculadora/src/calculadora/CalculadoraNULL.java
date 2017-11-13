@@ -16,5 +16,10 @@ public class CalculadoraNULL implements ICalculadora{
     public float Operaciones(float num1, String signo, float num2) {
         return 0.0f;
     }
+
+    @Override
+    public float Operacion(float num1, String funcion) {
+         return 0.0f;
+    }
     
 }

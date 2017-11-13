@@ -17,15 +17,15 @@ public class Controlador implements IViewEventListener{
     private String valorA;
     private String valorB;
     private String signo;
-    private boolean signoUsado;
     private String boton;
     private String laPantalla;
     private String memoria;
+    private boolean signoUsado;
     protected ICalculadora calculadora;
     protected VistaCalculadora vistaCalculadora;
     public Controlador() {
        signo="";
-       signoUsado=false;
+       signoUsado = false;
         vistaCalculadora = new VistaCalculadora();
         vistaCalculadora.setVisible(true);
     }
@@ -73,64 +73,70 @@ public class Controlador implements IViewEventListener{
         }else if (boton.equals("+")||boton.equals("-")||boton.equals("*")||boton.equals("/")){
             if(boton.equals("+")){
                 if(!signoUsado){
-                if(!laPantalla.equals("0")){
-                 valorA = laPantalla;
-                 signo="+";
-                 signoUsado = true;
-                 memoria=valorA;
-                 vistaCalculadora.getjPantalla().setText(memoria);
-                }
-                }else{
-                    String resul = calculadora.getSignoUsado(boton,memoria,vistaCalculadora.getjPantalla().getText(),signo);
+                    if(!laPantalla.equals("0")){
+                    valorA = laPantalla;
+                    signo="+";
+                    signoUsado = true;
+                    memoria=valorA;
+                     vistaCalculadora.getjPantalla().setText(memoria);
+                    }
+                }else if (boton.equals("+")){
+                    String resul= calculadora.getSignoUsado(boton,memoria, vistaCalculadora.getjPantalla().getText(), signo);
                     
                     vistaCalculadora.getjPantalla().setText(resul);
-                     signo="+";
+                    signo = "+";
                     memoria = resul;
                     valorA = resul;
                 }
                 
             }else if (boton.equals("-")){
                 if(!signoUsado){
-                    if(!laPantalla.equals("0")){
-                    valorA = laPantalla;
-                   signo="+";
+                if(!laPantalla.equals("0")){
+                 valorA = laPantalla;
+                 signo="-";
                  signoUsado = true;
                  memoria=valorA;
                  vistaCalculadora.getjPantalla().setText(memoria);
-                    }
-                }else{
-                    String resul = calculadora.getSignoUsado(boton,memoria,vistaCalculadora.getjPantalla().getText(),signo);
+                }
+                 }else if (boton.equals("-")){
+                    String resul= calculadora.getSignoUsado(boton,memoria, vistaCalculadora.getjPantalla().getText(), signo);
                     
                     vistaCalculadora.getjPantalla().setText(resul);
-                     signo="-";
+                    signo = "-";
                     memoria = resul;
                     valorA = resul;
                 }
             }else if (boton.equals("*")){
-                if(!signo.equals("*")){
+                if(!signoUsado){
                 if(!laPantalla.equals("0")){
                  valorA = laPantalla;
-                 memoria=valorA;
                  signo="*";
+                 signoUsado = true;
+                 memoria=valorA;
                  vistaCalculadora.getjPantalla().setText(memoria);
                 }
-                 }else{
-                    String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
+                 }else if (boton.equals("*")){
+                    String resul= calculadora.getSignoUsado(boton,memoria, vistaCalculadora.getjPantalla().getText(), signo);
+                    
                     vistaCalculadora.getjPantalla().setText(resul);
+                    signo = "*";
                     memoria = resul;
                     valorA = resul;
                 }
             }else if (boton.equals("/")){
-                if(!signo.equals("/")){
-                if(!laPantalla.equals("0")){
-                 valorA = laPantalla;
-                 memoria=valorA;
-                 signo="/";
-                 vistaCalculadora.getjPantalla().setText(memoria);
-                }
-                 }else{
-                   String resul = calculadora.getOperaciones(memoria,vistaCalculadora.getjPantalla().getText(),signo);
+                    if(!signoUsado){
+                    if(!laPantalla.equals("0")){
+                    valorA = laPantalla;
+                    signo="/";
+                    signoUsado = true;
+                    memoria=valorA;
+                    vistaCalculadora.getjPantalla().setText(memoria);
+                    }
+                 }else if (boton.equals("/")){
+                    String resul= calculadora.getSignoUsado(boton,memoria, vistaCalculadora.getjPantalla().getText(), signo);
+                    
                     vistaCalculadora.getjPantalla().setText(resul);
+                    signo = "/";
                     memoria = resul;
                     valorA = resul;
                 }
@@ -165,9 +171,9 @@ public class Controlador implements IViewEventListener{
                 resultado= calculadora.getOperaciones(valorA,valorB,signo);
                
                 vistaCalculadora.getjPantalla().setText(resultado);
-                signo = "";
                 signoUsado=false;
-                valorA=resultado;
+                signo = "";
+                memoria = vistaCalculadora.getjPantalla().getText();
                 }
         }
         

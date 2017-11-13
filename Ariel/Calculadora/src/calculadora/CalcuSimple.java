@@ -16,15 +16,17 @@ public class CalcuSimple implements ICalculadora {
     private String miPantalla;
     private String signo;
     private String resultadoSignoUsado;
+    private double decimales;
 
     public CalcuSimple() {
-        resultadoSignoUsado="";
+        
     }
   public CalcuSimple(String numeroA, String numeroB, String resultado, String signo) {
         this.numeroA = numeroA;
         this.numeroB = numeroB;
         this.resultado = resultado;
         this.signo = signo;
+        
     }
     
     public String CalculadoraSimple(String evento){
@@ -42,35 +44,58 @@ public class CalcuSimple implements ICalculadora {
       
         if (signo.equals("+")) {
             double r= Double.parseDouble(numeroA)+Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
+             resultado= Double.toString(r);
         } else if(signo.equals("-")) {
              double r= Double.parseDouble(numeroA)-Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
+             resultado= Double.toString(r);
         }else if(signo.equals("*")) {
              double r= Double.parseDouble(numeroA)*Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
+             resultado= Double.toString(r);
         }else if(signo.equals("/")) {
              double r= Double.parseDouble(numeroA)/Double.parseDouble(numeroB);
-            resultado= Double.toString(r);
-        }
+             resultado= Double.toString(r);
+  }
       
-        
+        for (int i = 0; i < resultado.length(); i++) {
+            if (resultado.substring(i,i+1).equals(".")) {
+                if(resultado.substring(i+1,i+2).equals("0")){
+                    double d;
+                    int j;
+                    d = Double.parseDouble(resultado);
+                    j= (int)d;
+                    resultado = Integer.toString(j);
+                    
+                }
+            }
+        }
         
         
         return resultado;
        }
     
-    public String getSignoUsado(String boton,String valorA, String valorB,String signo){
+    public String getSignoUsado(String boton, String valorA, String valorB, String signo){
         if (boton.equals("+")){
-           resultadoSignoUsado=getOperaciones(valorA,valorB,signo);
-         }else if (boton.equals("-")){
-            resultadoSignoUsado=getOperaciones(valorA,valorB,signo); 
-         }else if (boton.equals("*")){
-            resultadoSignoUsado=getOperaciones(valorA,valorB,signo); 
-         }else if (boton.equals("/")){
-            resultadoSignoUsado=getOperaciones(valorA,valorB,signo); 
-         }
-    return resultadoSignoUsado;
+            resultadoSignoUsado = getOperaciones (valorA, valorB,signo);
+        }else if (boton.equals("-")){
+            resultadoSignoUsado = getOperaciones (valorA, valorB,signo);
+        }else if (boton.equals("*")){
+            resultadoSignoUsado = getOperaciones (valorA, valorB,signo);
+        }else if (boton.equals("/")){
+            resultadoSignoUsado = getOperaciones (valorA, valorB,signo);
+        }
+        
+        return resultadoSignoUsado;
+    }
+    
+     public double getLimitarDecimales(double temperatura){
+        double decimalesReducidos;
+        double a;
+        int valorEntero;
+        a = temperatura * 10000;
+        valorEntero = (int)a;
+        decimalesReducidos = (double)valorEntero / 10000;
+        
+        return decimalesReducidos;
     }
     
     public String getNumeroA() {

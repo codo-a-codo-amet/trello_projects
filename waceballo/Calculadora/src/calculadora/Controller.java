@@ -17,10 +17,12 @@ public class Controller implements IViewEventListener {
     private Pantalla unaVista;
     private ICalculadora con;
     private CalculadoraSimple calc;
+    private CalculadoraCientifica cc;
 
     public Controller() {
         unaVista = new Pantalla();
         calc = new CalculadoraSimple();
+        cc = new CalculadoraCientifica();
     }
 
     public void Run() {
@@ -30,12 +32,7 @@ public class Controller implements IViewEventListener {
 
         unaVista.getLblMensaje().setVisible(false);
         unaVista.getTxtCalculo().setEnabled(false);
-
-        calc.setOperacion("*");
-        calc.setOperando1(10.0f);
-        calc.setOperando2(5.0f);
-
-        System.out.println("Resultado " + calc.Operaciones(calc.getOperando1(), calc.getOperacion(), calc.getOperando2()));
+        unaVista.getJpCientifica().setVisible(false);
 
         //A partir de ahora, escucha lo que le sucede a la vista.
         unaVista.AddEventListener(this);
@@ -51,8 +48,7 @@ public class Controller implements IViewEventListener {
             ActionEvent ae = (ActionEvent) event.target;
             String tecla = ae.getActionCommand();
 
-            System.out.println("Tecla " + ae.getActionCommand());
-
+            //System.out.println("Tecla " + ae.getActionCommand());
             if (ae.getActionCommand().equalsIgnoreCase("Salir")) {
                 System.exit(0);
             }
@@ -64,10 +60,10 @@ public class Controller implements IViewEventListener {
             n = unaVista.getTxtCalculo().getText();
 
             if (tecla.matches("\\d")) {
-                if (n.equals("0.00")){
-                    n="";
+                if (n.equals("0.00")) {
+                    n = "";
                 }
-                
+
                 numero = n;
                 numero = numero + tecla;
 
@@ -80,51 +76,110 @@ public class Controller implements IViewEventListener {
             } else {
                 signo = tecla;
                 String n1 = "";
-                String [] opera = new String[2]; 
-                
+
                 if (signo.equals("C")) {
                     unaVista.getTxtCalculo().setText("0.00");
                     unaVista.getLblMensaje().setVisible(false);
-                }else if (signo.equals(".")){
+                } else if (signo.equals(".")) {
                     n1 = n;
 
-                    if (!n1.contains(".")){
+                    if (!n1.contains(".")) {
                         n1 = n + signo;
                     }
-                }else if (signo.equals("<-")){
-                    n1 = n.substring(0, n.length()-1);
-                    
-                    if (n1.equals("")){
+                } else if (signo.equals("<-")) {
+                    n1 = n.substring(0, n.length() - 1);
+
+                    if (n1.equals("")) {
                         n1 = "0.00";
                     }
-                }else if (signo.equals("+")){
-                    opera[0] = n;
-                    opera[1] = tecla;
+                } else if (signo.equals("=")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+
+                    unaVista.getTxtCalculo().setText(n1);
+                    String sig = "";
+                    if (n1.indexOf("+") != -1) {
+                        sig = "+";
+                    } else if (n1.indexOf("-") != -1) {
+                        sig = "-";
+                    } else if (n1.indexOf("*") != -1) {
+                        sig = "*";
+                    } else if (n1.indexOf("/") != -1) {
+                        sig = "/";
+                    }
+
+                    String[] valores = n1.split("[-,+,/,*,%]");
+
+                    float n2 = calc.Operaciones(Float.parseFloat(valores[0]), sig, Float.parseFloat(valores[1]));
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+                } else if (signo.equals("sen")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "sen");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("cos")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "cos");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("tan")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "tan");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+                } else if (signo.equals("ln")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "ln");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("log")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "log");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
+                } else if (signo.equals("1/x")) {
+                    n1 = unaVista.getTxtCalculo().getText();
+                    unaVista.getTxtCalculo().setText(n1);
+
+                    float n2 = cc.Operacion(Float.parseFloat(n1), "1/x");
+                    String resultado = "" + n2;
+
+                    unaVista.getTxtCalculo().setText(resultado);
+
                     
-                    n1 = n+tecla;
-                }else if (signo.equals("-")){
-                    n1 = n+tecla;
-                }else if (signo.equals("*")){
-                    n1 = n+tecla;
-                }else if (signo.equals("/")){
-                    n1 = n+tecla;
-                }else if (signo.equals("%")){
-                    n1 = n+tecla;
-                }else if (signo.equals("=")){
-                    opera[2] = n;
-                    float res = calc.Operaciones(Float.parseFloat(opera[0]), opera[1], Float.parseFloat(opera[2]));
-                    n1 = Float.toString(res);
+                } else {
+                    n1 = n + tecla;
+                    unaVista.getTxtCalculo().setText(n1);
                 }
-                
-                unaVista.getTxtCalculo().setText(n1);
-
-
-
             }
-            
         } else {
             String nuevaCalculadora = (String) unaVista.getCbConversores().getModel().getSelectedItem();
             con = CalculadoraFactory.CrearCalculadora(nuevaCalculadora);
+            if (nuevaCalculadora.equals("Simple")) {
+                unaVista.getJpCientifica().setVisible(false);
+            } else {
+                unaVista.getJpCientifica().setVisible(true);
+            }
 
         }
 
